@@ -39,7 +39,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
       />
       <section className="py-10">
         <Container className="grid gap-8 lg:grid-cols-[1fr_320px]">
-          <article className="card-surface rounded-md p-6 sm:p-8">
+          <article className="card-surface min-w-0 rounded-md p-6 sm:p-8">
             <div className="mb-6 flex flex-wrap gap-2">
               {guide.tags.map((tag) => (
                 <Badge key={tag}>{tag}</Badge>

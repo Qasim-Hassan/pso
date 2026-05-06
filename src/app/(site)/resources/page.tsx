@@ -14,7 +14,7 @@ export default function ResourcesPage() {
     <>
       <PageHero
         title="Resource Library"
-        subtitle="Books, handouts, problem sets, past papers, solutions, and astronomy references grouped by subject."
+        subtitle="Books, handouts, problem sets, past papers, and solutions grouped by subject."
         variant="guides"
         stats={[
           { label: "Indexed Resources", value: String(stats.total), icon: "book-open" },

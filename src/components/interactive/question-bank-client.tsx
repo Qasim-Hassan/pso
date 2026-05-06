@@ -6,53 +6,84 @@ import { Badge } from "@/components/sections/common";
 import type { Question } from "@/lib/content-data";
 import { cn } from "@/lib/utils";
 
-const tabs = ["All Questions", "Common MCQs", "Subject MCQs", "Descriptive", "Problem Sets"];
+type PracticeMode = "Subject MCQs" | "Common MCQs" | "Descriptive";
+
+const modes: { label: PracticeMode; section: string; icon: string; hint: string }[] = [
+  { label: "Subject MCQs", section: "Part II", icon: "list-checks", hint: "NSTC Part II only" },
+  { label: "Common MCQs", section: "Part I", icon: "star", hint: "NSTC Part I" },
+  { label: "Descriptive", section: "Part III", icon: "book-open", hint: "Long-form paper questions" },
+];
+
+const subjectOrder = ["Mathematics", "Physics", "Biology", "Chemistry"];
+
+function sortSubjects(items: string[]) {
+  return [...items].sort((a, b) => {
+    const aIndex = subjectOrder.indexOf(a);
+    const bIndex = subjectOrder.indexOf(b);
+    if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+    if (aIndex !== -1) return -1;
+    if (bIndex !== -1) return 1;
+    return a.localeCompare(b);
+  });
+}
+
+function hashQuestion(id: string, salt: number) {
+  let hash = 2166136261 ^ salt;
+  for (let index = 0; index < id.length; index += 1) {
+    hash ^= id.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+function subjectIcon(subject: string) {
+  if (subject === "Mathematics") return "pi";
+  if (subject === "Chemistry") return "flask";
+  if (subject === "Biology") return "dna";
+  return "atom";
+}
+
+function optionTone(question: Question, index: number, selectedAnswer: number | null) {
+  if (selectedAnswer !== index) return "border-navy/10 bg-white text-charcoal hover:border-emerald/35";
+  if (question.answer === null) return "border-emerald bg-mint text-emerald";
+  return question.answer === index ? "border-emerald bg-mint text-emerald" : "border-red-300 bg-red-50 text-red-700";
+}
 
 export function QuestionBankClient({ questions }: { questions: Question[] }) {
-  const subjects = useMemo(() => ["All", ...Array.from(new Set(questions.map((question) => question.subject))).sort()], [questions]);
-  const years = useMemo(() => ["All", ...Array.from(new Set(questions.map((question) => String(question.year)))).sort()], [questions]);
-  const exams = useMemo(() => ["All", ...Array.from(new Set(questions.map((question) => question.exam))).sort()], [questions]);
-  const sections = useMemo(() => ["All", ...Array.from(new Set(questions.map((question) => question.section))).sort()], [questions]);
+  const subjects = useMemo(() => sortSubjects(Array.from(new Set(questions.map((question) => question.subject)))), [questions]);
   const [subject, setSubject] = useState("All");
-  const [section, setSection] = useState("All");
-  const [year, setYear] = useState("All");
-  const [exam, setExam] = useState("All");
-  const [type, setType] = useState("All Questions");
-  const [query, setQuery] = useState("");
+  const [mode, setMode] = useState<PracticeMode>("Subject MCQs");
+  const [shuffleSalt, setShuffleSalt] = useState(17);
   const [activeIndex, setActiveIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showSolution, setShowSolution] = useState(false);
 
-  const filtered = useMemo(() => {
-    return questions.filter((question) => {
-      const matchesSubject = subject === "All" || question.subject === subject;
-      const matchesSection = section === "All" || question.section === section;
-      const matchesYear = year === "All" || String(question.year) === year;
-      const matchesExam = exam === "All" || question.exam === exam;
-      const matchesType =
-        type === "All Questions" ||
-        (type === "Common MCQs" && question.section === "Part I") ||
-        (type === "Subject MCQs" && question.section === "Part II") ||
-        (type === "Descriptive" && question.section === "Part III") ||
-        (type === "Problem Sets" && question.section === "Resource");
-      const matchesQuery = !query.trim() || `${question.prompt} ${question.source} ${question.topic} ${question.sectionTitle}`.toLowerCase().includes(query.toLowerCase());
-      return matchesSubject && matchesSection && matchesYear && matchesExam && matchesType && matchesQuery;
+  const activeMode = modes.find((item) => item.label === mode) ?? modes[0];
+  const subjectCards = useMemo(() => {
+    return subjects.map((item) => {
+      const subjectQuestions = questions.filter((question) => question.subject === item);
+      return {
+        subject: item,
+        subjectMcqs: subjectQuestions.filter((question) => question.section === "Part II").length,
+        commonMcqs: subjectQuestions.filter((question) => question.section === "Part I").length,
+        descriptive: subjectQuestions.filter((question) => question.section === "Part III").length,
+      };
     });
-  }, [exam, query, questions, section, subject, type, year]);
+  }, [questions, subjects]);
 
-  const active = filtered[activeIndex] ?? filtered[0] ?? questions[0];
-  const topicCards = useMemo(() => {
-    const map = new Map<string, { subject: string; count: number; mcq: number; long: number }>();
-    for (const question of questions) {
-      const key = `${question.subject}:${question.topic}`;
-      const current = map.get(key) ?? { subject: question.subject, count: 0, mcq: 0, long: 0 };
-      current.count += 1;
-      if (question.type === "MCQ") current.mcq += 1;
-      else current.long += 1;
-      map.set(key, current);
-    }
-    return Array.from(map.entries()).sort((a, b) => b[1].count - a[1].count).slice(0, 8);
-  }, [questions]);
+  const filtered = useMemo(() => {
+    return questions
+      .filter((question) => {
+        const matchesMode = question.section === activeMode.section;
+        const matchesSubject = mode === "Common MCQs" || subject === "All" || question.subject === subject;
+        return matchesMode && matchesSubject;
+      })
+      .sort((a, b) => hashQuestion(a.id, shuffleSalt) - hashQuestion(b.id, shuffleSalt));
+  }, [activeMode.section, mode, questions, shuffleSalt, subject]);
+
+  const active = filtered[activeIndex] ?? null;
+  const canGoBack = activeIndex > 0;
+  const canGoNext = activeIndex < filtered.length - 1;
 
   function moveTo(index: number) {
     setActiveIndex(Math.max(0, Math.min(filtered.length - 1, index)));
@@ -60,204 +91,239 @@ export function QuestionBankClient({ questions }: { questions: Question[] }) {
     setShowSolution(false);
   }
 
-  return (
-    <div className="grid gap-6 lg:grid-cols-[280px_1fr_320px]">
-      <aside className="card-surface rounded-md p-5">
-        <div className="mb-5 flex items-center justify-between">
-          <h2 className="text-sm font-black uppercase text-charcoal">Filters</h2>
-          <button
-            className="text-xs font-black text-emerald"
-            type="button"
-            onClick={() => {
-              setSubject("All");
-              setSection("All");
-              setYear("All");
-              setExam("All");
-              setType("All Questions");
-              setQuery("");
-            }}
-          >
-            Clear all
-          </button>
-        </div>
-        <div className="space-y-5">
-          <Select label="Subject" value={subject} values={subjects} onChange={setSubject} />
-          <Select label="Section" value={section} values={sections} onChange={setSection} />
-          <Select label="Exam" value={exam} values={exams} onChange={setExam} />
-          <Select label="Year" value={year} values={years} onChange={setYear} />
-          <label className="flex items-center gap-2 rounded-md border border-navy/10 bg-white px-3 py-2 text-sm text-charcoal/60">
-            <input className="min-w-0 flex-1 bg-transparent outline-none" placeholder="Search prompts, topics, papers..." value={query} onChange={(event) => setQuery(event.target.value)} />
-            <Icon name="search" className="h-4 w-4" />
-          </label>
-          <div>
-            <h3 className="text-sm font-bold text-charcoal">Available Content</h3>
-            <div className="mt-3 grid grid-cols-2 gap-2 text-center">
-              <Metric label="Questions" value={questions.length} />
-              <Metric label="Visible" value={filtered.length} />
-              <Metric label="MCQs" value={questions.filter((question) => question.type === "MCQ").length} />
-              <Metric label="Long" value={questions.filter((question) => question.type === "Long").length} />
-            </div>
-          </div>
-        </div>
-      </aside>
+  function resetQuestionState() {
+    setActiveIndex(0);
+    setSelectedAnswer(null);
+    setShowSolution(false);
+  }
 
-      <section className="space-y-5">
-        <div className="card-surface overflow-hidden rounded-md">
-          <div className="grid border-b border-navy/10 sm:grid-cols-5">
-            {tabs.map((tab, index) => (
+  function chooseMode(value: PracticeMode) {
+    setMode(value);
+    if (value === "Common MCQs") setSubject("All");
+    resetQuestionState();
+  }
+
+  function chooseSubject(value: string) {
+    setSubject(value);
+    resetQuestionState();
+  }
+
+  function shuffleQuestions() {
+    setShuffleSalt((value) => value + 1);
+    resetQuestionState();
+  }
+
+  function resetPractice() {
+    setSubject("All");
+    setMode("Subject MCQs");
+    shuffleQuestions();
+  }
+
+  return (
+    <div className="grid gap-4 sm:gap-5 xl:grid-cols-[280px_minmax(0,1fr)]">
+      <aside className="space-y-4 xl:sticky xl:top-28 xl:self-start">
+        <div className="card-surface rounded-md p-4">
+          <div className="flex items-center justify-between gap-3">
+            <div>
+              <h2 className="text-sm font-black uppercase text-charcoal">Practice Mode</h2>
+              <p className="mt-1 text-xs font-semibold text-charcoal/60">NSTC past-paper questions only</p>
+            </div>
+            <button className="rounded-md border border-navy/10 bg-white px-3 py-2 text-xs font-black text-charcoal hover:border-emerald/40" type="button" onClick={resetPractice}>
+              Reset
+            </button>
+          </div>
+
+          <div className="mt-4 grid gap-2">
+            {modes.map((item) => (
               <button
-                key={tab}
+                key={item.label}
                 type="button"
-                onClick={() => {
-                  setType(tab);
-                  moveTo(0);
-                }}
+                onClick={() => chooseMode(item.label)}
                 className={cn(
-                  "flex min-h-12 items-center justify-center gap-2 border-r border-navy/10 px-3 text-sm font-black text-charcoal last:border-r-0",
-                  type === tab && "bg-emerald text-white",
+                  "flex items-center gap-3 rounded-md border px-3 py-3 text-left transition",
+                  mode === item.label ? "border-emerald bg-emerald text-white" : "border-navy/10 bg-white text-charcoal hover:border-emerald/35",
                 )}
               >
-                <Icon name={index === 0 ? "list-checks" : index === 3 ? "book-open" : "bookmark"} className="h-4 w-4" />
-                {tab}
+                <span className={cn("flex h-9 w-9 items-center justify-center rounded-md", mode === item.label ? "bg-white/15 text-white" : "bg-mint text-emerald")}>
+                  <Icon name={item.icon} className="h-5 w-5" />
+                </span>
+                <span>
+                  <span className="block text-sm font-black">{item.label}</span>
+                  <span className={cn("block text-xs font-semibold", mode === item.label ? "text-white/75" : "text-charcoal/55")}>{item.hint}</span>
+                </span>
               </button>
             ))}
           </div>
-          <div className="p-5">
-            <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-sm font-semibold text-charcoal/70">Showing {filtered.length.toLocaleString()} extracted questions</p>
-              <div className="flex gap-2">
-                <button className="rounded-md border border-navy/10 bg-white px-3 py-2 text-sm font-black text-charcoal" onClick={() => moveTo(activeIndex - 1)} type="button">
-                  Previous
+        </div>
+
+        <div className="card-surface rounded-md p-4">
+          <h2 className="text-sm font-black uppercase text-charcoal">Subjects</h2>
+          <div className="mt-4 grid gap-2">
+            {mode !== "Common MCQs" && (
+              <>
+                <button
+                  type="button"
+                  onClick={() => chooseSubject("All")}
+                  className={cn(
+                    "flex items-center justify-between rounded-md border px-3 py-2 text-sm font-black transition",
+                    subject === "All" ? "border-emerald bg-mint text-emerald" : "border-navy/10 bg-white text-charcoal hover:border-emerald/35",
+                  )}
+                >
+                  All subjects
+                  <span>{questions.filter((question) => question.section === activeMode.section).length}</span>
                 </button>
-                <button className="rounded-md bg-emerald px-3 py-2 text-sm font-black text-white" onClick={() => moveTo(activeIndex + 1)} type="button">
-                  Next
-                </button>
+                {subjectCards.map((card) => {
+                  const visibleCount = mode === "Subject MCQs" ? card.subjectMcqs : card.descriptive;
+                  return (
+                    <button
+                      key={card.subject}
+                      type="button"
+                      onClick={() => chooseSubject(card.subject)}
+                      className={cn(
+                        "flex items-center justify-between rounded-md border px-3 py-2 text-sm transition",
+                        subject === card.subject ? "border-emerald bg-mint text-emerald" : "border-navy/10 bg-white text-charcoal hover:border-emerald/35",
+                      )}
+                    >
+                      <span className="flex min-w-0 items-center gap-2 font-black">
+                        <Icon name={subjectIcon(card.subject)} className="h-4 w-4 shrink-0" />
+                        <span className="truncate">{card.subject}</span>
+                      </span>
+                      <span className="font-black">{visibleCount}</span>
+                    </button>
+                  );
+                })}
+              </>
+            )}
+          </div>
+          <p className="mt-3 text-xs font-semibold leading-5 text-charcoal/60">Subject MCQs exclude Part I common MCQs. Use Common MCQs when you want the shared screening section.</p>
+        </div>
+      </aside>
+
+      <section className="min-w-0 space-y-4">
+        <div className="card-surface rounded-md p-4 sm:p-5">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div className="min-w-0">
+              <div className="flex flex-wrap items-center gap-2">
+                <Badge className="border-emerald/20 bg-white">{mode}</Badge>
+                <Badge className="border-gold/30 bg-gold/15 text-charcoal">{mode === "Common MCQs" || subject === "All" ? "All subjects" : subject}</Badge>
+                <span className="text-sm font-bold text-charcoal/60">{filtered.length.toLocaleString()} questions in this drill</span>
               </div>
+              <h2 className="mt-3 font-display text-3xl font-bold leading-tight text-charcoal sm:text-4xl">
+                {mode === "Common MCQs" || subject === "All" ? mode : `${subject} ${mode}`}
+              </h2>
             </div>
-            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-              {topicCards.map(([key, value]) => (
-                <button key={key} type="button" onClick={() => setSubject(value.subject)} className="rounded-md border border-navy/10 bg-white p-4 text-left transition hover:border-emerald/40 hover:bg-mint">
-                  <Icon name={value.subject === "Mathematics" ? "pi" : value.subject === "Chemistry" ? "flask" : value.subject === "Biology" ? "dna" : "atom"} className="h-8 w-8 text-emerald" />
-                  <h3 className="mt-3 font-black text-charcoal">{key.split(":")[1]}</h3>
-                  <p className="text-sm text-charcoal/70">{value.subject}</p>
-                  <div className="mt-3 grid grid-cols-3 gap-2 text-xs text-charcoal/70">
-                    <span>{value.count} total</span>
-                    <span>{value.mcq} MCQ</span>
-                    <span>{value.long} long</span>
-                  </div>
-                </button>
-              ))}
+            <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
+              <button
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-navy/10 bg-white px-3 py-2 text-sm font-black text-charcoal disabled:cursor-not-allowed disabled:opacity-45 sm:px-4"
+                disabled={!canGoBack}
+                onClick={() => moveTo(activeIndex - 1)}
+                type="button"
+              >
+                Previous
+              </button>
+              <button
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-navy/10 bg-white px-3 py-2 text-sm font-black text-charcoal hover:border-emerald/40 sm:px-4"
+                onClick={shuffleQuestions}
+                type="button"
+              >
+                <Icon name="sparkles" className="h-4 w-4 text-gold" />
+                Shuffle
+              </button>
+              <button
+                className="col-span-2 inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-emerald px-3 py-2 text-sm font-black text-white disabled:cursor-not-allowed disabled:opacity-45 sm:col-span-1 sm:px-4"
+                disabled={!canGoNext}
+                onClick={() => moveTo(activeIndex + 1)}
+                type="button"
+              >
+                Next
+                <Icon name="chevron" className="h-4 w-4" />
+              </button>
             </div>
           </div>
         </div>
 
-        {active && (
-          <div className="card-surface rounded-md p-5">
-            <div className="flex flex-wrap items-center justify-between gap-3">
-              <h2 className="text-sm font-black uppercase text-charcoal">Question {active.displayNumber ?? active.number}</h2>
-              <span className="text-sm font-bold text-charcoal/60">{active.sectionTitle} - {active.source}</span>
+        {active ? (
+          <article className="card-surface rounded-md p-4 sm:p-7 lg:p-8">
+            <div className="flex flex-col gap-4 border-b border-navy/10 pb-5 lg:flex-row lg:items-start lg:justify-between">
+              <div>
+                <p className="text-sm font-black uppercase tracking-normal text-emerald">
+                  Question {activeIndex + 1} of {filtered.length}
+                </p>
+                <h3 className="mt-2 text-base font-black text-charcoal">{active.source}</h3>
+                <p className="mt-1 text-sm font-semibold text-charcoal/60">
+                  {active.sectionTitle} · Original number {active.displayNumber ?? active.number}
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-2 lg:justify-end">
+                {[active.subject, active.topic, active.difficulty, active.type].filter(Boolean).map((tag, index) => (
+                  <Badge key={`${tag}-${index}`} className="bg-white">
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
             </div>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {[active.subject, active.section, active.topic, active.difficulty, active.exam, String(active.year), active.type].map((tag) => (
-                <Badge key={tag}>{tag}</Badge>
-              ))}
+
+            <div className="py-7">
+              <p className="whitespace-pre-wrap text-lg font-semibold leading-8 text-charcoal sm:text-2xl sm:leading-10">{active.prompt}</p>
+              {active.figure && (
+                <details className="mt-5 rounded-md border border-navy/10 bg-white p-4">
+                  <summary className="cursor-pointer text-sm font-black text-emerald">Show diagram</summary>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={active.figure} alt={`Diagram for question ${active.displayNumber ?? active.number}`} className="mt-4 w-full rounded-md border border-navy/10" />
+                </details>
+              )}
             </div>
-            <p className="mt-5 whitespace-pre-wrap text-base leading-8 text-charcoal">{active.prompt}</p>
-            {active.figure && (
-              <details className="mt-4 rounded-md border border-navy/10 bg-white p-3">
-                <summary className="cursor-pointer text-sm font-black text-emerald">Show diagram</summary>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={active.figure} alt={`Diagram for ${active.id}`} className="mt-3 w-full rounded-md border border-navy/10" />
-              </details>
-            )}
-            {active.options.length > 0 && (
-              <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                  {active.options.map((option, index) => (
-                    <button
+
+            {active.options.length > 0 ? (
+              <div className="grid gap-3">
+                {active.options.map((option, index) => (
+                  <button
                     key={`${active.id}-${index}-${option}`}
                     onClick={() => setSelectedAnswer(index)}
                     type="button"
-                    className={cn(
-                      "flex min-h-12 items-center gap-3 rounded-md border px-4 text-left text-sm font-bold transition",
-                      selectedAnswer === index ? "border-emerald bg-mint text-emerald" : "border-navy/10 bg-white text-charcoal",
-                    )}
+                    className={cn("flex min-h-14 items-center gap-3 rounded-md border px-3 py-3 text-left text-sm font-bold leading-6 transition sm:gap-4 sm:px-4 sm:text-base", optionTone(active, index, selectedAnswer))}
                   >
-                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-navy/5 text-xs font-black">{String.fromCharCode(65 + index)}</span>
-                    {option}
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-navy/5 text-sm font-black">{String.fromCharCode(65 + index)}</span>
+                    <span>{option}</span>
                   </button>
                 ))}
               </div>
+            ) : (
+              <div className="rounded-md border border-navy/10 bg-white p-4 text-sm font-semibold text-charcoal/70">Write your solution separately, then reveal the available notes for checking.</div>
             )}
-            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-sm font-semibold text-charcoal/70">
-                Extracted from {active.paperId ? `${active.sectionTitle} in a past paper` : "problem set content"}. Page {active.page ?? "n/a"}.
-              </p>
+
+            <div className="mt-6 flex flex-col gap-3 border-t border-navy/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-sm font-semibold leading-6 text-charcoal/65">{active.page ? `Source page ${active.page}` : active.source}</p>
               <button
                 onClick={() => setShowSolution((value) => !value)}
-                className="inline-flex items-center justify-center gap-2 rounded-md bg-emerald px-5 py-2.5 text-sm font-black text-white"
+                className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-md bg-emerald px-5 py-2.5 text-sm font-black text-white sm:w-auto"
                 type="button"
               >
                 <Icon name="eye" className="h-4 w-4" />
-                {showSolution ? "Hide Solution" : "Reveal Solution"}
+                {showSolution ? "Hide Answer" : "Reveal Answer"}
               </button>
             </div>
+
             {showSolution && (
-              <div className="mt-5 rounded-md border border-emerald/20 bg-mint p-4">
-                <h3 className="font-black text-emerald">Solution</h3>
+              <div className="mt-5 rounded-md border border-emerald/20 bg-mint p-5">
+                <h3 className="font-black text-emerald">Answer</h3>
                 <p className="mt-2 text-sm leading-7 text-charcoal/80">
-                  {active.solution || "No reviewed solution is attached to this extracted item yet. The prompt, section, options, page, and diagram crop are ready for contributor review."}
+                  {active.solution ||
+                    (active.answer !== null
+                      ? `Correct option: ${String.fromCharCode(65 + active.answer)}.`
+                      : "No answer key is attached to this item yet. Use the source paper for final checking.")}
                 </p>
               </div>
             )}
+          </article>
+        ) : (
+          <div className="card-surface rounded-md p-8 text-center">
+            <Icon name="list-checks" className="mx-auto h-10 w-10 text-emerald" />
+            <h2 className="mt-4 font-display text-3xl font-bold text-charcoal">No questions in this drill</h2>
+            <p className="mt-2 text-sm font-semibold text-charcoal/65">Try another subject or practice mode.</p>
           </div>
         )}
       </section>
-
-      <aside className="space-y-5">
-        <div className="card-surface rounded-md p-5">
-          <h2 className="flex items-center gap-2 text-sm font-black uppercase text-charcoal">
-            <Icon name="sparkles" className="h-5 w-5 text-gold" /> Ingested Corpus
-          </h2>
-          <div className="mt-4 grid gap-3">
-            {subjects.slice(1).map((item) => (
-              <div key={item} className="flex items-center justify-between rounded-md border border-navy/10 bg-white px-3 py-2">
-                <span className="text-sm font-bold text-charcoal">{item}</span>
-                <span className="text-sm font-black text-emerald">{questions.filter((question) => question.subject === item).length}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="card-surface rounded-md p-5">
-          <h2 className="text-sm font-black uppercase text-charcoal">Contributor Workflow</h2>
-          <div className="mt-4 space-y-3 text-sm text-charcoal/75">
-            <p className="flex gap-2"><Icon name="check" className="h-5 w-5 text-emerald" /> Extracted questions are ready for review.</p>
-            <p className="flex gap-2"><Icon name="check" className="h-5 w-5 text-emerald" /> Diagram crops are attached only where a question needs them.</p>
-            <p className="flex gap-2"><Icon name="check" className="h-5 w-5 text-emerald" /> Solutions can be added by admins.</p>
-          </div>
-        </div>
-      </aside>
-    </div>
-  );
-}
-
-function Select({ label, value, values, onChange }: { label: string; value: string; values: string[]; onChange: (value: string) => void }) {
-  return (
-    <label className="block">
-      <span className="text-sm font-bold text-charcoal">{label}</span>
-      <select className="mt-2 w-full rounded-md border border-navy/10 bg-white px-3 py-2 text-sm font-semibold text-charcoal" value={value} onChange={(event) => onChange(event.target.value)}>
-        {values.map((item) => (
-          <option key={item}>{item}</option>
-        ))}
-      </select>
-    </label>
-  );
-}
-
-function Metric({ label, value }: { label: string; value: number }) {
-  return (
-    <div className="rounded-md border border-navy/10 bg-white p-3">
-      <div className="text-xl font-black text-emerald">{value.toLocaleString()}</div>
-      <div className="text-xs font-bold text-charcoal/60">{label}</div>
     </div>
   );
 }

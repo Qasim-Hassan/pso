@@ -6,7 +6,7 @@ import { GuidePreviewCard } from "@/components/sections/cards";
 import type { Guide } from "@/lib/guides";
 import { cn } from "@/lib/utils";
 
-const subjects = ["All", "General", "Physics", "Astronomy", "Chemistry", "Biology", "Mathematics", "Informatics"];
+const subjects = ["All", "General", "Mathematics", "Physics", "Informatics", "Biology", "Chemistry", "Astronomy"];
 
 export function GuidesBrowser({ guides }: { guides: Guide[] }) {
   const [subject, setSubject] = useState("All");
@@ -31,7 +31,7 @@ export function GuidesBrowser({ guides }: { guides: Guide[] }) {
   return (
     <div>
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-        <div className="flex gap-2 overflow-x-auto pb-1">
+        <div className="no-scrollbar flex max-w-full gap-2 overflow-x-auto pb-1">
           {subjects.map((item) => (
             <button
               key={item}

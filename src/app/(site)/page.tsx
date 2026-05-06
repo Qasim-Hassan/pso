@@ -2,17 +2,19 @@ import { AlumniCard, BlogCard, ResourceCard, TrackCard, Pathway } from "@/compon
 import { ButtonLink, Container, PageHero, SectionTitle, StatStrip } from "@/components/sections/common";
 import { alumniStories, blogPosts, featuredResources, pathwaySteps, tracks } from "@/lib/data";
 import { getQuestionStats, getResourceStats, pastPapers } from "@/lib/content-data";
+import { getAllGuides } from "@/lib/guides";
 
 export default function HomePage() {
   const questionStats = getQuestionStats();
   const resourceStats = getResourceStats();
+  const guideCount = getAllGuides().length;
   const liveStats = [
     { label: "Indexed Resources", value: `${resourceStats.total}+`, icon: "book-open" },
     { label: "Extracted Questions", value: `${questionStats.total}+`, icon: "clipboard-check" },
     { label: "Past Papers", value: `${pastPapers.length}`, icon: "file-text" },
     { label: "Contributors", value: "Open", icon: "users" },
-    { label: "Olympiad Tracks", value: "6", icon: "sparkles" },
-    { label: "Guide Articles", value: "15+", icon: "trophy" },
+    { label: "Olympiad Tracks", value: tracks.length.toString(), icon: "sparkles" },
+    { label: "Guide Articles", value: guideCount.toString(), icon: "trophy" },
   ];
   return (
     <>

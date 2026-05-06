@@ -7,7 +7,7 @@ import { Badge } from "@/components/sections/common";
 import type { PastPaper } from "@/lib/content-data";
 import { cn } from "@/lib/utils";
 
-const subjects = ["All", "Physics", "Chemistry", "Mathematics", "Biology"];
+const subjects = ["All", "Mathematics", "Physics", "Biology", "Chemistry"];
 
 export function PastPapersBrowser({ papers }: { papers: PastPaper[] }) {
   const [subject, setSubject] = useState("All");

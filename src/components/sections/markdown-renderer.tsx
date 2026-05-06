@@ -22,7 +22,7 @@ function renderInline(text: string) {
       return (
         <a
           key={`${part}-${index}`}
-          className="font-bold text-emerald underline-offset-4 hover:underline"
+          className="break-words font-bold text-emerald underline-offset-4 hover:underline"
           href={link[2]}
           target={link[2].startsWith("http") ? "_blank" : undefined}
           rel={link[2].startsWith("http") ? "noreferrer" : undefined}
@@ -145,5 +145,5 @@ export function MarkdownRenderer({ content }: { content: string }) {
 
   flushList();
 
-  return <div>{blocks}</div>;
+  return <div className="min-w-0 overflow-hidden break-words">{blocks}</div>;
 }

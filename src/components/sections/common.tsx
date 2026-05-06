@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Icon } from "@/components/icon";
-import { ScienceMural } from "@/components/sections/science-mural";
 import { cn } from "@/lib/utils";
 
 export function Container({ children, className }: { children: React.ReactNode; className?: string }) {
@@ -85,36 +84,46 @@ export function PageHero({
   subtitle: string;
   kicker?: string;
   stats?: { label: string; value: string; icon: string }[];
-  variant?: "home" | "guides" | "question-bank" | "alumni" | "compact";
+  variant?: "home" | "guides" | "question-bank" | "alumni" | "blog" | "olympiads" | "compact";
   actions?: React.ReactNode;
 }) {
+  const isHome = variant === "home";
+  const heroBackgrounds = {
+    guides: "/generated/inner-hero-guides-resources.png",
+    "question-bank": "/generated/inner-hero-practice-papers.png",
+    alumni: "/generated/inner-hero-alumni-blog.png",
+    blog: "/generated/inner-hero-alumni-blog.png",
+    olympiads: "/generated/inner-hero-olympiads-general.png",
+    compact: "/generated/inner-hero-olympiads-general.png",
+  } as const;
+  const backgroundImage = variant === "home" ? "/generated/science-hero-no-people.png" : heroBackgrounds[variant];
+
   return (
     <section className="relative overflow-hidden bg-navy text-white">
-      {variant === "home" ? (
-        <div
-          className="absolute inset-y-0 right-0 hidden w-full bg-cover bg-center opacity-80 md:block lg:w-[62%]"
-          style={{ backgroundImage: "url('/generated/science-hero-no-people.png')" }}
-        />
-      ) : (
-        <ScienceMural variant={variant} className="absolute inset-y-0 right-0 hidden w-full rounded-none opacity-70 md:block lg:w-[58%]" />
-      )}
-      <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/92 to-navy/30" />
-      <Container className="relative z-10 py-12 sm:py-16 lg:py-20">
+      <div
+        className={cn(
+          "absolute inset-y-0 right-0 hidden w-full bg-cover bg-center md:block",
+          isHome ? "opacity-80 lg:w-[62%]" : "opacity-55 lg:w-[58%]",
+        )}
+        style={{ backgroundImage: `url('${backgroundImage}')` }}
+      />
+      <div className={cn("absolute inset-0", isHome ? "bg-gradient-to-r from-navy via-navy/92 to-navy/30" : "bg-gradient-to-r from-navy via-navy/95 to-navy/70")} />
+      <Container className={cn("relative z-10", isHome ? "py-12 sm:py-16 lg:py-20" : "py-8 sm:py-10 lg:py-12")}>
         <div className="max-w-3xl">
           {kicker && <p className="mb-3 text-sm font-black uppercase text-gold">{kicker}</p>}
-          <h1 className="font-display text-5xl font-bold leading-[0.95] text-white sm:text-6xl lg:text-7xl">{title}</h1>
-          <p className="mt-5 max-w-2xl text-lg font-medium leading-8 text-white/80">{subtitle}</p>
-          {actions && <div className="mt-7 flex flex-wrap gap-4">{actions}</div>}
+          <h1 className={cn("font-display font-bold leading-[0.95] text-white", isHome ? "text-5xl sm:text-6xl lg:text-7xl" : "text-4xl sm:text-5xl")}>{title}</h1>
+          <p className={cn("max-w-2xl font-medium text-white/80", isHome ? "mt-5 text-lg leading-8" : "mt-4 text-base leading-7")}>{subtitle}</p>
+          {actions && <div className={cn("flex flex-wrap gap-4", isHome ? "mt-7" : "mt-5")}>{actions}</div>}
         </div>
         {stats && (
-          <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className={cn("grid gap-3 sm:grid-cols-2 lg:grid-cols-4", isHome ? "mt-10" : "mt-6")}>
             {stats.map((stat) => (
-              <div key={stat.label} className="flex items-center gap-3 border-r border-white/10 pr-4 last:border-r-0">
-                <span className="flex h-10 w-10 items-center justify-center rounded-md border border-gold/25 bg-white/10 text-gold">
-                  <Icon name={stat.icon} className="h-5 w-5" />
+              <div key={stat.label} className="flex items-center gap-3 pr-4 sm:border-r sm:border-white/10 sm:last:border-r-0">
+                <span className={cn("flex items-center justify-center rounded-md border border-gold/25 bg-white/10 text-gold", isHome ? "h-10 w-10" : "h-9 w-9")}>
+                  <Icon name={stat.icon} className={cn(isHome ? "h-5 w-5" : "h-4 w-4")} />
                 </span>
                 <div>
-                  <div className="text-2xl font-black text-white">{stat.value}</div>
+                  <div className={cn("font-black text-white", isHome ? "text-2xl" : "text-xl")}>{stat.value}</div>
                   <div className="text-xs font-semibold text-white/70">{stat.label}</div>
                 </div>
               </div>

@@ -87,6 +87,36 @@ export function ResourceCard({
   );
 }
 
+const guideVisuals: Record<string, { icon: string; label: string; accent: string }> = {
+  General: { icon: "book-open", label: "Roadmap", accent: "from-emerald/20 to-gold/20" },
+  Physics: { icon: "atom", label: "Mechanics", accent: "from-sky-200 to-mint" },
+  Astronomy: { icon: "orbit", label: "Observation", accent: "from-navy/15 to-gold/20" },
+  Chemistry: { icon: "flask", label: "Reactions", accent: "from-teal/20 to-mint" },
+  Biology: { icon: "dna", label: "Systems", accent: "from-emerald/15 to-lime-100" },
+  Mathematics: { icon: "pi", label: "Proofs", accent: "from-gold/25 to-mint" },
+  Informatics: { icon: "code", label: "Algorithms", accent: "from-cyan-100 to-mint" },
+};
+
+function GuideVisual({ guide }: { guide: { title: string; category: string } }) {
+  const visual = guideVisuals[guide.category] ?? guideVisuals.General;
+
+  return (
+    <div className={cn("soft-grid relative min-h-44 overflow-hidden rounded-t-md bg-gradient-to-br p-5", visual.accent)}>
+      <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full border border-emerald/15" />
+      <div className="absolute bottom-5 right-6 flex h-20 w-20 items-center justify-center rounded-full bg-white/85 text-emerald shadow-lg">
+        <Icon name={visual.icon} className="h-10 w-10" />
+      </div>
+      <div className="relative z-10 flex h-full min-h-32 flex-col justify-between">
+        <Badge>{guide.category}</Badge>
+        <div>
+          <p className="text-xs font-black uppercase text-emerald/75">{visual.label}</p>
+          <p className="mt-2 max-w-[13rem] text-xl font-black leading-tight text-charcoal">{guide.title}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function GuidePreviewCard({
   guide,
 }: {
@@ -94,10 +124,9 @@ export function GuidePreviewCard({
 }) {
   return (
     <Link href={`/guides/${guide.slug}`} className="card-surface group overflow-hidden rounded-md transition hover:-translate-y-1">
-      <EmptyVisual title={guide.title} icon={guide.category === "Chemistry" ? "flask" : guide.category === "Informatics" ? "code" : "book-open"} />
+      <GuideVisual guide={guide} />
       <div className="p-4">
-        <Badge>{guide.category}</Badge>
-        <h3 className="mt-3 text-lg font-black text-charcoal">{guide.title}</h3>
+        <h3 className="text-lg font-black text-charcoal">{guide.title}</h3>
         <p className="mt-2 min-h-14 text-sm leading-6 text-charcoal/70">{guide.description}</p>
         <div className="mt-4 flex items-center justify-between text-xs font-bold text-charcoal/60">
           <span>{guide.readTime}</span>
@@ -115,11 +144,11 @@ export function BlogCard({
   post: { slug: string; title: string; category: string; excerpt: string; date: string; author: string; read: string };
 }) {
   return (
-    <Link href={`/blog/${post.slug}`} className="card-surface group grid overflow-hidden rounded-md transition hover:-translate-y-1 sm:grid-cols-[160px_1fr]">
+    <Link href={`/blog/${post.slug}`} className="card-surface group grid min-w-0 overflow-hidden rounded-md transition hover:-translate-y-1 sm:grid-cols-[150px_minmax(0,1fr)]">
       <EmptyVisual title={post.title} icon={post.category === "Astronomy" ? "orbit" : post.category === "Chemistry" ? "flask" : "atom"} />
-      <div className="p-4">
+      <div className="min-w-0 p-4">
         <Badge>{post.category}</Badge>
-        <h3 className="mt-3 text-base font-black text-charcoal">{post.title}</h3>
+        <h3 className="mt-3 break-words text-base font-black text-charcoal">{post.title}</h3>
         <p className="mt-2 text-sm leading-6 text-charcoal/70">{post.excerpt}</p>
         <div className="mt-4 flex flex-wrap gap-3 text-xs font-bold text-charcoal/60">
           <span>{post.date}</span>

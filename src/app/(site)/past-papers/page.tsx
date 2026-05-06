@@ -14,7 +14,8 @@ export default function PastPapersPage() {
     <>
       <PageHero
         title="Past Papers"
-        subtitle="Practice extracted NSTC papers with source-page images, OCR for scanned papers, question navigation, scratchpad, hints, and solution panels."
+        subtitle="Practice extracted NSTC papers with timed attempts, question navigation, review mode, scratchpad, and an embedded scientific calculator."
+        variant="question-bank"
         stats={[
           { label: "Indexed Papers", value: pastPapers.length.toString(), icon: "file-text" },
           { label: "Extracted Questions", value: totalQuestions.toLocaleString(), icon: "clipboard-check" },

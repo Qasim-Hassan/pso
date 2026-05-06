@@ -4,6 +4,7 @@ export const guideSourceResources: ResourceItem[] = [
   {
     id: "guide-source-ipho-through-nstc",
     title: "Guide to IPhO through NSTC",
+    description: "Original IPhO guide source retained for attribution and cross-checking.",
     subject: "Physics",
     kind: "Guide",
     folder: "Guide Sources",
@@ -16,6 +17,7 @@ export const guideSourceResources: ResourceItem[] = [
   {
     id: "guide-source-nmtc",
     title: "NMTC Guide",
+    description: "Original mathematics guide source retained for attribution and cross-checking.",
     subject: "Mathematics",
     kind: "Guide",
     folder: "Guide Sources",
@@ -28,6 +30,7 @@ export const guideSourceResources: ResourceItem[] = [
   {
     id: "guide-source-nctc-icho",
     title: "NCTC and IChO Selection Guide",
+    description: "Original chemistry guide source retained for attribution and cross-checking.",
     subject: "Chemistry",
     kind: "Guide",
     folder: "Guide Sources",
@@ -40,6 +43,7 @@ export const guideSourceResources: ResourceItem[] = [
   {
     id: "guide-source-poi",
     title: "Pakistan Olympiad in Informatics Guide",
+    description: "Original informatics guide source retained for attribution and cross-checking.",
     subject: "Informatics",
     kind: "Guide",
     folder: "Guide Sources",
@@ -52,6 +56,7 @@ export const guideSourceResources: ResourceItem[] = [
   {
     id: "guide-source-nbtc",
     title: "NBTC Preparation Guide",
+    description: "Original biology guide source retained for attribution and cross-checking.",
     subject: "Biology",
     kind: "Guide",
     folder: "Guide Sources",
@@ -64,6 +69,7 @@ export const guideSourceResources: ResourceItem[] = [
   {
     id: "guide-source-ioaa",
     title: "IOAA Pakistan Guide",
+    description: "Original astronomy guide source retained for attribution and cross-checking.",
     subject: "Astronomy",
     kind: "Guide",
     folder: "Guide Sources",

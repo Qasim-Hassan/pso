@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
-import { PastPaperPractice } from "@/components/interactive/past-paper-practice";
-import { Container, PageHero } from "@/components/sections/common";
+import { PastPaperWorkspace } from "@/components/interactive/past-paper-workspace";
+import { Container } from "@/components/sections/common";
 import { getPaperById, getQuestionsForPaper, pastPapers } from "@/lib/content-data";
 
 export function generateStaticParams() {
@@ -22,22 +22,10 @@ export default async function PastPaperDetailPage({ params }: { params: Promise<
   const paperQuestions = getQuestionsForPaper(paper.id);
 
   return (
-    <>
-      <PageHero
-        title={paper.title}
-        subtitle={`${paper.exam} ${paper.year} ${paper.subject} practice with Part I common MCQs, Part II subject MCQs, and descriptive questions.`}
-        stats={[
-          { label: "MCQs", value: paper.mcqCount.toString(), icon: "clipboard-check" },
-          { label: "Common", value: paper.partICount.toString(), icon: "list-checks" },
-          { label: "Subject", value: paper.partIICount.toString(), icon: "atom" },
-          { label: "Descriptive", value: paper.descriptiveCount.toString(), icon: "book-open" },
-        ]}
-      />
-      <section className="py-8">
-        <Container>
-          <PastPaperPractice paper={paper} questions={paperQuestions} papers={pastPapers} />
-        </Container>
-      </section>
-    </>
+    <section className="py-4 md:py-6">
+      <Container>
+        <PastPaperWorkspace paper={paper} questions={paperQuestions} papers={pastPapers} />
+      </Container>
+    </section>
   );
 }

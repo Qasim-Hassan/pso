@@ -26,7 +26,9 @@ export default async function TrackDetailPage({ params }: { params: Promise<{ sl
   const subjectQuestions = questions.filter((question) => question.subject === track.name);
   const subjectPapers = pastPapers.filter((paper) => paper.subject === track.name);
   const subjectResources = resources.filter((resource) => resource.subject === track.name || (track.name === "Astronomy" && resource.subject === "IOAA"));
-  const subjectGuides = getAllGuides().filter((guide) => guide.category === track.name || guide.tags.includes(track.name)).slice(0, 4);
+  const subjectGuides = getAllGuides()
+    .filter((guide) => guide.category === track.name || (guide.tags ?? []).includes(track.name))
+    .slice(0, 4);
 
   return (
     <>
@@ -34,11 +36,12 @@ export default async function TrackDetailPage({ params }: { params: Promise<{ sl
         title={`${track.name} olympiad`}
         subtitle={track.summary}
         kicker={`${track.exam} preparation`}
+        variant="olympiads"
         stats={[
-          { label: "Learners", value: track.stats[0].split(" ")[0], icon: "graduation-cap" },
-          { label: "Resources", value: track.stats[1].split(" ")[0], icon: "book-open" },
-          { label: "Questions", value: subjectQuestions.length ? subjectQuestions.length.toString() : track.stats[2].split(" ")[0], icon: "clipboard-check" },
-          { label: "Papers", value: subjectPapers.length.toString(), icon: "file-text" },
+          { label: "Guides", value: String(subjectGuides.length), icon: "graduation-cap" },
+          { label: "Resources", value: String(subjectResources.length), icon: "book-open" },
+          { label: "Questions", value: String(subjectQuestions.length), icon: "clipboard-check" },
+          { label: "Papers", value: String(subjectPapers.length), icon: "file-text" },
         ]}
       />
 

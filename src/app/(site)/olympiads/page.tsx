@@ -12,13 +12,7 @@ export default function OlympiadsPage() {
       <PageHero
         title="Olympiad tracks"
         subtitle="Pick a discipline, understand the selection pathway, and build a plan around concepts, practice, and mentorship."
-        kicker="Science disciplines"
-        stats={[
-          { label: "Subjects", value: "6", icon: "atom" },
-          { label: "Topic Maps", value: "250+", icon: "route" },
-          { label: "Practice Questions", value: "85K+", icon: "clipboard-check" },
-          { label: "Mentors", value: "250+", icon: "users" },
-        ]}
+        variant="olympiads"
       />
       <section className="py-10">
         <Container>

@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { BlogCard } from "@/components/sections/cards";
+import { MarkdownRenderer } from "@/components/sections/markdown-renderer";
 import { Badge, ButtonLink, Container, PageHero } from "@/components/sections/common";
 import { blogPosts } from "@/lib/data";
 
@@ -24,7 +25,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <>
-      <PageHero title={post.title} subtitle={post.excerpt} kicker={post.category} />
+      <PageHero title={post.title} subtitle={post.excerpt} kicker={post.category} variant="blog" />
       <section className="py-10">
         <Container className="grid gap-8 lg:grid-cols-[1fr_360px]">
           <article className="card-surface rounded-md p-6 sm:p-8">
@@ -33,18 +34,32 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <Badge>{post.date}</Badge>
               <Badge>{post.author}</Badge>
             </div>
-            <div className="mt-8 space-y-5 text-base leading-8 text-charcoal/80">
-              <p>{post.excerpt}</p>
-              <p>
-                The strongest preparation plans are specific: choose a resource, define a weekly practice target, review mistakes carefully, and keep a small correction log for ideas that should not be missed twice.
-              </p>
-              <h2 className="font-display text-3xl font-bold text-charcoal">How to apply this</h2>
-              <p>
-                Turn the advice into a concrete session. Pick one topic from {post.category}, solve a short set under time pressure, then write down the concept, trick, or misconception behind each missed question.
-              </p>
-              <p>
-                If the session exposes a gap, go back to the relevant guide or resource page before attempting another timed set. That loop keeps practice purposeful instead of merely repetitive.
-              </p>
+            {post.videoId && (
+              <>
+                <div className="mt-8 overflow-hidden rounded-md border border-navy/10 bg-charcoal shadow-sm">
+                  <div className="aspect-video">
+                    <iframe
+                      className="h-full w-full"
+                      src={`https://www.youtube-nocookie.com/embed/${post.videoId}`}
+                      title={post.videoTitle}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
+                  </div>
+                </div>
+                <a
+                  className="mt-4 inline-flex font-bold text-emerald underline-offset-4 hover:underline"
+                  href={post.videoUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Watch on YouTube
+                </a>
+              </>
+            )}
+            <div className="mt-8">
+              <MarkdownRenderer content={post.content} />
             </div>
           </article>
           <aside className="space-y-5">

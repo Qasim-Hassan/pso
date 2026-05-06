@@ -6,37 +6,26 @@ export const metadata = {
   title: "Blog",
 };
 
-const categories = ["All", "Astronomy", "Physics", "Chemistry", "Biology", "Informatics", "Study Plan"];
-
 export default function BlogPage() {
+  const authors = new Set(blogPosts.map((post) => post.author));
+  const videos = blogPosts.filter((post) => post.videoId).length;
+
   return (
     <>
       <PageHero
         title="Blog"
-        subtitle="Preparation essays, mentor notes, study plans, and reflections from Pakistan's olympiad community."
+        subtitle="Video-backed essays from Pakistani Olympiad alumni sharing the routes, habits, and mindset that took them to MIT."
+        variant="blog"
         stats={[
-          { label: "Posts", value: "892", icon: "file-text" },
-          { label: "Authors", value: "80+", icon: "users" },
-          { label: "Topics", value: "250+", icon: "book-open" },
-          { label: "Monthly Readers", value: "32K", icon: "eye" },
+          { label: "Posts", value: blogPosts.length.toString(), icon: "file-text" },
+          { label: "Authors", value: authors.size.toString(), icon: "users" },
+          { label: "Videos", value: videos.toString(), icon: "eye" },
+          { label: "Focus", value: "MIT + NSTC", icon: "book-open" },
         ]}
       />
       <section className="py-10">
         <Container>
-          <div className="mb-6 flex gap-2 overflow-x-auto">
-            {categories.map((category) => (
-              <button
-                key={category}
-                className={`shrink-0 rounded-full border px-4 py-2 text-sm font-bold ${
-                  category === "All" ? "border-emerald bg-emerald text-white" : "border-navy/10 bg-white text-charcoal"
-                }`}
-                type="button"
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-          <SectionTitle title="Latest posts" copy="Mock content now, ready for a CMS or Supabase-backed editorial workflow later." />
+          <SectionTitle title="Latest posts" copy="Video-backed essays from Pakistani Olympiad alumni sharing the routes, habits, and mindset that took them to MIT." />
           <div className="grid gap-5 lg:grid-cols-2">
             {blogPosts.map((post) => (
               <BlogCard key={post.slug} post={post} />
