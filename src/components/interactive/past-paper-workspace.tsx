@@ -8,6 +8,7 @@ import type { PastPaper, Question } from "@/lib/content-data";
 import { cn } from "@/lib/utils";
 
 type Mode = "attempt" | "review";
+const PAST_PAPER_TIMER_SECONDS = 3 * 60 * 60;
 
 function formatTime(seconds: number) {
   const hours = Math.floor(seconds / 3600);
@@ -45,7 +46,7 @@ function isAnswered(question: Question, answers: Record<string, number>, written
 }
 
 export function PastPaperWorkspace({ paper, questions, papers }: { paper: PastPaper; questions: Question[]; papers: PastPaper[] }) {
-  const initialSeconds = useMemo(() => Math.min(10800, Math.max(3600, questions.length * 90)), [questions.length]);
+  const initialSeconds = PAST_PAPER_TIMER_SECONDS;
   const [seconds, setSeconds] = useState(initialSeconds);
   const [timerRunning, setTimerRunning] = useState(false);
   const [mode, setMode] = useState<Mode>("attempt");

@@ -127,7 +127,7 @@
       "Dialysis",
       "Diabetes",
       "Lithotripsy",
-      "Both a & b CHEMISTRY"
+      "Both a & b"
     ],
     "answer": null,
     "solution": "",
@@ -262,7 +262,7 @@
       "Vitamin A",
       "Vitamin B",
       "Vitamin C",
-      "Vitamin D MATHEMATICS"
+      "Vitamin D"
     ],
     "answer": null,
     "solution": "",
@@ -365,7 +365,7 @@
     "exam": "NSTC",
     "year": 2022,
     "source": "NSTC 2022 Biology Paper",
-    "prompt": "@@Q55@@ 54 is equal to",
+    "prompt": "5^5 / 5^4 is equal to",
     "options": [
       "1",
       "5",
@@ -397,7 +397,7 @@
       "𝑎𝑚𝑛",
       "𝑎𝑚+𝑛",
       "𝑎𝑚𝑛",
-      "None of these PHYSICS"
+      "None of these"
     ],
     "answer": null,
     "solution": "",
@@ -532,7 +532,7 @@
       "momentum and work",
       "energy and power",
       "mechanical energy and heat",
-      "work and power PART II – BIOLOGY"
+      "work and power"
     ],
     "answer": null,
     "solution": "",
@@ -692,8 +692,8 @@
     "prompt": "It is possible to date the rocks by comparing the amount of specific radioactive isotopes they contain. Which of the statement is correct in this respect?",
     "options": [
       "Older sediment layers have an equal amount of these radioactive isotopes as that of the young ones",
-      "Older sediment layers have less amount of these radioactive isotopes as that of the young ones.",
-      "Older sediment layers have a greater amount of these radioactive isotopes as that of the young ones.",
+      "Older sediment layers have less amount of these radioactive isotopes as that of the young ones",
+      "Older sediment layers have a greater amount of these radioactive isotopes as that of the young ones",
       "Older sediment layers did not have these radioactive isotopes"
     ],
     "answer": null,
@@ -1882,7 +1882,7 @@
       "The centromere",
       "Nucleosome",
       "Telomere",
-      "Histone =================================================================== Part III: Biology-Descriptive Questions [ @@Q30@@ Marks] Instructions:  Attempt any FIVE questions. The questions carry 6 marks each.  Only five questions will be marked so do not attempt extra questions.  Answer the questions to-the-point. Do not write irrelevant details.  Plz read solved examples for better understanding. Solved example: Question 1: You want to get high yield of potato. One fertilizers “Brand-A” in market claims to produce high potato yield than a generic “Brand-B” fertilizer. How will you test the claim of “Brand-A”? Answer: Treat potato seeds the same way in two plots by sowing in similar soil, water and climate condition. One group will be applied with “Brand -A” fertilizer while other with “Brand -B”. At the end of the growing season, harvest the potato and compare the yield s of both groups by counting the total number of potatoes and weighing the total yield in each group. Question 1: In the context of genetics, what is the reason of normal (healthy) and diseased siblings in same family if the parents are normal? Question 2: Why is shivering likely during the onset of a fever? Question 3: What advantages did plants gain from the evolution of secondary growth? Question 4: Why doesn’t gastric juice destroy the stomach cells that make it? Question 5: A zoo animal eating ample food shows signs of malnutrition, how will you (as a researcher) determine which nutrient is lacking in its diet? Question 6: A person traveling from Pakistan to America suffers from sleep disorder. What is the reason? -------End of paper-------"
+      "Histone"
     ],
     "answer": null,
     "solution": "",
@@ -1893,7 +1893,7 @@
     "id": "biology-2022-final-biology-2022-068e355-part-iii-1",
     "paperId": "biology-2022-final-biology-2022-068e355",
     "paperSubject": "Biology",
-    "number": 71,
+    "number": 1,
     "displayNumber": "Descriptive 1",
     "subject": "Biology",
     "topic": "Descriptive",
@@ -1904,7 +1904,117 @@
     "exam": "NSTC",
     "year": 2022,
     "source": "NSTC 2022 Biology Paper",
-    "prompt": "Biology-Descriptive Questions [ @@Q30@@ Marks] Instructions:  Attempt any FIVE questions. The questions carry 6 marks each.  Only five questions will be marked so do not attempt extra questions.  Answer the questions to-the-point. Do not write irrelevant details.  Plz read solved examples for better understanding. Solved example: Question 1: You want to get high yield of potato. One fertilizers “Brand-A” in market claims to produce high potato yield than a generic “Brand-B” fertilizer. How will you test the claim of “Brand-A”? Answer: Treat potato seeds the same way in two plots by sowing in similar soil, water and climate condition. One group will be applied with “Brand -A” fertilizer while other with “Brand -B”. At the end of the growing season, harvest the potato and compare the yield s of both groups by counting the total number of potatoes and weighing the total yield in each group. Question 1: In the context of genetics, what is the reason of normal (healthy) and diseased siblings in same family if the parents are normal? Question 2: Why is shivering likely during the onset of a fever? Question 3: What advantages did plants gain from the evolution of secondary growth? Question 4: Why doesn’t gastric juice destroy the stomach cells that make it? Question 5: A zoo animal eating ample food shows signs of malnutrition, how will you (as a researcher) determine which nutrient is lacking in its diet? Question 6: A person traveling from Pakistan to America suffers from sleep disorder. What is the reason? ----",
+    "prompt": "Question 1: In the context of genetics, what is the reason of normal (healthy) and diseased siblings in same family if the parents are normal?",
+    "options": [],
+    "answer": null,
+    "solution": "",
+    "page": null,
+    "figure": ""
+  },
+  {
+    "id": "biology-2022-final-biology-2022-068e355-part-iii-2",
+    "paperId": "biology-2022-final-biology-2022-068e355",
+    "paperSubject": "Biology",
+    "number": 2,
+    "displayNumber": "Descriptive 2",
+    "subject": "Biology",
+    "topic": "Descriptive",
+    "difficulty": "Descriptive",
+    "type": "Long",
+    "section": "Part III",
+    "sectionTitle": "Descriptive Questions",
+    "exam": "NSTC",
+    "year": 2022,
+    "source": "NSTC 2022 Biology Paper",
+    "prompt": "Question 2: Why is shivering likely during the onset of a fever?",
+    "options": [],
+    "answer": null,
+    "solution": "",
+    "page": null,
+    "figure": ""
+  },
+  {
+    "id": "biology-2022-final-biology-2022-068e355-part-iii-3",
+    "paperId": "biology-2022-final-biology-2022-068e355",
+    "paperSubject": "Biology",
+    "number": 3,
+    "displayNumber": "Descriptive 3",
+    "subject": "Biology",
+    "topic": "Descriptive",
+    "difficulty": "Descriptive",
+    "type": "Long",
+    "section": "Part III",
+    "sectionTitle": "Descriptive Questions",
+    "exam": "NSTC",
+    "year": 2022,
+    "source": "NSTC 2022 Biology Paper",
+    "prompt": "Question 3: What advantages did plants gain from the evolution of secondary growth?",
+    "options": [],
+    "answer": null,
+    "solution": "",
+    "page": null,
+    "figure": ""
+  },
+  {
+    "id": "biology-2022-final-biology-2022-068e355-part-iii-4",
+    "paperId": "biology-2022-final-biology-2022-068e355",
+    "paperSubject": "Biology",
+    "number": 4,
+    "displayNumber": "Descriptive 4",
+    "subject": "Biology",
+    "topic": "Descriptive",
+    "difficulty": "Descriptive",
+    "type": "Long",
+    "section": "Part III",
+    "sectionTitle": "Descriptive Questions",
+    "exam": "NSTC",
+    "year": 2022,
+    "source": "NSTC 2022 Biology Paper",
+    "prompt": "Question 4: Why doesn’t gastric juice destroy the stomach cells that make it?",
+    "options": [],
+    "answer": null,
+    "solution": "",
+    "page": null,
+    "figure": ""
+  },
+  {
+    "id": "biology-2022-final-biology-2022-068e355-part-iii-5",
+    "paperId": "biology-2022-final-biology-2022-068e355",
+    "paperSubject": "Biology",
+    "number": 5,
+    "displayNumber": "Descriptive 5",
+    "subject": "Biology",
+    "topic": "Descriptive",
+    "difficulty": "Descriptive",
+    "type": "Long",
+    "section": "Part III",
+    "sectionTitle": "Descriptive Questions",
+    "exam": "NSTC",
+    "year": 2022,
+    "source": "NSTC 2022 Biology Paper",
+    "prompt": "Question 5: A zoo animal eating ample food shows signs of malnutrition, how will you (as a researcher) determine which nutrient is lacking in its diet?",
+    "options": [],
+    "answer": null,
+    "solution": "",
+    "page": null,
+    "figure": ""
+  },
+  {
+    "id": "biology-2022-final-biology-2022-068e355-part-iii-6",
+    "paperId": "biology-2022-final-biology-2022-068e355",
+    "paperSubject": "Biology",
+    "number": 6,
+    "displayNumber": "Descriptive 6",
+    "subject": "Biology",
+    "topic": "Descriptive",
+    "difficulty": "Descriptive",
+    "type": "Long",
+    "section": "Part III",
+    "sectionTitle": "Descriptive Questions",
+    "exam": "NSTC",
+    "year": 2022,
+    "source": "NSTC 2022 Biology Paper",
+    "prompt": "Question 6: A person traveling from Pakistan to America suffers from sleep disorder. What is the reason? ----",
     "options": [],
     "answer": null,
     "solution": "",
@@ -2039,7 +2149,7 @@
       "prophase 1",
       "telophase 1",
       "anaphase 1",
-      "metaphase 1 CHEMISTRY"
+      "metaphase 1"
     ],
     "answer": null,
     "solution": "",
@@ -2174,7 +2284,7 @@
       "Florescent bulb",
       "Neon signs",
       "Laser",
-      "All of these MATHEMATICS"
+      "All of these"
     ],
     "answer": null,
     "solution": "",
@@ -2255,7 +2365,7 @@
       "0",
       "1",
       "2",
-      ""
+      "infinity"
     ],
     "answer": null,
     "solution": "",
@@ -2304,12 +2414,12 @@
     "exam": "NSTC",
     "year": 2023,
     "source": "NSTC 2023 Biology Paper",
-    "prompt": "If 𝑥 + @@Q01@@ 𝑥 = 2, then the value of 𝑥2 + @@Q01@@ 𝑥2 is",
+    "prompt": "If 𝑥 + 1 𝑥 = 2, then the value of 𝑥2 + 1 𝑥2 is",
     "options": [
       "1/4",
       "1",
       "3",
-      "2 PHYSICS"
+      "2"
     ],
     "answer": null,
     "solution": "",
@@ -2360,10 +2470,10 @@
     "source": "NSTC 2023 Biology Paper",
     "prompt": "A 1,200-kilogram car traveling at 10. m/s hits a tree and is brought to rest in 0.10 second. What is the magnitude of the average force acting on the car to bring it to rest?",
     "options": [
-      "1.2 × 102 N",
-      "1.2 × 103 N",
-      "1.2 × 104 N",
-      "1. @@Q02@@ × 105 N"
+      "1.2 x 10^2 N",
+      "1.2 x 10^3 N",
+      "1.2 x 10^4 N",
+      "1.2 x 10^5 N"
     ],
     "answer": null,
     "solution": "",
@@ -2414,10 +2524,10 @@
     "source": "NSTC 2023 Biology Paper",
     "prompt": "An electric iron operating at 120 volts draws 10. Amperes of current. How much heat energy is delivered by the iron in 30 Seconds?",
     "options": [
-      "3.0 × 102 J",
-      "3.6 × 103 J",
-      "1.2 × 103 J",
-      "3. @@Q06@@ × 104 J"
+      "3.0 x 10^2 J",
+      "3.6 x 10^3 J",
+      "1.2 x 10^3 J",
+      "3.6 x 10^4 J"
     ],
     "answer": null,
     "solution": "",
@@ -2444,7 +2554,7 @@
       "resonance",
       "diffraction",
       "the Doppler effect",
-      "refraction PART II – BIOLOGY"
+      "refraction"
     ],
     "answer": null,
     "solution": "",
@@ -2952,7 +3062,7 @@
     "exam": "NSTC",
     "year": 2023,
     "source": "NSTC 2023 Biology Paper",
-    "prompt": "The trees which shed leaves annually remove ------------------from their body.",
+    "prompt": "The trees which shed leaves annually remove",
     "options": [
       "Nutrients",
       "Oil and bark",
@@ -3438,7 +3548,7 @@
     "exam": "NSTC",
     "year": 2023,
     "source": "NSTC 2023 Biology Paper",
-    "prompt": "Diagphragm is a -------",
+    "prompt": "Diagphragm is a",
     "options": [
       "Thick bony structure present above the lungs",
       "Thick covering around the lungs",
@@ -3794,7 +3904,7 @@
       "Transformed DNA",
       "Transcript DNA",
       "Recombinant DNA",
-      "Mutated DNA =================================================================== Part III: Biology-Descriptive Questions [ @@Q30@@ Marks] Instructions:  Attempt any FIVE questions. The questions carry 6 marks each.  Only five questions will be marked so do not attempt extra questions.  Answer the questions to-the-point. Do not write irrelevant details.  Plz read solved examples for better understanding. Solved example: Question 0: You want to get high yield of potato. One fertilizers “Brand -A” in market claims to produce high potato yield than a generic “Brand-B” fertilizer. How will you test the claim of “Brand-A”? Answer: Treat potato seeds the same way in two plots by sowing in similar soil, water and climate condition. One group will be applied with “Brand -A” fertilizer while other with “Brand -B”. At the end of the growing season, harvest the potato and compare the yields of both groups by counting the total number of potatoes and weighing the total yield in each group. Question 1: In the context of genetics, what is the reason of normal (healthy) and diseased siblings in same family if the parents are normal? Question 2: Why is shivering likely during the onset of a fever? Question 3: A drug for Leukemia is not broken down in the stomach and is well absorbed by the intestine. The traces/molecules of the drug found in the patient’s blood do not match to the form that was swallowed by the patient. What is the possible explanation for this? Question 4: The cell goes through a cycle that consists of four stages: G1, S, G2, and M. After DNA is duplicated in eukaryotes, it must be bound to histones. This required the synthesis of hundreds of millions of new protein molecules. When in the cell cycle stage (G1, S, G2, or M) histones are produced? Question 5: If a child were born without a thymus gland, what cells and fun ctions of the immune system would be deficient? Explain. Question 6: How do biologists distinguish and categorize the millions of species on Earth? How humans and Chimps form a sister group? -------End of paper-------"
+      "Mutated DNA"
     ],
     "answer": null,
     "solution": "",
@@ -3805,7 +3915,7 @@
     "id": "biology-2023-final-biology-2023-a4481c6-part-iii-1",
     "paperId": "biology-2023-final-biology-2023-a4481c6",
     "paperSubject": "Biology",
-    "number": 71,
+    "number": 1,
     "displayNumber": "Descriptive 1",
     "subject": "Biology",
     "topic": "Descriptive",
@@ -3816,7 +3926,117 @@
     "exam": "NSTC",
     "year": 2023,
     "source": "NSTC 2023 Biology Paper",
-    "prompt": "Biology-Descriptive Questions [ @@Q30@@ Marks] Instructions:  Attempt any FIVE questions. The questions carry 6 marks each.  Only five questions will be marked so do not attempt extra questions.  Answer the questions to-the-point. Do not write irrelevant details.  Plz read solved examples for better understanding. Solved example: Question 0: You want to get high yield of potato. One fertilizers “Brand -A” in market claims to produce high potato yield than a generic “Brand-B” fertilizer. How will you test the claim of “Brand-A”? Answer: Treat potato seeds the same way in two plots by sowing in similar soil, water and climate condition. One group will be applied with “Brand -A” fertilizer while other with “Brand -B”. At the end of the growing season, harvest the potato and compare the yields of both groups by counting the total number of potatoes and weighing the total yield in each group. Question 1: In the context of genetics, what is the reason of normal (healthy) and diseased siblings in same family if the parents are normal? Question 2: Why is shivering likely during the onset of a fever? Question 3: A drug for Leukemia is not broken down in the stomach and is well absorbed by the intestine. The traces/molecules of the drug found in the patient’s blood do not match to the form that was swallowed by the patient. What is the possible explanation for this? Question 4: The cell goes through a cycle that consists of four stages: G1, S, G2, and M. After DNA is duplicated in eukaryotes, it must be bound to histones. This required the synthesis of hundreds of millions of new protein molecules. When in the cell cycle stage (G1, S, G2, or M) histones are produced? Question 5: If a child were born without a thymus gland, what cells and fun ctions of the immune system would be deficient? Explain. Question 6: How do biologists distinguish and categorize the millions of species on Earth? How humans and Chimps form a sister group? ----",
+    "prompt": "Question 1: In the context of genetics, what is the reason of normal (healthy) and diseased siblings in same family if the parents are normal?",
+    "options": [],
+    "answer": null,
+    "solution": "",
+    "page": null,
+    "figure": ""
+  },
+  {
+    "id": "biology-2023-final-biology-2023-a4481c6-part-iii-2",
+    "paperId": "biology-2023-final-biology-2023-a4481c6",
+    "paperSubject": "Biology",
+    "number": 2,
+    "displayNumber": "Descriptive 2",
+    "subject": "Biology",
+    "topic": "Descriptive",
+    "difficulty": "Descriptive",
+    "type": "Long",
+    "section": "Part III",
+    "sectionTitle": "Descriptive Questions",
+    "exam": "NSTC",
+    "year": 2023,
+    "source": "NSTC 2023 Biology Paper",
+    "prompt": "Question 2: Why is shivering likely during the onset of a fever?",
+    "options": [],
+    "answer": null,
+    "solution": "",
+    "page": null,
+    "figure": ""
+  },
+  {
+    "id": "biology-2023-final-biology-2023-a4481c6-part-iii-3",
+    "paperId": "biology-2023-final-biology-2023-a4481c6",
+    "paperSubject": "Biology",
+    "number": 3,
+    "displayNumber": "Descriptive 3",
+    "subject": "Biology",
+    "topic": "Descriptive",
+    "difficulty": "Descriptive",
+    "type": "Long",
+    "section": "Part III",
+    "sectionTitle": "Descriptive Questions",
+    "exam": "NSTC",
+    "year": 2023,
+    "source": "NSTC 2023 Biology Paper",
+    "prompt": "Question 3: A drug for Leukemia is not broken down in the stomach and is well absorbed by the intestine. The traces/molecules of the drug found in the patient’s blood do not match to the form that was swallowed by the patient. What is the possible explanation for this?",
+    "options": [],
+    "answer": null,
+    "solution": "",
+    "page": null,
+    "figure": ""
+  },
+  {
+    "id": "biology-2023-final-biology-2023-a4481c6-part-iii-4",
+    "paperId": "biology-2023-final-biology-2023-a4481c6",
+    "paperSubject": "Biology",
+    "number": 4,
+    "displayNumber": "Descriptive 4",
+    "subject": "Biology",
+    "topic": "Descriptive",
+    "difficulty": "Descriptive",
+    "type": "Long",
+    "section": "Part III",
+    "sectionTitle": "Descriptive Questions",
+    "exam": "NSTC",
+    "year": 2023,
+    "source": "NSTC 2023 Biology Paper",
+    "prompt": "Question 4: The cell goes through a cycle that consists of four stages: G1, S, G2, and M. After DNA is duplicated in eukaryotes, it must be bound to histones. This required the synthesis of hundreds of millions of new protein molecules. When in the cell cycle stage (G1, S, G2, or M) histones are produced?",
+    "options": [],
+    "answer": null,
+    "solution": "",
+    "page": null,
+    "figure": ""
+  },
+  {
+    "id": "biology-2023-final-biology-2023-a4481c6-part-iii-5",
+    "paperId": "biology-2023-final-biology-2023-a4481c6",
+    "paperSubject": "Biology",
+    "number": 5,
+    "displayNumber": "Descriptive 5",
+    "subject": "Biology",
+    "topic": "Descriptive",
+    "difficulty": "Descriptive",
+    "type": "Long",
+    "section": "Part III",
+    "sectionTitle": "Descriptive Questions",
+    "exam": "NSTC",
+    "year": 2023,
+    "source": "NSTC 2023 Biology Paper",
+    "prompt": "Question 5: If a child were born without a thymus gland, what cells and fun ctions of the immune system would be deficient? Explain.",
+    "options": [],
+    "answer": null,
+    "solution": "",
+    "page": null,
+    "figure": ""
+  },
+  {
+    "id": "biology-2023-final-biology-2023-a4481c6-part-iii-6",
+    "paperId": "biology-2023-final-biology-2023-a4481c6",
+    "paperSubject": "Biology",
+    "number": 6,
+    "displayNumber": "Descriptive 6",
+    "subject": "Biology",
+    "topic": "Descriptive",
+    "difficulty": "Descriptive",
+    "type": "Long",
+    "section": "Part III",
+    "sectionTitle": "Descriptive Questions",
+    "exam": "NSTC",
+    "year": 2023,
+    "source": "NSTC 2023 Biology Paper",
+    "prompt": "Question 6: How do biologists distinguish and categorize the millions of species on Earth? How humans and Chimps form a sister group? ----",
     "options": [],
     "answer": null,
     "solution": "",
@@ -3919,7 +4139,7 @@
     "exam": "NSTC",
     "year": 2024,
     "source": "NSTC 2024 Biology Paper",
-    "prompt": "Electric intensity is a ------------------------ quantity.",
+    "prompt": "Electric intensity is a",
     "options": [
       "Vector",
       "Scalar",
@@ -3948,10 +4168,10 @@
     "source": "NSTC 2024 Biology Paper",
     "prompt": "One coulomb is equal to the charge of------------------------electrons.",
     "options": [
-      "6.25x1019",
-      "6.24x1018",
-      "6.24x1017",
-      "6.25x1018 CHEMISTRY"
+      "6.25 x 10^19",
+      "6.24 x 10^18",
+      "6.24 x 10^17",
+      "6.25 x 10^18"
     ],
     "answer": null,
     "solution": "",
@@ -4086,7 +4306,7 @@
       "Fluorine",
       "Oxygen",
       "Nitrogen",
-      "Iodine MATHEMATICS"
+      "Iodine"
     ],
     "answer": null,
     "solution": "",
@@ -4221,7 +4441,7 @@
       "-4",
       "6",
       "2",
-      "3/ @@Q02@@ PHYSICS"
+      "3/ 2"
     ],
     "answer": null,
     "solution": "",
@@ -4302,7 +4522,7 @@
       "4.15 km/s",
       "2.78 km/s",
       "3.08 km/s",
-      "6. @@Q66@@ km/s"
+      "6. 66 km/s"
     ],
     "answer": null,
     "solution": "",
@@ -4356,7 +4576,7 @@
       "0.5 second",
       "1.0 seconds",
       "1.5 seconds",
-      "2.0 seconds PART II – BIOLOGY"
+      "2.0 seconds"
     ],
     "answer": null,
     "solution": "",
@@ -4837,7 +5057,7 @@
     "exam": "NSTC",
     "year": 2024,
     "source": "NSTC 2024 Biology Paper",
-    "prompt": "The trees which shed leaves annually remove ------------------from their body.",
+    "prompt": "The trees which shed leaves annually remove",
     "options": [
       "Nutrients",
       "Oil and bark",
@@ -5163,10 +5383,10 @@
     "source": "NSTC 2024 Biology Paper",
     "prompt": "Hypotonic solution",
     "options": [
-      "High solute conc.",
+      "High solute conc",
       "No water",
-      "Less solvent conc.",
-      "Less solute conc."
+      "Less solvent conc",
+      "Less solute conc"
     ],
     "answer": null,
     "solution": "",
@@ -5433,10 +5653,10 @@
     "source": "NSTC 2024 Biology Paper",
     "prompt": "The study of fossils is called",
     "options": [
-      "Environmental Biology",
-      "Historical biology",
+      "Environmental",
+      "Historical",
       "Paleontology",
-      "Social biology"
+      "Social"
     ],
     "answer": null,
     "solution": "",
@@ -5488,7 +5708,7 @@
     "prompt": "It is possible to date the rocks by comparing the amount of specific radioactive isotopes they contain. Which of the statement is correct in this respect?",
     "options": [
       "Older sediment layers have an equal amount of these radioactive isotopes as that of the young ones",
-      "Older sediment layers have less amount of these radioactive isotopes as that of the young ones.",
+      "Older sediment layers have less amount of these radioactive isotopes as that of the young ones",
       "Older sediment layers have a greater amount of these radioactive isotopes as that of the young ones",
       "Older sediment layers did not have these radioactive isotopes"
     ],
@@ -5706,7 +5926,7 @@
       "Do not have a cell wall",
       "Are heterotrophic",
       "Lack of membrane bounded organelles",
-      "Reproduce by binary fission =================================================================== Part III: Biology-Descriptive Questions [ @@Q30@@ Marks] Instructions:  Attempt any FIVE questions. The questions carry 6 marks each.  Only five questions will be marked so do not attempt extra questions.  Answer the questions to-the-point. Do not write irrelevant details.  In first three questions, the answer is to be given by choosing correct option.  Plz read solved examples for better understanding. Solved example: Question 0: You want to get high yield of potato. One fertilizers “Brand -A” in market claims to produce high potato yield than a generic “Brand-B” fertilizer. How will you test the claim of “Brand-A”? Answer: Treat potato seeds the same way in two plots by sowing in similar soil, water and climate condition. One group will be applied with “Brand -A” fertilizer while other with “Brand -B”. At the end of the growing season, harvest t he potato and compare the yields of both groups by counting the total number of potatoes and weighing the total yield in each group. =================================================================== ---------------------------------------------------------------------------------------------------------------------------------------- Question No 1: Plant movement occurs when plant organs change their spatial distribution after being exposed to stimuli, and may be caused either by differential growth or by differential turgor change among cells within the organs. Which of the following plant movements uses a mechanism distinct from the others? (A) The gravitropic movement of corn roots (B) The closure of soybean leaflets during night time (C) The tendrils of cucumber moving along the trellis (D) The phototropic movement of mung bean seedlings (E) The downward bending of the tomato leaves after flooding treatment Question No 2: Three stages in bacterial growth are: @@Q01@@ Lag phase, II. Log phase, III. Stationary phase In which phase or phases can penicillin inhibit the synthesis of the bacterial cell wall? A. Only I B. Only II C. Only III D. Only I and II E. Only I and III F. I, II and III Question 3: Which statement correctly describes the differentiation and development of cells and organs in flowering plants? A. Organo-morphogenesis involves cell movement as one of the important mechanisms. B. Post-embryogenesis is a growth process, as all of the plant organs are pre-formed during embryogenesis. C. Totipotency of plant tissues provides the original source of power to develop a complete plant by re - differentiation, without going through the de-differentiation process. D. The direction of cell division determines cell type and function. E. Lineage information obtained by genetic inheritance overrides environmental factors in determining the time for organ development. Question 4: Why is shivering likely during the onset of a fever? Answer: ---------------------------------------------------------------------------------------------------------------------------------------- Question 5: A drug for Leukemia is not broken down in the stomach and is well absorbed by the intestine. The traces/molecules of the drug found in the patient’s blood do not match to the form that was swallowed by the patient. What is the possible explanation for this? Answer: Question 6: If a child were born without a thymus gland, what cells and functions of the immune system would be deficient? Explain. Answer: -------End of paper-------"
+      "Reproduce by binary fission"
     ],
     "answer": null,
     "solution": "",
@@ -5717,7 +5937,7 @@
     "id": "biology-2024-final-biology-2024-3efb125-part-iii-1",
     "paperId": "biology-2024-final-biology-2024-3efb125",
     "paperSubject": "Biology",
-    "number": 71,
+    "number": 1,
     "displayNumber": "Descriptive 1",
     "subject": "Biology",
     "topic": "Descriptive",
@@ -5739,7 +5959,7 @@
     "id": "biology-2024-final-biology-2024-3efb125-part-iii-2",
     "paperId": "biology-2024-final-biology-2024-3efb125",
     "paperSubject": "Biology",
-    "number": 72,
+    "number": 2,
     "displayNumber": "Descriptive 2",
     "subject": "Biology",
     "topic": "Descriptive",
@@ -5750,7 +5970,95 @@
     "exam": "NSTC",
     "year": 2024,
     "source": "NSTC 2024 Biology Paper",
-    "prompt": "Question No 2: Three stages in bacterial growth are: @@Q01@@ Lag phase, II. Log phase, III. Stationary phase In which phase or phases can penicillin inhibit the synthesis of the bacterial cell wall? A. Only I B. Only II C. Only III D. Only I and II E. Only I and III F. I, II and III Question 3: Which statement correctly describes the differentiation and development of cells and organs in flowering plants? A. Organo-morphogenesis involves cell movement as one of the important mechanisms. B. Post-embryogenesis is a growth process, as all of the plant organs are pre-formed during embryogenesis. C. Totipotency of plant tissues provides the original source of power to develop a complete plant by re - differentiation, without going through the de-differentiation process. D. The direction of cell division determines cell type and function. E. Lineage information obtained by genetic inheritance overrides environmental factors in determining the time for organ development. Question 4: Why is shivering likely during the onset of a fever? Answer: ---------------------------------------------------------------------------------------------------------------------------------------- Question 5: A drug for Leukemia is not broken down in the stomach and is well absorbed by the intestine. The traces/molecules of the drug found in the patient’s blood do not match to the form that was swallowed by the patient. What is the possible explanation for this? Answer: Question 6: If a child were born without a thymus gland, what cells and functions of the immune system would be deficient? Explain. Answer: ----",
+    "prompt": "Question No 2: Three stages in bacterial growth are: 1 Lag phase, II. Log phase, III. Stationary phase In which phase or phases can penicillin inhibit the synthesis of the bacterial cell wall? A. Only I B. Only II C. Only III D. Only I and II E. Only I and III F. I, II and III",
+    "options": [],
+    "answer": null,
+    "solution": "",
+    "page": null,
+    "figure": ""
+  },
+  {
+    "id": "biology-2024-final-biology-2024-3efb125-part-iii-3",
+    "paperId": "biology-2024-final-biology-2024-3efb125",
+    "paperSubject": "Biology",
+    "number": 3,
+    "displayNumber": "Descriptive 3",
+    "subject": "Biology",
+    "topic": "Descriptive",
+    "difficulty": "Descriptive",
+    "type": "Long",
+    "section": "Part III",
+    "sectionTitle": "Descriptive Questions",
+    "exam": "NSTC",
+    "year": 2024,
+    "source": "NSTC 2024 Biology Paper",
+    "prompt": "Question 3: Which statement correctly describes the differentiation and development of cells and organs in flowering plants? A. Organo-morphogenesis involves cell movement as one of the important mechanisms. B. Post-embryogenesis is a growth process, as all of the plant organs are pre-formed during embryogenesis. C. Totipotency of plant tissues provides the original source of power to develop a complete plant by re - differentiation, without going through the de-differentiation process. D. The direction of cell division determines cell type and function. E. Lineage information obtained by genetic inheritance overrides environmental factors in determining the time for organ development.",
+    "options": [],
+    "answer": null,
+    "solution": "",
+    "page": null,
+    "figure": ""
+  },
+  {
+    "id": "biology-2024-final-biology-2024-3efb125-part-iii-4",
+    "paperId": "biology-2024-final-biology-2024-3efb125",
+    "paperSubject": "Biology",
+    "number": 4,
+    "displayNumber": "Descriptive 4",
+    "subject": "Biology",
+    "topic": "Descriptive",
+    "difficulty": "Descriptive",
+    "type": "Long",
+    "section": "Part III",
+    "sectionTitle": "Descriptive Questions",
+    "exam": "NSTC",
+    "year": 2024,
+    "source": "NSTC 2024 Biology Paper",
+    "prompt": "Question 4: Why is shivering likely during the onset of a fever? Answer:",
+    "options": [],
+    "answer": null,
+    "solution": "",
+    "page": null,
+    "figure": ""
+  },
+  {
+    "id": "biology-2024-final-biology-2024-3efb125-part-iii-5",
+    "paperId": "biology-2024-final-biology-2024-3efb125",
+    "paperSubject": "Biology",
+    "number": 5,
+    "displayNumber": "Descriptive 5",
+    "subject": "Biology",
+    "topic": "Descriptive",
+    "difficulty": "Descriptive",
+    "type": "Long",
+    "section": "Part III",
+    "sectionTitle": "Descriptive Questions",
+    "exam": "NSTC",
+    "year": 2024,
+    "source": "NSTC 2024 Biology Paper",
+    "prompt": "Question 5: A drug for Leukemia is not broken down in the stomach and is well absorbed by the intestine. The traces/molecules of the drug found in the patient’s blood do not match to the form that was swallowed by the patient. What is the possible explanation for this? Answer:",
+    "options": [],
+    "answer": null,
+    "solution": "",
+    "page": null,
+    "figure": ""
+  },
+  {
+    "id": "biology-2024-final-biology-2024-3efb125-part-iii-6",
+    "paperId": "biology-2024-final-biology-2024-3efb125",
+    "paperSubject": "Biology",
+    "number": 6,
+    "displayNumber": "Descriptive 6",
+    "subject": "Biology",
+    "topic": "Descriptive",
+    "difficulty": "Descriptive",
+    "type": "Long",
+    "section": "Part III",
+    "sectionTitle": "Descriptive Questions",
+    "exam": "NSTC",
+    "year": 2024,
+    "source": "NSTC 2024 Biology Paper",
+    "prompt": "Question 6: If a child were born without a thymus gland, what cells and functions of the immune system would be deficient? Explain. Answer: ----",
     "options": [],
     "answer": null,
     "solution": "",
@@ -6962,7 +7270,7 @@
     "source": "NSTC 2025 Biology Paper",
     "prompt": "The thin layer of fat cells in the dermis:",
     "options": [
-      "Maintain temp.",
+      "Maintain temp",
       "Insulates the body",
       "Provide protection",
       "Reduce sweating"
@@ -7262,7 +7570,7 @@
       "Dialysis",
       "Diabetes",
       "Lithotripsy",
-      "Both a & b CHEMISTRY"
+      "Both a & b"
     ],
     "answer": null,
     "solution": "",
@@ -7397,7 +7705,7 @@
       "Vitamin A",
       "Vitamin B",
       "Vitamin C",
-      "Vitamin D MATHEMATICS"
+      "Vitamin D"
     ],
     "answer": null,
     "solution": "",
@@ -7500,7 +7808,7 @@
     "exam": "NSTC",
     "year": 2022,
     "source": "NSTC 2022 Chemistry Paper",
-    "prompt": "@@Q55@@ 54 is equal to",
+    "prompt": "5^5 / 5^4 is equal to",
     "options": [
       "1",
       "5",
@@ -7532,7 +7840,7 @@
       "𝑎𝑚𝑛",
       "𝑎𝑚+𝑛",
       "𝑎𝑚𝑛",
-      "None of these PHYSICS"
+      "None of these"
     ],
     "answer": null,
     "solution": "",
@@ -7667,7 +7975,7 @@
       "momentum and work",
       "energy and power",
       "mechanical energy and heat",
-      "work and power PART II – CHEMISTRY"
+      "work and power"
     ],
     "answer": null,
     "solution": "",
@@ -7691,10 +7999,10 @@
     "source": "NSTC 2022 Chemistry Paper",
     "prompt": "Which of the following property is not the characteristic of dilute HCL?",
     "options": [
-      "It reacts with Zn and gas is evolved.",
-      "If reacts with solid Sodium carbonate to give brisk effervescence.",
-      "It turns blue litmus paper red.",
-      "It turns red litmus paper blue."
+      "It reacts with Zn and gas is evolved",
+      "If reacts with solid Sodium carbonate to give brisk effervescence",
+      "It turns blue litmus paper red",
+      "It turns red litmus paper blue"
     ],
     "answer": null,
     "solution": "",
@@ -7856,7 +8164,7 @@
       "44.8",
       "22.4",
       "11.2",
-      "5. @@Q06@@"
+      "5.6"
     ],
     "answer": null,
     "solution": "",
@@ -8018,7 +8326,7 @@
       "9 and 6",
       "9 and 3",
       "3 and 3",
-      "3 and @@Q09@@"
+      "3 and 9"
     ],
     "answer": null,
     "solution": "",
@@ -8126,7 +8434,7 @@
       "CaO",
       "CaCl2",
       "Ca(OCl)2",
-      "Ca(OH) @@Q02@@"
+      "Ca(OH)2"
     ],
     "answer": null,
     "solution": "",
@@ -8536,7 +8844,7 @@
     "answer": null,
     "solution": "",
     "page": 7,
-    "figure": ""
+    "figure": "/paper-assets/chemistry-2022-final-chemistry-2022-b9f5031/figures/q52-p7-manual.webp"
   },
   {
     "id": "chemistry-2022-final-chemistry-2022-b9f5031-part-ii-53",
@@ -8634,7 +8942,7 @@
     "exam": "NSTC",
     "year": 2022,
     "source": "NSTC 2022 Chemistry Paper",
-    "prompt": "When a small number of acids or bases are added to zwitterion ion, it resists a change in: @@Q01@@",
+    "prompt": "When a small number of acids or bases are added to zwitterion ion, it resists a change in: 1",
     "options": [
       "temperature",
       "volatility",
@@ -8882,7 +9190,7 @@
       "2 or 4",
       "4 or 6",
       "3 or 5",
-      "2 or @@Q03@@"
+      "2 or 3"
     ],
     "answer": null,
     "solution": "",
@@ -9017,7 +9325,7 @@
       "the entropy decrease",
       "the entropy increase",
       "the entropy remains constant",
-      "Condition is wrong, entropy does not change with any parameter. Part III: Chemistry-Descriptive Questions [Max points 30: All questions carry equal points] Question 1. What are the two tests to distinguish between glucose and fructose? Question 2. How does the half-life period depend on the initial concentration in the case of reactions of the first and nth order? Question 3. What does acetic acid and sodium acetate form? Question 4. Why Carboxylic is acidic? ----End of paper----"
+      "Condition is wrong, entropy does not change with any parameter"
     ],
     "answer": null,
     "solution": "",
@@ -9174,7 +9482,7 @@
       "prophase 1",
       "telophase 1",
       "anaphase 1",
-      "metaphase 1 CHEMISTRY"
+      "metaphase 1"
     ],
     "answer": null,
     "solution": "",
@@ -9228,7 +9536,7 @@
       "0.2 μm",
       "0.2 mm",
       "0.2 nm",
-      "0. @@Q02@@ pm"
+      "0.2 pm"
     ],
     "answer": null,
     "solution": "",
@@ -9309,7 +9617,7 @@
       "Florescent bulb",
       "Neon signs",
       "Laser",
-      "All of these MATHEMATICS"
+      "All of these"
     ],
     "answer": null,
     "solution": "",
@@ -9390,7 +9698,7 @@
       "0",
       "1",
       "2",
-      ""
+      "infinity"
     ],
     "answer": null,
     "solution": "",
@@ -9439,12 +9747,12 @@
     "exam": "NSTC",
     "year": 2023,
     "source": "NSTC 2023 Chemistry Paper",
-    "prompt": "If 𝑥 + @@Q01@@ 𝑥 = 2, then the value of 𝑥2 + @@Q01@@ 𝑥2 is",
+    "prompt": "If 𝑥 + 1 𝑥 = 2, then the value of 𝑥2 + 1 𝑥2 is",
     "options": [
       "1/4",
       "1",
       "3",
-      "2 PHYSICS"
+      "2"
     ],
     "answer": null,
     "solution": "",
@@ -9495,10 +9803,10 @@
     "source": "NSTC 2023 Chemistry Paper",
     "prompt": "A 1,200-kilogram car traveling at 10. m/s hits a tree and is brought to rest in 0.10 second. What is the magnitude of the average force acting on the car to bring it to rest?",
     "options": [
-      "1.2 × 102 N",
-      "1.2 × 103 N",
-      "1.2 × 104 N",
-      "1. @@Q02@@ × 105 N"
+      "1.2 x 10^2 N",
+      "1.2 x 10^3 N",
+      "1.2 x 10^4 N",
+      "1.2 x 10^5 N"
     ],
     "answer": null,
     "solution": "",
@@ -9549,10 +9857,10 @@
     "source": "NSTC 2023 Chemistry Paper",
     "prompt": "An electric iron operating at 120 volts draws 10. Amperes of current. How much heat energy is delivered by the iron in 30 Seconds?",
     "options": [
-      "3.0 × 102 J",
-      "3.6 × 103 J",
-      "1.2 × 103 J",
-      "3. @@Q06@@ × 104 J"
+      "3.0 x 10^2 J",
+      "3.6 x 10^3 J",
+      "1.2 x 10^3 J",
+      "3.6 x 10^4 J"
     ],
     "answer": null,
     "solution": "",
@@ -9579,7 +9887,7 @@
       "resonance",
       "diffraction",
       "the Doppler effect",
-      "refraction PART II – CHEMISTRY"
+      "refraction"
     ],
     "answer": null,
     "solution": "",
@@ -9766,7 +10074,7 @@
     "prompt": "The presence of dust particles in air serves",
     "options": [
       "As a nucleus to condense water vapour resulting in rain",
-      "To protect the inhabitants of the earth from the effects of ultra violet rays.",
+      "To protect the inhabitants of the earth from the effects of ultra violet rays",
       "To minimize the inflammatory nature of oxygen",
       "To maintain the average density of air"
     ],
@@ -10168,12 +10476,12 @@
     "exam": "NSTC",
     "year": 2023,
     "source": "NSTC 2023 Chemistry Paper",
-    "prompt": "When an electron is moving with velocity of 2.188 x 106 ms-1 in the first orbit of Bohr’s model of hydrogen. The de Broglie wavelength of electron is",
+    "prompt": "When an electron is moving with velocity of 2.188 x 10^6 ms-1 in the first orbit of Bohr’s model of hydrogen. The de Broglie wavelength of electron is",
     "options": [
       "0.33 nm",
       "0.34 nm",
       "0.35 nm",
-      "0. @@Q36@@ nm"
+      "0. 36 nm"
     ],
     "answer": null,
     "solution": "",
@@ -10276,12 +10584,12 @@
     "exam": "NSTC",
     "year": 2023,
     "source": "NSTC 2023 Chemistry Paper",
-    "prompt": "Solubility of CaF2 is 2.0×10-4 gdm-3 then Ksp of CaF2 is_______________?",
+    "prompt": "Solubility of CaF2 is 2.0 x 10^-4 gdm-3 then Ksp of CaF2 is_______________?",
     "options": [
-      "4.0×10-8",
-      "3.2×10-11",
-      "2.0×10-8",
-      "4.0×10-12"
+      "4.0 x 10^-8",
+      "3.2 x 10^-11",
+      "2.0 x 10^-8",
+      "4.0 x 10^-12"
     ],
     "answer": null,
     "solution": "",
@@ -10303,12 +10611,12 @@
     "exam": "NSTC",
     "year": 2023,
     "source": "NSTC 2023 Chemistry Paper",
-    "prompt": "Consider the following comparisons of Alkali Metals and Alkaline Earth Metals: @@Q01@@ While no Alkali Metal is found free in nature, some alkaline earth metals are found free in nature @@Q02@@ While alkali metals are highly reactive, alkaline earth metals are moderately reactive Which among the above statements is / are correct?",
+    "prompt": "Consider the following comparisons of Alkali Metals and Alkaline Earth Metals: 1 While no Alkali Metal is found free in nature, some alkaline earth metals are found free in nature 2 While alkali metals are highly reactive, alkaline earth metals are moderately reactive Which among the above statements is / are correct?",
     "options": [
       "Only 1",
       "Only 2",
       "Both 1 & 2",
-      "Neither 1 nor @@Q02@@"
+      "Neither 1 nor 2"
     ],
     "answer": null,
     "solution": "",
@@ -10632,7 +10940,7 @@
       "0, 2",
       "2, 0",
       "2, 1",
-      "1, @@Q02@@ 60 30 g of Mg and 30 g of O2 are reacted and the residual mixure contains (a) 60 g of MgO only (b) 40 g of MgO and 20 g of O2 (c) 45 g of MgO and 15 g of O2 (d) 50 g of MgO and 10 g of O2 @@Q61@@ For a certain particle, it is found that uncertainty in velocity is reciprocal of uncertainty in position. This implies that (a) Mass of the particle is > unity (b) Mass of the particle is unity (c) Mass of the particle < h (d) Mass of the particle > h / 4 @@Q62@@ What would be the concentration in % w/v of aqueous solution in which 80 ml ethanol is dissolved in 4 L solution? (a) 4% v/v (b) 10% v/v (c) 2% v/v (d) 8% v/v @@Q63@@ What will be final weight of 286 g Na2CO3 .10H2O by heating at 373 K (a) 206 g (b) 162 g (c) 186 g (d) 124 g @@Q64@@ Naphthalene is soluble in ether or benzene due to (a) Dipole-dipole attraction (b) Similar London forces (c) Hydrogen bond (d) Ionic attraction @@Q65@@ Which would undergo 𝑆𝑁 2 reaction slow. (a) I (b) Cl (c) Br (d) a and b @@Q66@@ For nucleophilic substitution bimolecure 𝑆𝑁 2 reaction give the correct order of reactivity. (a) 2° halide < 3° halide < 1° halide (b) 3° halide < 2° halide < 1° halide (c) 3° halide < 2° halide > 1° halide (d) 1° halide <3° halide 2° halide @@Q67@@ CH3 CH3H3C CH2OH gives which observation in Lucas test? (a) Reaction not take place (b) Give colour layer (c) Oilly point on layer (d) Milky solution @@Q68@@ Splitting of spectral lines under the influence of magnetic field is called (a) Stark effect (b) Zeeman effect (c) Photoelectric effect (d) None of these @@Q69@@ For which compound iodoform test is not possible (a) C2H5OH (b) CH3CHO (c) COCH3 (d) Benzophenone @@Q70@@ How many enantiomer pairs are obtained by monochlorination of 2, 3-dimethyl butane? (a) two (b) three (c) four (d) one Part III: Chemistry-Descriptive Questions [Max points 30: All questions carry equal points] Question 1. What is the difference between a chemical process and a physical process in chemistry? Question 2. Explain with the help of examples that a geometrical isomerism is different from conformation. Question 3. Why propane is stored in household tanks but not natural gas? Question 4. How will you separate a mixture of o-nitrophenol and p-nitrophenol? ----End of paper----"
+      "1, 2"
     ],
     "answer": null,
     "solution": "",
@@ -10686,7 +10994,7 @@
       "Mass of the particle is > unity",
       "Mass of the particle is unity",
       "Mass of the particle < h",
-      "Mass of the particle > h / 4"
+      "Mass of the particle > h / 4pi"
     ],
     "answer": null,
     "solution": "",
@@ -10929,7 +11237,7 @@
       "two",
       "three",
       "four",
-      "one Part III: Chemistry-Descriptive Questions [Max points 30: All questions carry equal points] Question 1. What is the difference between a chemical process and a physical process in chemistry? Question 2. Explain with the help of examples that a geometrical isomerism is different from conformation. Question 3. Why propane is stored in household tanks but not natural gas? Question 4. How will you separate a mixture of o-nitrophenol and p-nitrophenol? ----End of paper----"
+      "one"
     ],
     "answer": null,
     "solution": "",
@@ -11054,7 +11362,7 @@
     "exam": "NSTC",
     "year": 2024,
     "source": "NSTC 2024 Chemistry Paper",
-    "prompt": "Electric intensity is a ------------------------ quantity.",
+    "prompt": "Electric intensity is a",
     "options": [
       "vector",
       "scalar",
@@ -11083,10 +11391,10 @@
     "source": "NSTC 2024 Chemistry Paper",
     "prompt": "One coulomb is equal to the charge of------------------------electrons.",
     "options": [
-      "6.25x1019",
-      "6.24x1018",
-      "6.24x1017",
-      "6.25x1018 CHEMISTRY"
+      "6.25 x 10^19",
+      "6.24 x 10^18",
+      "6.24 x 10^17",
+      "6.25 x 10^18"
     ],
     "answer": null,
     "solution": "",
@@ -11221,7 +11529,7 @@
       "Fluorine",
       "Oxygen",
       "Nitrogen",
-      "Iodine MATHEMATICS"
+      "Iodine"
     ],
     "answer": null,
     "solution": "",
@@ -11356,7 +11664,7 @@
       "-4",
       "6",
       "2",
-      "3/ @@Q02@@ PHYSICS"
+      "3/ 2"
     ],
     "answer": null,
     "solution": "",
@@ -11437,7 +11745,7 @@
       "4.15 km/s",
       "2.78 km/s",
       "3.08 km/s",
-      "6. @@Q66@@ km/s"
+      "6. 66 km/s"
     ],
     "answer": null,
     "solution": "",
@@ -11491,7 +11799,7 @@
       "0.5 second",
       "1.0 seconds",
       "1.5 seconds",
-      "2.0 seconds PART II – CHEMISTRY"
+      "2.0 seconds"
     ],
     "answer": null,
     "solution": "",
@@ -11896,7 +12204,7 @@
       "CaCO3",
       "Ca(OH)2",
       "CaHCO3",
-      "Ca(HCO3) @@Q02@@"
+      "Ca(HCO3)2"
     ],
     "answer": null,
     "solution": "",
@@ -12301,7 +12609,7 @@
       "10.6 g",
       "31.8 g",
       "190.6 g",
-      "15. @@Q09@@ g"
+      "15. 9 g"
     ],
     "answer": null,
     "solution": "",
@@ -12404,7 +12712,7 @@
     "exam": "NSTC",
     "year": 2024,
     "source": "NSTC 2024 Chemistry Paper",
-    "prompt": "By photosynthesis using solar energy, maple trees make molecules of glucose in the reaction, 6CO2(g) + 6H2O(l) C6H12O6(s) + 6O2(g) H = +2815 kJ/mol glucose. To make 20 g of glucose, how much solar energy must the maple leaves absorb (if the process is 100% efficient)?",
+    "prompt": "By photosynthesis using solar energy, maple trees make molecules of glucose in the reaction, 6CO2(g) + 6H2O(l) C6H12O6(s) + 6O2(g) DeltaH = +2815 kJ/mol glucose. To make 20 g of glucose, how much solar energy must the maple leaves absorb (if the process is 100% efficient)?",
     "options": [
       "239 kJ",
       "469 kJ",
@@ -12436,7 +12744,7 @@
       "43.1 mL",
       "71.8 mL",
       "39.0 mL",
-      "23. @@Q04@@ mL"
+      "23. 4 mL"
     ],
     "answer": null,
     "solution": "",
@@ -12490,7 +12798,7 @@
       "11.4 mol/L",
       "8.9 mol/L",
       "5.9 mol/L",
-      "18. @@Q05@@ mol/L Part III: Chemistry-Descriptive Questions [Max points 30: All questions carry equal points] Question 1: Why won't iron dissolve as easily in HNO3 as it does in HCl? Answer:"
+      "18. 5 mol/L"
     ],
     "answer": null,
     "solution": "",
@@ -12598,7 +12906,7 @@
       "9.1 x 10–10 mol/L",
       "3.0 x 10–5 mol/L",
       "2.1 x 10–19 mol/L",
-      "1. @@Q03@@ x 10–5 mol/L"
+      "1.3 x 10–5 mol/L"
     ],
     "answer": null,
     "solution": "",
@@ -12652,7 +12960,7 @@
       "35.5 mL",
       "312 mL",
       "2.79 mL",
-      "4. @@Q95@@ mL"
+      "4. 95 mL"
     ],
     "answer": null,
     "solution": "",
@@ -12706,7 +13014,7 @@
       "0.34 atm",
       "0.64 atm",
       "1.92 atm",
-      "1."
+      "1"
     ],
     "answer": null,
     "solution": "",
@@ -12728,7 +13036,7 @@
     "exam": "NSTC",
     "year": 2024,
     "source": "NSTC 2024 Chemistry Paper",
-    "prompt": "atm @@Q66@@ Which substance would you expect to have the highest melting point.",
+    "prompt": "atm 66 Which substance would you expect to have the highest melting point.",
     "options": [
       "GeI4",
       "I2",
@@ -12760,7 +13068,7 @@
       "6.77 M",
       "6.45 M",
       "0.017 M",
-      "16. @@Q09@@ M"
+      "16. 9 M"
     ],
     "answer": null,
     "solution": "",
@@ -12841,7 +13149,7 @@
       "3.25 x 10–7 M",
       "5.7 x 10–5 M",
       "7.55 x 10–5 M",
-      "3. @@Q25@@ x 10–11 M ---------------------------------------------------------------------------------------------------------------------------------------- Question 2: What's the difference between baking soda and baking powder? Answer : Question 3: How do nonpolar molecules like O2 dissolve in water? Answer : Question 4: What is the difference between valence, and number of valence electrons? Answer : ----End of paper----"
+      "3. 25 x 10–11 M"
     ],
     "answer": null,
     "solution": "",
@@ -12852,7 +13160,7 @@
     "id": "chemistry-2024-final-chemistry-2024-1800740-part-iii-1",
     "paperId": "chemistry-2024-final-chemistry-2024-1800740",
     "paperSubject": "Chemistry",
-    "number": 71,
+    "number": 1,
     "displayNumber": "Descriptive 1",
     "subject": "Chemistry",
     "topic": "Descriptive",
@@ -12863,7 +13171,73 @@
     "exam": "NSTC",
     "year": 2024,
     "source": "NSTC 2024 Chemistry Paper",
-    "prompt": "Chemistry-Descriptive Questions [Max points 30: All questions carry equal points] Question 1: Why won't iron dissolve as easily in HNO3 as it does in HCl? Answer: @@Q58@@ In a certain solution the concentration of the OH– ion is 100 times greater than the concentration of the H+ ion. What is the pH of this solution? (a) 12 (b) 8 (c) 6 (d) 2 @@Q59@@ Formic acid (HCO2H) is a weak monoprotic acid in aqueous solution. An aqueous solution is made by dissolving 1.00 mol of formic acid in sufficient water to make 1.00 L of solution. Which one of the following species is present in largest concentration? (a) H3O+ (b) OH– (c) HCO2– (d) HCO2H @@Q60@@ What is the oxidation state of manganese in KMnO4? (a) +1 (b) +5 (c) +7 (d) +2 @@Q61@@ The solubility product constant of BiI3 is 8.2 x 10–19. The solubility of this salt in pure water is therefore (a) 9.1 x 10–10 mol/L (b) 3.0 x 10–5 mol/L (c) 2.1 x 10–19 mol/L (d) 1. @@Q03@@ x 10–5 mol/L @@Q62@@ An element X forms two oxides whose formulas are XO3 and X2O3. One of these oxides contains 52% of X by mass and has a molar mass of 99.98. What is the formula of this oxide? (a) Mg2O3 (b) K2O3 (c) CrO3 (d) Al2O3 @@Q63@@ The aqua regia can be prepared with concentrated nitric acid whose concentration is 16 M (16 mol/L). What volume of this acid would be required for complete reaction with 11.6 g of Pt? (a) 35.5 mL (b) 312 mL (c) 2.79 mL (d) 4. @@Q95@@ mL @@Q64@@ Oxygen condenses at –183°C and freezes at –223°C. According to the kinetic molecular theory, the kinetic energy of oxygen molecules is zero at (a) –183°C (b) –273°C (c) –373°C (d) –223°C @@Q65@@ Nickel tetracarbonyl, Ni(CO)4, is formed by the reaction of nickel metal and carbon monoxide. If 0.118 g of nickel reacts at 21°C with 570 mL of CO at an initial pressure of 2.00 atm, what is the pressure of CO after the reaction? (a) 0.34 atm (b) 0.64 atm (c) 1.92 atm (d) 1. @@Q66@@ atm @@Q66@@ Which substance would you expect to have the highest melting point. (a) GeI4 (b) I2 (c) KI (d) CH3I @@Q67@@ An antifreeze mixture consists of 40% ethylene glycol (C2H6O2) by weight in aqueous solution. If the density of this solution is 1.05 g/mL, what is the molar concentration? (a) 6.77 M (b) 6.45 M (c) 0.017 M (d) 16. @@Q09@@ M @@Q68@@ The ion H2PO4– can acts as either an acid or a base. Its conjugate base and acid are respectively (a) H3PO4 and HPO4 2– (b) HPO42– and H3PO4 (c) PO43– and HPO4 2– (d) H3PO4 and PO43– @@Q69@@ What is the pH of a solution of 10–9 M NaOH? (a) 5 (b) 6 (c) 7 (d) 9 @@Q70@@ The solubility of AgBr in pure water is 5.7 x 10–7 M (at 25°C). What is the solubility of AgBr in a solution which contains 0.01 mol of NaBr per litre? (a) 3.25 x 10–7 M (b) 5.7 x 10–5 M (c) 7.55 x 10–5 M (d) 3. @@Q25@@ x 10–11 M ---------------------------------------------------------------------------------------------------------------------------------------- Question 2: What's the difference between baking soda and baking powder? Answer : Question 3: How do nonpolar molecules like O2 dissolve in water? Answer : Question 4: What is the difference between valence, and number of valence electrons? Answer : -",
+    "prompt": "Question 1: Why won't iron dissolve as easily in HNO3 as it does in HCl? Answer:",
+    "options": [],
+    "answer": null,
+    "solution": "",
+    "page": null,
+    "figure": ""
+  },
+  {
+    "id": "chemistry-2024-final-chemistry-2024-1800740-part-iii-2",
+    "paperId": "chemistry-2024-final-chemistry-2024-1800740",
+    "paperSubject": "Chemistry",
+    "number": 2,
+    "displayNumber": "Descriptive 2",
+    "subject": "Chemistry",
+    "topic": "Descriptive",
+    "difficulty": "Descriptive",
+    "type": "Long",
+    "section": "Part III",
+    "sectionTitle": "Descriptive Questions",
+    "exam": "NSTC",
+    "year": 2024,
+    "source": "NSTC 2024 Chemistry Paper",
+    "prompt": "Question 2: What's the difference between baking soda and baking powder? Answer :",
+    "options": [],
+    "answer": null,
+    "solution": "",
+    "page": null,
+    "figure": ""
+  },
+  {
+    "id": "chemistry-2024-final-chemistry-2024-1800740-part-iii-3",
+    "paperId": "chemistry-2024-final-chemistry-2024-1800740",
+    "paperSubject": "Chemistry",
+    "number": 3,
+    "displayNumber": "Descriptive 3",
+    "subject": "Chemistry",
+    "topic": "Descriptive",
+    "difficulty": "Descriptive",
+    "type": "Long",
+    "section": "Part III",
+    "sectionTitle": "Descriptive Questions",
+    "exam": "NSTC",
+    "year": 2024,
+    "source": "NSTC 2024 Chemistry Paper",
+    "prompt": "Question 3: How do nonpolar molecules like O2 dissolve in water? Answer :",
+    "options": [],
+    "answer": null,
+    "solution": "",
+    "page": null,
+    "figure": ""
+  },
+  {
+    "id": "chemistry-2024-final-chemistry-2024-1800740-part-iii-4",
+    "paperId": "chemistry-2024-final-chemistry-2024-1800740",
+    "paperSubject": "Chemistry",
+    "number": 4,
+    "displayNumber": "Descriptive 4",
+    "subject": "Chemistry",
+    "topic": "Descriptive",
+    "difficulty": "Descriptive",
+    "type": "Long",
+    "section": "Part III",
+    "sectionTitle": "Descriptive Questions",
+    "exam": "NSTC",
+    "year": 2024,
+    "source": "NSTC 2024 Chemistry Paper",
+    "prompt": "Question 4: What is the difference between valence, and number of valence electrons? Answer : -",
     "options": [],
     "answer": null,
     "solution": "",
@@ -13265,10 +13639,10 @@
     "source": "NSTC 2025 Chemistry Paper",
     "prompt": "A 1,200-kilogram car traveling at 10 meters per second hits a tree and is brought to rest in 0.10 second. What isthemagnitudeoftheaverageforceactingonthecartobring ittorest?",
     "options": [
-      "1.2×102 N",
+      "1.2 x 10^2 N",
       "1.2×10* N",
-      "1.2×103 N",
-      "1.2×105 N"
+      "1.2 x 10^3 N",
+      "1.2 x 10^5 N"
     ],
     "answer": null,
     "solution": "",
@@ -13590,7 +13964,7 @@
     "prompt": "2NH3 (g) is -92.38 kJ at 298 K. The The enthalpy change (AH)for the reaction N2 (g)+3H2 (g) intermnal energychangeAUat298Kis:",
     "options": [
       "intermnal energychangeAUat298Kis: -92.38kJ",
-      "87.42kJ Identify the correct statement regarding a spontaneous process.",
+      "87.42kJ Identify the correct statement regarding a spontaneous process",
       "97.34 kJ",
       "89.9kJ"
     ],
@@ -13616,7 +13990,7 @@
     "source": "NSTC 2025 Chemistry Paper",
     "prompt": "Which of the following is tni-basic acid?",
     "options": [
-      "H.PO.",
+      "H.PO",
       "6)HPO) Which of the following pairs constitute buffer solution?",
       "HPO",
       "HPO"
@@ -13670,10 +14044,10 @@
     "source": "NSTC 2025 Chemistry Paper",
     "prompt": "Hydrogen ion concentration in mol/L in solution of pH 5.4will be:",
     "options": [
-      "3.88x100",
+      "3.88 x 10^0",
       "3.98 x10- The standardreduction potentialof three metallic cationX,YandZare0.52,-3.03and-1.18",
       "3.98x10%",
-      "3.68 x10-6"
+      "3.68 x 10^-6"
     ],
     "answer": null,
     "solution": "",
@@ -13778,7 +14152,7 @@
     "source": "NSTC 2025 Chemistry Paper",
     "prompt": "Whichof thefollowingoxides aremostbasics:",
     "options": [
-      "Bi2O;",
+      "Bi2O",
       "Se02",
       "Al03",
       "Sb203"
@@ -14186,7 +14560,7 @@
       "Dialysis",
       "Diabetes",
       "Lithotripsy",
-      "Both a & b CHEMISTRY"
+      "Both a & b"
     ],
     "answer": null,
     "solution": "",
@@ -14321,7 +14695,7 @@
       "Vitamin A",
       "Vitamin B",
       "Vitamin C",
-      "Vitamin D MATHEMATICS"
+      "Vitamin D"
     ],
     "answer": null,
     "solution": "",
@@ -14424,7 +14798,7 @@
     "exam": "NSTC",
     "year": 2022,
     "source": "NSTC 2022 Mathematics Paper",
-    "prompt": "@@Q55@@ 54 is equal to",
+    "prompt": "5^5 / 5^4 is equal to",
     "options": [
       "1",
       "5",
@@ -14456,7 +14830,7 @@
       "𝑎𝑚𝑛",
       "𝑎𝑚+𝑛",
       "𝑎𝑚𝑛",
-      "None of these PHYSICS"
+      "None of these"
     ],
     "answer": null,
     "solution": "",
@@ -14591,7 +14965,7 @@
       "momentum and work",
       "energy and power",
       "mechanical energy and heat",
-      "work and power PART II – MATHEMATICS"
+      "work and power"
     ],
     "answer": null,
     "solution": "",
@@ -14616,7 +14990,7 @@
     "prompt": "For any integers 𝑎, 𝑏, 𝑛 ∈ ℤ such that 𝑛|𝑎 and 𝑛|𝑏, then",
     "options": [
       "𝑛| gcd(𝑎",
-      "(b) 𝑛| gcd(𝑏, 𝑎)",
+      "𝑛| gcd(𝑏, 𝑎)",
       "𝑛| gcd(𝑎, 𝑏 − 𝑎)",
       "all of these"
     ],
@@ -14694,12 +15068,12 @@
     "exam": "NSTC",
     "year": 2022,
     "source": "NSTC 2022 Mathematics Paper",
-    "prompt": "If 𝑎 𝑏 = @@Q02@@ 3 and 𝑏 𝑐 = @@Q04@@ @@Q05@@ then 𝑎+𝑏 𝑏+𝑐 is equal to",
+    "prompt": "If 𝑎 𝑏 = 2 3 and 𝑏 𝑐 = 4 5 then 𝑎+𝑏 𝑏+𝑐 is equal to",
     "options": [
       "27 20",
       "15 4",
       "4 15",
-      "20 @@Q27@@"
+      "20 27"
     ],
     "answer": null,
     "solution": "",
@@ -14721,7 +15095,7 @@
     "exam": "NSTC",
     "year": 2022,
     "source": "NSTC 2022 Mathematics Paper",
-    "prompt": "If 𝑥2 − 2𝑥 + 1 = 0, then 𝑥2 + @@Q01@@ 𝑥2 is",
+    "prompt": "If 𝑥2 − 2𝑥 + 1 = 0, then 𝑥2 + 1 𝑥2 is",
     "options": [
       "0",
       "-2",
@@ -14942,7 +15316,7 @@
       "𝑟!",
       "(𝑟 − 1)!",
       "(𝑟 + 1)!",
-      "𝑟 @@Q05@@"
+      "𝑟 5"
     ],
     "answer": null,
     "solution": "",
@@ -14996,7 +15370,7 @@
       "81",
       "99",
       "1296",
-      "6561 36 1 + 3 + 5 + 7 +……….+ 17 is equal to (a) 101 (b) 81 (c) 71 (d) 61 @@Q37@@ 6 men and 4 women are to be seated in a row so that no two women sit together. The number of ways they can be seated is (a) 604800 (b) 17280 (c) 120960 (d) 518400 @@Q38@@ The number of ways of painting the faces of a cube with six different colors is (a) 1 (b) 6 (c) 6! (d) None of these @@Q39@@ If 𝑏 ≠ 0 ∈ ℤ, then which of the following statements is correct? (a) 𝑏|0 (b) 𝑏 ∤ 0 (c) 0|𝑏 (d) None of these @@Q40@@ Which of the following equals to 8? (a) 𝑔𝑐𝑑 (1,8) (b) 𝑔𝑐𝑑 (−32,44) (c) 𝑔𝑐𝑑 (12,42) (d) 𝑔𝑐𝑑 (−32,96) @@Q41@@ If 𝑎 is divisible by 𝑏, which of the following are true (a) 𝑏 divides into 𝑎 evenly (b) when we divide 𝑎 by 𝑏, the remainder is 0 (c) 𝑎 = 𝑏𝑞, for some integer 𝑞 (d) All of these @@Q42@@ The three numbers are in the ratio 1/2 ∶ 2/3 ∶ 3/4. The difference between greatest and smallest numbers is 36. Find the numbers (a) 72,84,108 (b) 60,72,96 (c) 72,84,96 (d) 72,96,108 @@Q43@@ Three bells beep at an interval of 12, 20, and 35 minutes. If they beep together at 10 a.m., then they will again beep together at (a) 12 pm (b) 5 pm (c) 4 pm (d) 1 pm @@Q44@@ What is the least number which when divided by the numbers 3, 5, 6, 8, 10 and 12 leaves in each case a remainder 2 but which when divided by 13 leaves no remainder? (a) 312 (b) 962 (c) 1586 (d) 1562 @@Q45@@ The sum of first five prime numbers is (a) 11 (b) 18 (c) 26 (d) 28 @@Q46@@ How many prime numbers are less than 50? (a) 16 (b) 15 (c) 14 (d) 18 @@Q47@@ In ∆𝑋𝑌𝑍, XY and XZ are 20 cm and 25 cm respectively, XP is angle bisector of ∠𝑌𝑋𝑍, YP = a cm and PZ = (a+3) cm. If I is the incenter of the triangle, then find the ratio of XI : IP. (a) 5:3 (b) 4:5 (c) 3:5 (d) 5: @@Q04@@ @@Q48@@ A circle is circum-scribed of ∆𝐴𝐵𝐶. O is the center of the circle and CP is the tangent of the circle at the point C. If BC bisects the ∠𝑂𝐶𝑃, then what is the supplementary angle of ∠𝐵𝐴𝐶? (a) 160° (b) 135° (c) 140° (d) 145° @@Q49@@ The area of the triangle whose vertices are given by the coordinates (1,2), (-4, -3) and (4, 1) is (a) 7 sq. units (b) 20 sq. units (c) 10 sq. units (d) 14 sq. units @@Q50@@ If the angles, in degree, of a triangle, are x, 3x + 20 and 6x, the triangle must be (a) Acute (b) Right (c) Isosceles (d) Obtuse 51 ∆𝐴𝐵𝐶 is inscribed in a circle with center O. If AB = 17 cm, BC = 10 cm and AC = 9 cm, then find the length of AO. (a) 18 cm (b) 10.6 cm (c) 106 cm (d) 36 cm @@Q52@@ If the measure of each interior angle of a regular polygon is 150°, then the number of its diagonals will be (a) 54 (b) 27 (c) 15 (d) 12 @@Q53@@ If an arithmetic progression is 13, 11, 9…., then find 50th term of that arithmetic progression. (a) -90 (b) -56 (c) -112 (d) -85 @@Q54@@ From a group of 7 men and 6 women, five persons are to be selected to form a committee so that three men are there on the committee. In how many ways can it be done? (a) 564 (b) 645 (c) 735 (d) 756 @@Q55@@ In a colony, there are 55 members. Every member posts a greeting card to all the members. How many greeting cards were posted by them? (a) 990 (b) 890 (c) 2970 (d) 1980 @@Q56@@ If nPr = 3024 and nCr = 126 then find n and r. (a) 9, 4 (b) 10, 3 (c) 12, 4 (d) 11, @@Q04@@ @@Q57@@ There are six movie parts numbered from 1 to 6. Find the number of ways in which they be arranged so that part-1 and part-3 are never together. (a) 876 (b) 480 (c) 654 (d) 237 @@Q58@@ Find the number of factors of the product 58 × 75 × 23 which are perfect squares. (a) 47 (b) 30 (c) 65 (d) 19 @@Q59@@ Midpoint of (-1,1) and (1,-1) is (a) (1,1) (b) (-1,-1) (c) (1,1) (d) (0,0) @@Q60@@ Four non-parallel lines in a plan intersect at most at (a) Zero Point (b) One Point (c) Four Points (d) Six Points @@Q61@@ If A and B are 2×2 matrices then Det(A+B) is equal to (a) Det(A) +Det(B) (b) Identity Matrix (c) Det(A).Det(B) (d) None of these. @@Q62@@ The solution of 2x−9 ≥ 7 is (a) [8, ∞) (b) (−∞, ∞) (c) (8, ∞) (d) (−∞, 8) @@Q63@@ The inverse of the function f (x) = 2x−9 is (a) (x+9)/2 (b) (x-9)/2 (c) (x+2)/9 (d) (x-2)/ @@Q09@@ @@Q64@@ Polygon with 9 sides is called (a) heptagon (b) nanogon (c) octagon (d) pentagon @@Q65@@ Area of a rhombus having diagonals equal to 6 cm and 8 cm is (a) 48 cm2 (b) 36 cm2 (c) 24 cm2 (d) 64 cm2 @@Q66@@ The length of a rectangular screen is 15 cm. Its area is 180 sq. cm. Its width is (a) 18 cm (b) 12 cm (c) 10 cm (d) 15 cm @@Q67@@ If f (x−3) = 9x2+2 then f (5) is (a) 578 (b) 227 (c) 555 (d) None of these @@Q68@@ The expression √20 − √20 − √20 − √20 − ⋯ is equal to (a) 20 (b) 5 (c) 4 (d) None of these @@Q69@@ The value of cos(tan−1(−1)) is (a) 1 2 (b) − 1 √2 (c) −𝜋 (d) √ @@Q02@@ @@Q02@@ @@Q70@@ A pair of chords of a circle subtending two congruent central angles is (a) parallel (b) congruent (c) over lapping (d) incongruent Part III: Mathematics-Descriptive Questions [ @@Q30@@ Marks] Question No 1: Find value of √2 √2 √2 √2 √2 … − √2 + √2 + √2 + √2 + √2 + ⋯ Question No 2: Given BE and CF are the altitudes of the triangle ABC. P, Q are on BE and the extension of CF respectively such that BP = AC, CQ = AB. Prove that AP and AQ perpendicular. -----End of paper----"
+      "6561"
     ],
     "answer": null,
     "solution": "",
@@ -15021,9 +15395,9 @@
     "prompt": "1 + 3 + 5 + 7 +……….+ 17 is equal to",
     "options": [
       "101",
-      "@@Q81@@",
-      "@@Q71@@",
-      "@@Q61@@"
+      "81",
+      "71",
+      "61"
     ],
     "answer": null,
     "solution": "",
@@ -15401,7 +15775,7 @@
       "Acute",
       "Right",
       "Isosceles",
-      "Obtuse 51 ∆𝐴𝐵𝐶 is inscribed in a circle with center O. If AB = 17 cm, BC = 10 cm and AC = 9 cm, then find the length of AO. (a) 18 cm (b) 10.6 cm (c) 106 cm (d) 36 cm"
+      "Obtuse"
     ],
     "answer": null,
     "solution": "",
@@ -15428,7 +15802,7 @@
       "18 cm",
       "10.6 cm",
       "106 cm",
-      "@@Q36@@ cm"
+      "36 cm"
     ],
     "answer": null,
     "solution": "",
@@ -15696,9 +16070,9 @@
     "prompt": "If A and B are 2×2 matrices then Det(A+B) is equal to",
     "options": [
       "Det(A) +Det(",
-      "(b) Identity Matrix",
+      "Identity Matrix",
       "Det(A).Det(B)",
-      "None of these."
+      "None of these"
     ],
     "answer": null,
     "solution": "",
@@ -15941,7 +16315,7 @@
       "parallel",
       "congruent",
       "over lapping",
-      "incongruent Part III: Mathematics-Descriptive Questions ["
+      "incongruent"
     ],
     "answer": null,
     "solution": "",
@@ -15952,7 +16326,7 @@
     "id": "mathematics-2022-final-maths-2022-fb487f9-part-iii-1",
     "paperId": "mathematics-2022-final-maths-2022-fb487f9",
     "paperSubject": "Mathematics",
-    "number": 71,
+    "number": 1,
     "displayNumber": "Descriptive 1",
     "subject": "Mathematics",
     "topic": "Descriptive",
@@ -15974,7 +16348,7 @@
     "id": "mathematics-2022-final-maths-2022-fb487f9-part-iii-2",
     "paperId": "mathematics-2022-final-maths-2022-fb487f9",
     "paperSubject": "Mathematics",
-    "number": 72,
+    "number": 2,
     "displayNumber": "Descriptive 2",
     "subject": "Mathematics",
     "topic": "Descriptive",
@@ -16120,7 +16494,7 @@
       "prophase 1",
       "telophase 1",
       "anaphase 1",
-      "metaphase 1 CHEMISTRY"
+      "metaphase 1"
     ],
     "answer": null,
     "solution": "",
@@ -16255,7 +16629,7 @@
       "Florescent bulb",
       "Neon signs",
       "Laser",
-      "All of these MATHEMATICS"
+      "All of these"
     ],
     "answer": null,
     "solution": "",
@@ -16336,7 +16710,7 @@
       "0",
       "1",
       "2",
-      ""
+      "infinity"
     ],
     "answer": null,
     "solution": "",
@@ -16385,12 +16759,12 @@
     "exam": "NSTC",
     "year": 2023,
     "source": "NSTC 2023 Mathematics Paper",
-    "prompt": "If 𝑥 + @@Q01@@ 𝑥 = 2, then the value of 𝑥2 + @@Q01@@ 𝑥2 is",
+    "prompt": "If 𝑥 + 1 𝑥 = 2, then the value of 𝑥2 + 1 𝑥2 is",
     "options": [
       "1/4",
       "1",
       "3",
-      "2 PHYSICS"
+      "2"
     ],
     "answer": null,
     "solution": "",
@@ -16441,10 +16815,10 @@
     "source": "NSTC 2023 Mathematics Paper",
     "prompt": "A 1,200-kilogram car traveling at 10. m/s hits a tree and is brought to rest in 0.10 second. What is the magnitude of the average force acting on the car to bring it to rest?",
     "options": [
-      "1.2 × 102 N",
-      "1.2 × 103 N",
-      "1.2 × 104 N",
-      "1. @@Q02@@ × 105 N"
+      "1.2 x 10^2 N",
+      "1.2 x 10^3 N",
+      "1.2 x 10^4 N",
+      "1.2 x 10^5 N"
     ],
     "answer": null,
     "solution": "",
@@ -16495,10 +16869,10 @@
     "source": "NSTC 2023 Mathematics Paper",
     "prompt": "An electric iron operating at 120 volts draws 10. Amperes of current. How much heat energy is delivered by the iron in 30 Seconds?",
     "options": [
-      "3.0 × 102 J",
-      "3.6 × 103 J",
-      "1.2 × 103 J",
-      "3. @@Q06@@ × 104 J"
+      "3.0 x 10^2 J",
+      "3.6 x 10^3 J",
+      "1.2 x 10^3 J",
+      "3.6 x 10^4 J"
     ],
     "answer": null,
     "solution": "",
@@ -16525,7 +16899,7 @@
       "resonance",
       "diffraction",
       "the Doppler effect",
-      "refraction PART II – MATHEMATICS"
+      "refraction"
     ],
     "answer": null,
     "solution": "",
@@ -16574,7 +16948,7 @@
     "exam": "NSTC",
     "year": 2023,
     "source": "NSTC 2023 Mathematics Paper",
-    "prompt": "Find the slope of the line with equation 3 2 10xy",
+    "prompt": "Find the slope of the line with equation 3 2 10xy+=",
     "options": [
       "10",
       "3/ 2-",
@@ -16633,7 +17007,7 @@
       "0",
       "1",
       "2",
-      ""
+      "infinity"
     ],
     "answer": null,
     "solution": "",
@@ -16687,7 +17061,7 @@
       "36π 𝑐𝑚3",
       "36π 𝑐𝑚2",
       "9π 𝑐𝑚2",
-      "18π 𝑐𝑚 @@Q02@@"
+      "18π 𝑐𝑚 2"
     ],
     "answer": null,
     "solution": "",
@@ -16849,7 +17223,7 @@
       "1 ∶ 1",
       "1 ∶ 2",
       "2 ∶ 1",
-      "None of these."
+      "None of these"
     ],
     "answer": null,
     "solution": "",
@@ -16903,7 +17277,7 @@
       "𝑥2 − 4𝑥 − 1 = 0",
       "𝑥2 + 4𝑥 + 1 = 0",
       "𝑥2 − 4𝑥 + 1 = 0",
-      "𝑥 @@Q02@@ + 4𝑥 + 1 = 0"
+      "𝑥 2 + 4𝑥 + 1 = 0"
     ],
     "answer": null,
     "solution": "",
@@ -17011,7 +17385,7 @@
       "2(2 − 3√3)",
       "2(√2 + √3)",
       "(√2 − √3)(√2 + √3)",
-      "2√7/ @@Q07@@"
+      "2√7/ 7"
     ],
     "answer": null,
     "solution": "",
@@ -17686,7 +18060,7 @@
       "9, 4",
       "10, 3",
       "12, 4",
-      "11, @@Q04@@"
+      "11, 4"
     ],
     "answer": null,
     "solution": "",
@@ -17794,7 +18168,7 @@
       "(x+3)/2",
       "(x-3)/2",
       "(x+2)/3",
-      "(x-2)/ @@Q03@@"
+      "(x-2)/ 3"
     ],
     "answer": null,
     "solution": "",
@@ -17821,7 +18195,7 @@
       "𝑦 = 2𝑥 − 9",
       "𝑦 = 2𝑥 + 3",
       "𝑦 = 0",
-      "𝑦 = 𝑥/ @@Q02@@ − 9"
+      "𝑦 = 𝑥/ 2 − 9"
     ],
     "answer": null,
     "solution": "",
@@ -17848,7 +18222,7 @@
       "5/3",
       "5/6",
       "3/5",
-      "6/ @@Q05@@"
+      "6/ 5"
     ],
     "answer": null,
     "solution": "",
@@ -17875,7 +18249,7 @@
       "2𝜋",
       "𝜋/3",
       "𝜋",
-      "−𝜋 Part III: Mathematics-Descriptive Questions [ @@Q30@@ Marks] Question No 1: Let 𝑎, 𝑏 and 𝑐 be distinct nonzero real numbers such that 1 1 1a b cb c a     Prove that |𝑎𝑏𝑐| = 1. Question No 2: In , and , ,ABC AB AC D E F are on ,,AB BC CA , such that .DE EF FD Prove that )1 2 ( .DEB ADF CFE     ----End of paper----"
+      "−𝜋"
     ],
     "answer": null,
     "solution": "",
@@ -17886,7 +18260,7 @@
     "id": "mathematics-2023-final-maths-2023-4566955-part-iii-1",
     "paperId": "mathematics-2023-final-maths-2023-4566955",
     "paperSubject": "Mathematics",
-    "number": 71,
+    "number": 1,
     "displayNumber": "Descriptive 1",
     "subject": "Mathematics",
     "topic": "Descriptive",
@@ -17897,7 +18271,7 @@
     "exam": "NSTC",
     "year": 2023,
     "source": "NSTC 2023 Mathematics Paper",
-    "prompt": "Question No 1: Let 𝑎, 𝑏 and 𝑐 be distinct nonzero real numbers such that 1 1 1a b cb c a     Prove that |𝑎𝑏𝑐| = 1.",
+    "prompt": "Question No 1: Let 𝑎, 𝑏 and 𝑐 be distinct nonzero real numbers such that 1 1 1a b cb c a+ = + = + Prove that |𝑎𝑏𝑐| = 1.",
     "options": [],
     "answer": null,
     "solution": "",
@@ -17908,7 +18282,7 @@
     "id": "mathematics-2023-final-maths-2023-4566955-part-iii-2",
     "paperId": "mathematics-2023-final-maths-2023-4566955",
     "paperSubject": "Mathematics",
-    "number": 72,
+    "number": 2,
     "displayNumber": "Descriptive 2",
     "subject": "Mathematics",
     "topic": "Descriptive",
@@ -17919,7 +18293,7 @@
     "exam": "NSTC",
     "year": 2023,
     "source": "NSTC 2023 Mathematics Paper",
-    "prompt": "Question No 2: In , and , ,ABC AB AC D E F are on ,,AB BC CA , such that .DE EF FD Prove that )1 2 ( .DEB ADF CFE     -",
+    "prompt": "Question No 2: In , and , ,ABC AB AC D E FDelta= are on ,,AB BC CA , such that .DE EF FD== Prove that )1 2 ( .DEB ADF CFEangle = angle + angle -",
     "options": [],
     "answer": null,
     "solution": "",
@@ -18022,7 +18396,7 @@
     "exam": "NSTC",
     "year": 2024,
     "source": "NSTC 2024 Mathematics Paper",
-    "prompt": "Electric intensity is a ------------------------ quantity.",
+    "prompt": "Electric intensity is a",
     "options": [
       "vector",
       "scalar",
@@ -18051,10 +18425,10 @@
     "source": "NSTC 2024 Mathematics Paper",
     "prompt": "One coulomb is equal to the charge of------------------------electrons.",
     "options": [
-      "6.25x1019",
-      "6.24x1018",
-      "6.24x1017",
-      "6.25x1018 CHEMISTRY"
+      "6.25 x 10^19",
+      "6.24 x 10^18",
+      "6.24 x 10^17",
+      "6.25 x 10^18"
     ],
     "answer": null,
     "solution": "",
@@ -18189,7 +18563,7 @@
       "Fluorine",
       "Oxygen",
       "Nitrogen",
-      "Iodine MATHEMATICS"
+      "Iodine"
     ],
     "answer": null,
     "solution": "",
@@ -18324,7 +18698,7 @@
       "-4",
       "6",
       "2",
-      "3/ @@Q02@@ PHYSICS"
+      "3/ 2"
     ],
     "answer": null,
     "solution": "",
@@ -18405,7 +18779,7 @@
       "4.15 km/s",
       "2.78 km/s",
       "3.08 km/s",
-      "6. @@Q66@@ km/s"
+      "6. 66 km/s"
     ],
     "answer": null,
     "solution": "",
@@ -18459,7 +18833,7 @@
       "0.5 second",
       "1.0 seconds",
       "1.5 seconds",
-      "2.0 seconds PART II – MATHEMATICS"
+      "2.0 seconds"
     ],
     "answer": null,
     "solution": "",
@@ -18486,7 +18860,7 @@
       "Concyclic",
       "Collinear",
       "Concurrent",
-      "None of these."
+      "None of these"
     ],
     "answer": null,
     "solution": "",
@@ -18648,7 +19022,7 @@
       "Triangles",
       "Parallelograms",
       "Circles",
-      "None of these."
+      "None of these"
     ],
     "answer": null,
     "solution": "",
@@ -19102,7 +19476,7 @@
     "exam": "NSTC",
     "year": 2024,
     "source": "NSTC 2024 Mathematics Paper",
-    "prompt": "How many terms are in the expansion of (2𝑥 − @@Q01@@ 𝑦) @@Q10@@ ?",
+    "prompt": "How many terms are in the expansion of (2𝑥 − 1 𝑦) 10 ?",
     "options": [
       "9",
       "10",
@@ -19134,7 +19508,7 @@
       "(55 4 )",
       "(55 3 )",
       "(56 3 )",
-      "( @@Q56@@ 4 )"
+      "( 56 4 )"
     ],
     "answer": null,
     "solution": "",
@@ -19510,9 +19884,9 @@
     "prompt": "If A and B are matrices of order three then Det(AB) equals",
     "options": [
       "Det(A)+Det(",
-      "(b) Det(A)Det(B)",
+      "Det(A)Det(B)",
       "0",
-      "None of these."
+      "None of these"
     ],
     "answer": null,
     "solution": "",
@@ -19674,7 +20048,7 @@
       "1:1",
       "1:2",
       "2:3",
-      "4: @@Q09@@"
+      "4: 9"
     ],
     "answer": null,
     "solution": "",
@@ -19728,7 +20102,7 @@
       "252 ∗ 4 – 198 ∗ 5",
       "252 ∗ 5 – 198 ∗ 4",
       "252 ∗ 5 – 198 ∗ 2",
-      "252 ∗ @@Q04@@ – 198 ∗ 4"
+      "252 ∗ 4 – 198 ∗ 4"
     ],
     "answer": null,
     "solution": "",
@@ -19779,9 +20153,9 @@
     "source": "NSTC 2024 Mathematics Paper",
     "prompt": "Which of the following is not irrational?",
     "options": [
-      "2 2 ",
+      "2 2 +",
       "2 2 -",
-      "(2 2 )(2 2 )-",
+      "(2 2 )(2 2 )+-",
       "None of the these"
     ],
     "answer": null,
@@ -19809,7 +20183,7 @@
       "45",
       "50",
       "7",
-      "49 Part III: Mathematics-Descriptive Questions [ @@Q30@@ Marks] Question No 1: Prove that ( 5 6 7)( 5 6 7)( 5 6 7)( 5 6 7) 140   - -  -    . Question No 2: Triangle ABC is inscribed in a circle. P, Q and R are any points on arcs AB, BC and AC respectively. Prove that 360ARC CQB BPA      . ----End of paper----"
+      "49"
     ],
     "answer": null,
     "solution": "",
@@ -19820,7 +20194,7 @@
     "id": "mathematics-2024-final-maths-2024-640e2ac-part-iii-1",
     "paperId": "mathematics-2024-final-maths-2024-640e2ac",
     "paperSubject": "Mathematics",
-    "number": 71,
+    "number": 1,
     "displayNumber": "Descriptive 1",
     "subject": "Mathematics",
     "topic": "Descriptive",
@@ -19831,7 +20205,7 @@
     "exam": "NSTC",
     "year": 2024,
     "source": "NSTC 2024 Mathematics Paper",
-    "prompt": "Question No 1: Prove that ( 5 6 7)( 5 6 7)( 5 6 7)( 5 6 7) 140   - -  -    .",
+    "prompt": "Question No 1: Prove that ( 5 6 7)( 5 6 7)( 5 6 7)( 5 6 7) 140+ + + - - + - + + = .",
     "options": [],
     "answer": null,
     "solution": "",
@@ -19842,7 +20216,7 @@
     "id": "mathematics-2024-final-maths-2024-640e2ac-part-iii-2",
     "paperId": "mathematics-2024-final-maths-2024-640e2ac",
     "paperSubject": "Mathematics",
-    "number": 72,
+    "number": 2,
     "displayNumber": "Descriptive 2",
     "subject": "Mathematics",
     "topic": "Descriptive",
@@ -19853,7 +20227,7 @@
     "exam": "NSTC",
     "year": 2024,
     "source": "NSTC 2024 Mathematics Paper",
-    "prompt": "Question No 2: Triangle ABC is inscribed in a circle. P, Q and R are any points on arcs AB, BC and AC respectively. Prove that 360ARC CQB BPA      . -",
+    "prompt": "Question No 2: Triangle ABC is inscribed in a circle. P, Q and R are any points on arcs AB, BC and AC respectively. Prove that 360ARC CQB BPAangle + angle + angle = . -",
     "options": [],
     "answer": null,
     "solution": "",
@@ -20255,10 +20629,10 @@
     "source": "NSTC 2025 Mathematics Paper",
     "prompt": "AI,200-kilogram car traveling at10meters per second hits a tree and is brought to rest in 0.10 second.What is the magnitude of the average force acting on the car to bring it to rest?",
     "options": [
-      "1.2×102 N",
+      "1.2 x 10^2 N",
       "1.2×10* N",
       "1.2×103N",
-      "1,2×105 N"
+      "1,2 x 10^5 N"
     ],
     "answer": null,
     "solution": "",
@@ -20447,7 +20821,7 @@
       "2x0",
       "6)",
       "180°-2x",
-      "Can'tbedetermined."
+      "Can'tbedetermined"
     ],
     "answer": null,
     "solution": "",
@@ -20498,9 +20872,9 @@
     "source": "NSTC 2025 Mathematics Paper",
     "prompt": "Solve for (indegrces): 2sin(0)=1 where0≤0≤180:",
     "options": [
-      "CD? value ofa'+b3+c3.",
+      "CD? value ofa'+b3+c3",
       "45°",
-      "60 PartIII:Mathematics-DescriptiveQuestions 30 Marks] Question No : In triangle ABC,angle A is a right angle. A point D lies on line segment AB in such a way that theangles ACDand BCDare equal.Moreover,|AD =2and BD|=3.What is thelength of line segment Question No 2: Let a, b and c be real numbers such that, a + b + c = 0 and a? + b? + c? = 12. Find the ---End of paper---",
+      "60 PartIII:Mathematics-DescriptiveQuestions 30 Marks] Question No : In triangle ABC,angle A is a right angle. A point D lies on line segment AB in such a way that theangles ACDand BCDare equal.Moreover,|AD =2and BD|=3.What is thelength of line segment",
       "90°"
     ],
     "answer": null,
@@ -20689,7 +21063,7 @@
     "options": [
       "atbiticd Thevalueofcab4bodis 24ad Prime mumber 432 99 (0) How many possible amounts exist?",
       "49 The sunt of two dimerent prime numbers is a Composite number What is the smallest positive integer n for which n! is divisible by 000? If ged(a, 0 and lem(a -72,what is the product axb? How many pairs of positive integers (r.y) satisty -y -72? Find the smallest number that when divided byS,6,and sleavesaremainderof3each time 145",
-      "1(96 1(14b Either Prime or Composite 29 (e)560 14 180 (0) A bag contains coins worth either S3 or S5.The total value is a rwo-digit number with identical digits (e.g.,S33).",
+      "1(96 1(14b Either Prime or Composite 29 (e)560 14 180 (0) A bag contains coins worth either S3 or S5.The total value is a rwo-digit number with identical digits (e.g.,S33)",
       "151 4d None of the mentioned 45 720 16 123"
     ],
     "answer": null,
@@ -20743,7 +21117,7 @@
     "options": [
       "1959 56 40320 516 80xy DAA2 16",
       "14536 (6) How many diagonals exist in a convex polygon with n sides? 20100 How many subsets does A= er.a...an-) have? LetS=(L2...500), thenumberof integers inSwhichare divisibleby2.3.or5are 500 (6) Determine the 4tem in the expansion of (r - 2y)5 40x (6)18 24",
-      "e)3024 n(n-3) (0) How many positions ofeight noks are there on a chess board in which no two of them attack each other? 28 (e)416 40r3y2 Astudent ean choose a professor in_ways if there ares femaleprofessors and 5male professors teaching (e)13 Find the number of tringles which can be fonmed by joining the angular points of polygon of S sides as vertices.",
+      "e)3024 n(n-3) (0) How many positions ofeight noks are there on a chess board in which no two of them attack each other? 28 (e)416 40r3y2 Astudent ean choose a professor in_ways if there ares femaleprofessors and 5male professors teaching (e)13 Find the number of tringles which can be fonmed by joining the angular points of polygon of S sides as vertices",
       "4032 (m+1) 366 80x²y3 40"
     ],
     "answer": null,
@@ -21305,7 +21679,7 @@
       "Dialysis",
       "Diabetes",
       "Lithotripsy",
-      "Both a & b CHEMISTRY"
+      "Both a & b"
     ],
     "answer": null,
     "solution": "",
@@ -21440,7 +21814,7 @@
       "Vitamin A",
       "Vitamin B",
       "Vitamin C",
-      "Vitamin D MATHEMATICS"
+      "Vitamin D"
     ],
     "answer": null,
     "solution": "",
@@ -21543,7 +21917,7 @@
     "exam": "NSTC",
     "year": 2022,
     "source": "NSTC 2022 Physics Paper",
-    "prompt": "@@Q55@@ @@Q54@@",
+    "prompt": "55 54",
     "options": [
       "1",
       "5",
@@ -21575,7 +21949,7 @@
       "𝑎𝑚𝑛",
       "𝑎𝑚+𝑛",
       "𝑎𝑚𝑛",
-      "None of these PHYSICS"
+      "None of these"
     ],
     "answer": null,
     "solution": "",
@@ -21710,7 +22084,7 @@
       "momentum and work",
       "energy and power",
       "mechanical energy and heat",
-      "work and power PART II – PHYSICS"
+      "work and power"
     ],
     "answer": null,
     "solution": "",
@@ -21741,8 +22115,8 @@
     ],
     "answer": null,
     "solution": "",
-    "page": null,
-    "figure": ""
+    "page": 4,
+    "figure": "/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q21-p4-manual.webp"
   },
   {
     "id": "physics-2022-final-physics-2022-b4137e5-part-ii-22",
@@ -21768,8 +22142,8 @@
     ],
     "answer": null,
     "solution": "",
-    "page": null,
-    "figure": ""
+    "page": 4,
+    "figure": "/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q22-p4-manual.webp"
   },
   {
     "id": "physics-2022-final-physics-2022-b4137e5-part-ii-23",
@@ -21795,8 +22169,8 @@
     ],
     "answer": null,
     "solution": "",
-    "page": null,
-    "figure": ""
+    "page": 4,
+    "figure": "/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q23-p4-manual.webp"
   },
   {
     "id": "physics-2022-final-physics-2022-b4137e5-part-ii-24",
@@ -21869,10 +22243,10 @@
     "source": "NSTC 2022 Physics Paper",
     "prompt": "During a collision, an 84-kilogram driver of a car moving at 24 meters per second is brought to rest by an inflating air bag in 1.2 seconds. The magnitude of the force exerted on the driver by the air bag is approximately.",
     "options": [
-      "7.0 × 101 N",
-      "8.2 × 102 N",
-      "1.7 × 103 N",
-      "2.0 × 103 N"
+      "7.0 x 10^1 N",
+      "8.2 x 10^2 N",
+      "1.7 x 10^3 N",
+      "2.0 x 10^3 N"
     ],
     "answer": null,
     "solution": "",
@@ -21931,7 +22305,7 @@
     "answer": null,
     "solution": "",
     "page": 5,
-    "figure": ""
+    "figure": "/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q28-p5-manual.webp"
   },
   {
     "id": "physics-2022-final-physics-2022-b4137e5-part-ii-29",
@@ -21975,12 +22349,12 @@
     "exam": "NSTC",
     "year": 2022,
     "source": "NSTC 2022 Physics Paper",
-    "prompt": "A catapult with a spring constant of 1.0 × 104 newtons per meter is required to launch an airplane from the deck of an aircraft carrier. The plane is released when it has been displaced 0.50 meter from its equilibrium position by the catapult. The energy acquired by the airplane from the catapult during takeoff is approximately",
+    "prompt": "A catapult with a spring constant of 1.0 x 10^4 newtons per meter is required to launch an airplane from the deck of an aircraft carrier. The plane is released when it has been displaced 0.50 meter from its equilibrium position by the catapult. The energy acquired by the airplane from the catapult during takeoff is approximately",
     "options": [
-      "1.3 × 103 J",
-      "2.0 × 104 J",
-      "2.5 × 103 J",
-      "1.0 × 104 J"
+      "1.3 x 10^3 J",
+      "2.0 x 10^4 J",
+      "2.5 x 10^3 J",
+      "1.0 x 10^4 J"
     ],
     "answer": null,
     "solution": "",
@@ -22029,12 +22403,12 @@
     "exam": "NSTC",
     "year": 2022,
     "source": "NSTC 2022 Physics Paper",
-    "prompt": "A 2.0×106 hertz radio signal is sent a distance of 7.3×1010 meters from Earth to a spaceship orbiting Mars. Approximately how much time does it take the radio signal to travel from Earth to the spaceship?",
+    "prompt": "A 2.0 x 10^6 hertz radio signal is sent a distance of 7.3 x 10^10 meters from Earth to a spaceship orbiting Mars. Approximately how much time does it take the radio signal to travel from Earth to the spaceship?",
     "options": [
       "4.11×10–3 s",
-      "2.43×102 s",
-      "2.19×108 s",
-      "1.46×1017 s"
+      "2.43 x 10^2 s",
+      "2.19 x 10^8 s",
+      "1.46 x 10^17 s"
     ],
     "answer": null,
     "solution": "",
@@ -22087,8 +22461,8 @@
     "options": [
       "4.2 J",
       "250 J",
-      "9.0 × 103 J",
-      "5. @@Q04@@ × 105 J"
+      "9.0 x 10^3 J",
+      "5.4 x 10^5 J"
     ],
     "answer": null,
     "solution": "",
@@ -22120,7 +22494,7 @@
     "answer": null,
     "solution": "",
     "page": 5,
-    "figure": ""
+    "figure": "/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q35-p5-manual.webp"
   },
   {
     "id": "physics-2022-final-physics-2022-b4137e5-part-ii-36",
@@ -22174,7 +22548,7 @@
     "answer": null,
     "solution": "",
     "page": 6,
-    "figure": ""
+    "figure": "/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q37-p6-manual.webp"
   },
   {
     "id": "physics-2022-final-physics-2022-b4137e5-part-ii-38",
@@ -22228,7 +22602,7 @@
     "answer": null,
     "solution": "",
     "page": 6,
-    "figure": ""
+    "figure": "/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q39-p6-manual.webp"
   },
   {
     "id": "physics-2022-final-physics-2022-b4137e5-part-ii-40",
@@ -22355,10 +22729,10 @@
     "source": "NSTC 2022 Physics Paper",
     "prompt": "What is the speed of light in a medium having an absolute index of refraction of 2.3?",
     "options": [
-      "0.77 ×108 m/s",
-      "1.3 ×108 m/s",
-      "1.5 ×108 m/s",
-      "2. @@Q03@@ ×108 m/s"
+      "0.77 x 10^8 m/s",
+      "1.3 x 10^8 m/s",
+      "1.5 x 10^8 m/s",
+      "2.3 x 10^8 m/s"
     ],
     "answer": null,
     "solution": "",
@@ -22490,10 +22864,10 @@
     "source": "NSTC 2022 Physics Paper",
     "prompt": "Which statement is consistent with Kepler’s laws of planetary motion?",
     "options": [
-      "The planets move at a constant speed around the Sun.",
-      "The speed of a planet is directly proportional to the radius of the path of motion.",
-      "An imaginary line from a planet to the Sun sweeps out equal areas in equal time intervals.",
-      "The more massive the planet, the slower the planet moves around the Sun."
+      "The planets move at a constant speed around the Sun",
+      "The speed of a planet is directly proportional to the radius of the path of motion",
+      "An imaginary line from a planet to the Sun sweeps out equal areas in equal time intervals",
+      "The more massive the planet, the slower the planet moves around the Sun"
     ],
     "answer": null,
     "solution": "",
@@ -22525,7 +22899,7 @@
     "answer": null,
     "solution": "",
     "page": 7,
-    "figure": ""
+    "figure": "/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q50-p7-manual.webp"
   },
   {
     "id": "physics-2022-final-physics-2022-b4137e5-part-ii-51",
@@ -22623,7 +22997,7 @@
     "exam": "NSTC",
     "year": 2022,
     "source": "NSTC 2022 Physics Paper",
-    "prompt": "The speed of light in vacuum, 𝑐, depends on two fundamental constants, the permeability of free space, 𝜇0, and the permittivity of free space, 𝜀0. The speed of light is given by 𝑐 = @@Q01@@ √𝜇0𝜀0 . The units of 𝜀0 are N-1.C2.m-2. The units for 𝜇0 are",
+    "prompt": "The speed of light in vacuum, 𝑐, depends on two fundamental constants, the permeability of free space, 𝜇0, and the permittivity of free space, 𝜀0. The speed of light is given by 𝑐 = 1 √𝜇0𝜀0 . The units of 𝜀0 are N-1.C2.m-2. The units for 𝜇0 are",
     "options": [
       "kg-1m-1C2",
       "kg.m.C-2",
@@ -22679,10 +23053,10 @@
     "source": "NSTC 2022 Physics Paper",
     "prompt": "A large bus and a small car collide and stick together. Which one undergoes the larger change in momentum?",
     "options": [
-      "The car.",
-      "The bus.",
-      "The momentum change is the same for both vehicles.",
-      "You can’t tell without knowing the final velocity of the combined masses."
+      "The car",
+      "The bus",
+      "The momentum change is the same for both vehicles",
+      "You can’t tell without knowing the final velocity of the combined masses"
     ],
     "answer": null,
     "solution": "",
@@ -22733,10 +23107,10 @@
     "source": "NSTC 2022 Physics Paper",
     "prompt": "A physics student is given three 12-ohm resistors with instructions to create the circuit that would have the lowest possible resistance. The correct circuit would be a",
     "options": [
-      "series circuit with an equivalent resistance of 36 ",
-      "series circuit with an equivalent resistance of 4.0 .",
-      "parallel circuit with an equivalent resistance of 36 ",
-      "parallel circuit with an equivalent resistance of 4.0 "
+      "series circuit with an equivalent resistance of 36 Omega",
+      "series circuit with an equivalent resistance of 4.0 Omega",
+      "parallel circuit with an equivalent resistance of 36 Omega",
+      "parallel circuit with an equivalent resistance of 4.0 Omega"
     ],
     "answer": null,
     "solution": "",
@@ -22760,10 +23134,10 @@
     "source": "NSTC 2022 Physics Paper",
     "prompt": "What occurs when light passes from water into flint glass?",
     "options": [
-      "Its speed decreases, its wavelength becomes shorter, and its frequency remains the same.",
-      "Its speed decreases, its wavelength becomes shorter, and its frequency increases.",
-      "Its speed increases, its wavelength becomes longer, and its frequency remains the same.",
-      "Its speed increases, its wavelength becomes longer, and its frequency decreases. @@Q61@@ The diagram on the right represents the path of Earth around the Sun. As Earth travels in its orbit from its January position to its July position, the potential energy of Earth (a) decreases and its kinetic energy decreases (b) decreases and its kinetic energy increases (c) increases and its kinetic energy decreases (d) increases and its kinetic energy increases @@Q62@@ A temperature change of 20 Celsius degrees is equal to a temperature change of (a) 20. Kelvins (b) 36. Kelvins (c) 253 Kelvins (d) 293 Kelvins @@Q63@@ The diagram on the right shows a circuit with a battery applying a potential difference across an N-type semiconductor. The majority charge carriers in the semiconductor are (a) negative electrons moving to the right (b) negative electrons moving to the left (c) positive holes moving to the right (d) positive holes moving to the left @@Q64@@ If nitrogen nuclei are bombarded with alpha particles they can be changed into oxygen nuclei. This phenomenon is known as (a) nuclear fission (b) nuclear fusion (c) artificial transmutation (d) particle scattering @@Q65@@ Which device can be used to detect subatomic particles that exit nuclei? (a) Van de Graaff generator (b) Geiger counter (c) linear accelerator (d) cyclotron @@Q66@@ If the nucleus of an atom emits a positron, the atomic number of the atom will (a) decrease by one (b) increase by one (c) remain unchanged (d) decrease by two @@Q67@@ The half-life of a particular radioactive material is 6.0 hours. What fraction of a sample of the material would remain after 1 day? (a) 1/4 (b) 2/3 (c) 3/8 (d) 1/16"
+      "Its speed decreases, its wavelength becomes shorter, and its frequency remains the same",
+      "Its speed decreases, its wavelength becomes shorter, and its frequency increases",
+      "Its speed increases, its wavelength becomes longer, and its frequency remains the same",
+      "Its speed increases, its wavelength becomes longer, and its frequency decreases"
     ],
     "answer": null,
     "solution": "",
@@ -22790,7 +23164,7 @@
       "same direction of displacement and the same direction of motion",
       "same direction of displacement and the opposite direction of motion",
       "opposite direction of displacement and the same direction of motion",
-      "opposite direction of displacement and the opposite direction of motion @@Q68@@ In a working transistor circuit, as the emitter-base current is increased, the collector current (a) decreases by a small amount (b) decreases by a large amount (c) increases by a small amount (d) increases by a large amount @@Q69@@ Spherical aberration is a defect associated with (a) spherical mirrors, only (b) plane mirrors, only (c) both spherical mirrors and lenses (d) both plane mirrors and lenses Part III: Physics-Descriptive Questions [ @@Q30@@ Marks] Question No 01: A rocket of constant mass 2.00×103 kg, is fired vertically upward with constant acceleration. After one minute it reaches a height of 36.0 km and its engine is switched off. Assuming the rocket’s mass and g remain constant, calculate a) the initial acceleration of the rocket b) the maximum height reached. c) the total time of flight. d) the work done by the rocket. (2+3+2+3) Question No 02: Fast neutrons, mass 𝑚1, with a speed 𝑣1 = 2.0 × 107 𝑚/𝑠 are slowed down in a nuclear reactor by elastic collision with the nuclei of a moderator. a) Derive the general expression for the speed 𝑣 of the neutron after collision with a nucleus of mass 𝑚2 which is initially at rest. b) Calculate the speed 𝑣 of a neutron after a single, head on, collision with a Hydrogen nucleus. c) Calculate the speed 𝑣 of a neutron after a single, head on, collision with a Carbon nucleus. d) After many collisions with atoms of the moderator at room temperature, what energy will neutron attain? (4+2+2+2) The masses involved are neutron: 1.0087 amu, hydrogen nucleus: 1.0073 amu; carbon nucleus: 11.9934 amu. Question No 03: The table below shows measurements of the decay rate of a sample of 128I, a radionuclide often used medically as a trace to measure the rate at which iodine is absorbed by the thyroid gland. a) Write an expression for the activity of the radionuclide as a function of time. b) What is half-life, and decay constant of the radioactive decay? c) What is the relationship between half-life, and decay constant of the radioactive decay? d) Use above data to find the decay constant and half-life of 128I. (2+2+1+5) ---End of paper--- @@Q70@@ If the current in an ammeter’s coil is doubled, the resulting torque on the coil will be (a) unchanged (b) halved (c) doubled (d) quadrupled Time (minutes) 𝐑 (𝐜𝐨𝐮𝐧𝐭𝐬/𝐬) 4.00 392. @@Q02@@ 68.00 65.5 132.00 10.9 196.00 1.86"
+      "opposite direction of displacement and the opposite direction of motion"
     ],
     "answer": null,
     "solution": "",
@@ -22822,7 +23196,7 @@
     "answer": null,
     "solution": "",
     "page": 9,
-    "figure": ""
+    "figure": "/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q61-p9-manual.webp"
   },
   {
     "id": "physics-2022-final-physics-2022-b4137e5-part-ii-62",
@@ -22876,7 +23250,7 @@
     "answer": null,
     "solution": "",
     "page": 9,
-    "figure": ""
+    "figure": "/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q63-p9-manual.webp"
   },
   {
     "id": "physics-2022-final-physics-2022-b4137e5-part-ii-64",
@@ -23033,7 +23407,7 @@
       "spherical mirrors, only",
       "plane mirrors, only",
       "both spherical mirrors and lenses",
-      "both plane mirrors and lenses Part III: Physics-Descriptive Questions ["
+      "both plane mirrors and lenses"
     ],
     "answer": null,
     "solution": "",
@@ -23060,7 +23434,7 @@
       "unchanged",
       "halved",
       "doubled",
-      "quadrupled Time (minutes) 𝐑 (𝐜𝐨𝐮𝐧𝐭𝐬/𝐬) 4.00 392."
+      "quadrupled Time (minutes) 𝐑 (𝐜𝐨𝐮𝐧𝐭𝐬/𝐬)4.00 392"
     ],
     "answer": null,
     "solution": "",
@@ -23071,7 +23445,7 @@
     "id": "physics-2022-final-physics-2022-b4137e5-part-iii-1",
     "paperId": "physics-2022-final-physics-2022-b4137e5",
     "paperSubject": "Physics",
-    "number": 71,
+    "number": 1,
     "displayNumber": "Descriptive 1",
     "subject": "Physics",
     "topic": "Descriptive",
@@ -23082,7 +23456,7 @@
     "exam": "NSTC",
     "year": 2022,
     "source": "NSTC 2022 Physics Paper",
-    "prompt": "Question No 01: A rocket of constant mass 2.00×103 kg, is fired vertically upward with constant acceleration. After one minute it reaches a height of 36.0 km and its engine is switched off. Assuming the rocket’s mass and g remain constant, calculate a) the initial acceleration of the rocket b) the maximum height reached. c) the total time of flight. d) the work done by the rocket. (2+3+2+3)",
+    "prompt": "Question No 01: A rocket of constant mass 2.00 x 10^3 kg, is fired vertically upward with constant acceleration. After one minute it reaches a height of 36.0 km and its engine is switched off. Assuming the rocket’s mass and g remain constant, calculate a) the initial acceleration of the rocket b) the maximum height reached. c) the total time of flight. d) the work done by the rocket. (2+3+2+3)",
     "options": [],
     "answer": null,
     "solution": "",
@@ -23093,7 +23467,7 @@
     "id": "physics-2022-final-physics-2022-b4137e5-part-iii-2",
     "paperId": "physics-2022-final-physics-2022-b4137e5",
     "paperSubject": "Physics",
-    "number": 72,
+    "number": 2,
     "displayNumber": "Descriptive 2",
     "subject": "Physics",
     "topic": "Descriptive",
@@ -23104,7 +23478,7 @@
     "exam": "NSTC",
     "year": 2022,
     "source": "NSTC 2022 Physics Paper",
-    "prompt": "Question No 02: Fast neutrons, mass 𝑚1, with a speed 𝑣1 = 2.0 × 107 𝑚/𝑠 are slowed down in a nuclear reactor by elastic collision with the nuclei of a moderator. a) Derive the general expression for the speed 𝑣 of the neutron after collision with a nucleus of mass 𝑚2 which is initially at rest. b) Calculate the speed 𝑣 of a neutron after a single, head on, collision with a Hydrogen nucleus. c) Calculate the speed 𝑣 of a neutron after a single, head on, collision with a Carbon nucleus. d) After many collisions with atoms of the moderator at room temperature, what energy will neutron attain? (4+2+2+2) The masses involved are neutron: 1.0087 amu, hydrogen nucleus: 1.0073 amu; carbon nucleus: 11.9934 amu.",
+    "prompt": "Question No 02: Fast neutrons, mass 𝑚1, with a speed 𝑣1 = 2.0 x 10^7 𝑚/𝑠 are slowed down in a nuclear reactor by elastic collision with the nuclei of a moderator. a) Derive the general expression for the speed 𝑣 of the neutron after collision with a nucleus of mass 𝑚2 which is initially at rest. b) Calculate the speed 𝑣 of a neutron after a single, head on, collision with a Hydrogen nucleus. c) Calculate the speed 𝑣 of a neutron after a single, head on, collision with a Carbon nucleus. d) After many collisions with atoms of the moderator at room temperature, what energy will neutron attain? (4+2+2+2) The masses involved are neutron: 1.0087 amu, hydrogen nucleus: 1.0073 amu; carbon nucleus: 11.9934 amu.",
     "options": [],
     "answer": null,
     "solution": "",
@@ -23115,7 +23489,7 @@
     "id": "physics-2022-final-physics-2022-b4137e5-part-iii-3",
     "paperId": "physics-2022-final-physics-2022-b4137e5",
     "paperSubject": "Physics",
-    "number": 73,
+    "number": 3,
     "displayNumber": "Descriptive 3",
     "subject": "Physics",
     "topic": "Descriptive",
@@ -23261,7 +23635,7 @@
       "Prophase 1",
       "Telophase 1",
       "Anaphase 1",
-      "Metaphase 1 CHEMISTRY"
+      "Metaphase 1"
     ],
     "answer": null,
     "solution": "",
@@ -23396,7 +23770,7 @@
       "Florescent bulb",
       "Neon signs",
       "Laser",
-      "All of these MATHEMATICS"
+      "All of these"
     ],
     "answer": null,
     "solution": "",
@@ -23477,7 +23851,7 @@
       "0",
       "1",
       "2",
-      ""
+      "infinity"
     ],
     "answer": null,
     "solution": "",
@@ -23526,12 +23900,12 @@
     "exam": "NSTC",
     "year": 2023,
     "source": "NSTC 2023 Physics Paper",
-    "prompt": "If 𝑥 + @@Q01@@ 𝑥 = 2, then the value of 𝑥2 + @@Q01@@ 𝑥2 is",
+    "prompt": "If 𝑥 + 1 𝑥 = 2, then the value of 𝑥2 + 1 𝑥2 is",
     "options": [
       "¼",
       "1",
       "3",
-      "2 PHYSICS"
+      "2"
     ],
     "answer": null,
     "solution": "",
@@ -23582,10 +23956,10 @@
     "source": "NSTC 2023 Physics Paper",
     "prompt": "A 1,200-kilogram car traveling at 10. m/s hits a tree and is brought to rest in 0.10 second. What is the magnitude of the average force acting on the car to bring it to rest?",
     "options": [
-      "1.2 × 102 N",
-      "1.2 × 103 N",
-      "1.2 × 104 N",
-      "1. @@Q02@@ × 105 N"
+      "1.2 x 10^2 N",
+      "1.2 x 10^3 N",
+      "1.2 x 10^4 N",
+      "1.2 x 10^5 N"
     ],
     "answer": null,
     "solution": "",
@@ -23636,10 +24010,10 @@
     "source": "NSTC 2023 Physics Paper",
     "prompt": "An electric iron operating at 120 volts draws 10. Amperes of current. How much heat energy is delivered by the iron in 30 Seconds?",
     "options": [
-      "3.0 × 102 J",
-      "3.6 × 103 J",
-      "1.2 × 103 J",
-      "3. @@Q06@@ × 104 J"
+      "3.0 x 10^2 J",
+      "3.6 x 10^3 J",
+      "1.2 x 10^3 J",
+      "3.6 x 10^4 J"
     ],
     "answer": null,
     "solution": "",
@@ -23666,7 +24040,7 @@
       "Resonance",
       "Diffraction",
       "The Doppler effect",
-      "Refraction PART II – PHYSICS"
+      "Refraction"
     ],
     "answer": null,
     "solution": "",
@@ -23769,12 +24143,12 @@
     "exam": "NSTC",
     "year": 2023,
     "source": "NSTC 2023 Physics Paper",
-    "prompt": "When Earth and the Moon are separated by a distance of 3.84 × 10 8 meters, the magnitude of the gravitational force of attraction between them is 2.0 × 1020 newtons. What would be the magnitude of this gravitational force of attraction if Earth and the Moon were separated by a distance of 1.92 × 108 meters?",
+    "prompt": "When Earth and the Moon are separated by a distance of 3.84 x 10^8 meters, the magnitude of the gravitational force of attraction between them is 2.0 x 10^20 newtons. What would be the magnitude of this gravitational force of attraction if Earth and the Moon were separated by a distance of 1.92 x 10^8 meters?",
     "options": [
-      "5.0 × 1019 N",
-      "4.0 × 1020 N",
-      "2.0 × 1020 N",
-      "8.0 × 1020 N"
+      "5.0 x 10^19 N",
+      "4.0 x 10^20 N",
+      "2.0 x 10^20 N",
+      "8.0 x 10^20 N"
     ],
     "answer": null,
     "solution": "",
@@ -23805,8 +24179,8 @@
     ],
     "answer": null,
     "solution": "",
-    "page": null,
-    "figure": ""
+    "page": 4,
+    "figure": "/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q25-p4-manual.webp"
   },
   {
     "id": "physics-2023-final-physics-2023-ac5a924-part-ii-26",
@@ -23825,10 +24199,10 @@
     "source": "NSTC 2023 Physics Paper",
     "prompt": "A motorcycle being driven on a dirt path hits a rock. Its 60. -kilogram cyclist is projected over the handlebars at 20.0 meters per second into a haystack. If the cyclist is brought to rest in 0.50 second, the magnitude of the average force exerted on the cyclist by the haystack is",
     "options": [
-      "6.0 × 101 N",
-      "5.9 × 102 N",
-      "1.2 × 103 N",
-      "2. @@Q04@@ × 103 N"
+      "6.0 x 10^1 N",
+      "5.9 x 10^2 N",
+      "1.2 x 10^3 N",
+      "2.4 x 10^3 N"
     ],
     "answer": null,
     "solution": "",
@@ -23859,8 +24233,8 @@
     ],
     "answer": null,
     "solution": "",
-    "page": null,
-    "figure": ""
+    "page": 4,
+    "figure": "/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q27-p4-manual.webp"
   },
   {
     "id": "physics-2023-final-physics-2023-ac5a924-part-ii-28",
@@ -23886,8 +24260,8 @@
     ],
     "answer": null,
     "solution": "",
-    "page": null,
-    "figure": ""
+    "page": 4,
+    "figure": "/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q28-p4-manual.webp"
   },
   {
     "id": "physics-2023-final-physics-2023-ac5a924-part-ii-29",
@@ -23906,10 +24280,10 @@
     "source": "NSTC 2023 Physics Paper",
     "prompt": "The current traveling from the cathode to the screen in a television picture tube is 5.0 × 10–5 ampere. How many electrons strike the screen in 5.0 seconds?",
     "options": [
-      "3.1 × 1024",
-      "1.6 × 1015",
-      "6.3 × 1018",
-      "1.0 × 105"
+      "3.1 x 10^24",
+      "1.6 x 10^15",
+      "6.3 x 10^18",
+      "1.0 x 10^5"
     ],
     "answer": null,
     "solution": "",
@@ -23931,7 +24305,7 @@
     "exam": "NSTC",
     "year": 2023,
     "source": "NSTC 2023 Physics Paper",
-    "prompt": "As a sound wave passes from water, where the speed is 1.49 × 103 meters per second, into air, the wave’s speed",
+    "prompt": "As a sound wave passes from water, where the speed is 1.49 x 10^3 meters per second, into air, the wave’s speed",
     "options": [
       "Decreases and its frequency remains the same same",
       "Increases and its frequency remains the same",
@@ -23967,8 +24341,8 @@
     ],
     "answer": null,
     "solution": "",
-    "page": null,
-    "figure": ""
+    "page": 4,
+    "figure": "/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q31-p4-manual.webp"
   },
   {
     "id": "physics-2023-final-physics-2023-ac5a924-part-ii-32",
@@ -24014,8 +24388,8 @@
     "source": "NSTC 2023 Physics Paper",
     "prompt": "A source of waves and an observer are moving relative to each other. The observer will detect a steadily increasing frequency if",
     "options": [
-      "He moves toward the source at a constant speed.",
-      "The source moves away from him at a constant speed.",
+      "He moves toward the source at a constant speed",
+      "The source moves away from him at a constant speed",
       "He accelerates toward the source",
       "The source accelerates away from him"
     ],
@@ -24076,7 +24450,7 @@
     "answer": null,
     "solution": "",
     "page": 5,
-    "figure": ""
+    "figure": "/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q35-p5-manual.webp"
   },
   {
     "id": "physics-2023-final-physics-2023-ac5a924-part-ii-36",
@@ -24130,7 +24504,7 @@
     "answer": null,
     "solution": "",
     "page": 5,
-    "figure": ""
+    "figure": "/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q37-p5-manual.webp"
   },
   {
     "id": "physics-2023-final-physics-2023-ac5a924-part-ii-38",
@@ -24176,10 +24550,10 @@
     "source": "NSTC 2023 Physics Paper",
     "prompt": "The force required to start an object sliding across a uniform horizontal surface is larger than the force required to keep the object sliding at a constant velocity. The magnitudes of the required forces are different in these situations because the force of kinetic friction",
     "options": [
-      "Is greater than the force of static friction.",
-      "Is less than the force of static friction.",
-      "Increases as the speed of the object relative to the surface increases.",
-      "Decreases as the speed of the object relative to the surface increases."
+      "Is greater than the force of static friction",
+      "Is less than the force of static friction",
+      "Increases as the speed of the object relative to the surface increases",
+      "Decreases as the speed of the object relative to the surface increases"
     ],
     "answer": null,
     "solution": "",
@@ -24203,15 +24577,15 @@
     "source": "NSTC 2023 Physics Paper",
     "prompt": "A laser beam is directed at the surface of a smooth, calm pond as represented in the diagram below. Which organisms could be illuminated by the laser light?",
     "options": [
-      "The bird and the fish.",
-      "The crab and the seaweed.",
-      "The bird and the seaweed.",
-      "The crab and the fish."
+      "The bird and the fish",
+      "The crab and the seaweed",
+      "The bird and the seaweed",
+      "The crab and the fish"
     ],
     "answer": null,
     "solution": "",
     "page": 6,
-    "figure": ""
+    "figure": "/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q40-p6-manual.webp"
   },
   {
     "id": "physics-2023-final-physics-2023-ac5a924-part-ii-41",
@@ -24230,10 +24604,10 @@
     "source": "NSTC 2023 Physics Paper",
     "prompt": "An immersion heater has a resistance of 5.0 ohms while drawing a current of 3.0 amperes. How much electrical energy is delivered to the heater during 200 seconds of operation?",
     "options": [
-      "3.0 × 103 J",
-      "9.0 × 103 J",
-      "6.0 × 103 J",
-      "1. @@Q05@@ × 104 J"
+      "3.0 x 10^3 J",
+      "9.0 x 10^3 J",
+      "6.0 x 10^3 J",
+      "1.5 x 10^4 J"
     ],
     "answer": null,
     "solution": "",
@@ -24338,8 +24712,8 @@
     "source": "NSTC 2023 Physics Paper",
     "prompt": "Standing waves in water are produced most often by periodic water waves",
     "options": [
-      "Being absorbed at the boundary with a new medium.",
-      "Refracting at a boundary with a new medium.",
+      "Being absorbed at the boundary with a new medium",
+      "Refracting at a boundary with a new medium",
       "Diffracting around a barrier",
       "Reflecting from a barrier"
     ],
@@ -24395,7 +24769,7 @@
       "8.0 × 10 –19 C",
       "3.2 × 10 –19 C",
       "4.8 × 10 –19 C",
-      "2. @@Q06@@ × 10 –19 C"
+      "2.6 × 10 –19 C"
     ],
     "answer": null,
     "solution": "",
@@ -24554,10 +24928,10 @@
     "source": "NSTC 2023 Physics Paper",
     "prompt": "As more and more negative electric charge is being brought to a conducting sphere, inside the sphere",
     "options": [
-      "The electric field and potential increase.",
+      "The electric field and potential increase",
       "The electric field stays constant and the potential. increases",
       "The electric field stays constant and the potential. decreases",
-      "The electric field increases and the potential decreases."
+      "The electric field increases and the potential decreases"
     ],
     "answer": null,
     "solution": "",
@@ -24584,7 +24958,7 @@
       "𝑣1 = 𝑣2 & 𝑇1 = 𝑇2",
       "𝑣1 ≠ 𝑣2 & 𝑇1 = 𝑇2",
       "𝑣1 = 𝑣2 & 𝑇1 ≠ 𝑇2",
-      "𝑣1 ≠ 𝑣 @@Q02@@ & 𝑇1 ≠ 𝑇2"
+      "𝑣1 ≠ 𝑣 2 & 𝑇1 ≠ 𝑇2"
     ],
     "answer": null,
     "solution": "",
@@ -24611,7 +24985,7 @@
       "TB − TA",
       "(TA + TB)/5",
       "(4TA + TB)/5",
-      "(TA − TB)/ @@Q05@@"
+      "(TA − TB)/ 5"
     ],
     "answer": null,
     "solution": "",
@@ -24635,10 +25009,10 @@
     "source": "NSTC 2023 Physics Paper",
     "prompt": "Two spheres are identical except that sphere A is white whereas sphere B is black. After they have been in thermal contact long enough with each other and their surroundings, in the visible range",
     "options": [
-      "A radiates less than B.",
-      "Both emit the same amount of radiation.",
-      "A radiates more than B.",
-      "A radiates more than B only if its temperature is high enough."
+      "A radiates less than B",
+      "Both emit the same amount of radiation",
+      "A radiates more than B",
+      "A radiates more than B only if its temperature is high enough"
     ],
     "answer": null,
     "solution": "",
@@ -24662,10 +25036,10 @@
     "source": "NSTC 2023 Physics Paper",
     "prompt": "Why does a raindrop fall with near-constant speed during the later stages of its descent?",
     "options": [
-      "The gravitational force is constant.",
+      "The gravitational force is constant",
       "Gravity cannot increase the speed of a falling object to more than 9.8 ms−1",
-      "Air resistance just balances the force of gravity.",
-      "The force of gravity is negligible for objects as small as a raindrop."
+      "Air resistance just balances the force of gravity",
+      "The force of gravity is negligible for objects as small as a raindrop"
     ],
     "answer": null,
     "solution": "",
@@ -24689,10 +25063,10 @@
     "source": "NSTC 2023 Physics Paper",
     "prompt": "A glass-walled elevator is moving upwards with constant acceleration. At some point in the elevator’s motion, a bolt breaks loose and drops from the ceiling. What is the motion of the bolt as seen by an external observer (i.e. one located outside the elevator)?",
     "options": [
-      "The bolt moves upwards at a constant speed.",
-      "The bold initially moves upwards, then slows, reverses direction and moves downwards.",
-      "The bolt appears to remain stationary.",
-      "The bolt immediately moves downwards, accelerating as it goes."
+      "The bolt moves upwards at a constant speed",
+      "The bold initially moves upwards, then slows, reverses direction and moves downwards",
+      "The bolt appears to remain stationary",
+      "The bolt immediately moves downwards, accelerating as it goes"
     ],
     "answer": null,
     "solution": "",
@@ -24716,10 +25090,10 @@
     "source": "NSTC 2023 Physics Paper",
     "prompt": "The Earth and the Moon both exert gravitational forces on objects in their vicinity. Imagine a line joining the Earth to the Moon, and extending to either side, as shown below (not to scale). Consider placing an object along this line. Where along this line is the net gravitational force on the object due to the Earth and the Moon equal to zero.",
     "options": [
-      "On the far side of the Earth from the Moon.",
-      "Halfway between the Earth and the Moon.",
-      "Between the Earth and the Moon, but closer to the Earth than to the Moon.",
-      "Between the Earth and the Moon, but closer to the Moon than to the Earth."
+      "On the far side of the Earth from the Moon",
+      "Halfway between the Earth and the Moon",
+      "Between the Earth and the Moon, but closer to the Earth than to the Moon",
+      "Between the Earth and the Moon, but closer to the Moon than to the Earth"
     ],
     "answer": null,
     "solution": "",
@@ -24770,10 +25144,10 @@
     "source": "NSTC 2023 Physics Paper",
     "prompt": "Some students are doing an experiment to calculate the spring constant of a particular spring. As part of this experiment, they suspend an object from the spring, pull it downwards, and let it go. The object then oscillates up and down, with a period of about 2 seconds. The students use a stopwatch to measure the period of oscillation. The best way to get an accurate and precise measurement of the period would be to",
     "options": [
-      "Measure the time taken for a single oscillation 10 times, and average the results.",
-      "Measure the time taken for a single oscillation 10 times, and average the results. Repeat this measurement three times, and average the results.",
-      "Measure the time taken for 10 oscillations, and divide by 10. Repeat this measurement three times, and average the results.",
-      "All of the methods above are equivalent, and will result in the same precision in the measurement of the period of oscillation."
+      "Measure the time taken for a single oscillation 10 times, and average the results",
+      "Measure the time taken for a single oscillation 10 times, and average the results. Repeat this measurement three times, and average the results",
+      "Measure the time taken for 10 oscillations, and divide by 10. Repeat this measurement three times, and average the results",
+      "All of the methods above are equivalent, and will result in the same precision in the measurement of the period of oscillation"
     ],
     "answer": null,
     "solution": "",
@@ -24827,7 +25201,7 @@
       "𝑣𝑖 = 5 𝑚/𝑠 & 𝑣𝑓 = 2 𝑚/𝑠",
       "𝑣𝑖 = 5 𝑚/𝑠 & 𝑣𝑓 = −2 𝑚/𝑠",
       "𝑣𝑖 = −5 𝑚/𝑠 & 𝑣𝑓 = −2 𝑚/𝑠",
-      "𝑣𝑖 = @@Q02@@ 𝑚/𝑠 & 𝑣𝑓 = −5 𝑚/𝑠"
+      "𝑣𝑖 = 2 𝑚/𝑠 & 𝑣𝑓 = −5 𝑚/𝑠"
     ],
     "answer": null,
     "solution": "",
@@ -24880,8 +25254,8 @@
     "options": [
       "Does not depend on A",
       "Increases as A increases, approaching a fixed value",
-      "Decreases as A increases, approaching a fixed value.",
-      "Is approximately constant for small values of A, then increases without bound."
+      "Decreases as A increases, approaching a fixed value",
+      "Is approximately constant for small values of A, then increases without bound"
     ],
     "answer": null,
     "solution": "",
@@ -24903,7 +25277,7 @@
     "exam": "NSTC",
     "year": 2023,
     "source": "NSTC 2023 Physics Paper",
-    "prompt": "Kepler's Laws state that @@Q01@@ the orbits of planets are elliptical with one focus at the sun, II. a line connecting the sun and a planet sweeps out equal areas in equal times, and III. the square of the period of a planet's orbit is proportional to the cube of its semimajor axis. Which of these laws would remain true if the force of gravity were proportional to 1/r3 rather than 1/r2?",
+    "prompt": "Kepler's Laws state that 1 the orbits of planets are elliptical with one focus at the sun, II. a line connecting the sun and a planet sweeps out equal areas in equal times, and III. the square of the period of a planet's orbit is proportional to the cube of its semimajor axis. Which of these laws would remain true if the force of gravity were proportional to 1/r3 rather than 1/r2?",
     "options": [
       "Only I",
       "Only II",
@@ -24935,12 +25309,12 @@
       "Upper: 10 m/s2; lower: 0",
       "Upper: 10 m/s2; lower: 10 m/s2",
       "Upper: 20 m/s2; lower: 10 m/s2",
-      "Upper: @@Q30@@ m/s2; lower: 0"
+      "Upper: 30 m/s2; lower: 0"
     ],
     "answer": null,
     "solution": "",
     "page": 8,
-    "figure": ""
+    "figure": "/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q67-p8-manual.webp"
   },
   {
     "id": "physics-2023-final-physics-2023-ac5a924-part-ii-68",
@@ -24986,10 +25360,10 @@
     "source": "NSTC 2023 Physics Paper",
     "prompt": "A block foats partially submerged in a container of liquid. When the entire container is accelerated upward, which of the following happens? Assume that both the liquid and the block are incompressible.",
     "options": [
-      "The block descends down lower into the liquid.",
-      "The block ascends up higher in the liquid.",
-      "The block does not ascend nor descend in the liquid.",
-      "The answer depends on the rate of change of the acceleration."
+      "The block descends down lower into the liquid",
+      "The block ascends up higher in the liquid",
+      "The block does not ascend nor descend in the liquid",
+      "The answer depends on the rate of change of the acceleration"
     ],
     "answer": null,
     "solution": "",
@@ -25016,7 +25390,7 @@
       "h",
       "2h",
       "3h",
-      "4h Part III: Physics-Descriptive Questions [ @@Q30@@ Marks] Question No 1: A 0.20 kg mass is attached to the lower end of a helical spring which is fixed at its upper end. The vertical spring is extended by 0.16 m in equilibrium. Determine: a) The change in gravitational potential energy of the mass due to spring’s extension. b) The elastic energy stored in the spring. c) Why do the magnitude of (i) and (ii) differ? The mass is pulled down a further distance of 0.07 m and released. d) What is its kinetic energy when passing through the equilibrium position? e) What is its period of oscillation? f) If the upper end of the spring is released, describe the motion of the mass and the spring? (10) Question No 2: a) Assuming the planets are in circular motion around the Sun, with radius 𝑅 and period 𝑇, use the data in Table 2.1 to test, graphically, the hypothesis that T is proportional to 𝑅𝛼 , where 𝛼 is a constant. Obtain from the graph: i) A value for 𝛼 and give its accuracy. ii) The constant of proportionality in SI units. PLANET R/108 km T/days Earth 1.49 365 Mars 2.28 687 Jupiter 7.78 4333 Uranus 28.7 30690 Table 2.1 b) i) Derive, using mechanics, the relationship between T and R in terms of the mass of the Sun, MS. ii) Determine MS using the data in (a). iii) The distance of the Moon from the Earth is 3.8× 105 km and its period is 27.3 days. Deduce the ratio (MS/ME), where ME is the mass of the Earth. (10+10) ---End of paper---"
+      "4h"
     ],
     "answer": null,
     "solution": "",
@@ -25027,7 +25401,7 @@
     "id": "physics-2023-final-physics-2023-ac5a924-part-iii-1",
     "paperId": "physics-2023-final-physics-2023-ac5a924",
     "paperSubject": "Physics",
-    "number": 71,
+    "number": 1,
     "displayNumber": "Descriptive 1",
     "subject": "Physics",
     "topic": "Descriptive",
@@ -25049,7 +25423,7 @@
     "id": "physics-2023-final-physics-2023-ac5a924-part-iii-2",
     "paperId": "physics-2023-final-physics-2023-ac5a924",
     "paperSubject": "Physics",
-    "number": 72,
+    "number": 2,
     "displayNumber": "Descriptive 2",
     "subject": "Physics",
     "topic": "Descriptive",
@@ -25060,7 +25434,7 @@
     "exam": "NSTC",
     "year": 2023,
     "source": "NSTC 2023 Physics Paper",
-    "prompt": "Question No 2: a) Assuming the planets are in circular motion around the Sun, with radius 𝑅 and period 𝑇, use the data in Table 2.1 to test, graphically, the hypothesis that T is proportional to 𝑅𝛼 , where 𝛼 is a constant. Obtain from the graph: i) A value for 𝛼 and give its accuracy. ii) The constant of proportionality in SI units. PLANET R/108 km T/days Earth 1.49 365 Mars 2.28 687 Jupiter 7.78 4333 Uranus 28.7 30690 Table 2.1 b) i) Derive, using mechanics, the relationship between T and R in terms of the mass of the Sun, MS. ii) Determine MS using the data in (a). iii) The distance of the Moon from the Earth is 3.8× 105 km and its period is 27.3 days. Deduce the ratio (MS/ME), where ME is the mass of the Earth. (10+10)",
+    "prompt": "Question No 2: a) Assuming the planets are in circular motion around the Sun, with radius 𝑅 and period 𝑇, use the data in Table 2.1 to test, graphically, the hypothesis that T is proportional to 𝑅𝛼 , where 𝛼 is a constant. Obtain from the graph: i) A value for 𝛼 and give its accuracy. ii) The constant of proportionality in SI units. PLANET R/108 km T/days Earth 1.49 365 Mars 2.28 687 Jupiter 7.78 4333 Uranus 28.7 30690 Table 2.1 b) i) Derive, using mechanics, the relationship between T and R in terms of the mass of the Sun, MS. ii) Determine MS using the data in (a). iii) The distance of the Moon from the Earth is 3.8 x 10^5 km and its period is 27.3 days. Deduce the ratio (MS/ME), where ME is the mass of the Earth. (10+10)",
     "options": [],
     "answer": null,
     "solution": "",
@@ -25163,7 +25537,7 @@
     "exam": "NSTC",
     "year": 2024,
     "source": "NSTC 2024 Physics Paper",
-    "prompt": "Electric intensity is a ------------------------ quantity.",
+    "prompt": "Electric intensity is a",
     "options": [
       "vector",
       "scalar",
@@ -25192,10 +25566,10 @@
     "source": "NSTC 2024 Physics Paper",
     "prompt": "One coulomb is equal to the charge of------------------------electrons.",
     "options": [
-      "6.25x1019",
-      "6.24x1018",
-      "6.24x1017",
-      "6.25x1018 CHEMISTRY"
+      "6.25 x 10^19",
+      "6.24 x 10^18",
+      "6.24 x 10^17",
+      "6.25 x 10^18"
     ],
     "answer": null,
     "solution": "",
@@ -25330,7 +25704,7 @@
       "Fluorine",
       "Oxygen",
       "Nitrogen",
-      "Iodine MATHEMATICS"
+      "Iodine"
     ],
     "answer": null,
     "solution": "",
@@ -25465,7 +25839,7 @@
       "-4",
       "6",
       "2",
-      "3/ @@Q02@@ PHYSICS"
+      "3/ 2"
     ],
     "answer": null,
     "solution": "",
@@ -25546,7 +25920,7 @@
       "4.15 km/s",
       "2.78 km/s",
       "3.08 km/s",
-      "6. @@Q66@@ km/s"
+      "6. 66 km/s"
     ],
     "answer": null,
     "solution": "",
@@ -25600,7 +25974,7 @@
       "0.5 second",
       "1.0 seconds",
       "1.5 seconds",
-      "2.0 seconds PART II – PHYSICS"
+      "2.0 seconds"
     ],
     "answer": null,
     "solution": "",
@@ -25705,10 +26079,10 @@
     "source": "NSTC 2024 Physics Paper",
     "prompt": "Consider a mass slides on a horizontal frictionless track. It is connected to a spring fastened to a wall. Initially, the amplitude of the oscillations is A and the spring constant is 𝑘1. The spring constant then decreases adiabatically at a constant rate until the value 𝑘2is reached. (For example, suppose the spring is being dissolved by the nitric acid.) What is the new amplitude?",
     "options": [
-      "𝐴(𝑘2 𝑘1 ) 1 2⁄",
-      "𝐴(𝑘2 𝑘1 ) 1 4⁄",
-      "𝐴(𝑘1 𝑘2 ) 1 2⁄",
-      "𝐴(𝑘1 𝑘 @@Q02@@ ) 1 4⁄"
+      "𝐴(𝑘2 𝑘1 )1 2⁄",
+      "𝐴(𝑘2 𝑘1 )1 4⁄",
+      "𝐴(𝑘1 𝑘2 )1 2⁄",
+      "𝐴(𝑘1 𝑘 2 )1 4⁄"
     ],
     "answer": null,
     "solution": "",
@@ -25816,7 +26190,7 @@
       "23.2 m",
       "25.5 m",
       "28.2 m",
-      "27. @@Q05@@ m"
+      "27. 5 m"
     ],
     "answer": null,
     "solution": "",
@@ -25897,7 +26271,7 @@
       "-0.5 m/s",
       "0.5 m/s",
       "0.25 m/s",
-      "-0. @@Q25@@ m/s"
+      "-0. 25 m/s"
     ],
     "answer": null,
     "solution": "",
@@ -25924,7 +26298,7 @@
       "4.27 s",
       "3.65 s",
       "5.24 s",
-      "4. @@Q92@@ s"
+      "4. 92 s"
     ],
     "answer": null,
     "solution": "",
@@ -26005,7 +26379,7 @@
       "10𝑔𝑚2",
       "5𝑔𝑚3",
       "5𝑔𝑚3",
-      "0.5𝑔𝑚 @@Q02@@"
+      "0.5𝑔𝑚 2"
     ],
     "answer": null,
     "solution": "",
@@ -26059,7 +26433,7 @@
       "70.7 m",
       "69.7 m",
       "62.7 m",
-      "66. @@Q07@@ m"
+      "66. 7 m"
     ],
     "answer": null,
     "solution": "",
@@ -26086,7 +26460,7 @@
       "30.4 m/s",
       "29.4 m/s",
       "25.4 m/s",
-      "28. @@Q04@@ m/s"
+      "28. 4 m/s"
     ],
     "answer": null,
     "solution": "",
@@ -26167,7 +26541,7 @@
       "√2𝑚1𝑣2 𝑘",
       "√𝑚1 𝑘𝑣",
       "√𝑚1𝑣2 3𝑘",
-      "√𝑚1𝑣 @@Q02@@ 9𝑘"
+      "√𝑚1𝑣 2 9𝑘"
     ],
     "answer": null,
     "solution": "",
@@ -26194,7 +26568,7 @@
       "3.0 m/s",
       "3.13 m/s",
       "2.51 m/s",
-      "2. @@Q95@@ m/s"
+      "2. 95 m/s"
     ],
     "answer": null,
     "solution": "",
@@ -26221,7 +26595,7 @@
       "1800/π rad/s",
       "60/π rad/s",
       "π /1800 rad/s",
-      "π / @@Q60@@ rad/s"
+      "π / 60 rad/s"
     ],
     "answer": null,
     "solution": "",
@@ -26248,7 +26622,7 @@
       "~ √7.5",
       "~ √6",
       "~ √6.5",
-      "~ √ @@Q07@@"
+      "~ √ 7"
     ],
     "answer": null,
     "solution": "",
@@ -26275,7 +26649,7 @@
       "3",
       "6",
       "1/3",
-      "1/ @@Q06@@"
+      "1/ 6"
     ],
     "answer": null,
     "solution": "",
@@ -26329,7 +26703,7 @@
       "0.28 m",
       "0.30 m",
       "0.33 m",
-      "0. @@Q41@@ m"
+      "0. 41 m"
     ],
     "answer": null,
     "solution": "",
@@ -26410,7 +26784,7 @@
       "0.59 s",
       "0.55 s",
       "0.63 s",
-      "0. @@Q68@@ s"
+      "0. 68 s"
     ],
     "answer": null,
     "solution": "",
@@ -26434,10 +26808,10 @@
     "source": "NSTC 2024 Physics Paper",
     "prompt": "Suppose there is a light source whose power is P = 40 W. A student is standing at a distance of 10 m from this sourse. If the radius of the pupil (a variable aperture through which light enters the eye) is 2mm and the wavelength of the light is 589 nm, How many photons strike the student's eye per second?",
     "options": [
-      "~12×1012 [photons/s]",
-      "~12×108 [photons/s]",
-      "~12×1011 [photons/s]",
-      "~12×1015 [photons/s]"
+      "~12 x 10^12 [photons/s]",
+      "~12 x 10^8 [photons/s]",
+      "~12 x 10^11 [photons/s]",
+      "~12 x 10^15 [photons/s]"
     ],
     "answer": null,
     "solution": "",
@@ -26464,7 +26838,7 @@
       "0.62 P",
       "0.48 P",
       "0.29 P",
-      "0. @@Q55@@ P"
+      "0. 55 P"
     ],
     "answer": null,
     "solution": "",
@@ -26491,7 +26865,7 @@
       "11.8× 10−9𝐹",
       "11.8 × 10−18𝐹",
       "11.8 × 10−12𝐹",
-      "11. @@Q08@@ × 10−10𝐹"
+      "11. 8 × 10−10𝐹"
     ],
     "answer": null,
     "solution": "",
@@ -26650,10 +27024,10 @@
     "source": "NSTC 2024 Physics Paper",
     "prompt": "A sportsman leaps into the air and catches a ball while both are in midair. Which undergoes the smaller change in momentum, the sportsman or the ball?",
     "options": [
-      "",
-      "",
-      "",
-      "The ball does. The sportsman does. The change in momentum is the same for both the sportsman and the ball. You can’t tell without knowing the final velocity of the combined sportsman-ball mass"
+      "The ball does.",
+      "The sportsman does.",
+      "The change in momentum is the same for both the sportsman and the ball.",
+      "You can’t tell without knowing the final velocity of the combined sportsman-ball mass"
     ],
     "answer": null,
     "solution": "",
@@ -26950,7 +27324,7 @@
       "2%",
       "5%",
       "10%",
-      "15% Part III: Physics-Descriptive Questions [30 Marks] Question No 01: (6+5+4) a) A thundercloud has a horizontal lower surface, area 25.0 km 2, 750 m above the surface of the Earth. Using a capacitor as a model, calculate the electrical energy, E1, stored when its potential is 1.0 105 V above the earth potential. If the cloud rises to 1250 m: (i) explain why the energy, E2, has increased or decreased (ii) What is the change in electrical energy, ΔE? b) A tank contains water to a depth of 1.0 m. Water emerges from a small hole in the vertical side of the tank at 20 cm below the surface. Determine: (i) the speed at which the water emerges from the hole (ii) the distance from the base of the tank at which the wate r strikes the floor on which the tank is standing. c) A closed wire loop in the form of a square of side 4.0 cm is placed with its plane perpendicular to a uniform magnetic field, which is increasing at the rate of 0.030.Ts -1. The loop has a resistance of 2.0 10-3 ohms. Calculate the current induced in the loop. Question No 2: (2+4+4+5) A weight of mass of mass M hangs from the end of a light vertical spring (with spring constant k) that is attached at its upper end, to a rigid support. When in equilibrium, the spring has an extension x1. The natural angular frequency of the system is ω. i) Determine x1 in terms of ω. ii) The mass vibrates about its equilibrium position, the spring having an extension (x1+x) at time t. Obtain an expression for the total potential energy, V, of the system. The zero of the gravitational potential energy is taken to be at the equilibrium extension, x1. iii) If the amplitude of the motion is A1, determine the maximum kinetic energy, T1, of the mass and the total energy, E1, of the system. iv) The mass collides elastically with a stationary body of mass M/2 at x=0. Determine the new velocity, v2, after the collision and amplitude, A2, of the motion of mass M. ---End of paper---"
+      "15%"
     ],
     "answer": null,
     "solution": "",
@@ -26961,7 +27335,7 @@
     "id": "physics-2024-final-physics-2024-405c90b-part-iii-1",
     "paperId": "physics-2024-final-physics-2024-405c90b",
     "paperSubject": "Physics",
-    "number": 71,
+    "number": 1,
     "displayNumber": "Descriptive 1",
     "subject": "Physics",
     "topic": "Descriptive",
@@ -26972,7 +27346,7 @@
     "exam": "NSTC",
     "year": 2024,
     "source": "NSTC 2024 Physics Paper",
-    "prompt": "Question No 01: (6+5+4) a) A thundercloud has a horizontal lower surface, area 25.0 km 2, 750 m above the surface of the Earth. Using a capacitor as a model, calculate the electrical energy, E1, stored when its potential is 1.0 105 V above the earth potential. If the cloud rises to 1250 m: (i) explain why the energy, E2, has increased or decreased (ii) What is the change in electrical energy, ΔE? b) A tank contains water to a depth of 1.0 m. Water emerges from a small hole in the vertical side of the tank at 20 cm below the surface. Determine: (i) the speed at which the water emerges from the hole (ii) the distance from the base of the tank at which the wate r strikes the floor on which the tank is standing. c) A closed wire loop in the form of a square of side 4.0 cm is placed with its plane perpendicular to a uniform magnetic field, which is increasing at the rate of 0.030.Ts -1. The loop has a resistance of 2.0 10-3 ohms. Calculate the current induced in the loop.",
+    "prompt": "Question No 01: (6+5+4) a) A thundercloud has a horizontal lower surface, area 25.0 km 2, 750 m above the surface of the Earth. Using a capacitor as a model, calculate the electrical energy, E1, stored when its potential is 1.0 x 10^5 V above the earth potential. If the cloud rises to 1250 m: (i) explain why the energy, E2, has increased or decreased (ii) What is the change in electrical energy, ΔE? b) A tank contains water to a depth of 1.0 m. Water emerges from a small hole in the vertical side of the tank at 20 cm below the surface. Determine: (i) the speed at which the water emerges from the hole (ii) the distance from the base of the tank at which the wate r strikes the floor on which the tank is standing. c) A closed wire loop in the form of a square of side 4.0 cm is placed with its plane perpendicular to a uniform magnetic field, which is increasing at the rate of 0.030.Ts -1. The loop has a resistance of 2.0 x 10^-3 ohms. Calculate the current induced in the loop.",
     "options": [],
     "answer": null,
     "solution": "",
@@ -26983,7 +27357,7 @@
     "id": "physics-2024-final-physics-2024-405c90b-part-iii-2",
     "paperId": "physics-2024-final-physics-2024-405c90b",
     "paperSubject": "Physics",
-    "number": 72,
+    "number": 2,
     "displayNumber": "Descriptive 2",
     "subject": "Physics",
     "topic": "Descriptive",
@@ -27396,10 +27770,10 @@
     "source": "NSTC 2025 Physics Paper",
     "prompt": "A1,200-kilogram car traveling at 10 meters per second hits a tree and is brought to rest in 0.10 second.What is the magnitude of the average force acting on the car to bring it to rest?",
     "options": [
-      "1.2×102 N",
+      "1.2 x 10^2 N",
       "1.2×10*N",
       "1.2×10' N",
-      "1.2×105 N"
+      "1.2 x 10^5 N"
     ],
     "answer": null,
     "solution": "",
@@ -27718,12 +28092,12 @@
     "exam": "NSTC",
     "year": 2025,
     "source": "NSTC 2025 Physics Paper",
-    "prompt": "If 4.8x10-17 joule of work is required to move an electron between two points in an electric field,what is the electric potential difference between these points?",
+    "prompt": "If 4.8 x 10^-17 joule of work is required to move an electron between two points in an electric field,what is the electric potential difference between these points?",
     "options": [
       "1.6x10-19V",
       "4.8×10-17V",
-      "3.0×102 V",
-      "4.8×102"
+      "3.0 x 10^2 V",
+      "4.8 x 10^2"
     ],
     "answer": null,
     "solution": "",
@@ -27911,7 +28285,7 @@
     "options": [
       "0.66sec",
       "0.78sec",
-      "1.67 sec A5.0 kg block with a speed of 8.0 m/s travels 2.0 m along a horizontal surface where it makes a head-on,",
+      "1.67 sec A5.0 kg block with a speed of 8.0 m/s travels 2.0 m along a horizontal surface where it makes a head-on",
       "1.79 sec"
     ],
     "answer": null,
@@ -28123,7 +28497,7 @@
     "exam": "NSTC",
     "year": 2025,
     "source": "NSTC 2025 Physics Paper",
-    "prompt": "with a force of 1.00x102 N along a handle inclined at 30° above the horizontal.What is the coefficient ofkinetic frictionbetweenthe suitcaseand thefloor? k=1.055",
+    "prompt": "with a force of 1.00 x 10^2 N along a handle inclined at 30° above the horizontal.What is the coefficient ofkinetic frictionbetweenthe suitcaseand thefloor? k=1.055",
     "options": [
       "k=0.013",
       "μk=0.394",
@@ -28558,7 +28932,7 @@
     "prompt": "What is the gravitational potential energy with respect to the surface of the water of a 75.0- kilogram diver located3.0metersabovethewater?",
     "options": [
       "2.17×10*J",
-      "2.25×103]",
+      "2.25 x 10^3]",
       "2.21×10’",
       "2.29×10\"J"
     ],
