@@ -1,12 +1,22 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Icon } from "@/components/icon";
 import { Badge } from "@/components/sections/common";
 import type { Question } from "@/lib/content-data";
 import { cn } from "@/lib/utils";
 
 type PracticeMode = "Subject MCQs" | "Common MCQs" | "Descriptive";
+type QuestionBankProgress = {
+  version: 1;
+  subject: string;
+  mode: PracticeMode;
+  shuffleSalt: number;
+  activeIndex: number;
+  answers: Record<string, number | null>;
+  revealed: Record<string, boolean>;
+  updatedAt: string | null;
+};
 
 const modes: { label: PracticeMode; section: string; icon: string; hint: string }[] = [
   { label: "Subject MCQs", section: "Part II", icon: "list-checks", hint: "NSTC Part II only" },
@@ -14,6 +24,7 @@ const modes: { label: PracticeMode; section: string; icon: string; hint: string 
   { label: "Descriptive", section: "Part III", icon: "book-open", hint: "Long-form paper questions" },
 ];
 
+const QUESTION_BANK_STORAGE_KEY = "pso:question-bank-progress:v1";
 const subjectOrder = ["Mathematics", "Physics", "Biology", "Chemistry"];
 
 function sortSubjects(items: string[]) {
@@ -49,14 +60,70 @@ function optionTone(question: Question, index: number, selectedAnswer: number | 
   return question.answer === index ? "border-emerald bg-mint text-emerald" : "border-red-300 bg-red-50 text-red-700";
 }
 
+function createInitialProgress(): QuestionBankProgress {
+  return {
+    version: 1,
+    subject: "All",
+    mode: "Subject MCQs",
+    shuffleSalt: 17,
+    activeIndex: 0,
+    answers: {},
+    revealed: {},
+    updatedAt: null,
+  };
+}
+
+function isPracticeMode(value: unknown): value is PracticeMode {
+  return modes.some((item) => item.label === value);
+}
+
+function cleanAnswers(value: unknown) {
+  if (!value || typeof value !== "object") return {};
+  return Object.fromEntries(
+    Object.entries(value as Record<string, unknown>).filter((entry): entry is [string, number | null] => {
+      const answer = entry[1];
+      return answer === null || (typeof answer === "number" && Number.isInteger(answer) && answer >= 0 && answer <= 3);
+    }),
+  );
+}
+
+function cleanRevealed(value: unknown) {
+  if (!value || typeof value !== "object") return {};
+  return Object.fromEntries(Object.entries(value as Record<string, unknown>).filter((entry): entry is [string, boolean] => typeof entry[1] === "boolean"));
+}
+
+function normalizeProgress(value: unknown, subjects: string[]): QuestionBankProgress {
+  const initial = createInitialProgress();
+  if (!value || typeof value !== "object") return initial;
+  const saved = value as Partial<QuestionBankProgress>;
+  const mode = isPracticeMode(saved.mode) ? saved.mode : initial.mode;
+  const subject = typeof saved.subject === "string" && (saved.subject === "All" || subjects.includes(saved.subject)) ? saved.subject : initial.subject;
+  return {
+    ...initial,
+    subject: mode === "Common MCQs" ? "All" : subject,
+    mode,
+    shuffleSalt: Number.isFinite(saved.shuffleSalt) ? Number(saved.shuffleSalt) : initial.shuffleSalt,
+    activeIndex: Number.isFinite(saved.activeIndex) ? Math.max(0, Math.floor(Number(saved.activeIndex))) : initial.activeIndex,
+    answers: cleanAnswers(saved.answers),
+    revealed: cleanRevealed(saved.revealed),
+    updatedAt: typeof saved.updatedAt === "string" ? saved.updatedAt : null,
+  };
+}
+
+function formatSavedAt(value: string | null) {
+  if (!value) return "Not saved yet";
+  return new Intl.DateTimeFormat(undefined, {
+    hour: "numeric",
+    minute: "2-digit",
+    second: "2-digit",
+  }).format(new Date(value));
+}
+
 export function QuestionBankClient({ questions }: { questions: Question[] }) {
   const subjects = useMemo(() => sortSubjects(Array.from(new Set(questions.map((question) => question.subject)))), [questions]);
-  const [subject, setSubject] = useState("All");
-  const [mode, setMode] = useState<PracticeMode>("Subject MCQs");
-  const [shuffleSalt, setShuffleSalt] = useState(17);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
-  const [showSolution, setShowSolution] = useState(false);
+  const [progress, setProgress] = useState<QuestionBankProgress>(() => createInitialProgress());
+  const [hydrated, setHydrated] = useState(false);
+  const { activeIndex, mode, shuffleSalt, subject } = progress;
 
   const activeMode = modes.find((item) => item.label === mode) ?? modes[0];
   const subjectCards = useMemo(() => {
@@ -81,42 +148,82 @@ export function QuestionBankClient({ questions }: { questions: Question[] }) {
       .sort((a, b) => hashQuestion(a.id, shuffleSalt) - hashQuestion(b.id, shuffleSalt));
   }, [activeMode.section, mode, questions, shuffleSalt, subject]);
 
-  const active = filtered[activeIndex] ?? null;
-  const canGoBack = activeIndex > 0;
-  const canGoNext = activeIndex < filtered.length - 1;
+  const visibleActiveIndex = filtered.length > 0 ? Math.min(activeIndex, filtered.length - 1) : 0;
+  const active = filtered[visibleActiveIndex] ?? null;
+  const selectedAnswer = active ? (progress.answers[active.id] ?? null) : null;
+  const showSolution = active ? Boolean(progress.revealed[active.id]) : false;
+  const answeredInFiltered = filtered.filter((question) => progress.answers[question.id] !== undefined && progress.answers[question.id] !== null).length;
+  const revealedInFiltered = filtered.filter((question) => progress.revealed[question.id]).length;
+  const progressPercent = filtered.length > 0 ? Math.round((answeredInFiltered / filtered.length) * 100) : 0;
+  const progressLabel = answeredInFiltered > 0 && progressPercent === 0 ? "<1%" : `${progressPercent}%`;
+  const progressBarWidth = answeredInFiltered > 0 ? Math.max(progressPercent, 1) : 0;
+  const canGoBack = visibleActiveIndex > 0;
+  const canGoNext = visibleActiveIndex < filtered.length - 1;
 
-  function moveTo(index: number) {
-    setActiveIndex(Math.max(0, Math.min(filtered.length - 1, index)));
-    setSelectedAnswer(null);
-    setShowSolution(false);
+  useEffect(() => {
+    const id = window.setTimeout(() => {
+      try {
+        const saved = window.localStorage.getItem(QUESTION_BANK_STORAGE_KEY);
+        setProgress(normalizeProgress(saved ? JSON.parse(saved) : null, subjects));
+      } catch {
+        setProgress(createInitialProgress());
+      } finally {
+        setHydrated(true);
+      }
+    }, 0);
+    return () => window.clearTimeout(id);
+  }, [subjects]);
+
+  useEffect(() => {
+    if (!hydrated) return;
+    window.localStorage.setItem(QUESTION_BANK_STORAGE_KEY, JSON.stringify(progress));
+  }, [hydrated, progress]);
+
+  function updateProgress(update: (previous: QuestionBankProgress) => QuestionBankProgress) {
+    setProgress((previous) => ({ ...update(previous), updatedAt: new Date().toISOString() }));
   }
 
-  function resetQuestionState() {
-    setActiveIndex(0);
-    setSelectedAnswer(null);
-    setShowSolution(false);
+  function moveTo(index: number) {
+    updateProgress((previous) => ({ ...previous, activeIndex: Math.max(0, Math.min(filtered.length - 1, index)) }));
   }
 
   function chooseMode(value: PracticeMode) {
-    setMode(value);
-    if (value === "Common MCQs") setSubject("All");
-    resetQuestionState();
+    updateProgress((previous) => ({
+      ...previous,
+      mode: value,
+      subject: value === "Common MCQs" ? "All" : previous.subject,
+      activeIndex: 0,
+    }));
   }
 
   function chooseSubject(value: string) {
-    setSubject(value);
-    resetQuestionState();
+    updateProgress((previous) => ({ ...previous, subject: value, activeIndex: 0 }));
   }
 
   function shuffleQuestions() {
-    setShuffleSalt((value) => value + 1);
-    resetQuestionState();
+    updateProgress((previous) => ({ ...previous, shuffleSalt: previous.shuffleSalt + 1, activeIndex: 0 }));
   }
 
   function resetPractice() {
-    setSubject("All");
-    setMode("Subject MCQs");
-    shuffleQuestions();
+    if (!window.confirm("Reset your saved question-bank progress in this browser?")) return;
+    window.localStorage.removeItem(QUESTION_BANK_STORAGE_KEY);
+    setProgress({ ...createInitialProgress(), updatedAt: new Date().toISOString() });
+  }
+
+  function chooseAnswer(index: number) {
+    if (!active) return;
+    updateProgress((previous) => ({
+      ...previous,
+      answers: { ...previous.answers, [active.id]: index },
+    }));
+  }
+
+  function toggleSolution() {
+    if (!active) return;
+    updateProgress((previous) => ({
+      ...previous,
+      revealed: { ...previous.revealed, [active.id]: !previous.revealed[active.id] },
+    }));
   }
 
   return (
@@ -153,6 +260,28 @@ export function QuestionBankClient({ questions }: { questions: Question[] }) {
                 </span>
               </button>
             ))}
+          </div>
+        </div>
+
+        <div className="card-surface rounded-md p-4">
+          <div className="flex items-center justify-between gap-3">
+            <div>
+              <h2 className="text-sm font-black uppercase text-charcoal">Local Progress</h2>
+              <p className="mt-1 text-xs font-semibold text-charcoal/60">Saved in this browser</p>
+            </div>
+            <span className="h-2.5 w-2.5 rounded-full bg-emerald" />
+          </div>
+          <div className="mt-4 rounded-md border border-navy/10 bg-white px-3 py-3">
+            <div className="flex items-center justify-between text-sm font-black text-charcoal">
+              <span>{answeredInFiltered} answered</span>
+              <span>{progressLabel}</span>
+            </div>
+            <div className="mt-2 h-2 rounded-full bg-cool">
+              <div className="h-2 rounded-full bg-emerald" style={{ width: `${progressBarWidth}%` }} />
+            </div>
+            <p className="mt-2 text-xs font-bold leading-5 text-charcoal/60">
+              {hydrated ? `${formatSavedAt(progress.updatedAt)} | ${revealedInFiltered} revealed` : "Loading saved question-bank progress"}
+            </p>
           </div>
         </div>
 
@@ -216,7 +345,7 @@ export function QuestionBankClient({ questions }: { questions: Question[] }) {
               <button
                 className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-navy/10 bg-white px-3 py-2 text-sm font-black text-charcoal disabled:cursor-not-allowed disabled:opacity-45 sm:px-4"
                 disabled={!canGoBack}
-                onClick={() => moveTo(activeIndex - 1)}
+                onClick={() => moveTo(visibleActiveIndex - 1)}
                 type="button"
               >
                 Previous
@@ -232,7 +361,7 @@ export function QuestionBankClient({ questions }: { questions: Question[] }) {
               <button
                 className="col-span-2 inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-emerald px-3 py-2 text-sm font-black text-white disabled:cursor-not-allowed disabled:opacity-45 sm:col-span-1 sm:px-4"
                 disabled={!canGoNext}
-                onClick={() => moveTo(activeIndex + 1)}
+                onClick={() => moveTo(visibleActiveIndex + 1)}
                 type="button"
               >
                 Next
@@ -247,11 +376,11 @@ export function QuestionBankClient({ questions }: { questions: Question[] }) {
             <div className="flex flex-col gap-4 border-b border-navy/10 pb-5 lg:flex-row lg:items-start lg:justify-between">
               <div>
                 <p className="text-sm font-black uppercase tracking-normal text-emerald">
-                  Question {activeIndex + 1} of {filtered.length}
+                  Question {visibleActiveIndex + 1} of {filtered.length}
                 </p>
                 <h3 className="mt-2 text-base font-black text-charcoal">{active.source}</h3>
                 <p className="mt-1 text-sm font-semibold text-charcoal/60">
-                  {active.sectionTitle} · Original number {active.displayNumber ?? active.number}
+                  {active.sectionTitle} | Original number {active.displayNumber ?? active.number}
                 </p>
               </div>
               <div className="flex flex-wrap gap-2 lg:justify-end">
@@ -279,7 +408,7 @@ export function QuestionBankClient({ questions }: { questions: Question[] }) {
                 {active.options.map((option, index) => (
                   <button
                     key={`${active.id}-${index}-${option}`}
-                    onClick={() => setSelectedAnswer(index)}
+                    onClick={() => chooseAnswer(index)}
                     type="button"
                     className={cn("flex min-h-14 items-center gap-3 rounded-md border px-3 py-3 text-left text-sm font-bold leading-6 transition sm:gap-4 sm:px-4 sm:text-base", optionTone(active, index, selectedAnswer))}
                   >
@@ -295,7 +424,7 @@ export function QuestionBankClient({ questions }: { questions: Question[] }) {
             <div className="mt-6 flex flex-col gap-3 border-t border-navy/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
               <p className="text-sm font-semibold leading-6 text-charcoal/65">{active.page ? `Source page ${active.page}` : active.source}</p>
               <button
-                onClick={() => setShowSolution((value) => !value)}
+                onClick={toggleSolution}
                 className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-md bg-emerald px-5 py-2.5 text-sm font-black text-white sm:w-auto"
                 type="button"
               >

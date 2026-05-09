@@ -1,6 +1,6 @@
 # Question Bank MCQ Answer Key
 
-Generated: 2026-05-09T20:12:19.342502+00:00
+Generated: 2026-05-09T21:40:52.054430+00:00
 
 Answer letters use the existing zero-based JSON `answer` field: A=0, B=1, C=2, D=3.
 Rows marked pending do not have an answer key applied in `src/data/questions.json`.
@@ -29,56 +29,56 @@ Rows marked pending do not have an answer key applied in `src/data/questions.jso
 | 18 | Part I | - | A | Authored from standard science reasoning after paper text review | Which net charge could be found on an object? |
 | 19 | Part I | - | B | Authored from standard science reasoning after paper text review | Compared to insulators, metals are better conductors of electricity because metals contain more free |
 | 20 | Part I | - | C | Authored from standard science reasoning after paper text review | Which two quantities are measured in the same units |
-| 21 | Part II | - | Pending | Pending authored review | In which phase of Meiosis the homologous chromosomes separated from each other |
-| 22 | Part II | - | Pending | Pending authored review | An unbroken series of species arranged in ancestors to descendent sequence with each later species having evol... |
-| 23 | Part II | - | Pending | Pending authored review | Lipids are synthesized in |
-| 24 | Part II | - | Pending | Pending authored review | Which of the following is an example of carnivorous plant |
-| 25 | Part II | - | Pending | Pending authored review | Which of the macronutrient is involved in closing and opening of stomata |
-| 26 | Part II | - | Pending | Pending authored review | It is possible to date the rocks by comparing the amount of specific radioactive isotopes they contain.... |
-| 27 | Part II | - | Pending | Pending authored review | The part of earth inhabited by organisms communities is known as |
-| 28 | Part II | - | Pending | Pending authored review | The scientific name of onion is |
-| 29 | Part II | - | Pending | Pending authored review | The tissues covers the outside of body and lines organs and cavities are called |
-| 30 | Part II | - | Pending | Pending authored review | Movement of molecules from an area of higher concentration to the area of lower concentration along the concen... |
-| 31 | Part II | - | Pending | Pending authored review | The meristem located on the tips roots and shoots is called |
-| 32 | Part II | - | Pending | Pending authored review | Maximum number of species of living things on earth are |
-| 33 | Part II | - | Pending | Pending authored review | The major component of fungi cell wall is |
-| 34 | Part II | - | Pending | Pending authored review | The Ozone layer is contained within the |
-| 35 | Part II | 5 | Pending | Pending authored review | Astronauts may use which technique to grow fruits and vegetables |
-| 36 | Part II | 5 | Pending | Pending authored review | The process in which cell takes solid materials are called |
-| 37 | Part II | 5 | Pending | Pending authored review | Which blood vessel contain valves |
-| 38 | Part II | 5 | Pending | Pending authored review | Pyruvic acid is converted to Acetyl CoA before entering in |
-| 39 | Part II | 5 | Pending | Pending authored review | Scurvy result from the lack of vitamin |
-| 40 | Part II | 5 | Pending | Pending authored review | Biological sciences have a set methodology and it is based on |
-| 41 | Part II | 5 | Pending | Pending authored review | Which of the following is not an example of continuous evolution? |
-| 42 | Part II | 5 | Pending | Pending authored review | The process of loss of water from plant surface through evaporation is called |
-| 43 | Part II | 5 | Pending | Pending authored review | A molecule of DNA contains all of the following EXCEPT |
-| 44 | Part II | 5 | Pending | Pending authored review | Which of the following is universal donor blood group |
-| 45 | Part II | 5 | Pending | Pending authored review | Contraction of atria pushes the blood toward ventricles, this is called |
-| 46 | Part II | 5 | Pending | Pending authored review | According to Mendel’s law of independent assortment what will be the typical ratio of F2 in a dihybrid cross |
-| 47 | Part II | 5 | Pending | Pending authored review | Principle of 3R means |
-| 48 | Part II | 5 | Pending | Pending authored review | Spectrococcus carries out a process called |
-| 49 | Part II | 5 | Pending | Pending authored review | Which of the following enzymes dissolve blood clots |
-| 50 | Part II | 5 | Pending | Pending authored review | The primary structure of protein refers to the |
-| 51 | Part II | 6 | Pending | Pending authored review | Sleep movements are a type of |
-| 52 | Part II | 6 | Pending | Pending authored review | The extreme change in pH results in |
-| 53 | Part II | 6 | Pending | Pending authored review | Pathogen contains special proteins known as |
-| 54 | Part II | 6 | Pending | Pending authored review | Stomata present in leaves involves in the process of |
-| 55 | Part II | 6 | Pending | Pending authored review | In the human body, 99% of total mass is formed of |
-| 56 | Part II | 6 | Pending | Pending authored review | Thick muscular structure present below the lungs |
-| 57 | Part II | 6 | Pending | Pending authored review | The one which is a weed killer |
-| 58 | Part II | 6 | Pending | Pending authored review | Amount of Carbon dioxide in inspired air |
-| 59 | Part II | 6 | Pending | Pending authored review | Primary chemical stimulus for breathing is the concentration of |
-| 60 | Part II | 6 | Pending | Pending authored review | Maintenance of internal body conditions at equilibrium, despite changes in the external environment |
-| 61 | Part II | 6 | Pending | Pending authored review | U-shape structure present in Nephron known as |
-| 62 | Part II | 6 | Pending | Pending authored review | Glomerulus is |
-| 63 | Part II | 6 | Pending | Pending authored review | Which of the following occurs in anaerobic respiration but not in aerobic respiration? |
-| 64 | Part II | 6 | Pending | Pending authored review | Chemical coordination is brought about by |
-| 65 | Part II | 6 | Pending | Pending authored review | Fusion of the bones at joint may occur and joints may become totally immoveable in |
-| 66 | Part II | 6 | Pending | Pending authored review | Calyx is a collection of |
-| 67 | Part II | 6 | Pending | Pending authored review | Hydra and corals also reproduce by means of |
-| 68 | Part II | 7 | Pending | Pending authored review | Scar present on a seed coat known as |
-| 69 | Part II | 7 | Pending | Pending authored review | The one which is not a globular protein |
-| 70 | Part II | 7 | Pending | Pending authored review | The basic structural unit of a chromosome is |
+| 21 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | In which phase of Meiosis the homologous chromosomes separated from each other |
+| 22 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | An unbroken series of species arranged in ancestors to descendent sequence with each later species having evol... |
+| 23 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | Lipids are synthesized in |
+| 24 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following is an example of carnivorous plant |
+| 25 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | Which of the macronutrient is involved in closing and opening of stomata |
+| 26 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | It is possible to date the rocks by comparing the amount of specific radioactive isotopes they contain.... |
+| 27 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | The part of earth inhabited by organisms communities is known as |
+| 28 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | The scientific name of onion is |
+| 29 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | The tissues covers the outside of body and lines organs and cavities are called |
+| 30 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | Movement of molecules from an area of higher concentration to the area of lower concentration along the concen... |
+| 31 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | The meristem located on the tips roots and shoots is called |
+| 32 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | Maximum number of species of living things on earth are |
+| 33 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | The major component of fungi cell wall is |
+| 34 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | The Ozone layer is contained within the |
+| 35 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | Astronauts may use which technique to grow fruits and vegetables |
+| 36 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | The process in which cell takes solid materials are called |
+| 37 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | Which blood vessel contain valves |
+| 38 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | Pyruvic acid is converted to Acetyl CoA before entering in |
+| 39 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | Scurvy result from the lack of vitamin |
+| 40 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | Biological sciences have a set methodology and it is based on |
+| 41 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following is not an example of continuous evolution? |
+| 42 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | The process of loss of water from plant surface through evaporation is called |
+| 43 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | A molecule of DNA contains all of the following EXCEPT |
+| 44 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following is universal donor blood group |
+| 45 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | Contraction of atria pushes the blood toward ventricles, this is called |
+| 46 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | According to Mendel’s law of independent assortment what will be the typical ratio of F2 in a dihybrid cross |
+| 47 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | Principle of 3R means |
+| 48 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | Spectrococcus carries out a process called |
+| 49 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following enzymes dissolve blood clots |
+| 50 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | The primary structure of protein refers to the |
+| 51 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | Sleep movements are a type of |
+| 52 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | The extreme change in pH results in |
+| 53 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | Pathogen contains special proteins known as |
+| 54 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | Stomata present in leaves involves in the process of |
+| 55 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | In the human body, 99% of total mass is formed of |
+| 56 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | Thick muscular structure present below the lungs |
+| 57 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | The one which is a weed killer |
+| 58 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | Amount of Carbon dioxide in inspired air |
+| 59 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | Primary chemical stimulus for breathing is the concentration of |
+| 60 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | Maintenance of internal body conditions at equilibrium, despite changes in the external environment |
+| 61 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | U-shape structure present in Nephron known as |
+| 62 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | Glomerulus is |
+| 63 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following occurs in anaerobic respiration but not in aerobic respiration? |
+| 64 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | Chemical coordination is brought about by |
+| 65 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | Fusion of the bones at joint may occur and joints may become totally immoveable in |
+| 66 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | Calyx is a collection of |
+| 67 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | Hydra and corals also reproduce by means of |
+| 68 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | Scar present on a seed coat known as |
+| 69 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | The one which is not a globular protein |
+| 70 | Part II | 7 | B | Authored from screenshot-verified paper text and standard subject reasoning | The basic structural unit of a chromosome is |
 
 ## NSTC 2022 Chemistry Paper
 
@@ -104,56 +104,56 @@ Rows marked pending do not have an answer key applied in `src/data/questions.jso
 | 18 | Part I | - | A | Authored from standard science reasoning after paper text review | Which net charge could be found on an object? |
 | 19 | Part I | - | B | Authored from standard science reasoning after paper text review | Compared to insulators, metals are better conductors of electricity because metals contain more free |
 | 20 | Part I | - | C | Authored from standard science reasoning after paper text review | Which two quantities are measured in the same units |
-| 21 | Part II | - | Pending | Pending authored review | Which of the following property is not the characteristic of dilute HCL? |
-| 22 | Part II | - | Pending | Pending authored review | Which acid is found in bee string? |
-| 23 | Part II | - | Pending | Pending authored review | Which process is used to produce baking soda? |
-| 24 | Part II | - | Pending | Pending authored review | A balances chemical equation always obeys. |
-| 25 | Part II | - | Pending | Pending authored review | Which isotope is used in nuclear reactor to generate electricity? |
-| 26 | Part II | - | Pending | Pending authored review | The percentage of Nitrogen in urea is |
-| 27 | Part II | - | Pending | Pending authored review | How much volume of oxygen at STP in liter is required to completely burn 8g of methane gas? |
-| 28 | Part II | - | Pending | Pending authored review | Which element has the same oxidation state in all of its compounds? |
-| 29 | Part II | - | Pending | Pending authored review | The elements of group 16 are also known as |
-| 30 | Part II | - | Pending | Pending authored review | The oxidation reaction is |
-| 31 | Part II | - | Pending | Pending authored review | What is the color of the flame test for sodium? |
-| 32 | Part II | - | Pending | Pending authored review | Acetic acid was added into a solid “S” kept in test tube. A colorless and odorless gas “G” was evolved which t... |
-| 33 | Part II | - | Pending | Pending authored review | The numbers of single and double bonds present in benzene are |
-| 34 | Part II | - | Pending | Pending authored review | Which of the following is not endothermic process? |
-| 35 | Part II | 6 | Pending | Pending authored review | Which gas is used to fill the plastic bags containing potato chips? |
-| 36 | Part II | 6 | Pending | Pending authored review | Which allotropic form of carbon is a good conductor of heat and electricity? |
-| 37 | Part II | 6 | Pending | Pending authored review | Which formula represents bleaching powder? |
-| 38 | Part II | 6 | Pending | Pending authored review | Fatty acid become rancid due to the process of |
-| 39 | Part II | 6 | Pending | Pending authored review | The oxides of metalloids are ___________ in nature. |
-| 40 | Part II | 6 | Pending | Pending authored review | Which of the following is not a standard condition? |
-| 41 | Part II | 6 | Pending | Pending authored review | Elements with more than 57 electrons require |
-| 42 | Part II | 6 | Pending | Pending authored review | The decrease in the force of attraction is due to the increase in the |
-| 43 | Part II | 6 | Pending | Pending authored review | The chemical reaction between carbonyl compounds and DNPH is an example of |
-| 44 | Part II | 6 | Pending | Pending authored review | In electrolysis of aqueous Copper(II) Sulfate (CuSO4) with Carbon (C) electrode, |
-| 45 | Part II | 6 | Pending | Pending authored review | The correct order of increasing nucleophilicity is |
-| 46 | Part II | 6 | Pending | Pending authored review | The incorrect statement about mineral acid is |
-| 47 | Part II | 6 | Pending | Pending authored review | Which among the following reagent can be used to distinguish between CH2BrCH=CH2 from CH3CH=CHBr? |
-| 48 | Part II | 6 | Pending | Pending authored review | Depletion of the ozone layer is caused due to |
-| 49 | Part II | 6 | Pending | Pending authored review | Find the volume of O2 required to burn 1 L of propane completely, measured at 0 ℃ temperature and 1 atm pressu... |
-| 50 | Part II | 7 | Pending | Pending authored review | Why do we boil the extract with conc. HNO3 in Lassaigne’s test for halogens? |
-| 51 | Part II | 7 | Pending | Pending authored review | The solution which is used to detect the presence of aldehyde or ketone is |
-| 52 | Part II | 7 | Pending | Pending authored review | Which of the following is the major organic product obtained from the following reaction?... |
-| 53 | Part II | 7 | Pending | Pending authored review | When dichromate (VI) ion becomes reduced to chromium (III) ion, a change of color occurs from |
-| 54 | Part II | 7 | Pending | Pending authored review | A container has an equal mass of H2, O2 and CH4 at 27℃, the ratio of their volume is |
-| 55 | Part II | 7 | Pending | Pending authored review | What is the molecular weight of Potash alum? |
-| 56 | Part II | 7 | Pending | Pending authored review | When a small number of acids or bases are added to zwitterion ion, it resists a change in: 1 |
-| 57 | Part II | 7 | Pending | Pending authored review | A mixture of low boiling hydrocarbons is called |
-| 58 | Part II | 7 | Pending | Pending authored review | Which of the following is widely used in the oxy-acetylene welding and cutting metals? |
-| 59 | Part II | 7 | Pending | Pending authored review | If graphite (C) is used as an electrode in the presence of concentrated Hydrochloric Acid (HCl), at the anode |
-| 60 | Part II | 8 | Pending | Pending authored review | Process in which coal is heated in the absence of air at high temperature and converted into coal gas, coal ta... |
-| 61 | Part II | 8 | Pending | Pending authored review | To conduct electricity, the ionic metals shall be |
-| 62 | Part II | 8 | Pending | Pending authored review | What is true about impurities? |
-| 63 | Part II | 8 | Pending | Pending authored review | If the nucleon (mass) and proton (atomic) number is 40 and 20 respectively, the element is? |
-| 64 | Part II | 8 | Pending | Pending authored review | All of these radicals have a valency of 2, except |
-| 65 | Part II | 8 | Pending | Pending authored review | Valency of plumbum can be |
-| 66 | Part II | 8 | Pending | Pending authored review | Give that a certain organic compounds absorbs light in the visible region, it CANNOT be true that it |
-| 67 | Part II | 8 | Pending | Pending authored review | Rank the following forces from weakest to strongest between two elementary particles: gravitational / covalent... |
-| 68 | Part II | 8 | Pending | Pending authored review | 0.36 moles of each aluminium and oxygen react with each other to produce aluminium oxide.... |
-| 69 | Part II | 8 | Pending | Pending authored review | Which substance has the highest percentage by mass of Nitrogen? |
-| 70 | Part II | 8 | Pending | Pending authored review | Suppose the entropy of a system increases with increase in some parameter X.... |
+| 21 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following property is not the characteristic of dilute HCL? |
+| 22 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | Which acid is found in bee string? |
+| 23 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | Which process is used to produce baking soda? |
+| 24 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | A balances chemical equation always obeys. |
+| 25 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | Which isotope is used in nuclear reactor to generate electricity? |
+| 26 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | The percentage of Nitrogen in urea is |
+| 27 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | How much volume of oxygen at STP in liter is required to completely burn 8g of methane gas? |
+| 28 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | Which element has the same oxidation state in all of its compounds? |
+| 29 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | The elements of group 16 are also known as |
+| 30 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | The oxidation reaction is |
+| 31 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | What is the color of the flame test for sodium? |
+| 32 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | Acetic acid was added into a solid “S” kept in test tube. A colorless and odorless gas “G” was evolved which t... |
+| 33 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | The numbers of single and double bonds present in benzene are |
+| 34 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following is not endothermic process? |
+| 35 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | Which gas is used to fill the plastic bags containing potato chips? |
+| 36 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | Which allotropic form of carbon is a good conductor of heat and electricity? |
+| 37 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | Which formula represents bleaching powder? |
+| 38 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | Fatty acid become rancid due to the process of |
+| 39 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | The oxides of metalloids are ___________ in nature. |
+| 40 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following is not a standard condition? |
+| 41 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | Elements with more than 57 electrons require |
+| 42 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | The decrease in the force of attraction is due to the increase in the |
+| 43 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | The chemical reaction between carbonyl compounds and DNPH is an example of |
+| 44 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | In electrolysis of aqueous Copper(II) Sulfate (CuSO4) with Carbon (C) electrode, |
+| 45 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | The correct order of increasing nucleophilicity is |
+| 46 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | The incorrect statement about mineral acid is |
+| 47 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | Which among the following reagent can be used to distinguish between CH2BrCH=CH2 from CH3CH=CHBr? |
+| 48 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | Depletion of the ozone layer is caused due to |
+| 49 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | Find the volume of O2 required to burn 1 L of propane completely, measured at 0 ℃ temperature and 1 atm pressu... |
+| 50 | Part II | 7 | D | Authored from screenshot-verified paper text and standard subject reasoning | Why do we boil the extract with conc. HNO3 in Lassaigne’s test for halogens? |
+| 51 | Part II | 7 | A | Authored from screenshot-verified paper text and standard subject reasoning | The solution which is used to detect the presence of aldehyde or ketone is |
+| 52 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following is the major organic product obtained from the following reaction?... |
+| 53 | Part II | 7 | D | Authored from screenshot-verified paper text and standard subject reasoning | When dichromate (VI) ion becomes reduced to chromium (III) ion, a change of color occurs from |
+| 54 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | A container has an equal mass of H2, O2 and CH4 at 27℃, the ratio of their volume is |
+| 55 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | What is the molecular weight of Potash alum? |
+| 56 | Part II | 7 | D | Authored from screenshot-verified paper text and standard subject reasoning | When a small number of acids or bases are added to zwitterion ion, it resists a change in: 1 |
+| 57 | Part II | 7 | D | Authored from screenshot-verified paper text and standard subject reasoning | A mixture of low boiling hydrocarbons is called |
+| 58 | Part II | 7 | B | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following is widely used in the oxy-acetylene welding and cutting metals? |
+| 59 | Part II | 7 | A | Authored from screenshot-verified paper text and standard subject reasoning | If graphite (C) is used as an electrode in the presence of concentrated Hydrochloric Acid (HCl), at the anode |
+| 60 | Part II | 8 | A | Authored from screenshot-verified paper text and standard subject reasoning | Process in which coal is heated in the absence of air at high temperature and converted into coal gas, coal ta... |
+| 61 | Part II | 8 | C | Authored from screenshot-verified paper text and standard subject reasoning | To conduct electricity, the ionic metals shall be |
+| 62 | Part II | 8 | C | Authored from screenshot-verified paper text and standard subject reasoning | What is true about impurities? |
+| 63 | Part II | 8 | D | Authored from screenshot-verified paper text and standard subject reasoning | If the nucleon (mass) and proton (atomic) number is 40 and 20 respectively, the element is? |
+| 64 | Part II | 8 | C | Authored from screenshot-verified paper text and standard subject reasoning | All of these radicals have a valency of 2, except |
+| 65 | Part II | 8 | A | Authored from screenshot-verified paper text and standard subject reasoning | Valency of plumbum can be |
+| 66 | Part II | 8 | B | Authored from screenshot-verified paper text and standard subject reasoning | Give that a certain organic compounds absorbs light in the visible region, it CANNOT be true that it |
+| 67 | Part II | 8 | D | Authored from screenshot-verified paper text and standard subject reasoning | Rank the following forces from weakest to strongest between two elementary particles: gravitational / covalent... |
+| 68 | Part II | 8 | A | Authored from screenshot-verified paper text and standard subject reasoning | 0.36 moles of each aluminium and oxygen react with each other to produce aluminium oxide.... |
+| 69 | Part II | 8 | C | Authored from screenshot-verified paper text and standard subject reasoning | Which substance has the highest percentage by mass of Nitrogen? |
+| 70 | Part II | 8 | A | Authored from screenshot-verified paper text and standard subject reasoning | Suppose the entropy of a system increases with increase in some parameter X.... |
 
 ## NSTC 2022 Mathematics Paper
 
@@ -179,56 +179,56 @@ Rows marked pending do not have an answer key applied in `src/data/questions.jso
 | 18 | Part I | - | A | Authored from standard science reasoning after paper text review | Which net charge could be found on an object? |
 | 19 | Part I | - | B | Authored from standard science reasoning after paper text review | Compared to insulators, metals are better conductors of electricity because metals contain more free |
 | 20 | Part I | - | C | Authored from standard science reasoning after paper text review | Which two quantities are measured in the same units |
-| 21 | Part II | - | Pending | Pending authored review | For any integers 𝑎, 𝑏, 𝑛 ∈ ℤ such that 𝑛\|𝑎 and 𝑛\|𝑏, then |
-| 22 | Part II | - | Pending | Pending authored review | If gcd(𝑎, 𝑏) = 𝑑 , then 𝑎 𝑑 and 𝑏 𝑑 are __________. |
-| 23 | Part II | - | Pending | Pending authored review | If "𝑝" is a prime and "𝑛" is a positive integer, then |
-| 24 | Part II | - | Pending | Pending authored review | If 𝑎 𝑏 = 2 3 and 𝑏 𝑐 = 4 5 then 𝑎+𝑏 𝑏+𝑐 is equal to |
-| 25 | Part II | - | Pending | Pending authored review | If 𝑥2 − 2𝑥 + 1 = 0, then 𝑥2 + 1 𝑥2 is |
-| 26 | Part II | - | Pending | Pending authored review | 𝑛𝑛 > |
-| 27 | Part II | - | Pending | Pending authored review | ⌊−3.1⌋ = |
-| 28 | Part II | - | Pending | Pending authored review | Decimal representation of (𝐴35𝐵𝑂𝐹)16 is |
-| 29 | Part II | - | Pending | Pending authored review | Which of the following integers is prime |
-| 30 | Part II | - | Pending | Pending authored review | The least common multiple of 345, 453, 234 is |
-| 31 | Part II | - | Pending | Pending authored review | In 3 fingers, the number of ways four rings can be worn is ………..ways. |
-| 32 | Part II | - | Pending | Pending authored review | The number of 5 digit numbers all digits of which are odd is |
-| 33 | Part II | - | Pending | Pending authored review | The product of 𝑟 consecutive positive integers is divisible by |
-| 34 | Part II | - | Pending | Pending authored review | Everybody in a room shakes hands with everybody else. The total number of shake hands is 66.... |
-| 35 | Part II | - | Pending | Pending authored review | The number of rectangles that a chessboard has………. |
-| 36 | Part II | 5 | Pending | Pending authored review | 1 + 3 + 5 + 7 +……….+ 17 is equal to |
-| 37 | Part II | 5 | Pending | Pending authored review | 6 men and 4 women are to be seated in a row so that no two women sit together.... |
-| 38 | Part II | 5 | Pending | Pending authored review | The number of ways of painting the faces of a cube with six different colors is |
-| 39 | Part II | 5 | Pending | Pending authored review | If 𝑏 ≠ 0 ∈ ℤ, then which of the following statements is correct? |
-| 40 | Part II | 5 | Pending | Pending authored review | Which of the following equals to 8? |
-| 41 | Part II | 5 | Pending | Pending authored review | If 𝑎 is divisible by 𝑏, which of the following are true |
-| 42 | Part II | 5 | Pending | Pending authored review | The three numbers are in the ratio 1/2 ∶ 2/3 ∶ 3/4. The difference between greatest and smallest numbers is 36... |
-| 43 | Part II | 5 | Pending | Pending authored review | Three bells beep at an interval of 12, 20, and 35 minutes. If they beep together at 10 a.m.... |
-| 44 | Part II | 5 | Pending | Pending authored review | What is the least number which when divided by the numbers 3, 5, 6, 8, 10 and 12 leaves in each case a remaind... |
-| 45 | Part II | 5 | Pending | Pending authored review | The sum of first five prime numbers is |
-| 46 | Part II | 5 | Pending | Pending authored review | How many prime numbers are less than 50? |
-| 47 | Part II | 5 | Pending | Pending authored review | In ∆𝑋𝑌𝑍, XY and XZ are 20 cm and 25 cm respectively, XP is angle bisector of ∠𝑌𝑋𝑍, YP = a cm and PZ = (a+3) cm... |
-| 48 | Part II | 5 | Pending | Pending authored review | A circle is circum-scribed of ∆𝐴𝐵𝐶. O is the center of the circle and CP is the tangent of the circle at the p... |
-| 49 | Part II | 5 | Pending | Pending authored review | The area of the triangle whose vertices are given by the coordinates (1,2), (-4, -3) and (4, 1) is |
-| 50 | Part II | 5 | Pending | Pending authored review | If the angles, in degree, of a triangle, are x, 3x + 20 and 6x, the triangle must be |
-| 51 | Part II | 6 | Pending | Pending authored review | ∆𝐴𝐵𝐶 is inscribed in a circle with center O. If AB = 17 cm, BC = 10 cm and AC = 9 cm, then find the length of... |
-| 52 | Part II | 6 | Pending | Pending authored review | If the measure of each interior angle of a regular polygon is 150°, then the number of its diagonals will be |
-| 53 | Part II | 6 | Pending | Pending authored review | If an arithmetic progression is 13, 11, 9…., then find 50th term of that arithmetic progression. |
-| 54 | Part II | 6 | Pending | Pending authored review | From a group of 7 men and 6 women, five persons are to be selected to form a committee so that three men are t... |
-| 55 | Part II | 6 | Pending | Pending authored review | In a colony, there are 55 members. Every member posts a greeting card to all the members.... |
-| 56 | Part II | 6 | Pending | Pending authored review | If nPr = 3024 and nCr = 126 then find n and r. |
-| 57 | Part II | 6 | Pending | Pending authored review | There are six movie parts numbered from 1 to 6. Find the number of ways in which they be arranged so that part... |
-| 58 | Part II | 6 | Pending | Pending authored review | Find the number of factors of the product 58 × 75 × 23 which are perfect squares. |
-| 59 | Part II | 6 | Pending | Pending authored review | Midpoint of (-1,1) and (1,-1) is |
-| 60 | Part II | 6 | Pending | Pending authored review | Four non-parallel lines in a plan intersect at most at |
-| 61 | Part II | 6 | Pending | Pending authored review | If A and B are 2×2 matrices then Det(A+B) is equal to |
-| 62 | Part II | 6 | Pending | Pending authored review | The solution of 2x−9 ≥ 7 is |
-| 63 | Part II | 6 | Pending | Pending authored review | The inverse of the function f (x) = 2x−9 is |
-| 64 | Part II | 6 | Pending | Pending authored review | Polygon with 9 sides is called |
-| 65 | Part II | 6 | Pending | Pending authored review | Area of a rhombus having diagonals equal to 6 cm and 8 cm is |
-| 66 | Part II | 6 | Pending | Pending authored review | The length of a rectangular screen is 15 cm. Its area is 180 sq. cm. Its width is |
-| 67 | Part II | 7 | Pending | Pending authored review | If f (x−3) = 9x2+2 then f (5) is |
-| 68 | Part II | 7 | Pending | Pending authored review | The expression √20 − √20 − √20 − √20 − ⋯ is equal to |
-| 69 | Part II | 7 | Pending | Pending authored review | The value of cos(tan−1(−1)) is |
-| 70 | Part II | 7 | Pending | Pending authored review | A pair of chords of a circle subtending two congruent central angles is |
+| 21 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | For any integers 𝑎, 𝑏, 𝑛 ∈ ℤ such that 𝑛\|𝑎 and 𝑛\|𝑏, then |
+| 22 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | If gcd(𝑎, 𝑏) = 𝑑 , then 𝑎 𝑑 and 𝑏 𝑑 are __________. |
+| 23 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | If "𝑝" is a prime and "𝑛" is a positive integer, then |
+| 24 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | If 𝑎 𝑏 = 2 3 and 𝑏 𝑐 = 4 5 then 𝑎+𝑏 𝑏+𝑐 is equal to |
+| 25 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | If 𝑥2 − 2𝑥 + 1 = 0, then 𝑥2 + 1 𝑥2 is |
+| 26 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | 𝑛𝑛 > |
+| 27 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | ⌊−3.1⌋ = |
+| 28 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | Decimal representation of (𝐴35𝐵𝑂𝐹)16 is |
+| 29 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following integers is prime |
+| 30 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | The least common multiple of 345, 453, 234 is |
+| 31 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | In 3 fingers, the number of ways four rings can be worn is ………..ways. |
+| 32 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | The number of 5 digit numbers all digits of which are odd is |
+| 33 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | The product of 𝑟 consecutive positive integers is divisible by |
+| 34 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | Everybody in a room shakes hands with everybody else. The total number of shake hands is 66.... |
+| 35 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | The number of rectangles that a chessboard has………. |
+| 36 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | 1 + 3 + 5 + 7 +……….+ 17 is equal to |
+| 37 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | 6 men and 4 women are to be seated in a row so that no two women sit together.... |
+| 38 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | The number of ways of painting the faces of a cube with six different colors is |
+| 39 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | If 𝑏 ≠ 0 ∈ ℤ, then which of the following statements is correct? |
+| 40 | Part II | 5 | No valid option | Screenshot-authored review; source item has no valid printed A-D key | Which of the following equals to 8? |
+| 41 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | If 𝑎 is divisible by 𝑏, which of the following are true |
+| 42 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | The three numbers are in the ratio 1/2 ∶ 2/3 ∶ 3/4. The difference between greatest and smallest numbers is 36... |
+| 43 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | Three bells beep at an interval of 12, 20, and 35 minutes. If they beep together at 10 a.m.... |
+| 44 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | What is the least number which when divided by the numbers 3, 5, 6, 8, 10 and 12 leaves in each case a remaind... |
+| 45 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | The sum of first five prime numbers is |
+| 46 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | How many prime numbers are less than 50? |
+| 47 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | In ∆𝑋𝑌𝑍, XY and XZ are 20 cm and 25 cm respectively, XP is angle bisector of ∠𝑌𝑋𝑍, YP = a cm and PZ = (a+3) cm... |
+| 48 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | A circle is circum-scribed of ∆𝐴𝐵𝐶. O is the center of the circle and CP is the tangent of the circle at the p... |
+| 49 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | The area of the triangle whose vertices are given by the coordinates (1,2), (-4, -3) and (4, 1) is |
+| 50 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | If the angles, in degree, of a triangle, are x, 3x + 20 and 6x, the triangle must be |
+| 51 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | ∆𝐴𝐵𝐶 is inscribed in a circle with center O. If AB = 17 cm, BC = 10 cm and AC = 9 cm, then find the length of... |
+| 52 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | If the measure of each interior angle of a regular polygon is 150°, then the number of its diagonals will be |
+| 53 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | If an arithmetic progression is 13, 11, 9…., then find 50th term of that arithmetic progression. |
+| 54 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | From a group of 7 men and 6 women, five persons are to be selected to form a committee so that three men are t... |
+| 55 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | In a colony, there are 55 members. Every member posts a greeting card to all the members.... |
+| 56 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | If nPr = 3024 and nCr = 126 then find n and r. |
+| 57 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | There are six movie parts numbered from 1 to 6. Find the number of ways in which they be arranged so that part... |
+| 58 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | Find the number of factors of the product 58 × 75 × 23 which are perfect squares. |
+| 59 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | Midpoint of (-1,1) and (1,-1) is |
+| 60 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | Four non-parallel lines in a plan intersect at most at |
+| 61 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | If A and B are 2×2 matrices then Det(A+B) is equal to |
+| 62 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | The solution of 2x−9 ≥ 7 is |
+| 63 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | The inverse of the function f (x) = 2x−9 is |
+| 64 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | Polygon with 9 sides is called |
+| 65 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | Area of a rhombus having diagonals equal to 6 cm and 8 cm is |
+| 66 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | The length of a rectangular screen is 15 cm. Its area is 180 sq. cm. Its width is |
+| 67 | Part II | 7 | A | Authored from screenshot-verified paper text and standard subject reasoning | If f (x−3) = 9x2+2 then f (5) is |
+| 68 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | The expression √20 − √20 − √20 − √20 − ⋯ is equal to |
+| 69 | Part II | 7 | D | Authored from screenshot-verified paper text and standard subject reasoning | The value of cos(tan−1(−1)) is |
+| 70 | Part II | 7 | B | Authored from screenshot-verified paper text and standard subject reasoning | A pair of chords of a circle subtending two congruent central angles is |
 
 ## NSTC 2022 Physics Paper
 
@@ -329,56 +329,56 @@ Rows marked pending do not have an answer key applied in `src/data/questions.jso
 | 18 | Part I | - | A | Authored from standard science reasoning after paper text review | When a neutral metal sphere is charged by contact with a positively charged glass rod, the sphere |
 | 19 | Part I | - | D | Authored from standard science reasoning after paper text review | An electric iron operating at 120 volts draws 10. Amperes of current. How much heat energy is delivered by the... |
 | 20 | Part I | - | C | Authored from standard science reasoning after paper text review | A radar gun can determine the speed of a moving automobile by measuring the difference infrequency between emi... |
-| 21 | Part II | - | Pending | Pending authored review | The process in which the homologous chromosomes line up with each other and form a pair is called |
-| 22 | Part II | - | Pending | Pending authored review | The major component of fungi cell wall is |
-| 23 | Part II | - | Pending | Pending authored review | The shrinking of cytoplasm is called |
-| 24 | Part II | - | Pending | Pending authored review | What is the shape of the rings present in trachea? |
-| 25 | Part II | - | Pending | Pending authored review | The main cause of lung cancer include |
-| 26 | Part II | - | Pending | Pending authored review | The tissues which attach muscles to bones are called? |
-| 27 | Part II | - | Pending | Pending authored review | Cartilage and bones are--------------- tissues. |
-| 28 | Part II | - | Pending | Pending authored review | Cellular respiration is--------------------------reaction |
-| 29 | Part II | - | Pending | Pending authored review | T and B cells are |
-| 30 | Part II | - | Pending | Pending authored review | Gaseous exchange in leaf occurs through |
-| 31 | Part II | - | Pending | Pending authored review | The nasal cavity opens into the |
-| 32 | Part II | - | Pending | Pending authored review | The tissues cover the outside of body and lines organs and cavities are called |
-| 33 | Part II | - | Pending | Pending authored review | -------------------are the most abundant species on planet Earth. |
-| 34 | Part II | - | Pending | Pending authored review | Erythrocytes transport----------------------? |
-| 35 | Part II | - | Pending | Pending authored review | Which blood vessel contain valves? |
-| 36 | Part II | - | Pending | Pending authored review | Glucagon is produced by |
-| 37 | Part II | - | Pending | Pending authored review | Plants store large amount of water in their cells for |
-| 38 | Part II | - | Pending | Pending authored review | Despite eating a carb-rich meal, the blood glucose level remains at |
-| 39 | Part II | - | Pending | Pending authored review | The trees which shed leaves annually remove |
-| 40 | Part II | - | Pending | Pending authored review | Cells involved in photosynthesis and respiration during day are |
-| 41 | Part II | - | Pending | Pending authored review | Some gaseous exchange in young stem and leaves occur through |
-| 42 | Part II | - | Pending | Pending authored review | ---------------------is the functional unit of environment. |
-| 43 | Part II | 5 | Pending | Pending authored review | The alternate form of a gene is called |
-| 44 | Part II | 5 | Pending | Pending authored review | Expired drugs can cause damage to |
-| 45 | Part II | 5 | Pending | Pending authored review | Spinal cord is the continuation of |
-| 46 | Part II | 5 | Pending | Pending authored review | The study of external structural characterization is called |
-| 47 | Part II | 5 | Pending | Pending authored review | Peritoneum contains |
-| 48 | Part II | 5 | Pending | Pending authored review | The study of internal structural characterization is called |
-| 49 | Part II | 5 | Pending | Pending authored review | The drugs used to reduce pain are known as |
-| 50 | Part II | 5 | Pending | Pending authored review | The most rapidly dwindling resource in the world is ______ |
-| 51 | Part II | 5 | Pending | Pending authored review | When the platelets count is too high, it can cause |
-| 52 | Part II | 5 | Pending | Pending authored review | Which of the following is NOT an example of continuous evolution? |
-| 53 | Part II | 5 | Pending | Pending authored review | Which of following WBC is involved in preventing blood clotting |
-| 54 | Part II | 5 | Pending | Pending authored review | During day, O2 is produced in the mesophyll cells as a |
-| 55 | Part II | 5 | Pending | Pending authored review | Carbon containing fossils fuels are? |
-| 56 | Part II | 5 | Pending | Pending authored review | Seedless fruit plants are propagated by |
-| 57 | Part II | 5 | Pending | Pending authored review | Diagphragm is a |
-| 58 | Part II | 5 | Pending | Pending authored review | The cancer with highest death rate in the world is------------------ |
-| 59 | Part II | 5 | Pending | Pending authored review | Elastic cartilage is found in |
-| 60 | Part II | 5 | Pending | Pending authored review | Which of these is an antiviral protein? |
-| 61 | Part II | 5 | Pending | Pending authored review | The sensory layer of eye is |
-| 62 | Part II | 5 | Pending | Pending authored review | Night blindness can be avoided by taking---- |
-| 63 | Part II | 5 | Pending | Pending authored review | Nonsene codons? |
-| 64 | Part II | 6 | Pending | Pending authored review | The lens found in human eye is |
-| 65 | Part II | 6 | Pending | Pending authored review | A vector is selected for the transfer of the isolated gene of interest to the |
-| 66 | Part II | 6 | Pending | Pending authored review | The observable set of characteristics of an organism |
-| 67 | Part II | 6 | Pending | Pending authored review | Pathogens contain proteins called |
-| 68 | Part II | 6 | Pending | Pending authored review | Nitrogen fixation is conversion of nitrogen into |
-| 69 | Part II | 6 | Pending | Pending authored review | Drugs used to relieve persistent or severe pain in chronic diseases e.g., cancer? |
-| 70 | Part II | 6 | Pending | Pending authored review | The vector DNA and the inserted gene of interest are collectively called as |
+| 21 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | The process in which the homologous chromosomes line up with each other and form a pair is called |
+| 22 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | The major component of fungi cell wall is |
+| 23 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | The shrinking of cytoplasm is called |
+| 24 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | What is the shape of the rings present in trachea? |
+| 25 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | The main cause of lung cancer include |
+| 26 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | The tissues which attach muscles to bones are called? |
+| 27 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | Cartilage and bones are--------------- tissues. |
+| 28 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | Cellular respiration is--------------------------reaction |
+| 29 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | T and B cells are |
+| 30 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | Gaseous exchange in leaf occurs through |
+| 31 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | The nasal cavity opens into the |
+| 32 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | The tissues cover the outside of body and lines organs and cavities are called |
+| 33 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | -------------------are the most abundant species on planet Earth. |
+| 34 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | Erythrocytes transport----------------------? |
+| 35 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | Which blood vessel contain valves? |
+| 36 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | Glucagon is produced by |
+| 37 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | Plants store large amount of water in their cells for |
+| 38 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | Despite eating a carb-rich meal, the blood glucose level remains at |
+| 39 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | The trees which shed leaves annually remove |
+| 40 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | Cells involved in photosynthesis and respiration during day are |
+| 41 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | Some gaseous exchange in young stem and leaves occur through |
+| 42 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | ---------------------is the functional unit of environment. |
+| 43 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | The alternate form of a gene is called |
+| 44 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | Expired drugs can cause damage to |
+| 45 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | Spinal cord is the continuation of |
+| 46 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | The study of external structural characterization is called |
+| 47 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | Peritoneum contains |
+| 48 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | The study of internal structural characterization is called |
+| 49 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | The drugs used to reduce pain are known as |
+| 50 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | The most rapidly dwindling resource in the world is ______ |
+| 51 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | When the platelets count is too high, it can cause |
+| 52 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following is NOT an example of continuous evolution? |
+| 53 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | Which of following WBC is involved in preventing blood clotting |
+| 54 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | During day, O2 is produced in the mesophyll cells as a |
+| 55 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | Carbon containing fossils fuels are? |
+| 56 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | Seedless fruit plants are propagated by |
+| 57 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | Diagphragm is a |
+| 58 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | The cancer with highest death rate in the world is------------------ |
+| 59 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | Elastic cartilage is found in |
+| 60 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | Which of these is an antiviral protein? |
+| 61 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | The sensory layer of eye is |
+| 62 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | Night blindness can be avoided by taking---- |
+| 63 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | Nonsene codons? |
+| 64 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | The lens found in human eye is |
+| 65 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | A vector is selected for the transfer of the isolated gene of interest to the |
+| 66 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | The observable set of characteristics of an organism |
+| 67 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | Pathogens contain proteins called |
+| 68 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | Nitrogen fixation is conversion of nitrogen into |
+| 69 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | Drugs used to relieve persistent or severe pain in chronic diseases e.g., cancer? |
+| 70 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | The vector DNA and the inserted gene of interest are collectively called as |
 
 ## NSTC 2023 Chemistry Paper
 
@@ -404,56 +404,56 @@ Rows marked pending do not have an answer key applied in `src/data/questions.jso
 | 18 | Part I | - | A | Authored from standard science reasoning after paper text review | When a neutral metal sphere is charged by contact with a positively charged glass rod, the sphere |
 | 19 | Part I | - | D | Authored from standard science reasoning after paper text review | An electric iron operating at 120 volts draws 10. Amperes of current. How much heat energy is delivered by the... |
 | 20 | Part I | - | C | Authored from standard science reasoning after paper text review | A radar gun can determine the speed of a moving automobile by measuring the difference infrequency between emi... |
-| 21 | Part II | - | Pending | Pending authored review | Which of the following isn’t a state function |
-| 22 | Part II | - | Pending | Pending authored review | The velocity of the photon |
-| 23 | Part II | - | Pending | Pending authored review | Hydrogen effuses four times more rapidly than volume of an unknown gas molar mass of unknown gas should be |
-| 24 | Part II | - | Pending | Pending authored review | Which one of the following is a buffer solution |
-| 25 | Part II | - | Pending | Pending authored review | Which substance can be used for disinfecting water |
-| 26 | Part II | - | Pending | Pending authored review | How many chiral compounds are possible on monochlorination of 2–methyl butane |
-| 27 | Part II | - | Pending | Pending authored review | The presence of dust particles in air serves |
-| 28 | Part II | - | Pending | Pending authored review | In the double displacement reaction between aqueous potassium iodide and aqueous lead nitrate, a yellow precip... |
-| 29 | Part II | - | Pending | Pending authored review | Formation of alkane by the action of Zn on alkyl halide is called |
-| 30 | Part II | - | Pending | Pending authored review | C10H22 + 900 K → C4H8 + C6H14 Name the reaction |
-| 31 | Part II | - | Pending | Pending authored review | In terms of acidic strength, which one of the following is in the correct increasing order |
-| 32 | Part II | - | Pending | Pending authored review | Which of the following are exothermic processes? (i) Reaction of water with quick lime (ii) Dilution of an aci... |
-| 33 | Part II | - | Pending | Pending authored review | How many isotopes have odd atomic number? |
-| 34 | Part II | - | Pending | Pending authored review | The major product formed by monobromination of methyl cyclopentane is |
-| 35 | Part II | - | Pending | Pending authored review | The reducing power of a metal depends on various factors. Suggest the factor which makes Li, the strongest red... |
-| 36 | Part II | 6 | Pending | Pending authored review | Some of the group - 2 metal halides are covalent and soluble in organic solvents.... |
-| 37 | Part II | 6 | Pending | Pending authored review | When 0.5 mole of phosphoric acid is dissolved in aqueous solution how many moles of -ve and +ve ions are colle... |
-| 38 | Part II | 6 | Pending | Pending authored review | Lindlar's Catalyst Na in Liq NH3 C CH3C CH3 A B In reaction A and B, respectively |
-| 39 | Part II | 6 | Pending | Pending authored review | Dead burnt plaster is |
-| 40 | Part II | 6 | Pending | Pending authored review | At 298 K temperature, if partial pressure of all given gases are same, then, which of the following gas posses... |
-| 41 | Part II | 6 | Pending | Pending authored review | Which of the following represents the given mode of hybridization sp2-sp2-sp-sp from left to right |
-| 42 | Part II | 6 | Pending | Pending authored review | When an electron is moving with velocity of 2.188 x 10^6 ms-1 in the first orbit of Bohr’s model of hydrogen.... |
-| 43 | Part II | 6 | Pending | Pending authored review | Atomic number of Mn is 25. What is the electronic configuration in the ground state? |
-| 44 | Part II | 6 | Pending | Pending authored review | The balanced chemical equation for the reaction which occurs when Be is added to water is____________? |
-| 45 | Part II | 6 | Pending | Pending authored review | A compound |
-| 46 | Part II | 6 | Pending | Pending authored review | Solubility of CaF2 is 2.0 x 10^-4 gdm-3 then Ksp of CaF2 is_______________? |
-| 47 | Part II | 6 | Pending | Pending authored review | Consider the following comparisons of Alkali Metals and Alkaline Earth Metals: 1 While no Alkali Metal is foun... |
-| 48 | Part II | 6 | Pending | Pending authored review | Which of the following alpha-emitter is commonly used in smoke detectors? |
-| 49 | Part II | 6 | Pending | Pending authored review | Which substance get oxidized in the reaction: 2Al + Cr2O3 → Al2O3 + 2Cr |
-| 50 | Part II | 6 | Pending | Pending authored review | What is the oxidation no. of phosphorus in H3PO3, H3PO4, H3PO2 or phosphorus acid, phosphoric acid, phosphinic... |
-| 51 | Part II | 7 | Pending | Pending authored review | CH CH + O3 CH2 Cl2 196K X Zn/H2O Y End product Y is? |
-| 52 | Part II | 7 | Pending | Pending authored review | How many of the following metals when heated in an atmosphere of N2 gas form nitrides?... |
-| 53 | Part II | 7 | Pending | Pending authored review | If ionic substances completely dissociate, then aqueous solution of which of the following substances having l... |
-| 54 | Part II | 7 | Pending | Pending authored review | Which type of solution, moist air is |
-| 55 | Part II | 7 | Pending | Pending authored review | Which of the following oxidation no. does not possess by nitrogen in any of its compound? |
-| 56 | Part II | 7 | Pending | Pending authored review | Which of the following is the component of most of the kidney stones |
-| 57 | Part II | 7 | Pending | Pending authored review | Which substance is a reducing agent in the following reaction? Reaction : 2Al + Cr2O3 → Al2O3 + 2Cr |
-| 58 | Part II | 7 | Pending | Pending authored review | What would be the formality of solution prepared by dissolving 9.48 g of Potash-alum in 5 L water? [M.... |
-| 59 | Part II | 7 | Pending | Pending authored review | Radial nodes present in 3s and 2p-orbitals are respectively |
-| 60 | Part II | 7 | Pending | Pending authored review | 30 g of Mg and 30 g of O2 are reacted and the residual mixure contains |
-| 61 | Part II | 7 | Pending | Pending authored review | For a certain particle, it is found that uncertainty in velocity is reciprocal of uncertainty in position.... |
-| 62 | Part II | 7 | Pending | Pending authored review | What would be the concentration in % w/v of aqueous solution in which 80 ml ethanol is dissolved in 4 L soluti... |
-| 63 | Part II | 7 | Pending | Pending authored review | What will be final weight of 286 g Na2CO3 .10H2O by heating at 373 K |
-| 64 | Part II | 7 | Pending | Pending authored review | Naphthalene is soluble in ether or benzene due to |
-| 65 | Part II | 7 | Pending | Pending authored review | Which would undergo 𝑆𝑁 2 reaction slow. |
-| 66 | Part II | 7 | Pending | Pending authored review | For nucleophilic substitution bimolecure 𝑆𝑁 2 reaction give the correct order of reactivity. |
-| 67 | Part II | 7 | Pending | Pending authored review | CH3 CH3H3C CH2OH gives which observation in Lucas test? |
-| 68 | Part II | 7 | Pending | Pending authored review | Splitting of spectral lines under the influence of magnetic field is called |
-| 69 | Part II | 8 | Pending | Pending authored review | For which compound iodoform test is not possible |
-| 70 | Part II | 8 | Pending | Pending authored review | How many enantiomer pairs are obtained by monochlorination of 2, 3-dimethyl butane? |
+| 21 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following isn’t a state function |
+| 22 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | The velocity of the photon |
+| 23 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | Hydrogen effuses four times more rapidly than volume of an unknown gas molar mass of unknown gas should be |
+| 24 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | Which one of the following is a buffer solution |
+| 25 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | Which substance can be used for disinfecting water |
+| 26 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | How many chiral compounds are possible on monochlorination of 2–methyl butane |
+| 27 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | The presence of dust particles in air serves |
+| 28 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | In the double displacement reaction between aqueous potassium iodide and aqueous lead nitrate, a yellow precip... |
+| 29 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | Formation of alkane by the action of Zn on alkyl halide is called |
+| 30 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | C10H22 + 900 K → C4H8 + C6H14 Name the reaction |
+| 31 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | In terms of acidic strength, which one of the following is in the correct increasing order |
+| 32 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following are exothermic processes? (i) Reaction of water with quick lime (ii) Dilution of an aci... |
+| 33 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | How many isotopes have odd atomic number? |
+| 34 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | The major product formed by monobromination of methyl cyclopentane is |
+| 35 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | The reducing power of a metal depends on various factors. Suggest the factor which makes Li, the strongest red... |
+| 36 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | Some of the group - 2 metal halides are covalent and soluble in organic solvents.... |
+| 37 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | When 0.5 mole of phosphoric acid is dissolved in aqueous solution how many moles of -ve and +ve ions are colle... |
+| 38 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | Lindlar's Catalyst Na in Liq NH3 C CH3C CH3 A B In reaction A and B, respectively |
+| 39 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | Dead burnt plaster is |
+| 40 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | At 298 K temperature, if partial pressure of all given gases are same, then, which of the following gas posses... |
+| 41 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following represents the given mode of hybridization sp2-sp2-sp-sp from left to right |
+| 42 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | When an electron is moving with velocity of 2.188 x 10^6 ms-1 in the first orbit of Bohr’s model of hydrogen.... |
+| 43 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | Atomic number of Mn is 25. What is the electronic configuration in the ground state? |
+| 44 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | The balanced chemical equation for the reaction which occurs when Be is added to water is____________? |
+| 45 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | A compound |
+| 46 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | Solubility of CaF2 is 2.0 x 10^-4 gdm-3 then Ksp of CaF2 is_______________? |
+| 47 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | Consider the following comparisons of Alkali Metals and Alkaline Earth Metals: 1 While no Alkali Metal is foun... |
+| 48 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following alpha-emitter is commonly used in smoke detectors? |
+| 49 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | Which substance get oxidized in the reaction: 2Al + Cr2O3 → Al2O3 + 2Cr |
+| 50 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | What is the oxidation no. of phosphorus in H3PO3, H3PO4, H3PO2 or phosphorus acid, phosphoric acid, phosphinic... |
+| 51 | Part II | 7 | D | Authored from screenshot-verified paper text and standard subject reasoning | CH CH + O3 CH2 Cl2 196K X Zn/H2O Y End product Y is? |
+| 52 | Part II | 7 | B | Authored from screenshot-verified paper text and standard subject reasoning | How many of the following metals when heated in an atmosphere of N2 gas form nitrides?... |
+| 53 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | If ionic substances completely dissociate, then aqueous solution of which of the following substances having l... |
+| 54 | Part II | 7 | A | Authored from screenshot-verified paper text and standard subject reasoning | Which type of solution, moist air is |
+| 55 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following oxidation no. does not possess by nitrogen in any of its compound? |
+| 56 | Part II | 7 | A | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following is the component of most of the kidney stones |
+| 57 | Part II | 7 | A | Authored from screenshot-verified paper text and standard subject reasoning | Which substance is a reducing agent in the following reaction? Reaction : 2Al + Cr2O3 → Al2O3 + 2Cr |
+| 58 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | What would be the formality of solution prepared by dissolving 9.48 g of Potash-alum in 5 L water? [M.... |
+| 59 | Part II | 7 | B | Authored from screenshot-verified paper text and standard subject reasoning | Radial nodes present in 3s and 2p-orbitals are respectively |
+| 60 | Part II | 7 | D | Authored from screenshot-verified paper text and standard subject reasoning | 30 g of Mg and 30 g of O2 are reacted and the residual mixure contains |
+| 61 | Part II | 7 | D | Authored from screenshot-verified paper text and standard subject reasoning | For a certain particle, it is found that uncertainty in velocity is reciprocal of uncertainty in position.... |
+| 62 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | What would be the concentration in % w/v of aqueous solution in which 80 ml ethanol is dissolved in 4 L soluti... |
+| 63 | Part II | 7 | D | Authored from screenshot-verified paper text and standard subject reasoning | What will be final weight of 286 g Na2CO3 .10H2O by heating at 373 K |
+| 64 | Part II | 7 | B | Authored from screenshot-verified paper text and standard subject reasoning | Naphthalene is soluble in ether or benzene due to |
+| 65 | Part II | 7 | B | Authored from screenshot-verified paper text and standard subject reasoning | Which would undergo 𝑆𝑁 2 reaction slow. |
+| 66 | Part II | 7 | B | Authored from screenshot-verified paper text and standard subject reasoning | For nucleophilic substitution bimolecure 𝑆𝑁 2 reaction give the correct order of reactivity. |
+| 67 | Part II | 7 | A | Authored from screenshot-verified paper text and standard subject reasoning | CH3 CH3H3C CH2OH gives which observation in Lucas test? |
+| 68 | Part II | 7 | B | Authored from screenshot-verified paper text and standard subject reasoning | Splitting of spectral lines under the influence of magnetic field is called |
+| 69 | Part II | 8 | D | Authored from screenshot-verified paper text and standard subject reasoning | For which compound iodoform test is not possible |
+| 70 | Part II | 8 | D | Authored from screenshot-verified paper text and standard subject reasoning | How many enantiomer pairs are obtained by monochlorination of 2, 3-dimethyl butane? |
 
 ## NSTC 2023 Mathematics Paper
 
@@ -479,56 +479,56 @@ Rows marked pending do not have an answer key applied in `src/data/questions.jso
 | 18 | Part I | - | A | Authored from standard science reasoning after paper text review | When a neutral metal sphere is charged by contact with a positively charged glass rod, the sphere |
 | 19 | Part I | - | D | Authored from standard science reasoning after paper text review | An electric iron operating at 120 volts draws 10. Amperes of current. How much heat energy is delivered by the... |
 | 20 | Part I | - | C | Authored from standard science reasoning after paper text review | A radar gun can determine the speed of a moving automobile by measuring the difference infrequency between emi... |
-| 21 | Part II | - | Pending | Pending authored review | A chord of length 24cm is at a distance of 5cm from the center of a circle. The radius of the circle is |
-| 22 | Part II | - | Pending | Pending authored review | Find the slope of the line with equation 3 2 10xy+= |
-| 23 | Part II | - | Pending | Pending authored review | Consider a triangle 𝐴𝐵𝐶 with ∠𝐵 = 30° and ∠𝐶 = 60°. What is the type of ∆𝐴𝐵𝐶? |
-| 24 | Part II | - | Pending | Pending authored review | Total number of circles that can pass through 2 pair of points in a plane are |
-| 25 | Part II | - | Pending | Pending authored review | Length of a diagonal of a rectangle with length 4 𝑐𝑚 and width 3 𝑐𝑚 is |
-| 26 | Part II | - | Pending | Pending authored review | Surface Area of a sphere with radius 3𝑐𝑚 is |
-| 27 | Part II | - | Pending | Pending authored review | In a right angle triangle length of the hypotenuse is 5cm and length of one side is 4cm.... |
-| 28 | Part II | - | Pending | Pending authored review | How many minimum points are required to draw a unique line in a plane |
-| 29 | Part II | - | Pending | Pending authored review | If the supplement of an angle is 3 times of its compliment, find the angle. |
-| 30 | Part II | - | Pending | Pending authored review | Maximum number of intersection points of 5 non parallel distinct lines in a plane are |
-| 31 | Part II | - | Pending | Pending authored review | The distance between two parallel tangents of a circle of radius 6 cm is |
-| 32 | Part II | - | Pending | Pending authored review | The ratio of heights of a cone and a hemisphere with equal bases and equal volumes is |
-| 33 | Part II | - | Pending | Pending authored review | If 𝑥2 + 𝑦2 + 𝑧2 = 125 and 𝑥𝑦 + 𝑦𝑧 + 𝑧𝑎 = 250, then 𝑥 + 𝑦 + 𝑧 is |
-| 34 | Part II | - | Pending | Pending authored review | The quadratic equation corresponding to the roots 2 + √5 and 2 − √5 is |
-| 35 | Part II | - | Pending | Pending authored review | The function 𝑓: 𝑅 → 𝑅 defined by 𝑓(𝑥) = 2𝑥2 + 𝑥 − 1 is |
-| 36 | Part II | 5 | Pending | Pending authored review | The number of real solutions of the equation 𝑥4 − 1 = 0 are |
-| 37 | Part II | 5 | Pending | Pending authored review | If 𝑥2 − 4𝑥 + 4 = 0, then the value of 𝑥2 is |
-| 38 | Part II | 5 | Pending | Pending authored review | Which of the following is not irrational? |
-| 39 | Part II | 5 | Pending | Pending authored review | If 𝑑\|𝑎 and 𝑑\|𝑏, then |
-| 40 | Part II | 5 | Pending | Pending authored review | Positive divisor of both 𝑎 and 𝑎 + 1 is |
-| 41 | Part II | 5 | Pending | Pending authored review | −123 ≡ 𝑎(mod 10) |
-| 42 | Part II | 5 | Pending | Pending authored review | gcd(2𝑎 + 1,9𝑎 + 4) = |
-| 43 | Part II | 5 | Pending | Pending authored review | If 𝑝 is prime and 𝑝\|𝑎𝑛, then |
-| 44 | Part II | 5 | Pending | Pending authored review | The remainders when 250 is divided by 7. |
-| 45 | Part II | 5 | Pending | Pending authored review | A girl wrote all the numbers from 100 to 200. Then she started counting the number of one's that has been used... |
-| 46 | Part II | 5 | Pending | Pending authored review | If each of the three nonzero numbers 𝑎, 𝑏 and 𝑐 is divisible by 3, then 𝑎𝑏𝑐 must be divisible by which one of... |
-| 47 | Part II | 5 | Pending | Pending authored review | If n is a positive integer, which one of the following numbers must have a remainder of 3 when divided by any... |
-| 48 | Part II | 5 | Pending | Pending authored review | When a particular positive number is divided by 5, the remainder is 2. If the same number is divided by 6, the... |
-| 49 | Part II | 5 | Pending | Pending authored review | A certain number when divided by 222 leaves a remainder 35, another number when divided by 407 leaves a remain... |
-| 50 | Part II | 5 | Pending | Pending authored review | The number obtained by interchanging the two digits of a two digit number is less than the original number by... |
-| 51 | Part II | 6 | Pending | Pending authored review | A six-person committee composed of Alice, Ben, Connie, Dolph, Egbert, and Francisco is to select a chairperson... |
-| 52 | Part II | 6 | Pending | Pending authored review | A boy lives at X and wants to go to School at Z. From his home X he has to first reach Y and then Y to Z.... |
-| 53 | Part II | 6 | Pending | Pending authored review | In a group of 50 students 24 like cold drinks and 36 like hot drinks and each student likes at least one of th... |
-| 54 | Part II | 6 | Pending | Pending authored review | In an arithmetic progression the 𝑚 times of 𝑚𝑡ℎ term is equal to 𝑛 times the 𝑛𝑡ℎ term, its (𝑚 + 𝑛)𝑡ℎ term will... |
-| 55 | Part II | 6 | Pending | Pending authored review | In the expansion of (2𝑎 − 3𝑏)6, determine the coefficient of the term containing 𝑎4𝑏2. |
-| 56 | Part II | 6 | Pending | Pending authored review | In a colony, there are 55 members. Every member posts a greeting card to all the members.... |
-| 57 | Part II | 6 | Pending | Pending authored review | There are 20 points in a plane, how many triangles can be formed by these points if 5 are collinear? |
-| 58 | Part II | 6 | Pending | Pending authored review | How many odd 3-digit whole numbers are there? For example, 203 is acceptable but 023 is not. |
-| 59 | Part II | 6 | Pending | Pending authored review | Consider the recurrence relation 𝑎𝑛 = 𝑎𝑛−1 + 𝑛 with initial condition 𝑎1 = 1. The value of 𝑎13 is __________ |
-| 60 | Part II | 6 | Pending | Pending authored review | How many numbers must be selected from the set {1, 2, 3, 4, 5, 6} to guarantee that at least one pair of these... |
-| 61 | Part II | 6 | Pending | Pending authored review | If arithmetic mean of 6, 7, 9, 𝑥 is 10, then value of 𝑥 is |
-| 62 | Part II | 6 | Pending | Pending authored review | Find the number of ways of arranging the letters of the words DANGER, so that no vowel occupies odd place. |
-| 63 | Part II | 6 | Pending | Pending authored review | If nPr = 3024 and nCr = 126 then find n and r. |
-| 64 | Part II | 6 | Pending | Pending authored review | There are 6 equally spaced points A, B, C, D, E and F marked on a circle with radius R.... |
-| 65 | Part II | 7 | Pending | Pending authored review | 17 students are present in a class. In how many ways, can they be made to stand in 2 circles of 8 and 9 studen... |
-| 66 | Part II | 7 | Pending | Pending authored review | Amir is a window cleaner. He uses the following formula to calculate the amount to charge his customers: Charg... |
-| 67 | Part II | 7 | Pending | Pending authored review | The inverse of the function f(x)=2x-3 is |
-| 68 | Part II | 7 | Pending | Pending authored review | Which of these lines is parallel to the line 2y = x+7 |
-| 69 | Part II | 7 | Pending | Pending authored review | Find x if 𝐿𝑜𝑔𝑥(9/25) = 2 |
-| 70 | Part II | 7 | Pending | Pending authored review | The period of 𝑦 = 2𝑆𝑖𝑛(𝑥 − 𝜋/3) 𝑖𝑠 |
+| 21 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | A chord of length 24cm is at a distance of 5cm from the center of a circle. The radius of the circle is |
+| 22 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | Find the slope of the line with equation 3 2 10xy+= |
+| 23 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | Consider a triangle 𝐴𝐵𝐶 with ∠𝐵 = 30° and ∠𝐶 = 60°. What is the type of ∆𝐴𝐵𝐶? |
+| 24 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | Total number of circles that can pass through 2 pair of points in a plane are |
+| 25 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | Length of a diagonal of a rectangle with length 4 𝑐𝑚 and width 3 𝑐𝑚 is |
+| 26 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | Surface Area of a sphere with radius 3𝑐𝑚 is |
+| 27 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | In a right angle triangle length of the hypotenuse is 5cm and length of one side is 4cm.... |
+| 28 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | How many minimum points are required to draw a unique line in a plane |
+| 29 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | If the supplement of an angle is 3 times of its compliment, find the angle. |
+| 30 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | Maximum number of intersection points of 5 non parallel distinct lines in a plane are |
+| 31 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | The distance between two parallel tangents of a circle of radius 6 cm is |
+| 32 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | The ratio of heights of a cone and a hemisphere with equal bases and equal volumes is |
+| 33 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | If 𝑥2 + 𝑦2 + 𝑧2 = 125 and 𝑥𝑦 + 𝑦𝑧 + 𝑧𝑎 = 250, then 𝑥 + 𝑦 + 𝑧 is |
+| 34 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | The quadratic equation corresponding to the roots 2 + √5 and 2 − √5 is |
+| 35 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | The function 𝑓: 𝑅 → 𝑅 defined by 𝑓(𝑥) = 2𝑥2 + 𝑥 − 1 is |
+| 36 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | The number of real solutions of the equation 𝑥4 − 1 = 0 are |
+| 37 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | If 𝑥2 − 4𝑥 + 4 = 0, then the value of 𝑥2 is |
+| 38 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following is not irrational? |
+| 39 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | If 𝑑\|𝑎 and 𝑑\|𝑏, then |
+| 40 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | Positive divisor of both 𝑎 and 𝑎 + 1 is |
+| 41 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | −123 ≡ 𝑎(mod 10) |
+| 42 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | gcd(2𝑎 + 1,9𝑎 + 4) = |
+| 43 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | If 𝑝 is prime and 𝑝\|𝑎𝑛, then |
+| 44 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | The remainders when 250 is divided by 7. |
+| 45 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | A girl wrote all the numbers from 100 to 200. Then she started counting the number of one's that has been used... |
+| 46 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | If each of the three nonzero numbers 𝑎, 𝑏 and 𝑐 is divisible by 3, then 𝑎𝑏𝑐 must be divisible by which one of... |
+| 47 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | If n is a positive integer, which one of the following numbers must have a remainder of 3 when divided by any... |
+| 48 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | When a particular positive number is divided by 5, the remainder is 2. If the same number is divided by 6, the... |
+| 49 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | A certain number when divided by 222 leaves a remainder 35, another number when divided by 407 leaves a remain... |
+| 50 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | The number obtained by interchanging the two digits of a two digit number is less than the original number by... |
+| 51 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | A six-person committee composed of Alice, Ben, Connie, Dolph, Egbert, and Francisco is to select a chairperson... |
+| 52 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | A boy lives at X and wants to go to School at Z. From his home X he has to first reach Y and then Y to Z.... |
+| 53 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | In a group of 50 students 24 like cold drinks and 36 like hot drinks and each student likes at least one of th... |
+| 54 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | In an arithmetic progression the 𝑚 times of 𝑚𝑡ℎ term is equal to 𝑛 times the 𝑛𝑡ℎ term, its (𝑚 + 𝑛)𝑡ℎ term will... |
+| 55 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | In the expansion of (2𝑎 − 3𝑏)6, determine the coefficient of the term containing 𝑎4𝑏2. |
+| 56 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | In a colony, there are 55 members. Every member posts a greeting card to all the members.... |
+| 57 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | There are 20 points in a plane, how many triangles can be formed by these points if 5 are collinear? |
+| 58 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | How many odd 3-digit whole numbers are there? For example, 203 is acceptable but 023 is not. |
+| 59 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | Consider the recurrence relation 𝑎𝑛 = 𝑎𝑛−1 + 𝑛 with initial condition 𝑎1 = 1. The value of 𝑎13 is __________ |
+| 60 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | How many numbers must be selected from the set {1, 2, 3, 4, 5, 6} to guarantee that at least one pair of these... |
+| 61 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | If arithmetic mean of 6, 7, 9, 𝑥 is 10, then value of 𝑥 is |
+| 62 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | Find the number of ways of arranging the letters of the words DANGER, so that no vowel occupies odd place. |
+| 63 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | If nPr = 3024 and nCr = 126 then find n and r. |
+| 64 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | There are 6 equally spaced points A, B, C, D, E and F marked on a circle with radius R.... |
+| 65 | Part II | 7 | B | Authored from screenshot-verified paper text and standard subject reasoning | 17 students are present in a class. In how many ways, can they be made to stand in 2 circles of 8 and 9 studen... |
+| 66 | Part II | 7 | A | Authored from screenshot-verified paper text and standard subject reasoning | Amir is a window cleaner. He uses the following formula to calculate the amount to charge his customers: Charg... |
+| 67 | Part II | 7 | A | Authored from screenshot-verified paper text and standard subject reasoning | The inverse of the function f(x)=2x-3 is |
+| 68 | Part II | 7 | D | Authored from screenshot-verified paper text and standard subject reasoning | Which of these lines is parallel to the line 2y = x+7 |
+| 69 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | Find x if 𝐿𝑜𝑔𝑥(9/25) = 2 |
+| 70 | Part II | 7 | A | Authored from screenshot-verified paper text and standard subject reasoning | The period of 𝑦 = 2𝑆𝑖𝑛(𝑥 − 𝜋/3) 𝑖𝑠 |
 
 ## NSTC 2023 Physics Paper
 
@@ -629,56 +629,56 @@ Rows marked pending do not have an answer key applied in `src/data/questions.jso
 | 18 | Part I | - | C | Authored from standard science reasoning after paper text review | What is the orbital velocity of geo stationary satellite? |
 | 19 | Part I | - | B | Authored from standard science reasoning after paper text review | What is the direction of electric and magnetic fields in an electromagnetic wave? |
 | 20 | Part I | - | D | Authored from standard science reasoning after paper text review | What is the time period of a seconds pendulum? |
-| 21 | Part II | - | Pending | Pending authored review | In which phase of Meiosis the homologous chromosomes separated from each other |
-| 22 | Part II | - | Pending | Pending authored review | The shrinking of cytoplasm is called |
-| 23 | Part II | - | Pending | Pending authored review | Which chemical component has the greatest contribution in the total mammalian cell weight? |
-| 24 | Part II | - | Pending | Pending authored review | What is the shape of the rings present in trachea? |
-| 25 | Part II | - | Pending | Pending authored review | Cartilage and bones are--------------- tissues. |
-| 26 | Part II | - | Pending | Pending authored review | Deposition of uric acid in the joints results in |
-| 27 | Part II | - | Pending | Pending authored review | Cellular respiration is--------------------------reaction |
-| 28 | Part II | - | Pending | Pending authored review | Group of living organisms of the same species living in the same place at the same time is called |
-| 29 | Part II | - | Pending | Pending authored review | Halophytes grow in |
-| 30 | Part II | - | Pending | Pending authored review | The pores in the layers of the bark |
-| 31 | Part II | - | Pending | Pending authored review | In animals, coordination is achieved by means of |
-| 32 | Part II | - | Pending | Pending authored review | The tissues cover the outside of body and lines organs and cavities are called |
-| 33 | Part II | - | Pending | Pending authored review | -------------------are the most abundant species on planet Earth. |
-| 34 | Part II | - | Pending | Pending authored review | Erythrocytes transport----------------------? |
-| 35 | Part II | - | Pending | Pending authored review | Blood caries the sugar and amino acids from intestine to liver by means of |
-| 36 | Part II | - | Pending | Pending authored review | Glucagon is produced by |
-| 37 | Part II | - | Pending | Pending authored review | Plants store large amount of water in their cells for |
-| 38 | Part II | - | Pending | Pending authored review | The trees which shed leaves annually remove |
-| 39 | Part II | - | Pending | Pending authored review | Out of 92 naturally occurring chemical elements how many are considered as bio-elements |
-| 40 | Part II | - | Pending | Pending authored review | ------------------is considered a terrestrial ecosystem. |
-| 41 | Part II | - | Pending | Pending authored review | The alternate form of a gene is called |
-| 42 | Part II | - | Pending | Pending authored review | Coliforms are bacteria usually present in |
-| 43 | Part II | - | Pending | Pending authored review | The largest part of the brain is------------------- |
-| 44 | Part II | - | Pending | Pending authored review | The study of external structural characterization is called |
-| 45 | Part II | 5 | Pending | Pending authored review | When the platelets count is too high, it can cause |
-| 46 | Part II | 5 | Pending | Pending authored review | Which of following WBC is involved in preventing blood clotting |
-| 47 | Part II | 5 | Pending | Pending authored review | During day, O2 is produced in the mesophyll cells as a |
-| 48 | Part II | 5 | Pending | Pending authored review | Carbon containing fossils fuels are? |
-| 49 | Part II | 5 | Pending | Pending authored review | Seedless fruit plants are propagated by |
-| 50 | Part II | 5 | Pending | Pending authored review | Hypotonic solution |
-| 51 | Part II | 5 | Pending | Pending authored review | When the walls of any arteries become thick, narrow, hardened, the condition is |
-| 52 | Part II | 5 | Pending | Pending authored review | The sensory layer of eye is |
-| 53 | Part II | 5 | Pending | Pending authored review | Night blindness can be avoided by taking---- |
-| 54 | Part II | 5 | Pending | Pending authored review | The lens found in human eye is |
-| 55 | Part II | 5 | Pending | Pending authored review | The observable set of characteristics of an organism |
-| 56 | Part II | 5 | Pending | Pending authored review | Pathogens contain proteins called |
-| 57 | Part II | 5 | Pending | Pending authored review | Nitrogen fixation is conversion of nitrogen into |
-| 58 | Part II | 5 | Pending | Pending authored review | The vector DNA and the inserted gene of interest are collectively called as |
-| 59 | Part II | 5 | Pending | Pending authored review | In lactic acid fermentation pyruvic acid is reduced to |
-| 60 | Part II | 5 | Pending | Pending authored review | The study of fossils is called |
-| 61 | Part II | 5 | Pending | Pending authored review | Oxygen accounts for ____ % of totals human body mass |
-| 62 | Part II | 5 | Pending | Pending authored review | It is possible to date the rocks by comparing the amount of specific radioactive isotopes they contain.... |
-| 63 | Part II | 5 | Pending | Pending authored review | Which disease can be controlled by vaccination? |
-| 64 | Part II | 5 | Pending | Pending authored review | Vaccine was first developed by? |
-| 65 | Part II | 5 | Pending | Pending authored review | Which of the following statement is incorrect about antibiotics? |
-| 66 | Part II | 6 | Pending | Pending authored review | Removal or degradation of environmental pollutants or toxic materials by living organisms is called |
-| 67 | Part II | 6 | Pending | Pending authored review | Which of the following is not a viral disease? |
-| 68 | Part II | 6 | Pending | Pending authored review | The arrangement of _____ speaks of the division of labor within the cell |
-| 69 | Part II | 6 | Pending | Pending authored review | Cellular digestion is associated with which organelle? |
-| 70 | Part II | 6 | Pending | Pending authored review | Mycoplasmas have been included in bacteria because |
+| 21 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | In which phase of Meiosis the homologous chromosomes separated from each other |
+| 22 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | The shrinking of cytoplasm is called |
+| 23 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | Which chemical component has the greatest contribution in the total mammalian cell weight? |
+| 24 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | What is the shape of the rings present in trachea? |
+| 25 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | Cartilage and bones are--------------- tissues. |
+| 26 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | Deposition of uric acid in the joints results in |
+| 27 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | Cellular respiration is--------------------------reaction |
+| 28 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | Group of living organisms of the same species living in the same place at the same time is called |
+| 29 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | Halophytes grow in |
+| 30 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | The pores in the layers of the bark |
+| 31 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | In animals, coordination is achieved by means of |
+| 32 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | The tissues cover the outside of body and lines organs and cavities are called |
+| 33 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | -------------------are the most abundant species on planet Earth. |
+| 34 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | Erythrocytes transport----------------------? |
+| 35 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | Blood caries the sugar and amino acids from intestine to liver by means of |
+| 36 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | Glucagon is produced by |
+| 37 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | Plants store large amount of water in their cells for |
+| 38 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | The trees which shed leaves annually remove |
+| 39 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | Out of 92 naturally occurring chemical elements how many are considered as bio-elements |
+| 40 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | ------------------is considered a terrestrial ecosystem. |
+| 41 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | The alternate form of a gene is called |
+| 42 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | Coliforms are bacteria usually present in |
+| 43 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | The largest part of the brain is------------------- |
+| 44 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | The study of external structural characterization is called |
+| 45 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | When the platelets count is too high, it can cause |
+| 46 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | Which of following WBC is involved in preventing blood clotting |
+| 47 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | During day, O2 is produced in the mesophyll cells as a |
+| 48 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | Carbon containing fossils fuels are? |
+| 49 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | Seedless fruit plants are propagated by |
+| 50 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | Hypotonic solution |
+| 51 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | When the walls of any arteries become thick, narrow, hardened, the condition is |
+| 52 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | The sensory layer of eye is |
+| 53 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | Night blindness can be avoided by taking---- |
+| 54 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | The lens found in human eye is |
+| 55 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | The observable set of characteristics of an organism |
+| 56 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | Pathogens contain proteins called |
+| 57 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | Nitrogen fixation is conversion of nitrogen into |
+| 58 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | The vector DNA and the inserted gene of interest are collectively called as |
+| 59 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | In lactic acid fermentation pyruvic acid is reduced to |
+| 60 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | The study of fossils is called |
+| 61 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | Oxygen accounts for ____ % of totals human body mass |
+| 62 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | It is possible to date the rocks by comparing the amount of specific radioactive isotopes they contain.... |
+| 63 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | Which disease can be controlled by vaccination? |
+| 64 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | Vaccine was first developed by? |
+| 65 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following statement is incorrect about antibiotics? |
+| 66 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | Removal or degradation of environmental pollutants or toxic materials by living organisms is called |
+| 67 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following is not a viral disease? |
+| 68 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | The arrangement of _____ speaks of the division of labor within the cell |
+| 69 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | Cellular digestion is associated with which organelle? |
+| 70 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | Mycoplasmas have been included in bacteria because |
 
 ## NSTC 2024 Chemistry Paper
 
@@ -704,56 +704,56 @@ Rows marked pending do not have an answer key applied in `src/data/questions.jso
 | 18 | Part I | - | C | Authored from standard science reasoning after paper text review | What is the orbital velocity of geo stationary satellite? |
 | 19 | Part I | - | B | Authored from standard science reasoning after paper text review | What is the direction of electric and magnetic fields in an electromagnetic wave? |
 | 20 | Part I | - | D | Authored from standard science reasoning after paper text review | What is the time period of a seconds pendulum? |
-| 21 | Part II | - | Pending | Pending authored review | How many orbitals are in an atomic sublevel with l = 3? |
-| 22 | Part II | - | Pending | Pending authored review | A ground state gaseous atom of which element has the greatest number of unpaired electrons? |
-| 23 | Part II | - | Pending | Pending authored review | An atom of which element has the highest second ionization energy? |
-| 24 | Part II | - | Pending | Pending authored review | For the elements in group 14 (C to Pb), which property increases with increasing atomic number? |
-| 25 | Part II | - | Pending | Pending authored review | When NaF, MgO, KCl and CaS are listed in order of increasing lattice energy, which order is correct? |
-| 26 | Part II | - | Pending | Pending authored review | A mineral containing only manganese and oxygen contains 69.6% Mn by mass. What is its empirical formula? |
-| 27 | Part II | - | Pending | Pending authored review | Toluene, C7H8, is added to gasoline to increase its octane rating. What is the volume ratio of air to toluene... |
-| 28 | Part II | - | Pending | Pending authored review | Which of the following acids does not commonly form acidic salts? |
-| 29 | Part II | - | Pending | Pending authored review | Which of the following reactions can not be used to form salts? |
-| 30 | Part II | - | Pending | Pending authored review | The number of neutrons present in the nucleus of an atom gives different |
-| 31 | Part II | - | Pending | Pending authored review | How many ml of 0.75N NaOH will be sufficient to neutralize 75 ml of 0.25 N H2SO4? |
-| 32 | Part II | - | Pending | Pending authored review | When the principal quantum number of a shell is three (n=3). It possesses |
-| 33 | Part II | - | Pending | Pending authored review | Maximum valency of an element is limited to |
-| 34 | Part II | - | Pending | Pending authored review | What is dry ice? |
-| 35 | Part II | - | Pending | Pending authored review | Bleaching powder is obtained by passing chlorine over |
-| 36 | Part II | - | Pending | Pending authored review | Since the atomic weight of sulphur is twice that of oxygen, the percentage by weight of sulphur in sulphur tri... |
-| 37 | Part II | - | Pending | Pending authored review | Hydrogen bonds are obtained between the hydrogen atom of a molecule and another atom of the same or different... |
-| 38 | Part II | - | Pending | Pending authored review | Ionization potential is influenced by |
-| 39 | Part II | - | Pending | Pending authored review | According to Fajan’s rule cavalent bonding is favoured by |
-| 40 | Part II | 6 | Pending | Pending authored review | In the reaction, ZnO + C → Zn + CO , carbon acts as |
-| 41 | Part II | 6 | Pending | Pending authored review | Oxidation number of oxygen is not taken as 2 in which of the following oxides? |
-| 42 | Part II | 6 | Pending | Pending authored review | If a dilute solution of potassium iodide mixed with a small amount of terpentine is allowed to stand in an ope... |
-| 43 | Part II | 6 | Pending | Pending authored review | Liquid helium has low boiling point because of |
-| 44 | Part II | 6 | Pending | Pending authored review | What is formula of gypsum? |
-| 45 | Part II | 6 | Pending | Pending authored review | Which of the following is true metal |
-| 46 | Part II | 6 | Pending | Pending authored review | Nitric oxide is |
-| 47 | Part II | 6 | Pending | Pending authored review | Ozone is a/an |
-| 48 | Part II | 6 | Pending | Pending authored review | Elements X and Y can combine to form two different compounds. If 1.60 g of X reacts with exactly1.... |
-| 49 | Part II | 6 | Pending | Pending authored review | Benzene (C6H6) can react with fluorine according to the unbalanced chemical equation C6H6 + F2 C6F6 + HF If th... |
-| 50 | Part II | 6 | Pending | Pending authored review | Given the balanced equation, 3Cu(s) + 8HNO3(aq) 3Cu(NO3)2(aq) + 2NO(g) + 4H2O(l).... |
-| 51 | Part II | 6 | Pending | Pending authored review | A 1.56 g sample of a compound containing only carbon and hydrogen was completely burned.... |
-| 52 | Part II | 6 | Pending | Pending authored review | Which one of the following has the largest radius? |
-| 53 | Part II | 6 | Pending | Pending authored review | In which one of the following lists are all the substances covalently bonded? |
-| 54 | Part II | 6 | Pending | Pending authored review | By photosynthesis using solar energy, maple trees make molecules of glucose in the reaction, 6CO2(g) + 6H2O(l)... |
-| 55 | Part II | 6 | Pending | Pending authored review | A student generates 41.0 mL of dihydrogen (H2) by reacting solid magnesium with hydrochloric acid at 20°C.... |
-| 56 | Part II | 6 | Pending | Pending authored review | At 70°C and atmospheric pressure of 101.3 kPa, a light bulb with a volume of 212 mL contains 0.... |
-| 57 | Part II | 6 | Pending | Pending authored review | An aqueous solution of concentrated hydrobromic acid contains 48% HBr by mass.... |
-| 58 | Part II | 7 | Pending | Pending authored review | In a certain solution the concentration of the OH– ion is 100 times greater than the concentration of the H+ i... |
-| 59 | Part II | 7 | Pending | Pending authored review | Formic acid (HCO2H) is a weak monoprotic acid in aqueous solution. An aqueous solution is made by dissolving 1... |
-| 60 | Part II | 7 | Pending | Pending authored review | What is the oxidation state of manganese in KMnO4? |
-| 61 | Part II | 7 | Pending | Pending authored review | The solubility product constant of BiI3 is 8.2 x 10–19. The solubility of this salt in pure water is therefore |
-| 62 | Part II | 7 | Pending | Pending authored review | An element X forms two oxides whose formulas are XO3 and X2O3. One of these oxides contains 52% of X by mass a... |
-| 63 | Part II | 7 | Pending | Pending authored review | The aqua regia can be prepared with concentrated nitric acid whose concentration is 16 M (16 mol/L).... |
-| 64 | Part II | 7 | Pending | Pending authored review | Oxygen condenses at –183°C and freezes at –223°C. According to the kinetic molecular theory, the kinetic energ... |
-| 65 | Part II | 7 | Pending | Pending authored review | Nickel tetracarbonyl, Ni(CO)4, is formed by the reaction of nickel metal and carbon monoxide. If 0.... |
-| 66 | Part II | 7 | Pending | Pending authored review | atm 66 Which substance would you expect to have the highest melting point. |
-| 67 | Part II | 7 | Pending | Pending authored review | An antifreeze mixture consists of 40% ethylene glycol (C2H6O2) by weight in aqueous solution.... |
-| 68 | Part II | 7 | Pending | Pending authored review | The ion H2PO4– can acts as either an acid or a base. Its conjugate base and acid are respectively |
-| 69 | Part II | 7 | Pending | Pending authored review | What is the pH of a solution of 10–9 M NaOH? |
-| 70 | Part II | 7 | Pending | Pending authored review | The solubility of AgBr in pure water is 5.7 x 10–7 M (at 25°C). What is the solubility of AgBr in a solution w... |
+| 21 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | How many orbitals are in an atomic sublevel with l = 3? |
+| 22 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | A ground state gaseous atom of which element has the greatest number of unpaired electrons? |
+| 23 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | An atom of which element has the highest second ionization energy? |
+| 24 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | For the elements in group 14 (C to Pb), which property increases with increasing atomic number? |
+| 25 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | When NaF, MgO, KCl and CaS are listed in order of increasing lattice energy, which order is correct? |
+| 26 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | A mineral containing only manganese and oxygen contains 69.6% Mn by mass. What is its empirical formula? |
+| 27 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | Toluene, C7H8, is added to gasoline to increase its octane rating. What is the volume ratio of air to toluene... |
+| 28 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following acids does not commonly form acidic salts? |
+| 29 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following reactions can not be used to form salts? |
+| 30 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | The number of neutrons present in the nucleus of an atom gives different |
+| 31 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | How many ml of 0.75N NaOH will be sufficient to neutralize 75 ml of 0.25 N H2SO4? |
+| 32 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | When the principal quantum number of a shell is three (n=3). It possesses |
+| 33 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | Maximum valency of an element is limited to |
+| 34 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | What is dry ice? |
+| 35 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | Bleaching powder is obtained by passing chlorine over |
+| 36 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | Since the atomic weight of sulphur is twice that of oxygen, the percentage by weight of sulphur in sulphur tri... |
+| 37 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | Hydrogen bonds are obtained between the hydrogen atom of a molecule and another atom of the same or different... |
+| 38 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | Ionization potential is influenced by |
+| 39 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | According to Fajan’s rule cavalent bonding is favoured by |
+| 40 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | In the reaction, ZnO + C → Zn + CO , carbon acts as |
+| 41 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | Oxidation number of oxygen is not taken as 2 in which of the following oxides? |
+| 42 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | If a dilute solution of potassium iodide mixed with a small amount of terpentine is allowed to stand in an ope... |
+| 43 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | Liquid helium has low boiling point because of |
+| 44 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | What is formula of gypsum? |
+| 45 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following is true metal |
+| 46 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | Nitric oxide is |
+| 47 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | Ozone is a/an |
+| 48 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | Elements X and Y can combine to form two different compounds. If 1.60 g of X reacts with exactly1.... |
+| 49 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | Benzene (C6H6) can react with fluorine according to the unbalanced chemical equation C6H6 + F2 C6F6 + HF If th... |
+| 50 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | Given the balanced equation, 3Cu(s) + 8HNO3(aq) 3Cu(NO3)2(aq) + 2NO(g) + 4H2O(l).... |
+| 51 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | A 1.56 g sample of a compound containing only carbon and hydrogen was completely burned.... |
+| 52 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | Which one of the following has the largest radius? |
+| 53 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | In which one of the following lists are all the substances covalently bonded? |
+| 54 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | By photosynthesis using solar energy, maple trees make molecules of glucose in the reaction, 6CO2(g) + 6H2O(l)... |
+| 55 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | A student generates 41.0 mL of dihydrogen (H2) by reacting solid magnesium with hydrochloric acid at 20°C.... |
+| 56 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | At 70°C and atmospheric pressure of 101.3 kPa, a light bulb with a volume of 212 mL contains 0.... |
+| 57 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | An aqueous solution of concentrated hydrobromic acid contains 48% HBr by mass.... |
+| 58 | Part II | 7 | B | Authored from screenshot-verified paper text and standard subject reasoning | In a certain solution the concentration of the OH– ion is 100 times greater than the concentration of the H+ i... |
+| 59 | Part II | 7 | D | Authored from screenshot-verified paper text and standard subject reasoning | Formic acid (HCO2H) is a weak monoprotic acid in aqueous solution. An aqueous solution is made by dissolving 1... |
+| 60 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | What is the oxidation state of manganese in KMnO4? |
+| 61 | Part II | 7 | D | Authored from screenshot-verified paper text and standard subject reasoning | The solubility product constant of BiI3 is 8.2 x 10–19. The solubility of this salt in pure water is therefore |
+| 62 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | An element X forms two oxides whose formulas are XO3 and X2O3. One of these oxides contains 52% of X by mass a... |
+| 63 | Part II | 7 | D | Authored from screenshot-verified paper text and standard subject reasoning | The aqua regia can be prepared with concentrated nitric acid whose concentration is 16 M (16 mol/L).... |
+| 64 | Part II | 7 | B | Authored from screenshot-verified paper text and standard subject reasoning | Oxygen condenses at –183°C and freezes at –223°C. According to the kinetic molecular theory, the kinetic energ... |
+| 65 | Part II | 7 | D | Authored from screenshot-verified paper text and standard subject reasoning | Nickel tetracarbonyl, Ni(CO)4, is formed by the reaction of nickel metal and carbon monoxide. If 0.... |
+| 66 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | atm 66 Which substance would you expect to have the highest melting point. |
+| 67 | Part II | 7 | A | Authored from screenshot-verified paper text and standard subject reasoning | An antifreeze mixture consists of 40% ethylene glycol (C2H6O2) by weight in aqueous solution.... |
+| 68 | Part II | 7 | B | Authored from screenshot-verified paper text and standard subject reasoning | The ion H2PO4– can acts as either an acid or a base. Its conjugate base and acid are respectively |
+| 69 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | What is the pH of a solution of 10–9 M NaOH? |
+| 70 | Part II | 7 | D | Authored from screenshot-verified paper text and standard subject reasoning | The solubility of AgBr in pure water is 5.7 x 10–7 M (at 25°C). What is the solubility of AgBr in a solution w... |
 
 ## NSTC 2024 Mathematics Paper
 
@@ -779,56 +779,56 @@ Rows marked pending do not have an answer key applied in `src/data/questions.jso
 | 18 | Part I | - | C | Authored from standard science reasoning after paper text review | What is the orbital velocity of geo stationary satellite? |
 | 19 | Part I | - | B | Authored from standard science reasoning after paper text review | What is the direction of electric and magnetic fields in an electromagnetic wave? |
 | 20 | Part I | - | D | Authored from standard science reasoning after paper text review | What is the time period of a seconds pendulum? |
-| 21 | Part II | - | Pending | Pending authored review | The points ( ) ( ) ( )1, 1 , 4, 2 , 10,8- in the plane are |
-| 22 | Part II | - | Pending | Pending authored review | Let the central angle subtended by two points on a circle is 120° . Then the inscribed angle subtended by thos... |
-| 23 | Part II | - | Pending | Pending authored review | How many different tangents can be drawn on a circle? |
-| 24 | Part II | - | Pending | Pending authored review | The angle between the tangents at the ends of two perpendicular radii is _________. |
-| 25 | Part II | - | Pending | Pending authored review | The tangents on the end points of a diameter of a circle are always |
-| 26 | Part II | - | Pending | Pending authored review | Consider a triangle 𝐴𝐵𝐶 with ∠𝐴 = 45° and ∠𝐵 = 5°. What is the type of ∆𝐴𝐵𝐶? |
-| 27 | Part II | - | Pending | Pending authored review | All the ________ in a plane are similar |
-| 28 | Part II | - | Pending | Pending authored review | If a line intersects two concentric circles with centre O at A, B, C and D, then |
-| 29 | Part II | - | Pending | Pending authored review | If 𝑎 and 𝑏 are coprime integers, which of the following must also be coprime? |
-| 30 | Part II | - | Pending | Pending authored review | Sum of two different prime numbers is a |
-| 31 | Part II | - | Pending | Pending authored review | How many distinct prime factors does 216 × 34 × 52 have? |
-| 32 | Part II | - | Pending | Pending authored review | What is the remainder when 72024 is divided by 13? |
-| 33 | Part II | - | Pending | Pending authored review | What is the least number that is exactly divisible by all the numbers from 1 to 10? |
-| 34 | Part II | - | Pending | Pending authored review | What is the units digit of 22047 × 311? |
-| 35 | Part II | - | Pending | Pending authored review | What is the value of 4234 mod 11 |
-| 36 | Part II | - | Pending | Pending authored review | If 𝑝 is a prime number greater than 3, what is the remainder when 𝑝2 is divided by 12? |
-| 37 | Part II | - | Pending | Pending authored review | If 𝑛 is a positive integer such that 𝑛2 is divisible by 72, then the smallest 𝑛 is |
-| 38 | Part II | - | Pending | Pending authored review | From a group 7 men and 6 women, five persons are to be selected to form a committee so that at least 3 men are... |
-| 39 | Part II | - | Pending | Pending authored review | The 6th and 17th terms of an A.P. are 19 and 41 respectively. Find the 40th term |
-| 40 | Part II | - | Pending | Pending authored review | There are 10 true-false questions in an examination. These questions can be answered in |
-| 41 | Part II | - | Pending | Pending authored review | Mayur travels from Mumbai to Jammu in 7 different ways. But he is allowed to return to Mumbai by any way excep... |
-| 42 | Part II | 5 | Pending | Pending authored review | What is the Cartesian product of set A and set B, if the set A = {1, 2} and set B = {a, b}? |
-| 43 | Part II | 5 | Pending | Pending authored review | Let the players who play cricket be 12, the ones who play football 10, those who play only cricket are 6, then... |
-| 44 | Part II | 5 | Pending | Pending authored review | How many terms are in the expansion of (2𝑥 − 1 𝑦) 10 ? |
-| 45 | Part II | 5 | Pending | Pending authored review | The value of (50 4 ) + ∑ (56 − 𝑟 3 )6 𝑟=1 is |
-| 46 | Part II | 5 | Pending | Pending authored review | There are 27 points in a plane. 5, 10 and 15 points are collinear on distinct lines.... |
-| 47 | Part II | 5 | Pending | Pending authored review | 10 boys and 10 girls sit alternately in a row and then alternately along a circle.... |
-| 48 | Part II | 5 | Pending | Pending authored review | If 𝑛(𝐴) = 20 and 𝑛(𝐵) = 30 and 𝑛(𝐴 ∪ 𝐵) = 40 then 𝑛(𝐴 ∩ 𝐵) is? |
-| 49 | Part II | 5 | Pending | Pending authored review | Which of the following function is not a mathematics function? |
-| 50 | Part II | 5 | Pending | Pending authored review | A ball is dropped from a height of 49 m. The quadratic equation 𝑑(𝑡) =– 𝑡2 + 49 provides information about the... |
-| 51 | Part II | 5 | Pending | Pending authored review | Cities A and B are 45 miles apart. Alicia lives in A and Beth lives in B.... |
-| 52 | Part II | 5 | Pending | Pending authored review | The sum of two numbers is S. Suppose 3 is added to each number and then each of the resulting numbers is doubl... |
-| 53 | Part II | 5 | Pending | Pending authored review | Given that a, b, and c are non-zero real numbers, define (a,b,c)= a/b + b/c + c/a. Find (2,12,9) |
-| 54 | Part II | 5 | Pending | Pending authored review | For how many positive integers m does there exist at least one positive integer n such that 𝑚𝑛 < 𝑚 + 𝑛? |
-| 55 | Part II | 5 | Pending | Pending authored review | Cindy was asked by her teacher to subtract 3 from a certain number and then divide the result by 9.... |
-| 56 | Part II | 5 | Pending | Pending authored review | Compute the sum of all the roots of (2x+3)(x-4)+(2x+3)(x-6)=0 |
-| 57 | Part II | 5 | Pending | Pending authored review | You and five friends need to raise 1500 dollars in donations for a charity, dividing the fundraising equally.... |
-| 58 | Part II | 6 | Pending | Pending authored review | A company sells peanut butter in cylindrical jars. Marketing research suggests that using wider jars will incr... |
-| 59 | Part II | 6 | Pending | Pending authored review | If A and B are matrices of order three then Det(AB) equals |
-| 60 | Part II | 6 | Pending | Pending authored review | The LCM of two numbers is 7200, and their HCF is 180. If one number is 360, then the second number is |
-| 61 | Part II | 6 | Pending | Pending authored review | In a group of 8 people, how many ways can you choose a committee of 3 people if two specific individuals refus... |
-| 62 | Part II | 6 | Pending | Pending authored review | Determine the sum of the geometric series: 4 + 2 + 1 + 1 2⁄ + …. |
-| 63 | Part II | 6 | Pending | Pending authored review | A recipe calls for a ratio of 2 cups of flour to 1 cup of sugar. If you want to use 4 cups of sugar, how much... |
-| 64 | Part II | 6 | Pending | Pending authored review | If p is inversely proportional to q, and p=8 when q=6, what is the value of q when p=12? |
-| 65 | Part II | 6 | Pending | Pending authored review | If the sides of two similar triangles are in the ratio 2:3, what is the ratio of their areas? |
-| 66 | Part II | 6 | Pending | Pending authored review | Simplify log3(27) − log3(9). |
-| 67 | Part II | 6 | Pending | Pending authored review | The linear combination of gcd(252, 198) = 18 is? |
-| 68 | Part II | 6 | Pending | Pending authored review | The inverse of 3 modulo 7 is? |
-| 69 | Part II | 6 | Pending | Pending authored review | Which of the following is not irrational? |
-| 70 | Part II | 6 | Pending | Pending authored review | If LCM of two number is 10 and GCD is 5 then the product of two numbers is? |
+| 21 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | The points ( ) ( ) ( )1, 1 , 4, 2 , 10,8- in the plane are |
+| 22 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | Let the central angle subtended by two points on a circle is 120° . Then the inscribed angle subtended by thos... |
+| 23 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | How many different tangents can be drawn on a circle? |
+| 24 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | The angle between the tangents at the ends of two perpendicular radii is _________. |
+| 25 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | The tangents on the end points of a diameter of a circle are always |
+| 26 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | Consider a triangle 𝐴𝐵𝐶 with ∠𝐴 = 45° and ∠𝐵 = 5°. What is the type of ∆𝐴𝐵𝐶? |
+| 27 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | All the ________ in a plane are similar |
+| 28 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | If a line intersects two concentric circles with centre O at A, B, C and D, then |
+| 29 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | If 𝑎 and 𝑏 are coprime integers, which of the following must also be coprime? |
+| 30 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | Sum of two different prime numbers is a |
+| 31 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | How many distinct prime factors does 216 × 34 × 52 have? |
+| 32 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | What is the remainder when 72024 is divided by 13? |
+| 33 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | What is the least number that is exactly divisible by all the numbers from 1 to 10? |
+| 34 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | What is the units digit of 22047 × 311? |
+| 35 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | What is the value of 4234 mod 11 |
+| 36 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | If 𝑝 is a prime number greater than 3, what is the remainder when 𝑝2 is divided by 12? |
+| 37 | Part II | - | C | Authored from screenshot-verified paper text and standard subject reasoning | If 𝑛 is a positive integer such that 𝑛2 is divisible by 72, then the smallest 𝑛 is |
+| 38 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | From a group 7 men and 6 women, five persons are to be selected to form a committee so that at least 3 men are... |
+| 39 | Part II | - | A | Authored from screenshot-verified paper text and standard subject reasoning | The 6th and 17th terms of an A.P. are 19 and 41 respectively. Find the 40th term |
+| 40 | Part II | - | D | Authored from screenshot-verified paper text and standard subject reasoning | There are 10 true-false questions in an examination. These questions can be answered in |
+| 41 | Part II | - | B | Authored from screenshot-verified paper text and standard subject reasoning | Mayur travels from Mumbai to Jammu in 7 different ways. But he is allowed to return to Mumbai by any way excep... |
+| 42 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | What is the Cartesian product of set A and set B, if the set A = {1, 2} and set B = {a, b}? |
+| 43 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | Let the players who play cricket be 12, the ones who play football 10, those who play only cricket are 6, then... |
+| 44 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | How many terms are in the expansion of (2𝑥 − 1 𝑦) 10 ? |
+| 45 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | The value of (50 4 ) + ∑ (56 − 𝑟 3 )6 𝑟=1 is |
+| 46 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | There are 27 points in a plane. 5, 10 and 15 points are collinear on distinct lines.... |
+| 47 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | 10 boys and 10 girls sit alternately in a row and then alternately along a circle.... |
+| 48 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | If 𝑛(𝐴) = 20 and 𝑛(𝐵) = 30 and 𝑛(𝐴 ∪ 𝐵) = 40 then 𝑛(𝐴 ∩ 𝐵) is? |
+| 49 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following function is not a mathematics function? |
+| 50 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | A ball is dropped from a height of 49 m. The quadratic equation 𝑑(𝑡) =– 𝑡2 + 49 provides information about the... |
+| 51 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | Cities A and B are 45 miles apart. Alicia lives in A and Beth lives in B.... |
+| 52 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | The sum of two numbers is S. Suppose 3 is added to each number and then each of the resulting numbers is doubl... |
+| 53 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | Given that a, b, and c are non-zero real numbers, define (a,b,c)= a/b + b/c + c/a. Find (2,12,9) |
+| 54 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | For how many positive integers m does there exist at least one positive integer n such that 𝑚𝑛 < 𝑚 + 𝑛? |
+| 55 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | Cindy was asked by her teacher to subtract 3 from a certain number and then divide the result by 9.... |
+| 56 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | Compute the sum of all the roots of (2x+3)(x-4)+(2x+3)(x-6)=0 |
+| 57 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | You and five friends need to raise 1500 dollars in donations for a charity, dividing the fundraising equally.... |
+| 58 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | A company sells peanut butter in cylindrical jars. Marketing research suggests that using wider jars will incr... |
+| 59 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | If A and B are matrices of order three then Det(AB) equals |
+| 60 | Part II | 6 | No valid option | Screenshot-authored review; source item has no valid printed A-D key | The LCM of two numbers is 7200, and their HCF is 180. If one number is 360, then the second number is |
+| 61 | Part II | 6 | No valid option | Screenshot-authored review; source item has no valid printed A-D key | In a group of 8 people, how many ways can you choose a committee of 3 people if two specific individuals refus... |
+| 62 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | Determine the sum of the geometric series: 4 + 2 + 1 + 1 2⁄ + …. |
+| 63 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | A recipe calls for a ratio of 2 cups of flour to 1 cup of sugar. If you want to use 4 cups of sugar, how much... |
+| 64 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | If p is inversely proportional to q, and p=8 when q=6, what is the value of q when p=12? |
+| 65 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | If the sides of two similar triangles are in the ratio 2:3, what is the ratio of their areas? |
+| 66 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | Simplify log3(27) − log3(9). |
+| 67 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | The linear combination of gcd(252, 198) = 18 is? |
+| 68 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | The inverse of 3 modulo 7 is? |
+| 69 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following is not irrational? |
+| 70 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | If LCM of two number is 10 and GCD is 5 then the product of two numbers is? |
 
 ## NSTC 2024 Physics Paper
 
@@ -923,43 +923,43 @@ Rows marked pending do not have an answer key applied in `src/data/questions.jso
 | 15 | Part I | 3 | B | Authored from standard science reasoning after paper text review | The set ofall points, in a plane equidistant fron a fixed point A= (x,y),forms a |
 | 18 | Part I | 3 | A | Authored from standard science reasoning after paper text review | When a neutral metal sphere is charged by contact with a positively charged glass rod, the sphere |
 | 20 | Part I | 3 | D | Authored from standard science reasoning after paper text review | One watt is equivalent to one |
-| 22 | Part II | 4 | Pending | Pending authored review | Round shapeofredbloodcell (RBC)facilitates the: Globular |
-| 23 | Part II | 4 | Pending | Pending authored review | Which one is an organic compound? |
-| 24 | Part II | 4 | Pending | Pending authored review | Which chemical component has the greatest contribution in the total mammalian cell weight? |
-| 25 | Part II | 4 | Pending | Pending authored review | Which organ is made up of air-carrying tubes and tiny sacs? |
-| 26 | Part II | 4 | Pending | Pending authored review | What is the shape of the rings present in trachea? B-shaped |
-| 27 | Part II | 4 | Pending | Pending authored review | The main cause of lung cancer include: Water |
-| 28 | Part II | 4 | Pending | Pending authored review | Which character differentiates living things from non-living organisms? They are highly They are acted organiz... |
-| 29 | Part II | 4 | Pending | Pending authored review | Epiglottis is: A tissue which Amembrane that A tissue that A flap that covers |
-| 30 | Part II | 4 | Pending | Pending authored review | tissues. Cartilage and bones are |
-| 31 | Part II | 4 | Pending | Pending authored review | -reaction: Cellular respiration is- Oxidation- |
-| 32 | Part II | 4 | Pending | Pending authored review | Wastematerial ofkeekar plant is: |
-| 33 | Part II | 4 | Pending | Pending authored review | Thekidneyworks to: Filter excess Maintain body Remove water |
-| 34 | Part II | 4 | Pending | Pending authored review | The process in which animals take oxygen from environment and give out air for getting rid of CO2 is called? |
-| 35 | Part II | 4 | Pending | Pending authored review | Gaseous exchange in leaf occurs through |
-| 36 | Part II | 4 | Pending | Pending authored review | Which one is a micromolecule? |
-| 37 | Part II | 4 | Pending | Pending authored review | The nasal cavity opens into the: |
-| 38 | Part II | 4 | Pending | Pending authored review | In animals, coordination is achieved by mcans of |
-| 41 | Part II | 5 | Pending | Pending authored review | Which blood vessel contain valves? |
-| 42 | Part II | 5 | Pending | Pending authored review | Oxidation of oxidation of |
-| 44 | Part II | 5 | Pending | Pending authored review | The trees which shed leaves annuallyremove -from their body. Excretory Harmless |
-| 46 | Part II | 5 | Pending | Pending authored review | -is responsible for chemical co-ordination. Peripheral Autonomous |
-| 47 | Part II | 5 | Pending | Pending authored review | Cells involved in photosynthesis and respiration during day are: |
-| 48 | Part II | 5 | Pending | Pending authored review | Whichof thefollowingmovement is involuntary? |
-| 49 | Part II | 5 | Pending | Pending authored review | Contraction of atria pushes the blood toward ventricles,this is called. |
-| 50 | Part II | 5 | Pending | Pending authored review | -is the functional unit of environment. |
-| 51 | Part II | 5 | Pending | Pending authored review | The altemate form ofa gene is called: |
-| 52 | Part II | 5 | Pending | Pending authored review | Expired drugs can cause damage to: |
-| 53 | Part II | 5 | Pending | Pending authored review | The blood vessels are not present in |
-| 55 | Part II | 5 | Pending | Pending authored review | Celiac, superior Stomach, liver, |
-| 58 | Part II | 5 | Pending | Pending authored review | right atrium and right ventricle and right atrium and |
-| 60 | Part II | 5 | Pending | Pending authored review | The thin layer of fat cells in the dermis: |
-| 63 | Part II | 6 | Pending | Pending authored review | During day.O, is produced in the mesophyll cells as a: |
-| 64 | Part II | 6 | Pending | Pending authored review | The metabolicwastes removed in sweat are: Urea, salts and |
-| 65 | Part II | 6 | Pending | Pending authored review | Flowers ofwind pollination produce? |
-| 66 | Part II | 6 | Pending | Pending authored review | Seedless fruit plants are propagated by: cutting |
-| 68 | Part II | 6 | Pending | Pending authored review | Whatdo seminal vesicles add to the semen? |
-| 69 | Part II | 6 | Pending | Pending authored review | -times per minute. During exercise orhard work thebreathing rate may increase upto- |
+| 22 | Part II | 4 | D | Authored from screenshot-verified paper text and standard subject reasoning | Round shapeofredbloodcell (RBC)facilitates the: Globular |
+| 23 | Part II | 4 | C | Authored from screenshot-verified paper text and standard subject reasoning | Which one is an organic compound? |
+| 24 | Part II | 4 | A | Authored from screenshot-verified paper text and standard subject reasoning | Which chemical component has the greatest contribution in the total mammalian cell weight? |
+| 25 | Part II | 4 | C | Authored from screenshot-verified paper text and standard subject reasoning | Which organ is made up of air-carrying tubes and tiny sacs? |
+| 26 | Part II | 4 | A | Authored from screenshot-verified paper text and standard subject reasoning | What is the shape of the rings present in trachea? B-shaped |
+| 27 | Part II | 4 | D | Authored from screenshot-verified paper text and standard subject reasoning | The main cause of lung cancer include: Water |
+| 28 | Part II | 4 | C | Authored from screenshot-verified paper text and standard subject reasoning | Which character differentiates living things from non-living organisms? They are highly They are acted organiz... |
+| 29 | Part II | 4 | A | Authored from screenshot-verified paper text and standard subject reasoning | Epiglottis is: A tissue which Amembrane that A tissue that A flap that covers |
+| 30 | Part II | 4 | B | Authored from screenshot-verified paper text and standard subject reasoning | tissues. Cartilage and bones are |
+| 31 | Part II | 4 | B | Authored from screenshot-verified paper text and standard subject reasoning | -reaction: Cellular respiration is- Oxidation- |
+| 32 | Part II | 4 | A | Authored from screenshot-verified paper text and standard subject reasoning | Wastematerial ofkeekar plant is: |
+| 33 | Part II | 4 | D | Authored from screenshot-verified paper text and standard subject reasoning | Thekidneyworks to: Filter excess Maintain body Remove water |
+| 34 | Part II | 4 | D | Authored from screenshot-verified paper text and standard subject reasoning | The process in which animals take oxygen from environment and give out air for getting rid of CO2 is called? |
+| 35 | Part II | 4 | B | Authored from screenshot-verified paper text and standard subject reasoning | Gaseous exchange in leaf occurs through |
+| 36 | Part II | 4 | D | Authored from screenshot-verified paper text and standard subject reasoning | Which one is a micromolecule? |
+| 37 | Part II | 4 | C | Authored from screenshot-verified paper text and standard subject reasoning | The nasal cavity opens into the: |
+| 38 | Part II | 4 | D | Authored from screenshot-verified paper text and standard subject reasoning | In animals, coordination is achieved by mcans of |
+| 41 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | Which blood vessel contain valves? |
+| 42 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | Oxidation of oxidation of |
+| 44 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | The trees which shed leaves annuallyremove -from their body. Excretory Harmless |
+| 46 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | -is responsible for chemical co-ordination. Peripheral Autonomous |
+| 47 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | Cells involved in photosynthesis and respiration during day are: |
+| 48 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | Whichof thefollowingmovement is involuntary? |
+| 49 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | Contraction of atria pushes the blood toward ventricles,this is called. |
+| 50 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | -is the functional unit of environment. |
+| 51 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | The altemate form ofa gene is called: |
+| 52 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | Expired drugs can cause damage to: |
+| 53 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | The blood vessels are not present in |
+| 55 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | Celiac, superior Stomach, liver, |
+| 58 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | right atrium and right ventricle and right atrium and |
+| 60 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | The thin layer of fat cells in the dermis: |
+| 63 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | During day.O, is produced in the mesophyll cells as a: |
+| 64 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | The metabolicwastes removed in sweat are: Urea, salts and |
+| 65 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | Flowers ofwind pollination produce? |
+| 66 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | Seedless fruit plants are propagated by: cutting |
+| 68 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | Whatdo seminal vesicles add to the semen? |
+| 69 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | -times per minute. During exercise orhard work thebreathing rate may increase upto- |
 
 ## NSTC 2025 Chemistry Paper
 
@@ -984,31 +984,31 @@ Rows marked pending do not have an answer key applied in `src/data/questions.jso
 | 18 | Part I | 4 | A | Authored from standard science reasoning after paper text review | When a neutral metal sphere is charged by contact with a positively charged glass rod, the sphere |
 | 19 | Part I | 4 | D | Authored from standard science reasoning after paper text review | Amotor is used to produce 4.0 waves each second in a string.What is the frequency of the waves? |
 | 20 | Part I | 4 | D | Authored from standard science reasoning after paper text review | One watt is equivalent to one |
-| 22 | Part II | 5 | Pending | Pending authored review | Which of the following is a non-crystalline solids'pair? have a long -range have anisotropic have a sharp meli... |
-| 23 | Part II | 5 | Pending | Pending authored review | SI unit of the coefficient of viscosity of the liquid is: |
-| 24 | Part II | 5 | Pending | Pending authored review | An ideal gas obeyingkinetic theory of gases can be liqucfied,if: it cannot be liqueficd at |
-| 25 | Part II | 5 | Pending | Pending authored review | The critical temperature of water is higher than that of O2 becausc the H2Omolccules has |
-| 28 | Part II | 5 | Pending | Pending authored review | 2/3 of total |
-| 30 | Part II | 5 | Pending | Pending authored review | A set of isoelectronic species is: |
-| 33 | Part II | 5 | Pending | Pending authored review | The incorrect configuration is: |
-| 36 | Part II | 5 | Pending | Pending authored review | 2NH3 (g) is -92.38 kJ at 298 K. The The enthalpy change (AH)for the reaction N2 (g)+3H2 (g) intermnal energych... |
-| 39 | Part II | 6 | Pending | Pending authored review | Which of the following is tni-basic acid? |
-| 40 | Part II | 6 | Pending | Pending authored review | Which of the following pairs constitute buffer solution? |
-| 41 | Part II | 6 | Pending | Pending authored review | Hydrogen ion concentration in mol/L in solution of pH 5.4will be: |
-| 43 | Part II | 6 | Pending | Pending authored review | respectively.The order of reducing power of the corresponding metal is: |
-| 44 | Part II | 6 | Pending | Pending authored review | Fora spontaneousreaction theG,equilibrium constant (K)and Ecll will be,respectively: |
-| 47 | Part II | 6 | Pending | Pending authored review | A colloidal solution ofa liguid in a solidistermedas: |
-| 49 | Part II | 6 | Pending | Pending authored review | Whichof thefollowingoxides aremostbasics: |
-| 51 | Part II | 6 | Pending | Pending authored review | Areduction in atomic sizes with increase in atomic number is a characteristic of elements of: |
-| 53 | Part II | 6 | Pending | Pending authored review | The planar structure of BF, can be explain by thefactthat BF,is: |
-| 56 | Part II | 6 | Pending | Pending authored review | Themolarityof purewater at 277K is: |
-| 62 | Part II | 7 | Pending | Pending authored review | By the addition of Fractional |
-| 63 | Part II | 7 | Pending | Pending authored review | The purity of organic compound is determined by: |
-| 64 | Part II | 7 | Pending | Pending authored review | TheIUPACname of CoHsCOCl is: Benzene Benzene carbony! |
-| 66 | Part II | 7 | Pending | Pending authored review | Whichoneofthefollowingdoes nothavesp’hybridized carbon? |
-| 67 | Part II | 7 | Pending | Pending authored review | Reactionnot involve the carboniumis: Pinacol pinacolone |
-| 68 | Part II | 7 | Pending | Pending authored review | AntiMarkownikoffadditionofHBrisnotobservedin: |
-| 69 | Part II | 7 | Pending | Pending authored review | Whichof thefollowing intermediate has the complete octet around the carbon atom? |
+| 22 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following is a non-crystalline solids'pair? have a long -range have anisotropic have a sharp meli... |
+| 23 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | SI unit of the coefficient of viscosity of the liquid is: |
+| 24 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | An ideal gas obeyingkinetic theory of gases can be liqucfied,if: it cannot be liqueficd at |
+| 25 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | The critical temperature of water is higher than that of O2 becausc the H2Omolccules has |
+| 28 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | 2/3 of total |
+| 30 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | A set of isoelectronic species is: |
+| 33 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | The incorrect configuration is: |
+| 36 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | 2NH3 (g) is -92.38 kJ at 298 K. The The enthalpy change (AH)for the reaction N2 (g)+3H2 (g) intermnal energych... |
+| 39 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following is tni-basic acid? |
+| 40 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | Which of the following pairs constitute buffer solution? |
+| 41 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | Hydrogen ion concentration in mol/L in solution of pH 5.4will be: |
+| 43 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | respectively.The order of reducing power of the corresponding metal is: |
+| 44 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | Fora spontaneousreaction theG,equilibrium constant (K)and Ecll will be,respectively: |
+| 47 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | A colloidal solution ofa liguid in a solidistermedas: |
+| 49 | Part II | 6 | A | Authored from screenshot-verified paper text and standard subject reasoning | Whichof thefollowingoxides aremostbasics: |
+| 51 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | Areduction in atomic sizes with increase in atomic number is a characteristic of elements of: |
+| 53 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | The planar structure of BF, can be explain by thefactthat BF,is: |
+| 56 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | Themolarityof purewater at 277K is: |
+| 62 | Part II | 7 | D | Authored from screenshot-verified paper text and standard subject reasoning | By the addition of Fractional |
+| 63 | Part II | 7 | A | Authored from screenshot-verified paper text and standard subject reasoning | The purity of organic compound is determined by: |
+| 64 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | TheIUPACname of CoHsCOCl is: Benzene Benzene carbony! |
+| 66 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | Whichoneofthefollowingdoes nothavesp’hybridized carbon? |
+| 67 | Part II | 7 | A | Authored from screenshot-verified paper text and standard subject reasoning | Reactionnot involve the carboniumis: Pinacol pinacolone |
+| 68 | Part II | 7 | D | Authored from screenshot-verified paper text and standard subject reasoning | AntiMarkownikoffadditionofHBrisnotobservedin: |
+| 69 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | Whichof thefollowing intermediate has the complete octet around the carbon atom? |
 
 ## NSTC 2025 Mathematics Paper
 
@@ -1033,26 +1033,26 @@ Rows marked pending do not have an answer key applied in `src/data/questions.jso
 | 18 | Part I | 3 | A | Authored from standard science reasoning after paper text review | When a neutral metal sphere is charged by contact with a positively charged glass rod, the sphere |
 | 19 | Part I | 3 | D | Authored from standard science reasoning after paper text review | A motor is used to produce 4.0 waves each second in a string. What is the frequency of the waves? |
 | 20 | Part I | 3 | D | Authored from standard science reasoning after paper text review | One watt is equivalent to one |
-| 23 | Part II | 4 | Pending | Pending authored review | The function f:R- Rdefined byf(x) =3x²+2x + 5, is neither one-one nor both one-one and |
-| 25 | Part II | 4 | Pending | Pending authored review | Consider the points in a plane with coordinates A =(0, -1), B =(3,-1),C =(3,4). Then ABC is a |
-| 26 | Part II | 4 | Pending | Pending authored review | Consider triangle ABC,AB=AC.If angle B =x,then angle C is |
-| 27 | Part II | 4 | Pending | Pending authored review | Let the central angle subtended by two points on a circle is 140'. Then the inscribed angle subtended by those... |
-| 30 | Part II | 6 | Pending | Pending authored review | Solve for (indegrces): 2sin(0)=1 where0≤0≤180: |
-| 31 | Part II | 4 | Pending | Pending authored review | Thedistancebetweenx-axisandthepoint(-2,5)is |
-| 32 | Part II | 4 | Pending | Pending authored review | Considera triangleABCwithZA=50°andZB=80°.What is the type of △ABC? |
-| 33 | Part II | 4 | Pending | Pending authored review | Consider a cylinder with radius 2 cm and height 6 cm. What is the surface area of the given cylinder? |
-| 35 | Part II | 4 | Pending | Pending authored review | If twofractions,each of which has a valuc between O and I,are multiplied together, the product will be always... |
-| 37 | Part II | 4 | Pending | Pending authored review | There are 35steps in a building.By the time Ahsan comes down two steps,Arham goes up one step.... |
-| 38 | Part II | 4 | Pending | Pending authored review | Let x, y and z be distinct integers. x and y are odd and positive, and z is even and positive.... |
-| 48 | Part II | 5 | Pending | Pending authored review | If a,b, c, and d are four ditlerent positive integers selected fromIto25,then thehighestpossible value atbitic... |
-| 50 | Part II | 5 | Pending | Pending authored review | If there are Is boys and 12 girls in a class, how many ways are there of selecting I student, either a boy or... |
-| 51 | Part II | 5 | Pending | Pending authored review | Howmany numbers in the range1000-0999have no repeated digits? |
-| 53 | Part II | 4 | Pending | Pending authored review | Haniya had to multiply two positive integers. Instead oftaking 35 as one of the multipliers,she incorrectly to... |
-| 59 | Part II | 5 | Pending | Pending authored review | Ifthe nth termofan arithmetic progression is 3n-4,then the (n + )h tem ofanAPis? |
-| 63 | Part II | 6 | Pending | Pending authored review | Solve the inequality: x-4x+3<0 |
-| 66 | Part II | 6 | Pending | Pending authored review | Astudentscored72marks inanexam.Ifthiswas 80%ofthe totalmarks,what werethemaxirmummarks |
-| 68 | Part II | 6 | Pending | Pending authored review | Aman invests a sum ofmoney at compound interest.The interest for the second year is Rs 528 and for the third y... |
-| 69 | Part II | 6 | Pending | Pending authored review | A car travels from A to B at a speed of 60 km/h and returns at a speed of 40 km/h.... |
+| 23 | Part II | 4 | D | Authored from screenshot-verified paper text and standard subject reasoning | The function f:R- Rdefined byf(x) =3x²+2x + 5, is neither one-one nor both one-one and |
+| 25 | Part II | 4 | C | Authored from screenshot-verified paper text and standard subject reasoning | Consider the points in a plane with coordinates A =(0, -1), B =(3,-1),C =(3,4). Then ABC is a |
+| 26 | Part II | 4 | B | Authored from screenshot-verified paper text and standard subject reasoning | Consider triangle ABC,AB=AC.If angle B =x,then angle C is |
+| 27 | Part II | 4 | D | Authored from screenshot-verified paper text and standard subject reasoning | Let the central angle subtended by two points on a circle is 140'. Then the inscribed angle subtended by those... |
+| 30 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | Solve for (indegrces): 2sin(0)=1 where0≤0≤180: |
+| 31 | Part II | 4 | B | Authored from screenshot-verified paper text and standard subject reasoning | Thedistancebetweenx-axisandthepoint(-2,5)is |
+| 32 | Part II | 4 | B | Authored from screenshot-verified paper text and standard subject reasoning | Considera triangleABCwithZA=50°andZB=80°.What is the type of △ABC? |
+| 33 | Part II | 4 | B | Authored from screenshot-verified paper text and standard subject reasoning | Consider a cylinder with radius 2 cm and height 6 cm. What is the surface area of the given cylinder? |
+| 35 | Part II | 4 | C | Authored from screenshot-verified paper text and standard subject reasoning | If twofractions,each of which has a valuc between O and I,are multiplied together, the product will be always... |
+| 37 | Part II | 4 | B | Authored from screenshot-verified paper text and standard subject reasoning | There are 35steps in a building.By the time Ahsan comes down two steps,Arham goes up one step.... |
+| 38 | Part II | 4 | C | Authored from screenshot-verified paper text and standard subject reasoning | Let x, y and z be distinct integers. x and y are odd and positive, and z is even and positive.... |
+| 48 | Part II | 5 | No valid option | Screenshot-authored review; source item has no valid printed A-D key | If a,b, c, and d are four ditlerent positive integers selected fromIto25,then thehighestpossible value atbitic... |
+| 50 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | If there are Is boys and 12 girls in a class, how many ways are there of selecting I student, either a boy or... |
+| 51 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | Howmany numbers in the range1000-0999have no repeated digits? |
+| 53 | Part II | 4 | A | Authored from screenshot-verified paper text and standard subject reasoning | Haniya had to multiply two positive integers. Instead oftaking 35 as one of the multipliers,she incorrectly to... |
+| 59 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | Ifthe nth termofan arithmetic progression is 3n-4,then the (n + )h tem ofanAPis? |
+| 63 | Part II | 6 | B | Authored from screenshot-verified paper text and standard subject reasoning | Solve the inequality: x-4x+3<0 |
+| 66 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | Astudentscored72marks inanexam.Ifthiswas 80%ofthe totalmarks,what werethemaxirmummarks |
+| 68 | Part II | 6 | C | Authored from screenshot-verified paper text and standard subject reasoning | Aman invests a sum ofmoney at compound interest.The interest for the second year is Rs 528 and for the third y... |
+| 69 | Part II | 6 | No valid option | Screenshot-authored review; source item has no valid printed A-D key | A car travels from A to B at a speed of 60 km/h and returns at a speed of 40 km/h.... |
 
 ## NSTC 2025 Physics Paper
 
@@ -1077,47 +1077,47 @@ Rows marked pending do not have an answer key applied in `src/data/questions.jso
 | 18 | Part I | 3 | A | Authored from standard science reasoning after paper text review | When a neutral metal sphere is charged by contact with a positively charged glass rod, the sphere |
 | 19 | Part I | 3 | D | Authored from standard science reasoning after paper text review | A motor is used to produce 4.0 waves each second in a string. What is the frequency of the waves? |
 | 20 | Part I | 3 | D | Authored from standard science reasoning after paper text review | One watt is equivalent to one |
-| 21 | Part II | 4 | Pending | Pending authored review | A constant force is used to keep a block sliding at constant velocity along a rough horizontal track.... |
-| 22 | Part II | 4 | Pending | Pending authored review | The spring ofa toycar is woundby pushing the carbackward with an average force of15 newtons through a distance... |
-| 23 | Part II | 4 | Pending | Pending authored review | The diagram shows a circuit with two resistors. What is the reading onammeterA? 12-volt source |
-| 24 | Part II | 4 | Pending | Pending authored review | A radar gun can determine the speed of a moving automobile by measuring the difference in frequency between em... |
-| 25 | Part II | 4 | Pending | Pending authored review | Aphoton of which electromagnetic radiation has themost energy? |
-| 26 | Part II | 4 | Pending | Pending authored review | When a 12-newton horizontal force is applied to a box on a horizontal tabletop, the box remains at rest.... |
-| 27 | Part II | 4 | Pending | Pending authored review | Three forces act on a box on an inclined plane as shown in the diagram. [Vectors are not drawn to scale.... |
-| 28 | Part II | 4 | Pending | Pending authored review | If 4.8 x 10^-17 joule of work is required to move an electron between two points in an electric field,what is... |
-| 29 | Part II | 4 | Pending | Pending authored review | The absolute index of refraction of thematerial is |
-| 30 | Part II | 4 | Pending | Pending authored review | represents anenergyof |
-| 31 | Part II | 4 | Pending | Pending authored review | Babar,who has a mass of M=100 kg, climbs to the roof ofa 30 m building and then lowers one end ofa massless ro... |
-| 33 | Part II | 5 | Pending | Pending authored review | Two identical objccts ofmass m are placed at either end ofa spring of spring constant k and the whole system i... |
-| 34 | Part II | 5 | Pending | Pending authored review | the highest point reached by the football if thrown this maximum range? Ignore air friction. |
-| 35 | Part II | 5 | Pending | Pending authored review | What is the final speed ofthe masses after the collision? Ignore gravity, and assume the two lumps stick V13 V... |
-| 36 | Part II | 5 | Pending | Pending authored review | movers above, first notice the piano when it is 14 meters above the ground.... |
-| 37 | Part II | 5 | Pending | Pending authored review | perfectly elastic collision with a 15.0 kg block which is at rest. The coeficient of kinetic friction between... |
-| 38 | Part II | 6 | Pending | Pending authored review | Four masses m are arranged at the vertices of a tetrahedron of side length z.... |
-| 39 | Part II | 5 | Pending | Pending authored review | gravitational self-potential energy ofa ball of mass density p and radius 2R? |
-| 40 | Part II | 5 | Pending | Pending authored review | afer it leaves the end of the table it has kinetic energy 3K. What is r? Neglect air resistance. |
-| 41 | Part II | 5 | Pending | Pending authored review | on both ramps is μ=0.40.The block starts from rest at a height of hi=1.0m above the horizontal.... |
-| 42 | Part II | 5 | Pending | Pending authored review | A cyclist maintains a steady speed of 22.0 km/h during the ride, except for a 20-minute break.... |
-| 43 | Part II | 5 | Pending | Pending authored review | gravity,near Earth's surface. What force does the astronaut exert on the spacecraft? |
-| 44 | Part II | 5 | Pending | Pending authored review | with a force of 1.00 x 10^2 N along a handle inclined at 30° above the horizontal.... |
-| 46 | Part II | 7 | Pending | Pending authored review | Thediagramrepresentsan electric circuit consisting ofa12-volt battery,a 3.... |
-| 47 | Part II | 7 | Pending | Pending authored review | Asource ofwaves and an observer are moving relative to each otherThe otrerver will dewata steadily increasingf... |
-| 49 | Part II | 7 | Pending | Pending authored review | Which type of field is pretenit near a moving electric charge? neithet an elearic field both an electric field... |
-| 50 | Part II | 7 | Pending | Pending authored review | Aperson is standing on a weighing machine inan clevatorcar.If the scale on the weighing machine rcadea value g... |
-| 51 | Part II | 7 | Pending | Pending authored review | The graph represents the relationship between the cnergy and the frequency of photons.... |
-| 53 | Part II | 7 | Pending | Pending authored review | Which wave phenomenon makes it possible for a player to hear the sound frorn a referee's whistle in an open fi... |
-| 54 | Part II | 7 | Pending | Pending authored review | Ahigh school physics student is siting in a seat reading this question.The magnitude ofthe force with which th... |
-| 55 | Part II | 7 | Pending | Pending authored review | The microphone is moved to a new fixed location 0.50 meter in front of the speaker.... |
-| 58 | Part II | 8 | Pending | Pending authored review | A very massive objcct traveling at l0 m/s strikes a very light object, initially at rest, and the light objcct... |
-| 59 | Part II | 8 | Pending | Pending authored review | Ahypothetical planethas a mass I.80 times thatofEarth,but the sameradius,What isg near its surface? |
-| 60 | Part II | 8 | Pending | Pending authored review | Arocket of mass 2.75x10°kg exerts a vertical thrust of3.55x10'N on thegases it expels.Assuming gravity g=9.... |
-| 61 | Part II | 8 | Pending | Pending authored review | Neglecting air resistance,a baseball player on Earth can throw a baseball a distance of 100 m.... |
-| 62 | Part II | 8 | Pending | Pending authored review | An object starting from rest can roll without slipping down an incline. Which of the following four objects, e... |
-| 63 | Part II | 8 | Pending | Pending authored review | An object is thrown directly downward from the top ofa 180meter tall building.It takes 1.... |
-| 64 | Part II | 8 | Pending | Pending authored review | Radiowaves andgamma raystraveling inspacehavethe same |
-| 65 | Part II | 8 | Pending | Pending authored review | What is the gravitational potential energy with respect to the surface of the water of a 75.... |
-| 66 | Part II | 8 | Pending | Pending authored review | A 60.0-kilogram runner has 1920 joules of kinetic energy.At what speed is he running? |
-| 67 | Part II | 8 | Pending | Pending authored review | If the direction of a moving car changes and its speed remains constant, which quantity must remain the same? |
-| 68 | Part II | 8 | Pending | Pending authored review | Which form(s) ofenergy can be transmitted through a vacuum? |
-| 69 | Part II | 8 | Pending | Pending authored review | If the potentialdifference applied to a fixedresistance isdoubled,the power dissipatedbythat resistance |
-| 70 | Part II | 8 | Pending | Pending authored review | According to the Standard Model, a proton is constructed of two up quarks and one down quark (uud) and a |
+| 21 | Part II | 4 | B | Authored from screenshot-verified paper text and standard subject reasoning | A constant force is used to keep a block sliding at constant velocity along a rough horizontal track.... |
+| 22 | Part II | 4 | B | Authored from screenshot-verified paper text and standard subject reasoning | The spring ofa toycar is woundby pushing the carbackward with an average force of15 newtons through a distance... |
+| 23 | Part II | 4 | D | Authored from screenshot-verified paper text and standard subject reasoning | The diagram shows a circuit with two resistors. What is the reading onammeterA? 12-volt source |
+| 24 | Part II | 4 | C | Authored from screenshot-verified paper text and standard subject reasoning | A radar gun can determine the speed of a moving automobile by measuring the difference in frequency between em... |
+| 25 | Part II | 4 | C | Authored from screenshot-verified paper text and standard subject reasoning | Aphoton of which electromagnetic radiation has themost energy? |
+| 26 | Part II | 4 | C | Authored from screenshot-verified paper text and standard subject reasoning | When a 12-newton horizontal force is applied to a box on a horizontal tabletop, the box remains at rest.... |
+| 27 | Part II | 4 | D | Authored from screenshot-verified paper text and standard subject reasoning | Three forces act on a box on an inclined plane as shown in the diagram. [Vectors are not drawn to scale.... |
+| 28 | Part II | 4 | C | Authored from screenshot-verified paper text and standard subject reasoning | If 4.8 x 10^-17 joule of work is required to move an electron between two points in an electric field,what is... |
+| 29 | Part II | 4 | B | Authored from screenshot-verified paper text and standard subject reasoning | The absolute index of refraction of thematerial is |
+| 30 | Part II | 4 | B | Authored from screenshot-verified paper text and standard subject reasoning | represents anenergyof |
+| 31 | Part II | 4 | D | Authored from screenshot-verified paper text and standard subject reasoning | Babar,who has a mass of M=100 kg, climbs to the roof ofa 30 m building and then lowers one end ofa massless ro... |
+| 33 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | Two identical objccts ofmass m are placed at either end ofa spring of spring constant k and the whole system i... |
+| 34 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | the highest point reached by the football if thrown this maximum range? Ignore air friction. |
+| 35 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | What is the final speed ofthe masses after the collision? Ignore gravity, and assume the two lumps stick V13 V... |
+| 36 | Part II | 5 | A | Authored from screenshot-verified paper text and standard subject reasoning | movers above, first notice the piano when it is 14 meters above the ground.... |
+| 37 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | perfectly elastic collision with a 15.0 kg block which is at rest. The coeficient of kinetic friction between... |
+| 38 | Part II | 6 | D | Authored from screenshot-verified paper text and standard subject reasoning | Four masses m are arranged at the vertices of a tetrahedron of side length z.... |
+| 39 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | gravitational self-potential energy ofa ball of mass density p and radius 2R? |
+| 40 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | afer it leaves the end of the table it has kinetic energy 3K. What is r? Neglect air resistance. |
+| 41 | Part II | 5 | B | Authored from screenshot-verified paper text and standard subject reasoning | on both ramps is μ=0.40.The block starts from rest at a height of hi=1.0m above the horizontal.... |
+| 42 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | A cyclist maintains a steady speed of 22.0 km/h during the ride, except for a 20-minute break.... |
+| 43 | Part II | 5 | D | Authored from screenshot-verified paper text and standard subject reasoning | gravity,near Earth's surface. What force does the astronaut exert on the spacecraft? |
+| 44 | Part II | 5 | C | Authored from screenshot-verified paper text and standard subject reasoning | with a force of 1.00 x 10^2 N along a handle inclined at 30° above the horizontal.... |
+| 46 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | Thediagramrepresentsan electric circuit consisting ofa12-volt battery,a 3.... |
+| 47 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | Asource ofwaves and an observer are moving relative to each otherThe otrerver will dewata steadily increasingf... |
+| 49 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | Which type of field is pretenit near a moving electric charge? neithet an elearic field both an electric field... |
+| 50 | Part II | 7 | D | Authored from screenshot-verified paper text and standard subject reasoning | Aperson is standing on a weighing machine inan clevatorcar.If the scale on the weighing machine rcadea value g... |
+| 51 | Part II | 7 | A | Authored from screenshot-verified paper text and standard subject reasoning | The graph represents the relationship between the cnergy and the frequency of photons.... |
+| 53 | Part II | 7 | A | Authored from screenshot-verified paper text and standard subject reasoning | Which wave phenomenon makes it possible for a player to hear the sound frorn a referee's whistle in an open fi... |
+| 54 | Part II | 7 | C | Authored from screenshot-verified paper text and standard subject reasoning | Ahigh school physics student is siting in a seat reading this question.The magnitude ofthe force with which th... |
+| 55 | Part II | 7 | D | Authored from screenshot-verified paper text and standard subject reasoning | The microphone is moved to a new fixed location 0.50 meter in front of the speaker.... |
+| 58 | Part II | 8 | D | Authored from screenshot-verified paper text and standard subject reasoning | A very massive objcct traveling at l0 m/s strikes a very light object, initially at rest, and the light objcct... |
+| 59 | Part II | 8 | D | Authored from screenshot-verified paper text and standard subject reasoning | Ahypothetical planethas a mass I.80 times thatofEarth,but the sameradius,What isg near its surface? |
+| 60 | Part II | 8 | No valid option | Screenshot-authored review; source item has no valid printed A-D key | Arocket of mass 2.75x10°kg exerts a vertical thrust of3.55x10'N on thegases it expels.Assuming gravity g=9.... |
+| 61 | Part II | 8 | C | Authored from screenshot-verified paper text and standard subject reasoning | Neglecting air resistance,a baseball player on Earth can throw a baseball a distance of 100 m.... |
+| 62 | Part II | 8 | A | Authored from screenshot-verified paper text and standard subject reasoning | An object starting from rest can roll without slipping down an incline. Which of the following four objects, e... |
+| 63 | Part II | 8 | B | Authored from screenshot-verified paper text and standard subject reasoning | An object is thrown directly downward from the top ofa 180meter tall building.It takes 1.... |
+| 64 | Part II | 8 | D | Authored from screenshot-verified paper text and standard subject reasoning | Radiowaves andgamma raystraveling inspacehavethe same |
+| 65 | Part II | 8 | C | Authored from screenshot-verified paper text and standard subject reasoning | What is the gravitational potential energy with respect to the surface of the water of a 75.... |
+| 66 | Part II | 8 | C | Authored from screenshot-verified paper text and standard subject reasoning | A 60.0-kilogram runner has 1920 joules of kinetic energy.At what speed is he running? |
+| 67 | Part II | 8 | D | Authored from screenshot-verified paper text and standard subject reasoning | If the direction of a moving car changes and its speed remains constant, which quantity must remain the same? |
+| 68 | Part II | 8 | A | Authored from screenshot-verified paper text and standard subject reasoning | Which form(s) ofenergy can be transmitted through a vacuum? |
+| 69 | Part II | 8 | D | Authored from screenshot-verified paper text and standard subject reasoning | If the potentialdifference applied to a fixedresistance isdoubled,the power dissipatedbythat resistance |
+| 70 | Part II | 8 | C | Authored from screenshot-verified paper text and standard subject reasoning | According to the Standard Model, a proton is constructed of two up quarks and one down quark (uud) and a |

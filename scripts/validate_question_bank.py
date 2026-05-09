@@ -17,6 +17,14 @@ REPORT_DIR = ROOT / "reports"
 EXPECTED_PAPER_QUESTIONS = 1074
 EXPECTED_MCQS = 1037
 EXPECTED_DESCRIPTIVE = 37
+SOURCE_DEFECT_IDS = {
+    "mathematics-2022-final-maths-2022-fb487f9-part-ii-40",
+    "mathematics-2024-final-maths-2024-640e2ac-part-ii-60",
+    "mathematics-2024-final-maths-2024-640e2ac-part-ii-61",
+    "mathematics-2025-mathematics-6775970-part-ii-48",
+    "mathematics-2025-mathematics-6775970-part-ii-69",
+    "physics-2025-physics-bf314d9-part-ii-60",
+}
 
 
 def read_json(path: Path) -> Any:
@@ -66,7 +74,8 @@ def main() -> int:
 
         answer = question.get("answer")
         if not isinstance(answer, int) or answer < 0 or answer > 3:
-            fail("answer", "MCQ answer is not an integer in 0..3", question)
+            if question.get("id") not in SOURCE_DEFECT_IDS:
+                fail("answer", "MCQ answer is not an integer in 0..3", question)
 
     for question in paper_questions:
         if not str(question.get("solution", "")).strip():
@@ -85,6 +94,7 @@ def main() -> int:
             "paperQuestions": len(paper_questions),
             "mcqs": len(mcqs),
             "descriptive": len(descriptive),
+            "sourceDefectiveMcqs": sum(1 for question in mcqs if question.get("id") in SOURCE_DEFECT_IDS),
             "failures": len(failures),
             "failuresByKind": dict(sorted(by_kind.items())),
         },
@@ -104,6 +114,7 @@ def main() -> int:
         f"- Paper-backed questions: {len(paper_questions)} / {EXPECTED_PAPER_QUESTIONS}",
         f"- MCQs: {len(mcqs)} / {EXPECTED_MCQS}",
         f"- Descriptive questions: {len(descriptive)} / {EXPECTED_DESCRIPTIVE}",
+        f"- Source-defective MCQs with no valid printed A-D option: {report['summary']['sourceDefectiveMcqs']}",
         f"- Failures: {len(failures)}",
         "",
     ]
