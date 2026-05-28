@@ -1,8 +1,6 @@
 import "server-only";
 
 import { revalidatePath, revalidateTag } from "next/cache";
-import { blogPosts } from "@/lib/data";
-import { getAllGuides } from "@/lib/guides";
 import { pastPapers, questions } from "@/lib/content-data";
 import type {
   AdminContext,
@@ -113,42 +111,6 @@ function toEditorItem(row: ContentRow): ContentEditorItem {
   };
 }
 
-function fallbackContent(): ContentListItem[] {
-  const blog = blogPosts.map((post, index) => ({
-    id: `fallback-blog-${post.slug}`,
-    kind: "blog_post" as const,
-      status: "published" as const,
-    slug: post.slug,
-    title: post.title,
-    excerpt: post.excerpt,
-    category: post.category,
-    authorName: post.author,
-    readTime: post.read,
-      featured: index === 0,
-      createdBy: null,
-      updatedAt: post.date,
-    publishedAt: post.date,
-    scheduledAt: null,
-  }));
-  const guides = getAllGuides().map((guide) => ({
-    id: `fallback-guide-${guide.slug}`,
-    kind: "guide" as const,
-    status: "published" as const,
-    slug: guide.slug,
-    title: guide.title,
-    excerpt: guide.description,
-    category: guide.category,
-    authorName: guide.author,
-    readTime: guide.readTime,
-      featured: guide.featured,
-      createdBy: null,
-      updatedAt: guide.updated,
-    publishedAt: guide.updated,
-    scheduledAt: null,
-  }));
-  return [...blog, ...guides];
-}
-
 function assertAdmin(context: AdminContext) {
   if (!context.user || !context.member || context.member.status !== "active") throw new Error("You are not allowed to perform this admin action.");
 }
@@ -244,12 +206,11 @@ function fallbackQuestions(): QuestionAdminItem[] {
 export async function getAdminDashboardData(context?: AdminContext): Promise<AdminDashboardData> {
   const supabase = getSupabaseServiceClient();
   if (!getSupabaseConfig().hasServiceRole || !supabase) {
-    const content = fallbackContent();
     return {
-      source: "fallback",
+      source: "unavailable",
       metrics: {
-        totalContent: content.length,
-        publishedContent: content.length,
+        totalContent: 0,
+        publishedContent: 0,
         reviewQueue: 0,
         scheduledContent: 0,
         resources: 0,
@@ -257,7 +218,7 @@ export async function getAdminDashboardData(context?: AdminContext): Promise<Adm
         questions: questions.length,
         admins: 0,
       },
-      content: content.slice(0, 8),
+      content: [],
       workflowEvents: [],
       auditLog: [],
     };
@@ -333,7 +294,7 @@ export async function getAdminDashboardData(context?: AdminContext): Promise<Adm
 export async function getAdminContentList(kind?: ContentKind, context?: AdminContext) {
   const supabase = getSupabaseServiceClient();
   if (!getSupabaseConfig().hasServiceRole || !supabase) {
-    return fallbackContent().filter((item) => !kind || item.kind === kind);
+    return [];
   }
 
   let query = supabase

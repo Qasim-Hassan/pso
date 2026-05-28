@@ -24,9 +24,9 @@ export default async function AdminDashboardPage() {
   return (
     <AdminShell context={context} title="Dashboard" description="Secure editorial command center for Pakistan Olympiads.">
       <div className="space-y-6">
-        {data.source === "fallback" ? (
+        {data.source === "unavailable" ? (
           <div className="rounded-md border border-gold/25 bg-gold/10 p-4 text-sm font-bold text-gold">
-            Supabase service role is not configured, so this dashboard is showing repository fallback data.
+            Supabase service role is not configured, so database-backed content is unavailable.
           </div>
         ) : null}
 

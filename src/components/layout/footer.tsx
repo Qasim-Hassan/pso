@@ -7,6 +7,7 @@ const columns = [
     links: [
       ["Olympiads", "/olympiads"],
       ["Guides", "/guides"],
+      ["Resources", "/resources"],
       ["Question Bank", "/question-bank"],
       ["Past Papers", "/past-papers"],
       ["Blog", "/blog"],
@@ -19,6 +20,7 @@ const columns = [
       ["Long Problems", "/question-bank"],
       ["Roadmaps", "/guides"],
       ["Past Papers", "/past-papers"],
+      ["Resource Library", "/resources"],
     ],
   },
   {

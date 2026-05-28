@@ -1,8 +1,7 @@
 import "server-only";
 
 import { unstable_cache } from "next/cache";
-import { alumniStories, blogPosts } from "@/lib/data";
-import { getAllGuides, getGuideBySlug, getGuideSlugs, type Guide } from "@/lib/guides";
+import type { Guide } from "@/lib/guides";
 import { getSupabaseConfig, getSupabaseServiceClient } from "@/lib/supabase/server";
 import type { ContentKind, ContentStatus } from "@/lib/admin/types";
 
@@ -96,7 +95,7 @@ function rowToGuide(row: PublishedContentRow): Guide {
 
 async function queryPublishedRows(kind: ContentKind) {
   const supabase = getSupabaseServiceClient();
-  if (!getSupabaseConfig().hasServiceRole || !supabase) return null;
+  if (!getSupabaseConfig().hasServiceRole || !supabase) return [];
 
   const { data, error } = await supabase
     .from("content_items")
@@ -109,7 +108,7 @@ async function queryPublishedRows(kind: ContentKind) {
 
   if (error) {
     console.error("Published content query failed", error);
-    return null;
+    return [];
   }
 
   return (data ?? []) as PublishedContentRow[];
@@ -122,7 +121,6 @@ const getCachedPublishedRows = unstable_cache(queryPublishedRows, ["published-co
 
 export async function getPublishedBlogPosts() {
   const rows = await getCachedPublishedRows("blog_post");
-  if (!rows) return blogPosts;
   return rows.map(rowToBlogPost);
 }
 
@@ -149,25 +147,21 @@ export async function getPublishedBlogSlugs() {
 
 export async function getPublishedGuides() {
   const rows = await getCachedPublishedRows("guide");
-  if (!rows) return getAllGuides();
   return rows.map(rowToGuide).sort((a, b) => Number(b.featured) - Number(a.featured) || a.title.localeCompare(b.title));
 }
 
 export async function getPublishedGuideBySlug(slug: string) {
   const rows = await getCachedPublishedRows("guide");
-  if (!rows) return getGuideBySlug(slug);
   const row = rows.find((item) => item.slug === slug);
   return row ? rowToGuide(row) : null;
 }
 
 export async function getPublishedGuideSlugs() {
   const rows = await getCachedPublishedRows("guide");
-  if (!rows) return getGuideSlugs();
   return rows.map((row) => row.slug);
 }
 
 export async function getPublishedAlumniStories() {
   const rows = await getCachedPublishedRows("alumni_story");
-  if (!rows) return alumniStories;
   return rows.map(rowToAlumniStory);
 }

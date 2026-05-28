@@ -94,7 +94,7 @@ export type AdminDashboardData = {
     summary: string;
     createdAt: string;
   }[];
-  source: "supabase" | "fallback";
+  source: "supabase" | "unavailable";
 };
 
 export type ActionState = {
