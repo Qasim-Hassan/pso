@@ -130,7 +130,7 @@ export async function saveContentAction(_: ActionState, formData: FormData): Pro
     videoId: formData.get("videoId"),
     videoTitle: formData.get("videoTitle"),
     coverImageUrl: formData.get("coverImageUrl"),
-    featured: formData.get("featured") === "on",
+    featured: formData.get("featured") === "on" || formData.get("featured") === "true",
     scheduledAt: formData.get("scheduledAt"),
     tags: formData.get("tags"),
     level: formData.get("level"),

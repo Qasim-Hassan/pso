@@ -23,21 +23,12 @@ type EditorFields = {
   category: string;
   authorName: string;
   readTime: string;
-  sourceUrl: string;
-  videoUrl: string;
-  videoId: string;
-  videoTitle: string;
-  coverImageUrl: string;
   featured: boolean;
   status: ContentStatus;
   scheduledAt: string;
-  tags: string;
-  level: string;
 };
 
 function editorDefaults(kind: ContentKind, item?: ContentEditorItem | null): EditorFields {
-  const metadata = item?.metadata ?? {};
-  const tags = Array.isArray(metadata.tags) ? metadata.tags.join(", ") : "";
   return {
     title: item?.title ?? "",
     slug: item?.slug ?? "",
@@ -46,23 +37,16 @@ function editorDefaults(kind: ContentKind, item?: ContentEditorItem | null): Edi
     category: item?.category ?? (kind === "blog_post" ? "NSTC" : "General"),
     authorName: item?.authorName ?? "Pakistan Olympiads Editorial Team",
     readTime: item?.readTime ?? "",
-    sourceUrl: item?.sourceUrl ?? "",
-    videoUrl: item?.videoUrl ?? "",
-    videoId: item?.videoId ?? "",
-    videoTitle: item?.videoTitle ?? "",
-    coverImageUrl: item?.coverImageUrl ?? "",
     featured: item?.featured ?? false,
     status: item?.status ?? "draft",
     scheduledAt: item?.scheduledAt ?? "",
-    tags,
-    level: String(metadata.level ?? (kind === "guide" ? "Beginner" : "")),
   };
 }
 
 export function ContentEditor({ kind, item, context }: { kind: ContentKind; item?: ContentEditorItem | null; context: AdminContext }) {
   const [state, action, pending] = useActionState(saveContentAction, initialState);
   const [deleteState, deleteAction, deletePending] = useActionState(deleteContentAction, initialState);
-  const [previewTab, setPreviewTab] = useState<"writing" | "rendered" | "metadata">("writing");
+  const [previewTab, setPreviewTab] = useState<"writing" | "rendered">("writing");
   const storageKey = `pso-admin-editor:${kind}:${item?.id ?? "new"}`;
   const [fields, setFields] = useState<EditorFields>(() => {
     const defaults = editorDefaults(kind, item);
@@ -88,7 +72,6 @@ export function ContentEditor({ kind, item, context }: { kind: ContentKind; item
       { label: "Slug", ok: /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(fields.slug) },
       { label: "Summary", ok: fields.excerpt.trim().length >= 20 },
       { label: "Body", ok: fields.body.trim().length >= 50 },
-      { label: "Video", ok: !fields.videoId || /^[a-zA-Z0-9_-]{11}$/.test(fields.videoId) },
     ],
     [fields],
   );
@@ -109,6 +92,15 @@ export function ContentEditor({ kind, item, context }: { kind: ContentKind; item
     <form action={action} className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_420px]">
       <input type="hidden" name="id" value={item?.id ?? ""} />
       <input type="hidden" name="kind" value={kind} />
+      <input type="hidden" name="sourceUrl" value="" />
+      <input type="hidden" name="videoUrl" value="" />
+      <input type="hidden" name="videoId" value="" />
+      <input type="hidden" name="videoTitle" value="" />
+      <input type="hidden" name="coverImageUrl" value="" />
+      <input type="hidden" name="featured" value="false" />
+      <input type="hidden" name="scheduledAt" value="" />
+      <input type="hidden" name="tags" value="" />
+      <input type="hidden" name="level" value="" />
       <section className="space-y-4">
         <div className="rounded-md border border-white/10 bg-white/5 p-5">
           <div className="grid gap-4 lg:grid-cols-2">
@@ -117,8 +109,6 @@ export function ContentEditor({ kind, item, context }: { kind: ContentKind; item
             <Field label="Category" name="category" value={fields.category} onChange={(value) => updateField("category", value)} />
             <Field label="Author" name="authorName" value={fields.authorName} onChange={(value) => updateField("authorName", value)} />
             <Field label="Read time" name="readTime" value={fields.readTime} onChange={(value) => updateField("readTime", value)} />
-            <Field label="Tags" name="tags" value={fields.tags} onChange={(value) => updateField("tags", value)} placeholder="Physics, NSTC, Roadmap" />
-            {kind === "guide" ? <Field label="Level" name="level" value={fields.level} onChange={(value) => updateField("level", value)} /> : null}
             <label className="block">
               <span className="text-xs font-bold uppercase text-white/60">Status</span>
               <select
@@ -160,7 +150,7 @@ export function ContentEditor({ kind, item, context }: { kind: ContentKind; item
             <div className="mb-3 flex items-center justify-between gap-3 border-b border-navy/10 pb-3">
               <h2 className="text-sm font-black uppercase text-charcoal">Preview</h2>
               <div className="flex gap-1">
-                {(["writing", "rendered", "metadata"] as const).map((tab) => (
+                {(["writing", "rendered"] as const).map((tab) => (
                   <button key={tab} type="button" onClick={() => setPreviewTab(tab)} className={cn("rounded-md px-2 py-1 text-xs font-black capitalize", previewTab === tab ? "bg-emerald text-white" : "bg-mint text-emerald")}>
                     {tab}
                   </button>
@@ -169,22 +159,6 @@ export function ContentEditor({ kind, item, context }: { kind: ContentKind; item
             </div>
             {previewTab === "writing" ? <pre className="whitespace-pre-wrap break-words text-sm leading-7 text-charcoal/75">{fields.body || "Preview appears as you write."}</pre> : null}
             {previewTab === "rendered" ? <MarkdownRenderer content={fields.body || "Preview appears as you write."} /> : null}
-            {previewTab === "metadata" ? (
-              <dl className="grid gap-3 text-sm">
-                {[
-                  ["Title", fields.title || "Untitled"],
-                  ["Slug", fields.slug || "not-set"],
-                  ["Summary", fields.excerpt || "No summary"],
-                  ["Read time", fields.readTime || calculateReadTime(fields.body)],
-                  ["Tags", fields.tags || "No tags"],
-                ].map(([label, value]) => (
-                  <div key={label} className="rounded-md bg-mint p-3">
-                    <dt className="text-xs font-black uppercase text-emerald">{label}</dt>
-                    <dd className="mt-1 break-words text-charcoal/75">{value}</dd>
-                  </div>
-                ))}
-              </dl>
-            ) : null}
           </div>
         </div>
       </section>
@@ -200,10 +174,6 @@ export function ContentEditor({ kind, item, context }: { kind: ContentKind; item
               </div>
             ))}
           </div>
-          <label className="mt-4 flex items-center gap-3 rounded-md border border-white/10 bg-[#061117]/70 px-3 py-3 text-sm font-bold text-white/75">
-            <input name="featured" type="checkbox" checked={fields.featured} onChange={(event) => updateField("featured", event.target.checked)} />
-            Featured content
-          </label>
           <button className="mt-4 w-full rounded-md bg-emerald px-4 py-3 text-sm font-black text-white disabled:opacity-60" disabled={pending} type="submit">
             {pending ? "Saving..." : "Save content"}
           </button>
@@ -221,21 +191,9 @@ export function ContentEditor({ kind, item, context }: { kind: ContentKind; item
           </div>
         ) : null}
 
-        <div className="rounded-md border border-white/10 bg-white/5 p-5">
-          <h2 className="text-sm font-black uppercase text-white">Embeds and metadata</h2>
-          <div className="mt-4 space-y-3">
-            <Field label="Source URL" name="sourceUrl" value={fields.sourceUrl} onChange={(value) => updateField("sourceUrl", value)} />
-            <Field label="YouTube URL" name="videoUrl" value={fields.videoUrl} onChange={(value) => updateField("videoUrl", value)} />
-            <Field label="YouTube ID" name="videoId" value={fields.videoId} onChange={(value) => updateField("videoId", value)} />
-            <Field label="Video title" name="videoTitle" value={fields.videoTitle} onChange={(value) => updateField("videoTitle", value)} />
-            <Field label="Cover image URL" name="coverImageUrl" value={fields.coverImageUrl} onChange={(value) => updateField("coverImageUrl", value)} />
-            <Field label="Scheduled publish ISO" name="scheduledAt" value={fields.scheduledAt} onChange={(value) => updateField("scheduledAt", value)} placeholder="2026-05-12T09:00:00.000Z" />
-          </div>
-        </div>
-
         <div className="rounded-md border border-white/10 bg-white/5 p-5 text-sm leading-6 text-white/70">
           <h2 className="text-sm font-black uppercase text-white">Revision history</h2>
-          <p className="mt-3">Every save writes a new `content_revisions` snapshot and an `audit_log` entry. Use the Audit Logs page to inspect production changes.</p>
+          <p className="mt-3">Every save writes a new revision snapshot for this post or guide.</p>
         </div>
       </aside>
     </form>
