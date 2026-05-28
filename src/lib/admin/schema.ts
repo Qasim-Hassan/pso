@@ -97,7 +97,7 @@ export const otpRequestSchema = z.object({
 
 export const otpVerifySchema = z.object({
   email: z.string().trim().email().transform((value) => value.toLowerCase()),
-  token: z.string().trim().regex(/^\d{6}$/, "Enter the 6-digit code from your email."),
+  token: z.string().trim().regex(/^\d{6,8}$/, "Enter the code from your email."),
 });
 
 export const transitionSchema = z.object({

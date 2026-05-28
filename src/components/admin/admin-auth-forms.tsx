@@ -38,7 +38,7 @@ export function AdminAuthForms() {
 
       <form action={verifyAction} className="rounded-md border border-white/10 bg-navy/70 p-6 text-white shadow-xl">
         <h2 className="text-2xl font-black">Enter code</h2>
-        <p className="mt-2 text-sm leading-6 text-white/65">Use the 6-digit code from your email. No password is used for admin access.</p>
+        <p className="mt-2 text-sm leading-6 text-white/65">Use the code from your email. No password is used for admin access.</p>
         <input type="hidden" name="email" value={email} />
         <label className="mt-6 block">
           <span className="text-sm font-bold">Code</span>
@@ -46,8 +46,8 @@ export function AdminAuthForms() {
             name="token"
             className="mt-2 w-full rounded-md border border-white/10 bg-white/5 px-4 py-3 text-center font-mono text-2xl tracking-[0.35em] text-white outline-none focus:border-emerald"
             inputMode="numeric"
-            pattern="[0-9]{6}"
-            maxLength={6}
+            pattern="[0-9]{6,8}"
+            maxLength={8}
             required
           />
         </label>
