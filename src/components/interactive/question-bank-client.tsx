@@ -137,9 +137,7 @@ function getQuestionPdfMetadata(question: Question) {
 }
 
 function getQuestionPdfUrl(question: QuestionWithPdf) {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  if (!supabaseUrl) return null;
-  return `${supabaseUrl}/storage/v1/object/public/question-pdfs/${question.pdf.cropPath}`;
+  return `/api/question-pdf/${question.pdf.cropPath}`;
 }
 
 export function QuestionBankClient({ questions }: { questions: Question[] }) {
@@ -492,7 +490,7 @@ export function QuestionBankClient({ questions }: { questions: Question[] }) {
                     <a className="font-black text-emerald underline" href={activePdfUrl} target="_blank" rel="noreferrer">
                       Open PDF
                     </a>
-                    <a className="font-black text-emerald underline" href={activePdfUrl} download>
+                    <a className="font-black text-emerald underline" href={`${activePdfUrl}?download=1`}>
                       Download
                     </a>
                   </span>
