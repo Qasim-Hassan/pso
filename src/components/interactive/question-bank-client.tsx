@@ -438,14 +438,7 @@ export function QuestionBankClient({ questions }: { questions: Question[] }) {
             <div className="py-6">
               {activePdfUrl ? (
                 <div className="overflow-hidden rounded-md border border-navy/10 bg-white">
-                  <object data={activePdfUrl} type="application/pdf" className="h-[560px] w-full sm:h-[680px]">
-                    <div className="p-5 text-sm font-semibold text-charcoal/70">
-                      PDF preview is not available in this browser.{" "}
-                      <a className="font-black text-emerald underline" href={activePdfUrl} target="_blank" rel="noreferrer">
-                        Open the extracted question PDF
-                      </a>
-                    </div>
-                  </object>
+                  <iframe src={`${activePdfUrl}#toolbar=0&navpanes=0&view=FitH`} title={`Question ${active.pdf.displayNumber} PDF`} className="h-[560px] w-full sm:h-[680px]" />
                 </div>
               ) : (
                 <div className="rounded-md border border-gold/30 bg-gold/10 p-5 text-sm font-semibold leading-6 text-charcoal/75">
@@ -495,9 +488,14 @@ export function QuestionBankClient({ questions }: { questions: Question[] }) {
             <div className="mt-6 flex flex-col gap-3 border-t border-navy/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
               <p className="text-sm font-semibold leading-6 text-charcoal/65">
                 {activePdfUrl ? (
-                  <a className="font-black text-emerald underline" href={activePdfUrl} target="_blank" rel="noreferrer">
-                    Open PDF in a new tab
-                  </a>
+                  <span className="flex flex-wrap gap-3">
+                    <a className="font-black text-emerald underline" href={activePdfUrl} target="_blank" rel="noreferrer">
+                      Open PDF
+                    </a>
+                    <a className="font-black text-emerald underline" href={activePdfUrl} download>
+                      Download
+                    </a>
+                  </span>
                 ) : (
                   "PDF unavailable"
                 )}
