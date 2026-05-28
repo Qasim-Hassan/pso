@@ -15,6 +15,8 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT = ROOT / "output" / "pdf" / "nstc-question-crops"
 PAST_PAPERS_JSON = ROOT / "src" / "data" / "past-papers.json"
 QUESTIONS_JSON = ROOT / "src" / "data" / "questions.json"
+NEXT_QUESTION_GAP = 1.0
+PAGE_BOTTOM_MARGIN = 10.0
 
 
 @dataclass(frozen=True)
@@ -198,11 +200,11 @@ def clip_for_segment(doc: fitz.Document, start: Start, end: tuple[int, float] | 
         page = doc[page_index]
         y0 = start.y - 7 if page_index == start.page_index else 40.0
         if end and page_index == end[0]:
-            y1 = end[1] - 12
+            y1 = end[1] - NEXT_QUESTION_GAP
             if y1 <= y0 + 8:
-                y1 = end[1] - 3
+                y1 = end[1]
         else:
-            y1 = page.rect.height - 36
+            y1 = page.rect.height - PAGE_BOTTOM_MARGIN
         y0 = max(0.0, y0)
         y1 = min(float(page.rect.height), y1)
         if y1 <= y0 + 8:
