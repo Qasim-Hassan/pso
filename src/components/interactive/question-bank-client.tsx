@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { Icon } from "@/components/icon";
+import { PdfViewer } from "@/components/interactive/pdf-viewer";
 import { Badge } from "@/components/sections/common";
 import type { Question } from "@/lib/content-data";
 import { questionPdfMetadata } from "@/lib/question-pdf-paths";
@@ -434,15 +435,11 @@ export function QuestionBankClient({ questions }: { questions: Question[] }) {
             </div>
 
             <div className="py-6">
-              {activePdfUrl ? (
-                <div className="overflow-hidden rounded-md border border-navy/10 bg-white">
-                  <iframe src={`${activePdfUrl}#toolbar=0&navpanes=0&view=FitH`} title={`Question ${active.pdf.displayNumber} PDF`} className="h-[560px] w-full sm:h-[680px]" />
-                </div>
-              ) : (
-                <div className="rounded-md border border-gold/30 bg-gold/10 p-5 text-sm font-semibold leading-6 text-charcoal/75">
-                  Extracted PDF is not available for this question yet. The 2025 camera-scan papers are excluded from the extraction set.
-                </div>
-              )}
+              <PdfViewer
+                title={`Question ${active.pdf.displayNumber} PDF`}
+                url={activePdfUrl}
+                unavailableMessage="Extracted PDF is not available for this question yet. The 2025 camera-scan papers are excluded from the extraction set."
+              />
             </div>
 
             {active.pdf.type === "MCQ" ? (

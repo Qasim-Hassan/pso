@@ -3,13 +3,13 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { Icon } from "@/components/icon";
+import { PdfViewer } from "@/components/interactive/pdf-viewer";
 import { Badge } from "@/components/sections/common";
 import type { PastPaper, Question } from "@/lib/content-data";
 import { cn } from "@/lib/utils";
 
 type AnswerChoice = "A" | "B" | "C" | "D";
 type WorkspaceSection = "part-i" | "part-ii" | "descriptive";
-type ZoomPreset = "fit" | "100" | "125" | "150";
 
 type AttemptState = {
   paperId: string;
@@ -17,7 +17,6 @@ type AttemptState = {
   descriptiveAnswer: string;
   descriptiveSolutionFileName: string;
   scratchpad: string;
-  currentPage: number;
   activeQuestion: number | null;
   timerSecondsRemaining: number;
   timerRunning: boolean;
@@ -53,7 +52,6 @@ function createInitialAttempt(paper: PastPaper): AttemptState {
     descriptiveAnswer: "",
     descriptiveSolutionFileName: "",
     scratchpad: "",
-    currentPage: 0,
     activeQuestion: null,
     timerSecondsRemaining: PAST_PAPER_TIMER_SECONDS,
     timerRunning: false,
@@ -70,7 +68,6 @@ function normalizeAttempt(paper: PastPaper, value: Partial<AttemptState> | null)
     ...value,
     mcqAnswers: { ...initial.mcqAnswers, ...(value.mcqAnswers ?? {}) },
     descriptiveSolutionFileName: typeof value.descriptiveSolutionFileName === "string" ? value.descriptiveSolutionFileName : "",
-    currentPage: Math.max(0, Math.min(paper.pageImages.length - 1, value.currentPage ?? 0)),
     timerSecondsRemaining: Math.max(0, value.timerSecondsRemaining ?? PAST_PAPER_TIMER_SECONDS),
     timerRunning: Boolean(value.timerRunning && (value.timerSecondsRemaining ?? 0) > 0),
   };
@@ -89,18 +86,11 @@ function formatSavedAt(value: string | null) {
   }).format(new Date(value));
 }
 
-function pageLabel(index: number) {
-  return `Page ${index + 1}`;
-}
-
 export function PastPaperWorkspace({ paper, questions, papers }: { paper: PastPaper; questions: Question[]; papers: PastPaper[] }) {
   const [attempt, setAttempt] = useState<AttemptState>(() => createInitialAttempt(paper));
   const [hydrated, setHydrated] = useState(false);
   const [section, setSection] = useState<WorkspaceSection>("part-i");
-  const [zoom, setZoom] = useState<ZoomPreset>("fit");
 
-  const pageCount = paper.pageImages.length;
-  const currentPage = Math.min(attempt.currentPage, Math.max(0, pageCount - 1));
   const answeredCount = MCQ_NUMBERS.filter((number) => attempt.mcqAnswers[String(number)]).length;
   const progress = Math.round((answeredCount / MCQ_NUMBERS.length) * 100);
   const unansweredCount = MCQ_NUMBERS.length - answeredCount;
@@ -120,27 +110,12 @@ export function PastPaperWorkspace({ paper, questions, papers }: { paper: PastPa
     return map;
   }, [questions]);
 
-  const pageByQuestion = useMemo(() => {
-    const map = new Map<number, number>();
-    for (const question of questions) {
-      if (question.type !== "MCQ" || !question.page) continue;
-      map.set(question.number, Math.max(0, Math.min(pageCount - 1, question.page - 1)));
-    }
-    return map;
-  }, [pageCount, questions]);
-
   const visibleNumbers = section === "part-i" ? PART_I_NUMBERS : PART_II_NUMBERS;
   const verifiedCount = answerKeyByQuestion.size;
   const correctCount = MCQ_NUMBERS.filter((number) => {
     const correct = answerKeyByQuestion.get(number);
     return correct && attempt.mcqAnswers[String(number)] === correct;
   }).length;
-  const zoomClass = {
-    fit: "w-full max-w-full",
-    "100": "w-[680px] max-w-none sm:w-[900px]",
-    "125": "w-[850px] max-w-none sm:w-[1125px]",
-    "150": "w-[1020px] max-w-none sm:w-[1350px]",
-  }[zoom];
 
   useEffect(() => {
     const id = window.setTimeout(() => {
@@ -181,26 +156,18 @@ export function PastPaperWorkspace({ paper, questions, papers }: { paper: PastPa
     setAttempt((previous) => ({ ...update(previous), updatedAt: new Date().toISOString() }));
   }
 
-  function setCurrentPage(nextPage: number) {
-    updateAttempt((previous) => ({ ...previous, currentPage: Math.max(0, Math.min(pageCount - 1, nextPage)) }));
-  }
-
   function focusQuestion(number: number) {
-    const page = pageByQuestion.get(number);
     updateAttempt((previous) => ({
       ...previous,
       activeQuestion: number,
-      currentPage: page ?? previous.currentPage,
     }));
   }
 
   function chooseAnswer(number: number, choice: AnswerChoice) {
     if (isReviewing) return;
-    const page = pageByQuestion.get(number);
     updateAttempt((previous) => ({
       ...previous,
       activeQuestion: number,
-      currentPage: page ?? previous.currentPage,
       mcqAnswers: { ...previous.mcqAnswers, [String(number)]: choice },
     }));
   }
@@ -219,7 +186,6 @@ export function PastPaperWorkspace({ paper, questions, papers }: { paper: PastPa
     window.localStorage.removeItem(storageKey(paper.id));
     setAttempt({ ...fresh, updatedAt: new Date().toISOString() });
     setSection("part-i");
-    setZoom("fit");
   }
 
   function submitAttempt() {
@@ -331,57 +297,7 @@ export function PastPaperWorkspace({ paper, questions, papers }: { paper: PastPa
           <div className="flex flex-col gap-3 border-b border-navy/10 p-3 sm:p-4 md:p-5 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <h2 className="text-lg font-black text-charcoal">Paper Viewer</h2>
-              <p className="mt-1 text-sm font-semibold text-charcoal/60">
-                {pageCount > 0 ? `${pageLabel(currentPage)} of ${pageCount}` : "No rendered pages available"}
-              </p>
-            </div>
-            <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2 sm:flex sm:flex-wrap">
-              <button
-                className="rounded-md border border-navy/10 bg-white px-2.5 py-2 text-sm font-black text-charcoal disabled:opacity-40 sm:px-3"
-                onClick={() => setCurrentPage(currentPage - 1)}
-                type="button"
-                disabled={currentPage === 0}
-              >
-                Previous
-              </button>
-              <select
-                className="h-10 min-w-0 rounded-md border border-navy/10 bg-white px-2 text-sm font-black text-charcoal outline-none focus:border-emerald sm:px-3"
-                value={currentPage}
-                onChange={(event) => setCurrentPage(Number(event.target.value))}
-                disabled={pageCount === 0}
-              >
-                {paper.pageImages.map((_, index) => (
-                  <option key={index} value={index}>
-                    {pageLabel(index)}
-                  </option>
-                ))}
-              </select>
-              <button
-                className="rounded-md bg-emerald px-2.5 py-2 text-sm font-black text-white disabled:opacity-40 sm:px-3"
-                onClick={() => setCurrentPage(currentPage + 1)}
-                type="button"
-                disabled={currentPage >= pageCount - 1}
-              >
-                Next
-              </button>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-3 border-b border-navy/10 bg-ivory px-3 py-3 sm:px-4 md:flex-row md:items-center md:justify-between md:px-5">
-            <div className="no-scrollbar flex gap-2 overflow-x-auto">
-              {(["fit", "100", "125", "150"] as ZoomPreset[]).map((item) => (
-                <button
-                  key={item}
-                  type="button"
-                  onClick={() => setZoom(item)}
-                  className={cn(
-                    "shrink-0 rounded-md border px-3 py-2 text-xs font-black uppercase",
-                    zoom === item ? "border-emerald bg-emerald text-white" : "border-navy/10 bg-white text-charcoal hover:border-emerald/40",
-                  )}
-                >
-                  {item === "fit" ? "Fit" : `${item}%`}
-                </button>
-              ))}
+              <p className="mt-1 text-sm font-semibold text-charcoal/60">{paper.pages} pages</p>
             </div>
             {paper.resourceUrl ? (
               <Link href={paper.resourceUrl} target="_blank" className="inline-flex items-center gap-2 rounded-md border border-navy/10 bg-white px-3 py-2 text-sm font-black text-emerald hover:border-emerald/40">
@@ -391,25 +307,8 @@ export function PastPaperWorkspace({ paper, questions, papers }: { paper: PastPa
             ) : null}
           </div>
 
-          <div className="max-h-[70vh] min-h-[360px] overflow-auto bg-cool p-2 sm:max-h-[calc(100vh-210px)] sm:min-h-[560px] sm:p-3 md:p-5">
-            {pageCount > 0 ? (
-              <div className="mx-auto flex w-full justify-center">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={paper.pageImages[currentPage]}
-                  alt={`${paper.title}, ${pageLabel(currentPage)}`}
-                  className={cn("rounded-md border border-navy/10 bg-white shadow-lg", zoomClass)}
-                />
-              </div>
-            ) : (
-              <div className="flex min-h-[520px] items-center justify-center rounded-md border border-dashed border-navy/15 bg-white p-8 text-center">
-                <div>
-                  <Icon name="file-text" className="mx-auto h-10 w-10 text-emerald" />
-                  <h3 className="mt-4 text-xl font-black text-charcoal">Rendered pages unavailable</h3>
-                  <p className="mt-2 text-sm text-charcoal/65">Use the original PDF link while page images are generated for this paper.</p>
-                </div>
-              </div>
-            )}
+          <div className="bg-cool p-2 sm:p-3 md:p-5">
+            <PdfViewer title={`${paper.title} PDF`} url={paper.resourceUrl} heightClassName="h-[70vh] min-h-[520px]" unavailableMessage="Original PDF is not available for this paper yet." />
           </div>
         </section>
 
@@ -507,7 +406,6 @@ export function PastPaperWorkspace({ paper, questions, papers }: { paper: PastPa
                       number={number}
                       answer={attempt.mcqAnswers[String(number)]}
                       active={attempt.activeQuestion === number}
-                      hasPage={pageByQuestion.has(number)}
                       review={isReviewing}
                       correctAnswer={answerKeyByQuestion.get(number) ?? null}
                       onFocus={() => focusQuestion(number)}
@@ -620,20 +518,14 @@ export function PastPaperWorkspace({ paper, questions, papers }: { paper: PastPa
       </div>
 
       <div className="fixed inset-x-0 bottom-0 z-30 border-t border-white/10 bg-navy px-3 py-2 text-white shadow-2xl md:hidden">
-        <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto_auto] items-center gap-2">
-          <button className="rounded-md border border-white/15 px-3 py-2 text-xs font-black disabled:opacity-40" onClick={() => setCurrentPage(currentPage - 1)} type="button" disabled={currentPage === 0}>
-            Prev
-          </button>
+        <div className="mx-auto grid max-w-7xl grid-cols-[1fr_auto] items-center gap-2">
           <div className="text-center">
-            <p className="text-xs font-black">{pageCount ? `${currentPage + 1}/${pageCount}` : "No pages"}</p>
+            <p className="text-xs font-black">{paper.subject} {paper.year}</p>
             <p className="text-[11px] text-white/70">{answeredCount}/70 answered</p>
           </div>
           <a href="#answer-workspace" className="rounded-md border border-white/15 px-3 py-2 text-xs font-black">
             Answers
           </a>
-          <button className="rounded-md bg-emerald px-3 py-2 text-xs font-black disabled:opacity-40" onClick={() => setCurrentPage(currentPage + 1)} type="button" disabled={currentPage >= pageCount - 1}>
-            Next
-          </button>
         </div>
       </div>
 
@@ -660,7 +552,6 @@ function McqAnswerRow({
   number,
   answer,
   active,
-  hasPage,
   review,
   correctAnswer,
   onFocus,
@@ -669,7 +560,6 @@ function McqAnswerRow({
   number: number;
   answer: AnswerChoice | null;
   active: boolean;
-  hasPage: boolean;
   review: boolean;
   correctAnswer: AnswerChoice | null;
   onFocus: () => void;
@@ -689,9 +579,7 @@ function McqAnswerRow({
     >
       <button className="mb-2 flex w-full items-center justify-between text-left" onClick={onFocus} type="button">
         <span className="text-sm font-black text-charcoal">Q{number}</span>
-        <span className={cn("text-[11px] font-bold", hasPage ? "text-emerald" : "text-charcoal/45")}>
-          {review ? (correctAnswer ? `Key: ${correctAnswer}` : "Key pending") : hasPage ? "Jump to page" : "No page link"}
-        </span>
+        <span className="text-[11px] font-bold text-charcoal/45">{review ? (correctAnswer ? `Key: ${correctAnswer}` : "Key pending") : "Select"}</span>
       </button>
       <div className="grid grid-cols-4 gap-1.5">
         {CHOICES.map((choice) => (
