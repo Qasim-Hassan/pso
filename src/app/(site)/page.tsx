@@ -15,12 +15,9 @@ export default async function HomePage() {
   const questionStats = getQuestionStatsForRows(questions);
   const guideCount = guides.length;
   const liveStats = [
-    { label: "Extracted Questions", value: `${questionStats.total}+`, icon: "clipboard-check" },
+    { label: "Questions", value: `${questionStats.total}+`, icon: "clipboard-check" },
     { label: "Past Papers", value: `${pastPapers.length}`, icon: "file-text" },
     { label: "Guide Articles", value: guideCount.toString(), icon: "book-open" },
-    { label: "Blog Posts", value: blogPosts.length.toString(), icon: "newspaper" },
-    { label: "Contributors", value: "Open", icon: "users" },
-    { label: "Olympiad Tracks", value: tracks.length.toString(), icon: "sparkles" },
   ];
   return (
     <>
