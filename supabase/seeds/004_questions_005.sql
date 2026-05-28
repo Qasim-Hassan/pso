@@ -1321,7 +1321,7 @@ insert into public.questions (
   'Part II', 'Mathematics MCQs', 'NSTC',
   2024, 'NSTC 2024 Mathematics Paper', 'A recipe calls for a ratio of 2 cups of flour to 1 cup of sugar. If you want to use 4 cups of sugar, how much flour should you use?',
   '["8 cups","6 cups","4 cups","2 cups"]'::jsonb, 0, 'Correct option: A. 8 cups is the verified choice from the source paper; it follows from the standard mathematics result needed by the prompt.',
-  6, '/paper-assets/mathematics-2024-final-maths-2024-640e2ac/figures/q63-p6-1.webp', '{}'::jsonb
+  6, '/api/storage/paper-assets/mathematics-2024-final-maths-2024-640e2ac/figures/q63-p6-1.webp', '{}'::jsonb
 ),
 (
   'mathematics-2024-final-maths-2024-640e2ac-part-ii-64', 'published', 'mathematics-2024-final-maths-2024-640e2ac', 'Mathematics',

@@ -10,7 +10,7 @@ const contentSecurityPolicy = [
   "font-src 'self' data:",
   "connect-src 'self' https://*.supabase.co wss://*.supabase.co",
   "media-src 'self' blob: https://*.supabase.co",
-  "frame-src https://www.youtube-nocookie.com https://www.youtube.com https://www.desmos.com",
+  "frame-src 'self' https://www.youtube-nocookie.com https://www.youtube.com https://www.desmos.com",
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",

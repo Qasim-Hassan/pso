@@ -1,3 +1,5 @@
 .next-dev*.log
 tmp/
 reports/
+public/resources/
+public/paper-assets/

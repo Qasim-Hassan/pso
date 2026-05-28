@@ -286,7 +286,7 @@ insert into public.questions (
   'Part II', 'Chemistry MCQs', 'NSTC',
   2022, 'NSTC 2022 Chemistry Paper', 'Which of the following is the major organic product obtained from the following reaction? H O Ag2O NH4OH, H2O ethanol',
   '["Structure A","Structure B","Structure C","Structure D"]'::jsonb, 2, 'Correct option: C. Structure C is the verified choice from the source paper; it follows from the standard chemistry result needed by the prompt.',
-  7, '/paper-assets/chemistry-2022-final-chemistry-2022-b9f5031/figures/q52-p7-manual.webp', '{}'::jsonb
+  7, '/api/storage/paper-assets/chemistry-2022-final-chemistry-2022-b9f5031/figures/q52-p7-manual.webp', '{}'::jsonb
 ),
 (
   'chemistry-2022-final-chemistry-2022-b9f5031-part-ii-53', 'published', 'chemistry-2022-final-chemistry-2022-b9f5031', 'Chemistry',

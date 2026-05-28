@@ -700,7 +700,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2022, 'NSTC 2022 Physics Paper', 'Which vector diagram represents the greatest magnitude of displacement for an object?',
   '["Diagram A","Diagram B","Diagram C","Diagram D"]'::jsonb, 1, 'The net resultant is in the North-West with magnitude equal to: p 12 + 12 = âˆš 1m 1m',
-  4, '/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q21-p4-manual.webp', '{}'::jsonb
+  4, '/api/storage/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q21-p4-manual.webp', '{}'::jsonb
 ),
 (
   'physics-2022-final-physics-2022-b4137e5-part-ii-22', 'published', 'physics-2022-final-physics-2022-b4137e5', 'Physics',
@@ -709,7 +709,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2022, 'NSTC 2022 Physics Paper', 'In the diagram shown on the right, two identical spheres, A and B, have equal net positive charges. Which arrow best represents the direction of their resultant electric field at point P?',
   '["Diagram A","Diagram B","Diagram C","Diagram D"]'::jsonb, 3, '+ + A B P âƒ—Enet',
-  4, '/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q22-p4-manual.webp', '{}'::jsonb
+  4, '/api/storage/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q22-p4-manual.webp', '{}'::jsonb
 ),
 (
   'physics-2022-final-physics-2022-b4137e5-part-ii-23', 'published', 'physics-2022-final-physics-2022-b4137e5', 'Physics',
@@ -718,7 +718,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2022, 'NSTC 2022 Physics Paper', 'The graph on the right shows the velocity of a race car moving along a straight line as a function of time. What is the magnitude of the displacement of the car from t = 2.0 seconds to t = 4.0 seconds?',
   '["20 m","40 m","60 m","80 m"]'::jsonb, 2, 'We know: Displacement = Area of Velocity time graph Area Total = 1 2 b h = 1 2 (4) (40) = 80 m Find the area from t=2s to t=4s Area = Area Total âˆ’Area from 0 to 2s Area from 0 to 2s = 1 2 (2) (20) = 20 m Thus, Area = 80 âˆ’20 = 60 m',
-  4, '/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q23-p4-manual.webp', '{}'::jsonb
+  4, '/api/storage/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q23-p4-manual.webp', '{}'::jsonb
 ),
 (
   'physics-2022-final-physics-2022-b4137e5-part-ii-24', 'published', 'physics-2022-final-physics-2022-b4137e5', 'Physics',
@@ -763,7 +763,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2022, 'NSTC 2022 Physics Paper', 'In the circuit diagram shown on the right, what are the correct readings of voltmeters V1 and V2?',
   '["V1 reads 2.0 V and V2 reads 4.0 V","V1 reads 4.0 V and V2 reads 2.0 V","V1 reads 3.0 V and V2 reads 3.0 V","V1 reads 6.0 V and V2 reads 6.0 V"]'::jsonb, 3, 'Itâ€™s important to see both 10â„¦and 5â„¦resistors are directly connected across the 6.0 V source in parallel. Therefore: V1 = V2 = 6.0 V',
-  5, '/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q28-p5-manual.webp', '{}'::jsonb
+  5, '/api/storage/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q28-p5-manual.webp', '{}'::jsonb
 ),
 (
   'physics-2022-final-physics-2022-b4137e5-part-ii-29', 'published', 'physics-2022-final-physics-2022-b4137e5', 'Physics',
@@ -790,7 +790,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2022, 'NSTC 2022 Physics Paper', 'Which diagram best represents magnetic flux lines around a bar magnet?',
   '["Diagram A","Diagram B","Diagram C","Diagram D"]'::jsonb, 1, 'The source solution marks option B for this item.',
-  5, '/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q31-p5-4.webp', '{}'::jsonb
+  5, '/api/storage/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q31-p5-4.webp', '{}'::jsonb
 ),
 (
   'physics-2022-final-physics-2022-b4137e5-part-ii-32', 'published', 'physics-2022-final-physics-2022-b4137e5', 'Physics',
@@ -817,7 +817,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2022, 'NSTC 2022 Physics Paper', 'What is the total electrical energy used by a 1500-watt hair dryer operating for 6.0 minutes?',
   '["4.2 J","250 J","9.0 x 10^3 J","5.4 x 10^5 J"]'::jsonb, 3, 'Power = Work(J) time(s) t = 6.0m Ã— 60s = 360s Work = Power Ã— time = (1500)(360) = 5.4 Ã— 105J',
-  5, '/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q34-p5-5.webp', '{}'::jsonb
+  5, '/api/storage/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q34-p5-5.webp', '{}'::jsonb
 ),
 (
   'physics-2022-final-physics-2022-b4137e5-part-ii-35', 'published', 'physics-2022-final-physics-2022-b4137e5', 'Physics',
@@ -826,7 +826,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2022, 'NSTC 2022 Physics Paper', 'The diagram shown represents the wave pattern produced by two sources located at points A and B. Which phenomenon occurs at the intersections of the circular wave fronts?',
   '["diffraction","interference","refraction","reflection"]'::jsonb, 1, 'When two waves collide their crest and trough interfer.',
-  5, '/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q35-p5-manual.webp', '{}'::jsonb
+  5, '/api/storage/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q35-p5-manual.webp', '{}'::jsonb
 ),
 (
   'physics-2022-final-physics-2022-b4137e5-part-ii-36', 'published', 'physics-2022-final-physics-2022-b4137e5', 'Physics',
@@ -835,7 +835,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2022, 'NSTC 2022 Physics Paper', 'Identical charges A, B, and C are located between two oppositely charged parallel plates, as shown in the diagram on the right. The magnitude of the force exerted on the charges by the electric field between the plates is',
   '["least on A and greatest on C","greatest on A and least on C","the same on A and C, but less on B","the same for A, B, and C"]'::jsonb, 3, 'To know the answer for this you must be familiar with deriving Electric Fields for simple objects like a Capacitor: âƒ—Einside = Î´ Ïµ0 Thus, the Electric field is constant regardless of distance from the plates.',
-  6, '/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q36-p6-1.webp', '{}'::jsonb
+  6, '/api/storage/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q36-p6-1.webp', '{}'::jsonb
 ),
 (
   'physics-2022-final-physics-2022-b4137e5-part-ii-37', 'published', 'physics-2022-final-physics-2022-b4137e5', 'Physics',
@@ -844,7 +844,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2022, 'NSTC 2022 Physics Paper', 'The graph on the right represents the elongation of a spring as a function of the applied force. How much work must be done to stretch the spring 0.40 meter?',
   '["4.8 J","6.0 J","9.8 J","24 J"]'::jsonb, 0, 'Finding the Work here is the same as finding the Area so: Area = 1 2bh = 1 2(F)(x) = 1 2(24)(0.4) = 4.8J',
-  6, '/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q37-p6-manual.webp', '{}'::jsonb
+  6, '/api/storage/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q37-p6-manual.webp', '{}'::jsonb
 ),
 (
   'physics-2022-final-physics-2022-b4137e5-part-ii-38', 'published', 'physics-2022-final-physics-2022-b4137e5', 'Physics',
@@ -853,7 +853,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2022, 'NSTC 2022 Physics Paper', 'Which circuit diagram shows voltmeter V and ammeter A correctly positioned to measure the total potential difference of the circuit and the current through each resistor?',
   '["Diagram A","Diagram B","Diagram C","Diagram D"]'::jsonb, 0, 'A Voltmeter is always connected in parallel, and an Ammeter in series.',
-  6, '/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q38-p6-6.webp', '{}'::jsonb
+  6, '/api/storage/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q38-p6-6.webp', '{}'::jsonb
 ),
 (
   'physics-2022-final-physics-2022-b4137e5-part-ii-39', 'published', 'physics-2022-final-physics-2022-b4137e5', 'Physics',
@@ -862,7 +862,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2022, 'NSTC 2022 Physics Paper', 'The diagram below shows a 4.0-kilogram cart moving to the right and a 6.0-kilogram cart moving to the left on a horizontal frictionless surface. When the two carts collide they lock together. The magnitude of the total momentum of the two-cart system after the collision is',
   '["0.0 kgâ€¢m/s","6.0 kgâ€¢m/s","15 kgâ€¢m/s","30 kgâ€¢m/s"]'::jsonb, 1, 'Solving: By Conservation of Momentum, âƒ—Pfinal = (4)(+3) + (6)(âˆ’3) = âˆ’6 kgm/s âƒ—Pfinal = 6 kgm/s',
-  6, '/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q39-p6-manual.webp', '{}'::jsonb
+  6, '/api/storage/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q39-p6-manual.webp', '{}'::jsonb
 ),
 (
   'physics-2022-final-physics-2022-b4137e5-part-ii-40', 'published', 'physics-2022-final-physics-2022-b4137e5', 'Physics',
@@ -916,7 +916,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2022, 'NSTC 2022 Physics Paper', 'Which graph best represents the relationship between the average molecular kinetic energy (ð¾ð¸Ì…Ì…Ì…Ì… ) of an ideal gas and its absolute temperature (T)?',
   '["Diagram A","Diagram B","Diagram C","Diagram D"]'::jsonb, 3, 'It would be a straight line â€y = mxâ€ from the equation: KE = 3 2kbT 2',
-  7, '/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q45-p7-4.webp', '{}'::jsonb
+  7, '/api/storage/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q45-p7-4.webp', '{}'::jsonb
 ),
 (
   'physics-2022-final-physics-2022-b4137e5-part-ii-46', 'published', 'physics-2022-final-physics-2022-b4137e5', 'Physics',
@@ -952,7 +952,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2022, 'NSTC 2022 Physics Paper', 'Which statement is consistent with Keplerâ€™s laws of planetary motion?',
   '["The planets move at a constant speed around the Sun","The speed of a planet is directly proportional to the radius of the path of motion","An imaginary line from a planet to the Sun sweeps out equal areas in equal time intervals","The more massive the planet, the slower the planet moves around the Sun"]'::jsonb, 2, 'Keplers 2nd Law states: â€A line connecting a planet to the Sun sweeps out equal areas in equal timesâ€',
-  7, '/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q49-p7-5.webp', '{}'::jsonb
+  7, '/api/storage/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q49-p7-5.webp', '{}'::jsonb
 ),
 (
   'physics-2022-final-physics-2022-b4137e5-part-ii-50', 'published', 'physics-2022-final-physics-2022-b4137e5', 'Physics',
@@ -961,7 +961,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2022, 'NSTC 2022 Physics Paper', 'The diagram on the right shows an electron e about to enter the region between the poles of two magnets. Upon entering the region between the poles, the moving electron will experience a magnetic force directed',
   '["toward the north pole","toward the south pole","into the page","out of the page"]'::jsonb, 3, 'Use Flemingâ€™s left hand rule. Point Index from North to South. Middle Finger in the direction of current (opposite of electron motion) Thumb = Force',
-  7, '/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q50-p7-manual.webp', '{}'::jsonb
+  7, '/api/storage/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q50-p7-manual.webp', '{}'::jsonb
 ),
 (
   'physics-2022-final-physics-2022-b4137e5-part-ii-51', 'published', 'physics-2022-final-physics-2022-b4137e5', 'Physics',
@@ -970,7 +970,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2022, 'NSTC 2022 Physics Paper', 'An object arrow is placed in front of a concave mirror having center of curvature C and principal focus F. Which diagram best shows the location of point I, the image of the tip of the object arrow?',
   '["Diagram A","Diagram B","Diagram C","Diagram D"]'::jsonb, 2, 'Between Focal point and pole of the Mirror Image is Virtual i.e behind the Mirror.',
-  7, '/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q51-p7-9.webp', '{}'::jsonb
+  7, '/api/storage/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q51-p7-9.webp', '{}'::jsonb
 ),
 (
   'physics-2022-final-physics-2022-b4137e5-part-ii-52', 'published', 'physics-2022-final-physics-2022-b4137e5', 'Physics',
@@ -1006,7 +1006,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2022, 'NSTC 2022 Physics Paper', 'Which two graphs represent the motion of an object on which the net force is zero?',
   '["Diagram A","Diagram B","Diagram C","Diagram D"]'::jsonb, 1, 'Acceleration is the slope of velocity or speed time graph in this case. Thus the graphs where slopes are zero are correct. The reason D is not correct is because velocity/speed is the slope of distance time graph so only those would match in which the slope is constant for the distance time graph. â‹† Note: This question isnâ€™t strictly correct they should have said something like â€œan object moving along a straight line.â€ Without that, the logic is incompleteâ€”constant speed alone doesnâ€™t guarantee zero net force unless you also forbid any change in direction.',
-  8, '/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q55-p8-4.webp', '{}'::jsonb
+  8, '/api/storage/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q55-p8-4.webp', '{}'::jsonb
 ),
 (
   'physics-2022-final-physics-2022-b4137e5-part-ii-56', 'published', 'physics-2022-final-physics-2022-b4137e5', 'Physics',
@@ -1060,7 +1060,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2022, 'NSTC 2022 Physics Paper', 'The diagram on the right represents the path of Earth around the Sun. As Earth travels in its orbit from its January position to its July position, the potential energy of Earth',
   '["decreases and its kinetic energy decreases","decreases and its kinetic energy increases","increases and its kinetic energy decreases","increases and its kinetic energy increases"]'::jsonb, 2, 'The potential energy always increases as you move further from the star/planet this is due to the formula: U(r) = âˆ’GMm r As r increases P.E decreases but since there is a negative sign the whole value increases. also as we know: âˆ†U = âˆ†K thus P.E increasing means Kinetic energy decreasing.',
-  9, '/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q61-p9-manual.webp', '{}'::jsonb
+  9, '/api/storage/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q61-p9-manual.webp', '{}'::jsonb
 ),
 (
   'physics-2022-final-physics-2022-b4137e5-part-ii-62', 'published', 'physics-2022-final-physics-2022-b4137e5', 'Physics',
@@ -1069,7 +1069,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2022, 'NSTC 2022 Physics Paper', 'A temperature change of 20 Celsius degrees is equal to a temperature change of',
   '["20. Kelvins","36. Kelvins","253 Kelvins","293 Kelvins"]'::jsonb, 0, 'You can prove the following out if you want but: âˆ†T(â—¦C) = âˆ†T(K)',
-  9, '/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q62-p9-1.webp', '{}'::jsonb
+  9, '/api/storage/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q62-p9-1.webp', '{}'::jsonb
 ),
 (
   'physics-2022-final-physics-2022-b4137e5-part-ii-63', 'published', 'physics-2022-final-physics-2022-b4137e5', 'Physics',
@@ -1078,7 +1078,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2022, 'NSTC 2022 Physics Paper', 'The diagram on the right shows a circuit with a battery applying a potential difference across an N-type semiconductor. The majority charge carriers in the semiconductor are',
   '["negative electrons moving to the right","negative electrons moving to the left","positive holes moving to the right","positive holes moving to the left"]'::jsonb, 1, 'In an N-type semiconductor, the majority charge carriers are electrons.Thus in a circuit electrons would move opposite to current flow i.e left.',
-  9, '/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q63-p9-manual.webp', '{}'::jsonb
+  9, '/api/storage/paper-assets/physics-2022-final-physics-2022-b4137e5/figures/q63-p9-manual.webp', '{}'::jsonb
 ),
 (
   'physics-2022-final-physics-2022-b4137e5-part-ii-64', 'published', 'physics-2022-final-physics-2022-b4137e5', 'Physics',

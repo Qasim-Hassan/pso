@@ -131,6 +131,14 @@ function sqlTextArray(value: string[] | null | undefined) {
   return `array[${items.map((item) => sqlString(item)).join(", ")}]::text[]`;
 }
 
+function storagePath(value: string | null | undefined) {
+  if (!value) return value;
+  if (value.startsWith("http://") || value.startsWith("https://")) return value;
+  if (value.startsWith("/resources/")) return `/api/storage/resource-files/${value.slice("/resources/".length)}`;
+  if (value.startsWith("/paper-assets/")) return `/api/storage/paper-assets/${value.slice("/paper-assets/".length)}`;
+  return value;
+}
+
 function sqlTimestamp(value: string) {
   return `${sqlString(value)}::timestamptz`;
 }
@@ -316,7 +324,7 @@ function resourcesSql(resources: ResourceSeed[]) {
   ${sqlString(resource.id)}, 'published', ${sqlString(resource.title)}, ${sqlRequiredString(resource.description)},
   ${sqlString(resource.subject)}, ${sqlString(resource.kind)}, ${sqlRequiredString(resource.folder)},
   ${sqlNumber(resource.year)}, ${sqlNumber(resource.pages ?? 0)}, ${sqlNumber(resource.sizeBytes ?? 0)},
-  ${sqlString(resource.localUrl)}, ${sqlRequiredString(resource.sourceUrl)}, '{}'::jsonb
+  ${sqlString(storagePath(resource.localUrl))}, ${sqlRequiredString(resource.sourceUrl)}, '{}'::jsonb
 )`);
 
   return `${sqlHeader("Resource seed")}
@@ -347,8 +355,8 @@ commit;`;
 function pastPapersSql(papers: PastPaperSeed[]) {
   const values = papers.map((paper) => `(
   ${sqlString(paper.id)}, 'published', ${sqlString(paper.title)}, ${sqlString(paper.exam)}, ${sqlString(paper.subject)},
-  ${sqlNumber(paper.year)}, ${sqlNumber(paper.pages ?? 0)}, ${sqlString(paper.resourceUrl)},
-  ${sqlRequiredString(paper.sourceUrl)}, ${sqlBoolean(paper.scanned)}, ${sqlTextArray(paper.pageImages)},
+  ${sqlNumber(paper.year)}, ${sqlNumber(paper.pages ?? 0)}, ${sqlString(storagePath(paper.resourceUrl))},
+  ${sqlRequiredString(paper.sourceUrl)}, ${sqlBoolean(paper.scanned)}, ${sqlTextArray((paper.pageImages ?? []).map((item) => storagePath(item) ?? item))},
   ${sqlNumber(paper.questionCount ?? 0)}, ${sqlNumber(paper.mcqCount ?? 0)}, ${sqlNumber(paper.descriptiveCount ?? 0)},
   ${sqlNumber(paper.partICount ?? 0)}, ${sqlNumber(paper.partIICount ?? 0)}, '{}'::jsonb
 )`);
@@ -390,7 +398,7 @@ function questionsSql(questions: QuestionSeed[], chunkNumber: number) {
   ${sqlRequiredString(question.section)}, ${sqlRequiredString(question.sectionTitle)}, ${sqlRequiredString(question.exam)},
   ${sqlNumber(question.year)}, ${sqlRequiredString(question.source)}, ${sqlString(question.prompt)},
   ${sqlJson(question.options, [])}, ${sqlNumber(question.answer)}, ${sqlRequiredString(question.solution)},
-  ${sqlNumber(question.page)}, ${sqlRequiredString(question.figure)}, '{}'::jsonb
+  ${sqlNumber(question.page)}, ${sqlRequiredString(storagePath(question.figure))}, '{}'::jsonb
 )`);
 
   return `${sqlHeader(`Question seed chunk ${chunkNumber}`)}

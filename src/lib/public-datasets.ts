@@ -59,6 +59,14 @@ type QuestionRow = {
   figure: string;
 };
 
+function storageUrlForPath(value: string | null) {
+  if (!value) return value;
+  if (value.startsWith("http://") || value.startsWith("https://")) return value;
+  if (value.startsWith("/resources/")) return `/api/storage/resource-files/${value.slice("/resources/".length)}`;
+  if (value.startsWith("/paper-assets/")) return `/api/storage/paper-assets/${value.slice("/paper-assets/".length)}`;
+  return value;
+}
+
 function rowToResource(row: ResourceRow): ResourceItem {
   return {
     id: row.id,
@@ -70,7 +78,7 @@ function rowToResource(row: ResourceRow): ResourceItem {
     year: row.year,
     pages: row.pages,
     sizeBytes: row.size_bytes,
-    localUrl: row.local_url,
+    localUrl: storageUrlForPath(row.local_url),
     sourceUrl: row.source_url,
   };
 }
@@ -83,10 +91,10 @@ function rowToPastPaper(row: PastPaperRow): PastPaper {
     subject: row.subject,
     year: row.year,
     pages: row.pages,
-    resourceUrl: row.resource_url,
+    resourceUrl: storageUrlForPath(row.resource_url),
     sourceUrl: row.source_url,
     scanned: row.scanned,
-    pageImages: row.page_images ?? [],
+    pageImages: (row.page_images ?? []).map((item) => storageUrlForPath(item) ?? item),
     questionCount: row.question_count,
     mcqCount: row.mcq_count,
     descriptiveCount: row.descriptive_count,
@@ -116,7 +124,7 @@ function rowToQuestion(row: QuestionRow): Question {
     answer: row.answer,
     solution: row.solution,
     page: row.page,
-    figure: row.figure,
+    figure: storageUrlForPath(row.figure) ?? "",
   };
 }
 

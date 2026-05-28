@@ -151,7 +151,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2025, 'NSTC 2025 Physics Paper', 'Thediagramrepresentsan electric circuit consisting ofa12-volt battery,a 3.0-ohnresistor,Ri,andavariableresistor,Ra.At whalvalue mustthe 12V variable resistor be set to produce a Curent of 1.o ampere through Rf? 122',
   '["6.00","1302","900","122"]'::jsonb, 2, 'Correct option: C. 900 is the verified choice from the source paper; it follows from the standard physics result needed by the prompt.',
-  7, '/paper-assets/physics-2025-physics-bf314d9/figures/q46-p7.webp', '{}'::jsonb
+  7, '/api/storage/paper-assets/physics-2025-physics-bf314d9/figures/q46-p7.webp', '{}'::jsonb
 ),
 (
   'physics-2025-physics-bf314d9-part-ii-47', 'published', 'physics-2025-physics-bf314d9', 'Physics',
@@ -187,7 +187,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2025, 'NSTC 2025 Physics Paper', 'The graph represents the relationship between the cnergy and the frequency of photons.The slope of the Eneryyi graph would be 6.67%10-11 1.60 / 10-19C',
   '["6.63 x 10-3j.s","6.67%10-11 N.m''kg?","1.60 Ã—10-)","1.60 / 10-19C (p)"]'::jsonb, 0, 'Correct option: A. 6.63 x 10-3j.s is the verified choice from the source paper; it follows from the standard physics result needed by the prompt.',
-  7, '/paper-assets/physics-2025-physics-bf314d9/figures/q51-p7.webp', '{}'::jsonb
+  7, '/api/storage/paper-assets/physics-2025-physics-bf314d9/figures/q51-p7.webp', '{}'::jsonb
 ),
 (
   'physics-2025-physics-bf314d9-part-ii-53', 'published', 'physics-2025-physics-bf314d9', 'Physics',

@@ -43,7 +43,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2023, 'NSTC 2023 Physics Paper', 'The graph represents the motion of a car during a 6.0-second time interval. What is the total distance traveled by the car during this 6.0-second interval?',
   '["60. m","20. m","30. m","40. m"]'::jsonb, 3, 'We know: Distance = Area of Speed/Velocity-time graph Area Total = Area of triangle + Area of rectangle = 1 2 (b) (h) + (b Ã— h) = 1 2(4)(10) + ((6 âˆ’4) Ã— (10)) = 40m',
-  4, '/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q25-p4-manual.webp', '{}'::jsonb
+  4, '/api/storage/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q25-p4-manual.webp', '{}'::jsonb
 ),
 (
   'physics-2023-final-physics-2023-ac5a924-part-ii-26', 'published', 'physics-2023-final-physics-2023-ac5a924', 'Physics',
@@ -61,7 +61,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2023, 'NSTC 2023 Physics Paper', 'Which combination of resistors has the smallest equivalent resistance?',
   '["Diagram A","Diagram B","Diagram C","Diagram D"]'::jsonb, 2, 'To solve you should know: Reff in series = R1 + R2 + R3 Reff in parallel = 1 R1 + 1 R2 + 1 R3 Thus, solving each circuit you will find option C resistance to be the lowest that is: Reff in parallel = 1 1 + 1 R = 2 R = 1 2â„¦',
-  4, '/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q27-p4-manual.webp', '{}'::jsonb
+  4, '/api/storage/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q27-p4-manual.webp', '{}'::jsonb
 ),
 (
   'physics-2023-final-physics-2023-ac5a924-part-ii-28', 'published', 'physics-2023-final-physics-2023-ac5a924', 'Physics',
@@ -70,7 +70,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2023, 'NSTC 2023 Physics Paper', 'A constant potential difference is applied across a variable resistor held at constant temperature. Which graph best represents the relationship between the resistance of the variable resistor and the current through it?',
   '["Diagram A","Diagram B","Diagram C","Diagram D"]'::jsonb, 0, 'Rearranging Ohmâ€™s law gives the relationship: I = V Ã— 1 R',
-  4, '/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q28-p4-manual.webp', '{}'::jsonb
+  4, '/api/storage/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q28-p4-manual.webp', '{}'::jsonb
 ),
 (
   'physics-2023-final-physics-2023-ac5a924-part-ii-29', 'published', 'physics-2023-final-physics-2023-ac5a924', 'Physics',
@@ -97,7 +97,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2023, 'NSTC 2023 Physics Paper', 'The diagram below represents an electric circuit consisting of a 12-volt battery, a 3.0-ohm resistor, R1, and a variable resistor, R2. At what value must the variable resistor be set to produce a current of 1.0 ampere through R1?',
   '["6.0 Î©","3.0 Î©","9.0 Î©","12 Î©"]'::jsonb, 2, 'Solving: Reff in series = R1 + R2 V = IReff 12 = 1(3 + R2) R2 = 12 âˆ’3 = 9â„¦',
-  4, '/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q31-p4-manual.webp', '{}'::jsonb
+  4, '/api/storage/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q31-p4-manual.webp', '{}'::jsonb
 ),
 (
   'physics-2023-final-physics-2023-ac5a924-part-ii-32', 'published', 'physics-2023-final-physics-2023-ac5a924', 'Physics',
@@ -124,7 +124,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2023, 'NSTC 2023 Physics Paper', 'A wave is diffracted as it passes through an opening in a barrier. The amount of diffraction that the wave undergoes depends on both',
   '["Amplitude and frequency of the incident wave","Wavelength and speed of the incident wave","Wavelength of the incident wave and the size of the opening","Amplitude of the incident wave and the size of the opening"]'::jsonb, 2, 'â€Diffraction is only noticeable when the wavelength and the size of the opening is comparable.â€',
-  5, '/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q34-p5-1.webp', '{}'::jsonb
+  5, '/api/storage/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q34-p5-1.webp', '{}'::jsonb
 ),
 (
   'physics-2023-final-physics-2023-ac5a924-part-ii-35', 'published', 'physics-2023-final-physics-2023-ac5a924', 'Physics',
@@ -133,7 +133,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2023, 'NSTC 2023 Physics Paper', 'The diagram on right represents two waves of equal amplitude and frequency approaching point P as they move through the same medium. As the two waves pass through each other, the medium at point P will',
   '["Vibrate up and down","Vibrate into and out of the page","Vibrate left and right","Remain stationary"]'::jsonb, 3, 'The two waves are 180â—¦out of Phase. Thus the point P would remain stationary as the two waves interfere.',
-  5, '/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q35-p5-manual.webp', '{}'::jsonb
+  5, '/api/storage/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q35-p5-manual.webp', '{}'::jsonb
 ),
 (
   'physics-2023-final-physics-2023-ac5a924-part-ii-36', 'published', 'physics-2023-final-physics-2023-ac5a924', 'Physics',
@@ -142,7 +142,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2023, 'NSTC 2023 Physics Paper', 'A constant unbalanced force is applied to an object for a period of time. Which graph best represents the acceleration of the object as a function of elapsed time?',
   '["Diagram A","Diagram B","Diagram C","Diagram D"]'::jsonb, 3, 'Here Unbalanced just means there is a net acceleration. The question further tells us it is constant which is our option D.',
-  5, '/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q36-p5-5.webp', '{}'::jsonb
+  5, '/api/storage/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q36-p5-5.webp', '{}'::jsonb
 ),
 (
   'physics-2023-final-physics-2023-ac5a924-part-ii-37', 'published', 'physics-2023-final-physics-2023-ac5a924', 'Physics',
@@ -151,7 +151,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2023, 'NSTC 2023 Physics Paper', 'The graph below represents the kinetic energy, gravitational potential energy, and total mechanical energy of a moving block. Which best describes the motion of the block?',
   '["Accelerating on a flat horizontal. surface","Falling freely","Sliding up a frictionless incline","Being lifted at constant velocity"]'::jsonb, 1, 'From energy conservation: âˆ†K.E = âˆ†P.E The rest is deduced from the graph whereas distance is moved P.E is decreasing. Hence eliminating Option C, Option D, and Option A.',
-  5, '/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q37-p5-manual.webp', '{}'::jsonb
+  5, '/api/storage/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q37-p5-manual.webp', '{}'::jsonb
 ),
 (
   'physics-2023-final-physics-2023-ac5a924-part-ii-38', 'published', 'physics-2023-final-physics-2023-ac5a924', 'Physics',
@@ -160,7 +160,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2023, 'NSTC 2023 Physics Paper', 'Which graph best represents the relationship between the magnitude of the electric field strength, E, around a point charge and the distance, r, from the point charge?',
   '["Diagram A","Diagram B","Diagram C","Diagram D"]'::jsonb, 3, 'Electric Field mentioned is given by: âƒ—E = Kq r2 This equation corresponds to the graph in Option D.',
-  5, '/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q38-p5-9.webp', '{}'::jsonb
+  5, '/api/storage/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q38-p5-9.webp', '{}'::jsonb
 ),
 (
   'physics-2023-final-physics-2023-ac5a924-part-ii-39', 'published', 'physics-2023-final-physics-2023-ac5a924', 'Physics',
@@ -178,7 +178,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2023, 'NSTC 2023 Physics Paper', 'A laser beam is directed at the surface of a smooth, calm pond as represented in the diagram below. Which organisms could be illuminated by the laser light?',
   '["The bird and the fish","The crab and the seaweed","The bird and the seaweed","The crab and the fish"]'::jsonb, 0, 'Generally when light enters water (or any new medium) it both reflects and refracts under most conditions.',
-  6, '/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q40-p6-manual.webp', '{}'::jsonb
+  6, '/api/storage/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q40-p6-manual.webp', '{}'::jsonb
 ),
 (
   'physics-2023-final-physics-2023-ac5a924-part-ii-41', 'published', 'physics-2023-final-physics-2023-ac5a924', 'Physics',
@@ -205,7 +205,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2023, 'NSTC 2023 Physics Paper', 'Identical resistors (R) are connected across the same 12-volt battery. Which circuit uses the greatest power?',
   '["Diagram A","Diagram B","Diagram C","Diagram D"]'::jsonb, 3, 'Since Voltage is a constant we get: P = V 2 R P âˆ1 R Thus the one with the least resistance will use the greatest power: Reff in series = R1 + R2 + R3 Reff in parallel = 1 R1 + 1 R2 + 1 R3 Thus, Option A: Reff = R Option B: Reff = 3R Option C: Reff = 1 2R Option D: Reff = 1 4R',
-  6, '/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q43-p6-4.webp', '{}'::jsonb
+  6, '/api/storage/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q43-p6-4.webp', '{}'::jsonb
 ),
 (
   'physics-2023-final-physics-2023-ac5a924-part-ii-44', 'published', 'physics-2023-final-physics-2023-ac5a924', 'Physics',
@@ -214,7 +214,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2023, 'NSTC 2023 Physics Paper', 'Which graph best represents the motion of an object that is not in equilibrium as it travels along a straight line?',
   '["Diagram A","Diagram B","Diagram C","Diagram D"]'::jsonb, 2, 'In a straight line motion: V elocity = Speed Acceleration = dâƒ—v dt The Question asks which object is NOT in equilibrium. Hence C is the only traveling with an acceleration.',
-  6, '/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q44-p6-8.webp', '{}'::jsonb
+  6, '/api/storage/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q44-p6-8.webp', '{}'::jsonb
 ),
 (
   'physics-2023-final-physics-2023-ac5a924-part-ii-45', 'published', 'physics-2023-final-physics-2023-ac5a924', 'Physics',
@@ -340,7 +340,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2023, 'NSTC 2023 Physics Paper', 'A glass-walled elevator is moving upwards with constant acceleration. At some point in the elevatorâ€™s motion, a bolt breaks loose and drops from the ceiling. What is the motion of the bolt as seen by an external observer (i.e. one located outside the elevator)?',
   '["The bolt moves upwards at a constant speed","The bold initially moves upwards, then slows, reverses direction and moves downwards","The bolt appears to remain stationary","The bolt immediately moves downwards, accelerating as it goes"]'::jsonb, 1, 'External (inertial) observer â€¢ Initial state. When the bolt breaks loose (t = 0) it keeps the carâ€™s upward speed v0. â€¢ Forces. After detachment the only force is its weight mg, so the acceleration is a = âˆ’g (downward). â€¢ Kinematics (with +y upward). v(t) = v0 âˆ’g t, y(t) = v0 t âˆ’1 2gt2. â€¢ Turning point. It rises until v = 0 at ttop = v0 g , ymax = v2 2g. After that it accelerates downward with magnitude g. Thus the bolt first moves upward, momentarily stops, then reverses and falls.',
-  7, '/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q58-p7-1.webp', '{}'::jsonb
+  7, '/api/storage/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q58-p7-1.webp', '{}'::jsonb
 ),
 (
   'physics-2023-final-physics-2023-ac5a924-part-ii-59', 'published', 'physics-2023-final-physics-2023-ac5a924', 'Physics',
@@ -349,7 +349,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2023, 'NSTC 2023 Physics Paper', 'The Earth and the Moon both exert gravitational forces on objects in their vicinity. Imagine a line joining the Earth to the Moon, and extending to either side, as shown below (not to scale). Consider placing an object along this line. Where along this line is the net gravitational force on the object due to the Earth and the Moon equal to zero.',
   '["On the far side of the Earth from the Moon","Halfway between the Earth and the Moon","Between the Earth and the Moon, but closer to the Earth than to the Moon","Between the Earth and the Moon, but closer to the Moon than to the Earth"]'::jsonb, 3, 'A mass m experiences the gravitational attraction by a greater mass M given as: Fg = GMm r2 Now since mass M of moon is smaller to increase the magnitude of the total force by the moon Fm the distance from it r must decrease i.e nearer to moon. Nearer to moon automatically means farther from Earth in this case. Thus option D',
-  7, '/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q59-p7-2.webp', '{}'::jsonb
+  7, '/api/storage/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q59-p7-2.webp', '{}'::jsonb
 ),
 (
   'physics-2023-final-physics-2023-ac5a924-part-ii-60', 'published', 'physics-2023-final-physics-2023-ac5a924', 'Physics',
@@ -358,7 +358,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2023, 'NSTC 2023 Physics Paper', 'A ball is held at a height H above a floor, as sketched in the diagram on the right. It is then released and falls to the floor. If air resistance can be ignored, which of the four graphs below (labelled a to d) correctly gives the mechanical energy Emech of the Earth-ball system as a function of the altitude y of the ball?',
   '["Diagram A","Diagram B","Diagram C","Diagram D"]'::jsonb, 1, 'This problem is simple: Use energy conservation.',
-  7, '/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q60-p7-6.webp', '{}'::jsonb
+  7, '/api/storage/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q60-p7-6.webp', '{}'::jsonb
 ),
 (
   'physics-2023-final-physics-2023-ac5a924-part-ii-61', 'published', 'physics-2023-final-physics-2023-ac5a924', 'Physics',
@@ -412,7 +412,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2023, 'NSTC 2023 Physics Paper', 'Kepler''s Laws state that 1 the orbits of planets are elliptical with one focus at the sun, II. a line connecting the sun and a planet sweeps out equal areas in equal times, and III. the square of the period of a planet''s orbit is proportional to the cube of its semimajor axis. Which of these laws would remain true if the force of gravity were proportional to 1/r3 rather than 1/r2?',
   '["Only I","Only II","Only III","Both II and III"]'::jsonb, 1, 'This can be solved without having to do any math: Option A : It canâ€™t be this due to the fact elliptical orbits have a squared term in them which would not remain the same once cubed. Option C: This is obvious since changing r changes the semi-major axis. Option D: We just ruled out C so it wouldnâ€™t make sense.',
-  8, '/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q66-p8-1.webp', '{}'::jsonb
+  8, '/api/storage/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q66-p8-1.webp', '{}'::jsonb
 ),
 (
   'physics-2023-final-physics-2023-ac5a924-part-ii-67', 'published', 'physics-2023-final-physics-2023-ac5a924', 'Physics',
@@ -421,7 +421,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2023, 'NSTC 2023 Physics Paper', 'Two blocks are suspended by two massless elastic strings to the ceiling as shown in the figure. The masses of the upper and lower block are m 1 = 2 kg and m 2 = 4 kg, respectively. If the upper string is suddenly cut just above the top block what are the accelerations of the two blocks at the moment when the top block begins to fall?',
   '["Upper: 10 m/s2; lower: 0","Upper: 10 m/s2; lower: 10 m/s2","Upper: 20 m/s2; lower: 10 m/s2","Upper: 30 m/s2; lower: 0"]'::jsonb, 3, 'Immediately after the upper string is cut the lower (elastic, but massless) string has had no time to change its length so its tension is the same as it was a moment earlier. Because forces can only change after information travels through the string, the cut has not yet been â€œfeltâ€ at the lower block. block forces just after the cut (upward +) m1 = 2 kg (âˆ’T) + (âˆ’m1g) m2 = 4 kg +T âˆ’m2g Originally the system was static, so the tension in the lower string was T = m2g = 4 kg (10 m/s2) = 40 N. Acceleration of the upper block For m1 do the greater force mius the less force = ma): = âˆ’T âˆ’m1g = âˆ’  40 + 20   N = âˆ’60 N = m1a1 Hence a1 = P Fm1 m1 = âˆ’60 = âˆ’30 m/s2. (The minus sign simply means the acceleration is downward.) Thus the top block initially accelerates downward at 30 m/s2 Acceleration of the lower block For m2 the upward tension balances its weight: +T âˆ’m2g = 40 âˆ’40 = 0 =â‡’ a2 = 0....',
-  8, '/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q67-p8-manual.webp', '{}'::jsonb
+  8, '/api/storage/paper-assets/physics-2023-final-physics-2023-ac5a924/figures/q67-p8-manual.webp', '{}'::jsonb
 ),
 (
   'physics-2023-final-physics-2023-ac5a924-part-ii-68', 'published', 'physics-2023-final-physics-2023-ac5a924', 'Physics',
@@ -1312,7 +1312,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2025, 'NSTC 2025 Physics Paper', 'The diagram shows a circuit with two resistors. What is the reading onammeterA? 12-volt source',
   '["1.3A","1.5 A","3.0A","0.75A"]'::jsonb, 3, 'Correct option: D. 0.75A is the verified choice from the source paper; it follows from the standard physics result needed by the prompt.',
-  4, '/paper-assets/physics-2025-physics-bf314d9/figures/q23-p4.webp', '{}'::jsonb
+  4, '/api/storage/paper-assets/physics-2025-physics-bf314d9/figures/q23-p4.webp', '{}'::jsonb
 ),
 (
   'physics-2025-physics-bf314d9-part-ii-24', 'published', 'physics-2025-physics-bf314d9', 'Physics',
@@ -1348,7 +1348,7 @@ insert into public.questions (
   'Part II', 'Physics MCQs', 'NSTC',
   2025, 'NSTC 2025 Physics Paper', 'Three forces act on a box on an inclined plane as shown in the diagram. [Vectors are not drawn to scale.] If the box is atrest, the net force acting on it is equal to Horizontal Weight',
   '["the weight","friction","thenormalforce","zero"]'::jsonb, 3, 'Correct option: D. zero is the verified choice from the source paper; it follows from the standard physics result needed by the prompt.',
-  4, '/paper-assets/physics-2025-physics-bf314d9/figures/q27-p4.webp', '{}'::jsonb
+  4, '/api/storage/paper-assets/physics-2025-physics-bf314d9/figures/q27-p4.webp', '{}'::jsonb
 ),
 (
   'physics-2025-physics-bf314d9-part-ii-28', 'published', 'physics-2025-physics-bf314d9', 'Physics',
