@@ -103,6 +103,7 @@ async function queryPublishedRows(kind: ContentKind) {
     .select("kind,status,slug,title,excerpt,body,category,author_name,read_time,source_url,video_url,video_id,video_title,featured,metadata,published_at,updated_at")
     .eq("kind", kind)
     .eq("status", "published")
+    .is("deleted_at", null)
     .lte("published_at", new Date().toISOString())
     .order("published_at", { ascending: false });
 

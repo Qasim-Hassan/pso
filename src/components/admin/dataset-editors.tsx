@@ -1,8 +1,8 @@
 "use client";
 
 import { useActionState } from "react";
-import { savePastPaperAction, saveQuestionAction, saveResourceAction } from "@/app/admin/actions";
-import type { ActionState, ContentStatus, PastPaperAdminItem, QuestionAdminItem, ResourceAdminItem } from "@/lib/admin/types";
+import { deleteResourceAction, savePastPaperAction, saveQuestionAction, saveResourceAction } from "@/app/admin/actions";
+import { adminSubjects, type ActionState, type AdminContext, type ContentStatus, type PastPaperAdminItem, type QuestionAdminItem, type ResourceAdminItem } from "@/lib/admin/types";
 
 const initialState: ActionState = { ok: false, message: "" };
 const statuses: ContentStatus[] = ["draft", "in_review", "changes_requested", "scheduled", "published", "archived"];
@@ -64,8 +64,10 @@ function SavePanel({ state, pending, label }: { state: ActionState; pending: boo
   );
 }
 
-export function ResourceEditor({ item }: { item?: ResourceAdminItem | null }) {
+export function ResourceEditor({ item, context }: { item?: ResourceAdminItem | null; context: AdminContext }) {
   const [state, action, pending] = useActionState(saveResourceAction, initialState);
+  const [deleteState, deleteAction, deletePending] = useActionState(deleteResourceAction, initialState);
+  const subjects = context.member?.isOwner ? adminSubjects : context.permissions.resourceSubjects;
   return (
     <form action={action} className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_320px]">
       <section className="rounded-md border border-white/10 bg-white/5 p-5">
@@ -73,7 +75,14 @@ export function ResourceEditor({ item }: { item?: ResourceAdminItem | null }) {
           <TextField label="ID" name="id" value={item?.id} />
           <StatusField value={item?.status} />
           <TextField label="Title" name="title" value={item?.title} />
-          <TextField label="Subject" name="subject" value={item?.subject} />
+          <label className="block">
+            <span className="text-xs font-bold uppercase text-white/60">Subject</span>
+            <select name="subject" defaultValue={item?.subject ?? subjects[0]} className="mt-2 w-full rounded-md border border-white/10 bg-[#061117] px-3 py-3 text-sm text-white outline-none focus:border-emerald">
+              {subjects.map((subject) => (
+                <option key={subject}>{subject}</option>
+              ))}
+            </select>
+          </label>
           <TextField label="Kind" name="kind" value={item?.kind} />
           <TextField label="Folder" name="folder" value={item?.folder} />
           <TextField label="Year" name="year" value={item?.year} type="number" />
@@ -85,8 +94,32 @@ export function ResourceEditor({ item }: { item?: ResourceAdminItem | null }) {
         <div className="mt-4">
           <TextArea label="Description" name="description" value={item?.description} rows={4} />
         </div>
+        <label className="mt-4 block">
+          <span className="text-xs font-bold uppercase text-white/60">Upload PDF or image</span>
+          <input
+            name="resourceFile"
+            type="file"
+            accept="application/pdf,image/png,image/jpeg,image/webp"
+            className="mt-2 w-full rounded-md border border-white/10 bg-[#061117] px-3 py-3 text-sm text-white file:mr-3 file:rounded-md file:border-0 file:bg-emerald file:px-3 file:py-2 file:text-sm file:font-black file:text-white"
+          />
+        </label>
+        {item?.localUrl ? (
+          <a href={item.localUrl} target="_blank" className="mt-4 inline-flex font-black text-emerald">
+            Open attached file
+          </a>
+        ) : null}
       </section>
-      <SavePanel state={state} pending={pending} label="Save resource" />
+      <div className="space-y-4">
+        <SavePanel state={state} pending={pending} label="Save resource" />
+        {context.member?.isOwner && item ? (
+          <div className="rounded-md border border-red-400/30 bg-red-950/20 p-5">
+            <button type="submit" formAction={deleteAction} disabled={deletePending} className="w-full rounded-md bg-red-600 px-4 py-3 text-sm font-black text-white disabled:opacity-60">
+              {deletePending ? "Deleting..." : "Delete resource"}
+            </button>
+            {deleteState.message ? <p className={deleteState.ok ? "mt-4 text-sm font-bold text-emerald" : "mt-4 text-sm font-bold text-red-200"}>{deleteState.message}</p> : null}
+          </div>
+        ) : null}
+      </div>
     </form>
   );
 }

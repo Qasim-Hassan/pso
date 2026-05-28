@@ -1,5 +1,5 @@
 import { AdminShell } from "@/components/admin/admin-shell";
-import { requireAdmin } from "@/lib/admin/auth";
+import { requireOwner } from "@/lib/admin/auth";
 import { getAdminDashboardData } from "@/lib/admin/content";
 
 export const metadata = {
@@ -7,8 +7,8 @@ export const metadata = {
 };
 
 export default async function AdminAnalyticsPage() {
-  const context = await requireAdmin(["owner", "editor", "reviewer"]);
-  const data = await getAdminDashboardData();
+  const context = await requireOwner();
+  const data = await getAdminDashboardData(context);
   const rows = [
     ["Published content", data.metrics.publishedContent],
     ["Review queue", data.metrics.reviewQueue],

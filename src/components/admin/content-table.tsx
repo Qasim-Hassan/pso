@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { transitionContentFormAction } from "@/app/admin/actions";
 import { Icon } from "@/components/icon";
-import type { ContentListItem, ContentStatus } from "@/lib/admin/types";
+import type { AdminContext, ContentListItem, ContentStatus } from "@/lib/admin/types";
 
 const transitionOptions: ContentStatus[] = ["draft", "in_review", "changes_requested", "scheduled", "published", "archived"];
 
-export function ContentTable({ items, editBasePath }: { items: ContentListItem[]; editBasePath: string }) {
+export function ContentTable({ items, editBasePath, context }: { items: ContentListItem[]; editBasePath: string; context: AdminContext }) {
+  const canTransition = (item: ContentListItem) => Boolean(context.member?.isOwner || item.createdBy === context.user?.id);
   return (
     <div className="overflow-x-auto rounded-md border border-white/10 bg-white/5">
       <table className="w-full min-w-[900px] border-collapse text-left text-sm">
@@ -42,18 +43,22 @@ export function ContentTable({ items, editBasePath }: { items: ContentListItem[]
                 </Link>
               </td>
               <td className="px-4 py-4">
-                <form action={transitionContentFormAction} className="flex gap-2">
-                  <input type="hidden" name="id" value={item.id} />
-                  <input type="hidden" name="note" value="Changed from admin table." />
-                  <select name="status" defaultValue={item.status} className="rounded-md border border-white/10 bg-[#061117] px-2 py-2 text-xs font-bold text-white">
-                    {transitionOptions.map((status) => (
-                      <option key={status}>{status}</option>
-                    ))}
-                  </select>
-                  <button className="rounded-md bg-emerald px-3 py-2 text-xs font-black text-white" type="submit">
-                    Apply
-                  </button>
-                </form>
+                {canTransition(item) ? (
+                  <form action={transitionContentFormAction} className="flex gap-2">
+                    <input type="hidden" name="id" value={item.id} />
+                    <input type="hidden" name="note" value="Changed from admin table." />
+                    <select name="status" defaultValue={item.status} className="rounded-md border border-white/10 bg-[#061117] px-2 py-2 text-xs font-bold text-white">
+                      {transitionOptions.map((status) => (
+                        <option key={status}>{status}</option>
+                      ))}
+                    </select>
+                    <button className="rounded-md bg-emerald px-3 py-2 text-xs font-black text-white" type="submit">
+                      Apply
+                    </button>
+                  </form>
+                ) : (
+                  <span className="text-xs font-bold text-white/45">No access</span>
+                )}
               </td>
             </tr>
           ))}

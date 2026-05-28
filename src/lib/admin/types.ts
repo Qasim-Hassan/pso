@@ -1,10 +1,29 @@
-export const adminRoles = ["owner", "editor", "reviewer", "contributor"] as const;
+export const adminSubjects = ["Astronomy", "Biology", "Chemistry", "Mathematics", "Physics"] as const;
+export const moderatorPermissionKinds = ["resources_subject", "blog", "guide"] as const;
+export const adminMemberStatuses = ["active", "disabled"] as const;
 export const contentKinds = ["blog_post", "guide", "alumni_story", "resource", "past_paper", "question", "solution"] as const;
 export const contentStatuses = ["draft", "in_review", "changes_requested", "scheduled", "published", "archived"] as const;
 
-export type AdminRole = (typeof adminRoles)[number];
+export type AdminSubject = (typeof adminSubjects)[number];
+export type ModeratorPermissionKind = (typeof moderatorPermissionKinds)[number];
+export type AdminMemberStatus = (typeof adminMemberStatuses)[number];
 export type ContentKind = (typeof contentKinds)[number];
 export type ContentStatus = (typeof contentStatuses)[number];
+
+export type AdminPermissions = {
+  blogs: boolean;
+  guides: boolean;
+  resourceSubjects: AdminSubject[];
+};
+
+export type AdminMember = {
+  id: string;
+  email: string;
+  displayName: string;
+  status: AdminMemberStatus;
+  isOwner: boolean;
+  lastLoginAt: string | null;
+};
 
 export type AdminContext = {
   isConfigured: boolean;
@@ -16,9 +35,8 @@ export type AdminContext = {
     displayName: string;
     avatarUrl: string;
   } | null;
-  role: AdminRole | null;
-  mfaRequired: boolean;
-  mfaVerified: boolean;
+  member: AdminMember | null;
+  permissions: AdminPermissions;
 };
 
 export type ContentListItem = {
@@ -32,6 +50,7 @@ export type ContentListItem = {
   authorName: string;
   readTime: string;
   featured: boolean;
+  createdBy: string | null;
   updatedAt: string;
   publishedAt: string | null;
   scheduledAt: string | null;
@@ -81,6 +100,7 @@ export type AdminDashboardData = {
 export type ActionState = {
   ok: boolean;
   message: string;
+  email?: string;
   fieldErrors?: Record<string, string[] | undefined>;
 };
 
@@ -89,7 +109,7 @@ export type ResourceAdminItem = {
   status: ContentStatus;
   title: string;
   description: string;
-  subject: string;
+  subject: AdminSubject;
   kind: string;
   folder: string;
   year: number | null;
@@ -97,6 +117,7 @@ export type ResourceAdminItem = {
   sizeBytes: number;
   localUrl: string;
   sourceUrl: string;
+  createdBy: string | null;
   updatedAt: string;
 };
 
@@ -145,12 +166,8 @@ export type QuestionAdminItem = {
   updatedAt: string;
 };
 
-export type ContributorAdminItem = {
-  userId: string;
-  email: string;
-  displayName: string;
-  avatarUrl: string;
-  role: AdminRole;
-  requireMfa: boolean;
+export type ModeratorAdminItem = AdminMember & {
+  permissions: AdminPermissions;
+  createdAt: string;
   updatedAt: string;
 };

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { AdminShell } from "@/components/admin/admin-shell";
 import { PastPaperEditor } from "@/components/admin/dataset-editors";
 import { Icon } from "@/components/icon";
-import { requireAdmin } from "@/lib/admin/auth";
+import { requireDatasetOwner } from "@/lib/admin/auth";
 import { getAdminPastPaperItem, getAdminPastPapers } from "@/lib/admin/content";
 
 export const metadata = {
@@ -10,7 +10,7 @@ export const metadata = {
 };
 
 export default async function AdminPastPapersPage({ searchParams }: { searchParams: Promise<{ edit?: string }> }) {
-  const context = await requireAdmin(["owner", "editor", "contributor", "reviewer"]);
+  const context = await requireDatasetOwner();
   const { edit } = await searchParams;
   const [pastPapers, item] = await Promise.all([getAdminPastPapers(), getAdminPastPaperItem(edit)]);
   const scanned = pastPapers.filter((paper) => paper.scanned).length;

@@ -1,18 +1,14 @@
 import { AdminShell } from "@/components/admin/admin-shell";
 import { Icon } from "@/components/icon";
-import { requireAdmin } from "@/lib/admin/auth";
+import { requireResourceAccess } from "@/lib/admin/auth";
 
 export const metadata = {
   title: "Media Library | Admin",
 };
 
 export default async function AdminMediaPage() {
-  const context = await requireAdmin(["owner", "editor", "contributor", "reviewer"]);
-  const buckets = [
-    { name: "content-assets", limit: "10 MB", types: "PNG, JPEG, WEBP, GIF", purpose: "Blog and guide imagery" },
-    { name: "resource-files", limit: "50 MB", types: "PDF, PNG, JPEG, WEBP", purpose: "Student-facing resource files" },
-    { name: "paper-assets", limit: "50 MB", types: "PDF, PNG, JPEG, WEBP", purpose: "Past-paper PDFs and page renders" },
-  ];
+  const context = await requireResourceAccess();
+  const buckets = [{ name: "resource-files", limit: "50 MB", types: "PDF, PNG, JPEG, WEBP", purpose: "Student-facing resource files" }];
 
   return (
     <AdminShell context={context} title="Media Library" description="Storage policy, upload buckets, and asset governance for content editors.">

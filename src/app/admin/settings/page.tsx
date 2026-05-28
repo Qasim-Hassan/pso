@@ -1,5 +1,5 @@
 import { AdminShell } from "@/components/admin/admin-shell";
-import { requireAdmin } from "@/lib/admin/auth";
+import { requireOwner } from "@/lib/admin/auth";
 import { getSupabaseConfig } from "@/lib/supabase/server";
 
 export const metadata = {
@@ -7,15 +7,14 @@ export const metadata = {
 };
 
 export default async function AdminSettingsPage() {
-  const context = await requireAdmin(["owner", "editor"]);
+  const context = await requireOwner();
   const config = getSupabaseConfig();
   const checks = [
     ["Supabase URL", Boolean(config.url)],
     ["Anon key", Boolean(config.anonKey)],
     ["Service role key", Boolean(config.serviceRoleKey)],
     ["Revalidation secret", Boolean(process.env.CONTENT_REVALIDATION_SECRET)],
-    ["Invite code", Boolean(process.env.ADMIN_INVITE_CODE)],
-    ["MFA required", process.env.ADMIN_MFA_REQUIRED !== "false"],
+    ["Email OTP template", true],
   ];
 
   return (

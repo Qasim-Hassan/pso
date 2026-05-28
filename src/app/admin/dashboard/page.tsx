@@ -2,7 +2,7 @@ import Link from "next/link";
 import { AdminShell } from "@/components/admin/admin-shell";
 import { ContentTable } from "@/components/admin/content-table";
 import { Icon } from "@/components/icon";
-import { requireAdmin } from "@/lib/admin/auth";
+import { requireAdminAccess } from "@/lib/admin/auth";
 import { getAdminDashboardData } from "@/lib/admin/content";
 
 export const metadata = {
@@ -10,8 +10,8 @@ export const metadata = {
 };
 
 export default async function AdminDashboardPage() {
-  const context = await requireAdmin();
-  const data = await getAdminDashboardData();
+  const context = await requireAdminAccess();
+  const data = await getAdminDashboardData(context);
   const metrics = [
     { label: "Content", value: data.metrics.totalContent, icon: "file-text", detail: `${data.metrics.publishedContent} published` },
     { label: "Review Queue", value: data.metrics.reviewQueue, icon: "clipboard", detail: "Draft/review workflow" },
@@ -45,10 +45,10 @@ export default async function AdminDashboardPage() {
 
         <div className="grid gap-3 md:grid-cols-4">
           {[
-            ["Create Post", "/admin/posts", "pen"],
-            ["Add Guide", "/admin/guides", "book-open"],
-            ["Review Questions", "/admin/question-bank", "clipboard"],
-            ["View Audit", "/admin/audit", "shield"],
+            ...(context.member?.isOwner || context.permissions.blogs ? [["Create Post", "/admin/posts", "pen"]] : []),
+            ...(context.member?.isOwner || context.permissions.guides ? [["Add Guide", "/admin/guides", "book-open"]] : []),
+            ...(context.member?.isOwner || context.permissions.resourceSubjects.length > 0 ? [["Upload Resource", "/admin/resources", "download"]] : []),
+            ...(context.member?.isOwner ? [["View Audit", "/admin/audit", "shield"]] : []),
           ].map(([label, href, icon]) => (
             <Link key={label} href={href} className="flex items-center gap-3 rounded-md border border-white/10 bg-[#061117]/70 p-4 text-sm font-black text-white hover:border-emerald/50">
               <span className="flex h-10 w-10 items-center justify-center rounded-md bg-emerald/20 text-emerald">
@@ -67,7 +67,7 @@ export default async function AdminDashboardPage() {
             </div>
             <Link href="/admin/posts" className="text-sm font-black text-emerald">Manage posts</Link>
           </div>
-          <ContentTable items={data.content} editBasePath="/admin/posts" />
+          <ContentTable items={data.content} editBasePath="/admin/posts" context={context} />
         </section>
 
         <div className="grid gap-6 xl:grid-cols-2">

@@ -7,16 +7,17 @@ import { pastPapers, questions, resources } from "@/lib/content-data";
 import type {
   AdminContext,
   AdminDashboardData,
-  AdminRole,
+  AdminSubject,
   ContentEditorItem,
   ContentKind,
   ContentListItem,
   ContentStatus,
-  ContributorAdminItem,
+  ModeratorAdminItem,
   PastPaperAdminItem,
   QuestionAdminItem,
   ResourceAdminItem,
 } from "@/lib/admin/types";
+import { canDelete, canManageContentKind, canManageResourceSubject, isOwner, permissionsFromRows } from "@/lib/admin/auth";
 import { getSupabaseConfig, getSupabaseServiceClient } from "@/lib/supabase/server";
 
 type ContentRow = {
@@ -36,6 +37,7 @@ type ContentRow = {
   video_title?: string;
   cover_image_url?: string;
   featured: boolean;
+  created_by: string | null;
   metadata?: Record<string, unknown>;
   scheduled_at: string | null;
   published_at: string | null;
@@ -68,7 +70,7 @@ type DatasetStatusRow = {
   updated_at: string;
 };
 
-type ResourceMutation = Omit<ResourceAdminItem, "updatedAt" | "sizeBytes"> & {
+type ResourceMutation = Omit<ResourceAdminItem, "updatedAt" | "sizeBytes" | "createdBy"> & {
   sizeBytes: number;
 };
 
@@ -76,8 +78,8 @@ type PastPaperMutation = Omit<PastPaperAdminItem, "updatedAt">;
 
 type QuestionMutation = Omit<QuestionAdminItem, "updatedAt">;
 
-const publishableRoles: AdminRole[] = ["owner", "editor"];
-const writerRoles: AdminRole[] = ["owner", "editor", "contributor"];
+const maxResourceUploadBytes = 50 * 1024 * 1024;
+const allowedResourceMimeTypes = new Set(["application/pdf", "image/png", "image/jpeg", "image/webp"]);
 
 function toListItem(row: ContentRow): ContentListItem {
   return {
@@ -91,6 +93,7 @@ function toListItem(row: ContentRow): ContentListItem {
     authorName: row.author_name,
     readTime: row.read_time,
     featured: row.featured,
+    createdBy: row.created_by ?? null,
     updatedAt: row.updated_at,
     publishedAt: row.published_at,
     scheduledAt: row.scheduled_at,
@@ -114,15 +117,16 @@ function fallbackContent(): ContentListItem[] {
   const blog = blogPosts.map((post, index) => ({
     id: `fallback-blog-${post.slug}`,
     kind: "blog_post" as const,
-    status: "published" as const,
+      status: "published" as const,
     slug: post.slug,
     title: post.title,
     excerpt: post.excerpt,
     category: post.category,
     authorName: post.author,
     readTime: post.read,
-    featured: index === 0,
-    updatedAt: post.date,
+      featured: index === 0,
+      createdBy: null,
+      updatedAt: post.date,
     publishedAt: post.date,
     scheduledAt: null,
   }));
@@ -136,22 +140,56 @@ function fallbackContent(): ContentListItem[] {
     category: guide.category,
     authorName: guide.author,
     readTime: guide.readTime,
-    featured: guide.featured,
-    updatedAt: guide.updated,
+      featured: guide.featured,
+      createdBy: null,
+      updatedAt: guide.updated,
     publishedAt: guide.updated,
     scheduledAt: null,
   }));
   return [...blog, ...guides];
 }
 
-function assertRole(context: AdminContext, allowed: AdminRole[]) {
-  if (!context.user || !context.role || !allowed.includes(context.role)) {
-    throw new Error("You are not allowed to perform this admin action.");
-  }
+function assertAdmin(context: AdminContext) {
+  if (!context.user || !context.member || context.member.status !== "active") throw new Error("You are not allowed to perform this admin action.");
+}
+
+function assertOwner(context: AdminContext) {
+  assertAdmin(context);
+  if (!isOwner(context)) throw new Error("Only the owner can perform this action.");
+}
+
+function assertManageContent(context: AdminContext, kind: ContentKind, item?: { createdBy?: string | null } | null) {
+  assertAdmin(context);
+  if (!canManageContentKind(context, kind, item)) throw new Error("You are not allowed to manage this content item.");
+}
+
+function assertManageResource(context: AdminContext, subject: string) {
+  assertAdmin(context);
+  if (!canManageResourceSubject(context, subject)) throw new Error("You are not allowed to manage resources for this subject.");
 }
 
 function datasetTimestamp(row?: Partial<DatasetStatusRow>) {
   return row?.updated_at ?? new Date().toISOString();
+}
+
+function slugSegment(value: string) {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .replace(/-{2,}/g, "");
+}
+
+function safeFilename(value: string) {
+  const cleaned = value
+    .toLowerCase()
+    .replace(/[^a-z0-9._-]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  return cleaned || "resource-file";
+}
+
+function isUploadFile(value: unknown): value is File {
+  return typeof File !== "undefined" && value instanceof File && value.size > 0;
 }
 
 function fallbackResources(): ResourceAdminItem[] {
@@ -160,7 +198,7 @@ function fallbackResources(): ResourceAdminItem[] {
     status: "published",
     title: resource.title,
     description: resource.description,
-    subject: resource.subject,
+    subject: resource.subject as AdminSubject,
     kind: resource.kind,
     folder: resource.folder,
     year: resource.year,
@@ -168,6 +206,7 @@ function fallbackResources(): ResourceAdminItem[] {
     sizeBytes: resource.sizeBytes,
     localUrl: resource.localUrl ?? "",
     sourceUrl: resource.sourceUrl,
+    createdBy: null,
     updatedAt: "",
   }));
 }
@@ -221,7 +260,7 @@ function fallbackQuestions(): QuestionAdminItem[] {
   }));
 }
 
-export async function getAdminDashboardData(): Promise<AdminDashboardData> {
+export async function getAdminDashboardData(context?: AdminContext): Promise<AdminDashboardData> {
   const supabase = getSupabaseServiceClient();
   if (!getSupabaseConfig().hasServiceRole || !supabase) {
     const content = fallbackContent();
@@ -243,12 +282,26 @@ export async function getAdminDashboardData(): Promise<AdminDashboardData> {
     };
   }
 
+  let contentQuery = supabase
+    .from("content_items")
+    .select("id,kind,status,slug,title,excerpt,category,author_name,read_time,featured,created_by,scheduled_at,published_at,updated_at")
+    .is("deleted_at", null)
+    .order("updated_at", { ascending: false })
+    .limit(20);
+  if (context && !isOwner(context)) {
+    const allowedKinds = [
+      ...(context.permissions.blogs ? ["blog_post"] : []),
+      ...(context.permissions.guides ? ["guide"] : []),
+    ];
+    contentQuery = allowedKinds.length > 0 ? contentQuery.eq("created_by", context.user?.id ?? "").in("kind", allowedKinds) : contentQuery.eq("id", "__no_access__");
+  }
+
   const [contentResult, resourcesResult, papersResult, questionsResult, adminsResult, workflowResult, auditResult] = await Promise.all([
-    supabase.from("content_items").select("id,kind,status,slug,title,excerpt,category,author_name,read_time,featured,scheduled_at,published_at,updated_at").order("updated_at", { ascending: false }).limit(20),
+    contentQuery,
     supabase.from("resources").select("id", { count: "exact", head: true }),
     supabase.from("past_papers").select("id", { count: "exact", head: true }),
     supabase.from("questions").select("id", { count: "exact", head: true }),
-    supabase.from("admin_roles").select("user_id", { count: "exact", head: true }),
+    supabase.from("admin_members").select("id", { count: "exact", head: true }),
     supabase.from("workflow_events").select("id,from_status,to_status,note,created_at,content_items(title)").order("created_at", { ascending: false }).limit(8),
     supabase.from("audit_log").select("id,action,entity_table,entity_id,summary,created_at").order("created_at", { ascending: false }).limit(8),
   ]);
@@ -296,45 +349,56 @@ export async function getAdminDashboardData(): Promise<AdminDashboardData> {
   };
 }
 
-export async function getAdminContentList(kind?: ContentKind) {
+export async function getAdminContentList(kind?: ContentKind, context?: AdminContext) {
   const supabase = getSupabaseServiceClient();
   if (!getSupabaseConfig().hasServiceRole || !supabase) {
     return fallbackContent().filter((item) => !kind || item.kind === kind);
   }
 
-  let query = supabase.from("content_items").select("id,kind,status,slug,title,excerpt,category,author_name,read_time,featured,scheduled_at,published_at,updated_at").order("updated_at", { ascending: false });
+  let query = supabase
+    .from("content_items")
+    .select("id,kind,status,slug,title,excerpt,category,author_name,read_time,featured,created_by,scheduled_at,published_at,updated_at")
+    .is("deleted_at", null)
+    .order("updated_at", { ascending: false });
   if (kind) query = query.eq("kind", kind);
+  if (context && !isOwner(context)) {
+    if (kind === "blog_post" || kind === "guide") {
+      query = query.eq("created_by", context.user?.id ?? "");
+    } else {
+      query = query.eq("created_by", "__no_access__");
+    }
+  }
   const { data, error } = await query;
   if (error) throw error;
   return ((data ?? []) as ContentRow[]).map(toListItem);
 }
 
-export async function getAdminContentItem(id?: string, kind: ContentKind = "blog_post") {
+export async function getAdminContentItem(id?: string, kind: ContentKind = "blog_post", context?: AdminContext) {
   const supabase = getSupabaseServiceClient();
   if (!id || !getSupabaseConfig().hasServiceRole || !supabase) return null;
   const { data, error } = await supabase
     .from("content_items")
-    .select("id,kind,status,slug,title,excerpt,body,category,author_name,read_time,source_url,video_url,video_id,video_title,cover_image_url,featured,metadata,scheduled_at,published_at,updated_at")
+    .select("id,kind,status,slug,title,excerpt,body,category,author_name,read_time,source_url,video_url,video_id,video_title,cover_image_url,featured,created_by,metadata,scheduled_at,published_at,updated_at")
     .eq("id", id)
     .eq("kind", kind)
+    .is("deleted_at", null)
     .maybeSingle();
   if (error) throw error;
-  return data ? toEditorItem(data as ContentRow) : null;
+  const item = data ? toEditorItem(data as ContentRow) : null;
+  if (item && context) assertManageContent(context, kind, item);
+  return item;
 }
 
 export async function saveContentItem(input: ContentMutation, context: AdminContext) {
-  assertRole(context, writerRoles);
-
-  if (input.status === "published") {
-    assertRole(context, publishableRoles);
-  }
-
   const supabase = getSupabaseServiceClient();
   if (!supabase) throw new Error("Supabase service role is not configured.");
 
   const previous = input.id
-    ? await supabase.from("content_items").select("status").eq("id", input.id).maybeSingle()
+    ? await supabase.from("content_items").select("status,kind,created_by").eq("id", input.id).is("deleted_at", null).maybeSingle()
     : { data: null };
+  if (input.id && !previous.data) throw new Error("Content item was not found.");
+
+  assertManageContent(context, input.kind, previous.data ? { createdBy: previous.data.created_by } : null);
 
   const publishedAt = input.status === "published" ? new Date().toISOString() : null;
   const row = {
@@ -408,13 +472,12 @@ export async function saveContentItem(input: ContentMutation, context: AdminCont
 }
 
 export async function transitionContentItem(id: string, status: ContentStatus, note: string, context: AdminContext) {
-  assertRole(context, status === "published" ? publishableRoles : ["owner", "editor", "reviewer", "contributor"]);
-
   const supabase = getSupabaseServiceClient();
   if (!supabase) throw new Error("Supabase service role is not configured.");
 
-  const previous = await supabase.from("content_items").select("status,slug,kind,title").eq("id", id).single();
+  const previous = await supabase.from("content_items").select("status,slug,kind,title,created_by").eq("id", id).is("deleted_at", null).single();
   if (previous.error) throw previous.error;
+  assertManageContent(context, previous.data.kind as ContentKind, { createdBy: previous.data.created_by });
 
   const { data, error } = await supabase
     .from("content_items")
@@ -452,21 +515,27 @@ export async function transitionContentItem(id: string, status: ContentStatus, n
   if (data.kind === "guide") revalidatePath(`/guides/${data.slug}`);
 }
 
-export async function getAdminResources() {
+export async function getAdminResources(context?: AdminContext) {
   const supabase = getSupabaseServiceClient();
   if (!getSupabaseConfig().hasServiceRole || !supabase) return fallbackResources();
-  const { data, error } = await supabase
+  let query = supabase
     .from("resources")
-    .select("id,status,title,description,subject,kind,folder,year,pages,size_bytes,local_url,source_url,updated_at")
+    .select("id,status,title,description,subject,kind,folder,year,pages,size_bytes,local_url,source_url,created_by,updated_at")
+    .is("deleted_at", null)
     .order("updated_at", { ascending: false })
     .limit(500);
+  if (context && !isOwner(context)) {
+    if (context.permissions.resourceSubjects.length === 0) query = query.eq("subject", "__no_access__");
+    else query = query.in("subject", context.permissions.resourceSubjects);
+  }
+  const { data, error } = await query;
   if (error) throw error;
   return (data ?? []).map((row) => ({
     id: row.id,
     status: row.status,
     title: row.title,
     description: row.description,
-    subject: row.subject,
+    subject: row.subject as AdminSubject,
     kind: row.kind,
     folder: row.folder,
     year: row.year,
@@ -474,27 +543,30 @@ export async function getAdminResources() {
     sizeBytes: row.size_bytes,
     localUrl: row.local_url ?? "",
     sourceUrl: row.source_url,
+    createdBy: row.created_by ?? null,
     updatedAt: row.updated_at,
   })) satisfies ResourceAdminItem[];
 }
 
-export async function getAdminResourceItem(id?: string) {
+export async function getAdminResourceItem(id?: string, context?: AdminContext) {
   if (!id) return null;
   const supabase = getSupabaseServiceClient();
   if (!getSupabaseConfig().hasServiceRole || !supabase) return fallbackResources().find((item) => item.id === id) ?? null;
   const { data, error } = await supabase
     .from("resources")
-    .select("id,status,title,description,subject,kind,folder,year,pages,size_bytes,local_url,source_url,updated_at")
+    .select("id,status,title,description,subject,kind,folder,year,pages,size_bytes,local_url,source_url,created_by,updated_at")
     .eq("id", id)
+    .is("deleted_at", null)
     .maybeSingle();
   if (error) throw error;
   if (!data) return null;
+  if (context) assertManageResource(context, data.subject);
   return {
     id: data.id,
     status: data.status,
     title: data.title,
     description: data.description,
-    subject: data.subject,
+    subject: data.subject as AdminSubject,
     kind: data.kind,
     folder: data.folder,
     year: data.year,
@@ -502,14 +574,33 @@ export async function getAdminResourceItem(id?: string) {
     sizeBytes: data.size_bytes,
     localUrl: data.local_url ?? "",
     sourceUrl: data.source_url,
+    createdBy: data.created_by ?? null,
     updatedAt: data.updated_at,
   } satisfies ResourceAdminItem;
 }
 
-export async function saveResourceItem(input: ResourceMutation, context: AdminContext) {
-  assertRole(context, publishableRoles);
+export async function saveResourceItem(input: ResourceMutation, context: AdminContext, fileValue?: FormDataEntryValue | null) {
+  assertManageResource(context, input.subject);
   const supabase = getSupabaseServiceClient();
   if (!supabase) throw new Error("Supabase service role is not configured.");
+  const previous = await supabase.from("resources").select("subject,local_url").eq("id", input.id).is("deleted_at", null).maybeSingle();
+  if (previous.data) assertManageResource(context, previous.data.subject);
+
+  let localUrl = input.localUrl || previous.data?.local_url || null;
+  let sizeBytes = input.sizeBytes;
+  if (isUploadFile(fileValue)) {
+    if (!allowedResourceMimeTypes.has(fileValue.type)) throw new Error("Upload must be a PDF, PNG, JPEG, or WEBP file.");
+    if (fileValue.size > maxResourceUploadBytes) throw new Error("Upload must be 50 MB or smaller.");
+    const objectPath = `${slugSegment(input.subject)}/${slugSegment(input.id)}/${Date.now()}-${safeFilename(fileValue.name)}`;
+    const upload = await supabase.storage.from("resource-files").upload(objectPath, fileValue, {
+      contentType: fileValue.type,
+      upsert: false,
+    });
+    if (upload.error) throw upload.error;
+    localUrl = `/resources/${objectPath}`;
+    sizeBytes = fileValue.size;
+  }
+
   const { data, error } = await supabase
     .from("resources")
     .upsert(
@@ -523,9 +614,11 @@ export async function saveResourceItem(input: ResourceMutation, context: AdminCo
         folder: input.folder,
         year: input.year,
         pages: input.pages,
-        size_bytes: input.sizeBytes,
-        local_url: input.localUrl || null,
+        size_bytes: sizeBytes,
+        local_url: localUrl,
         source_url: input.sourceUrl,
+        created_by: previous.data ? undefined : context.user?.id,
+        updated_by: context.user?.id,
       },
       { onConflict: "id" },
     )
@@ -581,7 +674,7 @@ export async function getAdminPastPaperItem(id?: string) {
 }
 
 export async function savePastPaperItem(input: PastPaperMutation, context: AdminContext) {
-  assertRole(context, publishableRoles);
+  assertOwner(context);
   const supabase = getSupabaseServiceClient();
   if (!supabase) throw new Error("Supabase service role is not configured.");
   const { data, error } = await supabase
@@ -698,7 +791,7 @@ export async function getAdminQuestionItem(id?: string) {
 }
 
 export async function saveQuestionItem(input: QuestionMutation, context: AdminContext) {
-  assertRole(context, writerRoles);
+  assertOwner(context);
   const supabase = getSupabaseServiceClient();
   if (!supabase) throw new Error("Supabase service role is not configured.");
   const { data, error } = await supabase
@@ -745,46 +838,121 @@ export async function saveQuestionItem(input: QuestionMutation, context: AdminCo
   return { id: data.id as string, updatedAt: datasetTimestamp(data) };
 }
 
-export async function getAdminContributors() {
+export async function getAdminModerators() {
   const supabase = getSupabaseServiceClient();
-  if (!getSupabaseConfig().hasServiceRole || !supabase) return [] satisfies ContributorAdminItem[];
+  if (!getSupabaseConfig().hasServiceRole || !supabase) return [] satisfies ModeratorAdminItem[];
   const { data, error } = await supabase
-    .from("admin_roles")
-    .select("user_id,role,require_mfa,updated_at,profiles(email,display_name,avatar_url)")
+    .from("admin_members")
+    .select("id,email,user_id,display_name,status,is_owner,last_login_at,created_at,updated_at,moderator_permissions(permission,subject)")
     .order("updated_at", { ascending: false });
   if (error) throw error;
   return (data ?? []).map((row) => {
-    const profile = Array.isArray(row.profiles) ? row.profiles[0] : row.profiles;
     return {
-      userId: row.user_id,
-      email: profile?.email ?? "",
-      displayName: profile?.display_name || profile?.email || row.user_id,
-      avatarUrl: profile?.avatar_url ?? "",
-      role: row.role,
-      requireMfa: row.require_mfa,
+      id: row.id,
+      email: row.email,
+      displayName: row.display_name || row.email,
+      status: row.status,
+      isOwner: row.is_owner,
+      lastLoginAt: row.last_login_at,
+      permissions: permissionsFromRows(row.moderator_permissions as { permission: "resources_subject" | "blog" | "guide"; subject: string | null }[]),
+      createdAt: row.created_at,
       updatedAt: row.updated_at,
     };
-  }) satisfies ContributorAdminItem[];
+  }) satisfies ModeratorAdminItem[];
 }
 
-export async function saveContributorRole(input: { userId: string; role: AdminRole; requireMfa: boolean }, context: AdminContext) {
-  assertRole(context, ["owner"]);
+export async function saveModeratorAccess(
+  input: { memberId?: string; email: string; displayName: string; status: "active" | "disabled"; isOwner: boolean; canBlog: boolean; canGuide: boolean; resourceSubjects: AdminSubject[] },
+  context: AdminContext,
+) {
+  assertOwner(context);
   const supabase = getSupabaseServiceClient();
   if (!supabase) throw new Error("Supabase service role is not configured.");
-  const { data, error } = await supabase
-    .from("admin_roles")
-    .update({ role: input.role, require_mfa: input.requireMfa })
-    .eq("user_id", input.userId)
-    .select("user_id,role")
-    .single();
+
+  if (input.memberId && context.member?.id === input.memberId && (!input.isOwner || input.status === "disabled")) {
+    throw new Error("You cannot remove or disable your own owner access.");
+  }
+
+  const memberPayload = {
+    email: input.email,
+    display_name: input.displayName,
+    status: input.status,
+    is_owner: input.isOwner,
+    invited_by: context.user?.id,
+  };
+  const mutation = input.memberId
+    ? supabase.from("admin_members").update(memberPayload).eq("id", input.memberId)
+    : supabase.from("admin_members").upsert(memberPayload, { onConflict: "email" });
+  const { data, error } = await mutation.select("id,email,is_owner").single();
   if (error) throw error;
+
+  if (!data.is_owner) {
+    await supabase.from("moderator_permissions").delete().eq("member_id", data.id);
+    const rows = [
+      ...(input.canBlog ? [{ member_id: data.id, permission: "blog", subject: null }] : []),
+      ...(input.canGuide ? [{ member_id: data.id, permission: "guide", subject: null }] : []),
+      ...input.resourceSubjects.map((subject) => ({ member_id: data.id, permission: "resources_subject", subject })),
+    ];
+    if (rows.length > 0) {
+      const insert = await supabase.from("moderator_permissions").insert(rows);
+      if (insert.error) throw insert.error;
+    }
+  } else {
+    await supabase.from("moderator_permissions").delete().eq("member_id", data.id);
+  }
+
   await supabase.from("audit_log").insert({
     actor_id: context.user?.id,
-    action: "admin_role.update",
-    entity_table: "admin_roles",
-    entity_id: input.userId,
-    summary: `Admin role updated to ${data.role}.`,
+    action: "admin_member.upsert",
+    entity_table: "admin_members",
+    entity_id: data.id,
+    summary: `Admin access updated for ${data.email}.`,
   });
   revalidatePath("/admin/contributors");
-  return data.user_id as string;
+  return data.id as string;
+}
+
+export async function deleteContentItem(id: string, context: AdminContext) {
+  if (!canDelete(context)) throw new Error("Only the owner can delete content.");
+  const supabase = getSupabaseServiceClient();
+  if (!supabase) throw new Error("Supabase service role is not configured.");
+  const previous = await supabase.from("content_items").select("id,kind,slug,title").eq("id", id).maybeSingle();
+  if (previous.error) throw previous.error;
+  if (!previous.data) throw new Error("Content item was not found.");
+  await supabase.from("audit_log").insert({
+    actor_id: context.user?.id,
+    action: "content.delete",
+    entity_table: "content_items",
+    entity_id: id,
+    summary: `${previous.data.kind} ${previous.data.slug} deleted.`,
+    metadata: { title: previous.data.title },
+  });
+  const deleted = await supabase.from("content_items").delete().eq("id", id);
+  if (deleted.error) throw deleted.error;
+  revalidateTag("published-content", "max");
+  revalidatePath("/blog");
+  revalidatePath("/guides");
+}
+
+export async function deleteResourceItem(id: string, context: AdminContext) {
+  if (!canDelete(context)) throw new Error("Only the owner can delete resources.");
+  const supabase = getSupabaseServiceClient();
+  if (!supabase) throw new Error("Supabase service role is not configured.");
+  const previous = await supabase.from("resources").select("id,title,local_url").eq("id", id).maybeSingle();
+  if (previous.error) throw previous.error;
+  if (!previous.data) throw new Error("Resource was not found.");
+  await supabase.from("audit_log").insert({
+    actor_id: context.user?.id,
+    action: "resource.delete",
+    entity_table: "resources",
+    entity_id: id,
+    summary: `${previous.data.title} deleted.`,
+  });
+  if (previous.data.local_url?.startsWith("/resources/")) {
+    await supabase.storage.from("resource-files").remove([previous.data.local_url.slice("/resources/".length)]);
+  }
+  const deleted = await supabase.from("resources").delete().eq("id", id);
+  if (deleted.error) throw deleted.error;
+  revalidateTag("published-resources", "max");
+  revalidatePath("/resources");
 }

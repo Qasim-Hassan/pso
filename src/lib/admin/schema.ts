@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { adminRoles, contentKinds, contentStatuses } from "@/lib/admin/types";
+import { adminMemberStatuses, adminSubjects, contentKinds, contentStatuses } from "@/lib/admin/types";
 
 const emptyStringToUndefined = (value: unknown) => (value === "" ? undefined : value);
 const optionalUrl = z.preprocess(emptyStringToUndefined, z.string().url().optional());
@@ -91,14 +91,13 @@ export const contentFormSchema = z
     }
   });
 
-export const loginSchema = z.object({
-  email: z.string().email(),
-  password: z.string().min(8),
+export const otpRequestSchema = z.object({
+  email: z.string().trim().email().transform((value) => value.toLowerCase()),
 });
 
-export const inviteSignupSchema = loginSchema.extend({
-  displayName: z.string().trim().min(2).max(120),
-  inviteCode: z.string().trim().min(8),
+export const otpVerifySchema = z.object({
+  email: z.string().trim().email().transform((value) => value.toLowerCase()),
+  token: z.string().trim().regex(/^\d{6}$/, "Enter the 6-digit code from your email."),
 });
 
 export const transitionSchema = z.object({
@@ -116,7 +115,7 @@ export const resourceFormSchema = z.object({
   status: z.enum(contentStatuses).default("published"),
   title: z.string().trim().min(3).max(240),
   description: z.string().trim().max(800).optional().default(""),
-  subject: z.string().trim().min(2).max(80),
+  subject: z.enum(adminSubjects),
   kind: z.string().trim().min(2).max(80),
   folder: z.string().trim().max(160).optional().default(""),
   year: nullableNumber.optional().default(null),
@@ -175,8 +174,13 @@ export const questionFormSchema = z.object({
   options: value.options.split(/\r?\n/).map((item) => item.trim()).filter(Boolean),
 }));
 
-export const contributorRoleSchema = z.object({
-  userId: z.string().uuid(),
-  role: z.enum(adminRoles),
-  requireMfa: z.coerce.boolean().default(true),
+export const moderatorAccessSchema = z.object({
+  memberId: z.string().uuid().optional(),
+  email: z.string().trim().email().transform((value) => value.toLowerCase()),
+  displayName: z.string().trim().min(2).max(120),
+  status: z.enum(adminMemberStatuses).default("active"),
+  isOwner: z.coerce.boolean().default(false),
+  canBlog: z.coerce.boolean().default(false),
+  canGuide: z.coerce.boolean().default(false),
+  resourceSubjects: z.array(z.enum(adminSubjects)).default([]),
 });

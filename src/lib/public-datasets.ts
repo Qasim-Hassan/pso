@@ -135,6 +135,7 @@ async function queryPublishedResources() {
     .from("resources")
     .select("id,title,description,subject,kind,folder,year,pages,size_bytes,local_url,source_url")
     .eq("status", "published")
+    .is("deleted_at", null)
     .order("subject", { ascending: true })
     .order("title", { ascending: true });
 

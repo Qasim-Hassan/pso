@@ -2,7 +2,7 @@ import Link from "next/link";
 import { AdminShell } from "@/components/admin/admin-shell";
 import { ResourceEditor } from "@/components/admin/dataset-editors";
 import { Icon } from "@/components/icon";
-import { requireAdmin } from "@/lib/admin/auth";
+import { requireResourceAccess } from "@/lib/admin/auth";
 import { getAdminResourceItem, getAdminResources } from "@/lib/admin/content";
 
 export const metadata = {
@@ -10,9 +10,9 @@ export const metadata = {
 };
 
 export default async function AdminResourcesPage({ searchParams }: { searchParams: Promise<{ edit?: string }> }) {
-  const context = await requireAdmin(["owner", "editor", "contributor", "reviewer"]);
+  const context = await requireResourceAccess();
   const { edit } = await searchParams;
-  const [resources, item] = await Promise.all([getAdminResources(), getAdminResourceItem(edit)]);
+  const [resources, item] = await Promise.all([getAdminResources(context), getAdminResourceItem(edit, context)]);
   const external = resources.filter((resource) => !resource.localUrl).length;
 
   return (
@@ -20,7 +20,7 @@ export default async function AdminResourcesPage({ searchParams }: { searchParam
       <div className="space-y-6">
         <DatasetHeader total={resources.length} secondary={`${external} external links`} icon="download" />
         <ResourceTable resources={resources} />
-        <ResourceEditor item={item} />
+        <ResourceEditor item={item} context={context} />
       </div>
     </AdminShell>
   );

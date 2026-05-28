@@ -6,18 +6,18 @@ import type { AdminContext } from "@/lib/admin/types";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { href: "/admin/dashboard", label: "Dashboard", icon: "dashboard" },
-  { href: "/admin/posts", label: "Blog Posts", icon: "file-text" },
-  { href: "/admin/guides", label: "Guides", icon: "book-open" },
-  { href: "/admin/resources", label: "Resources", icon: "download" },
-  { href: "/admin/past-papers", label: "Past Papers", icon: "file-text" },
-  { href: "/admin/question-bank", label: "Question Bank", icon: "clipboard" },
-  { href: "/admin/alumni", label: "Alumni Stories", icon: "users" },
-  { href: "/admin/media", label: "Media Library", icon: "bookmark" },
-  { href: "/admin/contributors", label: "Contributors", icon: "users" },
-  { href: "/admin/analytics", label: "Analytics", icon: "activity" },
-  { href: "/admin/audit", label: "Audit Logs", icon: "shield" },
-  { href: "/admin/settings", label: "Settings", icon: "shield" },
+  { href: "/admin/dashboard", label: "Dashboard", icon: "dashboard", scope: "all" },
+  { href: "/admin/posts", label: "Blog Posts", icon: "file-text", scope: "blog" },
+  { href: "/admin/guides", label: "Guides", icon: "book-open", scope: "guide" },
+  { href: "/admin/resources", label: "Resources", icon: "download", scope: "resources" },
+  { href: "/admin/past-papers", label: "Past Papers", icon: "file-text", scope: "owner" },
+  { href: "/admin/question-bank", label: "Question Bank", icon: "clipboard", scope: "owner" },
+  { href: "/admin/alumni", label: "Alumni Stories", icon: "users", scope: "owner" },
+  { href: "/admin/media", label: "Media Library", icon: "bookmark", scope: "resources" },
+  { href: "/admin/contributors", label: "Access", icon: "users", scope: "owner" },
+  { href: "/admin/analytics", label: "Analytics", icon: "activity", scope: "owner" },
+  { href: "/admin/audit", label: "Audit Logs", icon: "shield", scope: "owner" },
+  { href: "/admin/settings", label: "Settings", icon: "shield", scope: "owner" },
 ];
 
 export function AdminShell({
@@ -34,6 +34,14 @@ export function AdminShell({
   if (!context.isConfigured) {
     return <AdminSetup title={title} />;
   }
+  const visibleNavItems = navItems.filter((item) => {
+    if (item.scope === "all") return true;
+    if (context.member?.isOwner) return true;
+    if (item.scope === "blog") return context.permissions.blogs;
+    if (item.scope === "guide") return context.permissions.guides;
+    if (item.scope === "resources") return context.permissions.resourceSubjects.length > 0;
+    return false;
+  });
 
   return (
     <main className="min-h-screen bg-navy text-white admin-grid">
@@ -41,7 +49,7 @@ export function AdminShell({
         <aside className="border-r border-white/10 bg-[#061117]/95 p-6">
           <Logo />
           <nav className="mt-8 grid gap-1">
-            {navItems.map((item) => (
+            {visibleNavItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -76,7 +84,7 @@ export function AdminShell({
                 </label>
                 <div className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm">
                   <span className="font-black text-white">{context.profile?.displayName ?? context.user?.email}</span>
-                  <span className="ml-2 text-white/55">{context.role}</span>
+                  <span className="ml-2 text-white/55">{context.member?.isOwner ? "owner" : "moderator"}</span>
                 </div>
                 <form action={signOutAction}>
                   <button className="rounded-md bg-emerald px-4 py-2 text-sm font-black text-white" type="submit">
@@ -85,11 +93,6 @@ export function AdminShell({
                 </form>
               </div>
             </div>
-            {context.mfaRequired && !context.mfaVerified ? (
-              <div className="mt-4 rounded-md border border-gold/30 bg-gold/15 px-4 py-3 text-sm font-bold text-gold">
-                MFA is required for privileged admin accounts. Enable and verify MFA in Supabase Auth before production launch.
-              </div>
-            ) : null}
           </header>
           <div className="p-5 sm:p-6">{children}</div>
         </section>
@@ -104,7 +107,6 @@ function AdminSetup({ title }: { title: string }) {
     "NEXT_PUBLIC_SUPABASE_ANON_KEY",
     "SUPABASE_SERVICE_ROLE_KEY",
     "CONTENT_REVALIDATION_SECRET",
-    "ADMIN_INVITE_CODE",
   ];
 
   return (
@@ -124,7 +126,7 @@ function AdminSetup({ title }: { title: string }) {
           ))}
         </div>
         <div className="mt-8 rounded-md border border-gold/25 bg-gold/10 p-4 text-sm leading-6 text-white/75">
-          Run the SQL migration in `supabase/migrations`, create the three storage buckets from the migration, then run `npm run db:seed` after exporting the Supabase service role key.
+          Run the SQL migration in `supabase/migrations`, configure the Supabase email OTP template to include the numeric token, then add the first owner row in `admin_members`.
         </div>
       </section>
     </main>

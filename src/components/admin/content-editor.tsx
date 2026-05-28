@@ -1,12 +1,10 @@
 "use client";
 
 import { useActionState, useEffect, useMemo, useState } from "react";
-import ReactMarkdown from "react-markdown";
-import rehypeSanitize from "rehype-sanitize";
-import remarkGfm from "remark-gfm";
-import { saveContentAction } from "@/app/admin/actions";
+import { deleteContentAction, saveContentAction } from "@/app/admin/actions";
 import { Icon } from "@/components/icon";
-import type { ActionState, ContentEditorItem, ContentKind, ContentStatus } from "@/lib/admin/types";
+import { MarkdownRenderer } from "@/components/sections/markdown-renderer";
+import type { ActionState, AdminContext, ContentEditorItem, ContentKind, ContentStatus } from "@/lib/admin/types";
 import { calculateReadTime, slugify } from "@/lib/admin/schema";
 import { cn } from "@/lib/utils";
 
@@ -61,8 +59,10 @@ function editorDefaults(kind: ContentKind, item?: ContentEditorItem | null): Edi
   };
 }
 
-export function ContentEditor({ kind, item }: { kind: ContentKind; item?: ContentEditorItem | null }) {
+export function ContentEditor({ kind, item, context }: { kind: ContentKind; item?: ContentEditorItem | null; context: AdminContext }) {
   const [state, action, pending] = useActionState(saveContentAction, initialState);
+  const [deleteState, deleteAction, deletePending] = useActionState(deleteContentAction, initialState);
+  const [previewTab, setPreviewTab] = useState<"writing" | "rendered" | "metadata">("writing");
   const storageKey = `pso-admin-editor:${kind}:${item?.id ?? "new"}`;
   const [fields, setFields] = useState<EditorFields>(() => {
     const defaults = editorDefaults(kind, item);
@@ -102,6 +102,9 @@ export function ContentEditor({ kind, item }: { kind: ContentKind; item?: Conten
     }));
   }
 
+  const canHardDelete = Boolean(context.member?.isOwner && item);
+  const availableStatuses = statuses.filter((status) => context.member?.isOwner || status !== "scheduled");
+
   return (
     <form action={action} className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_420px]">
       <input type="hidden" name="id" value={item?.id ?? ""} />
@@ -124,7 +127,7 @@ export function ContentEditor({ kind, item }: { kind: ContentKind; item?: Conten
                 value={fields.status}
                 onChange={(event) => updateField("status", event.target.value as ContentStatus)}
               >
-                {statuses.map((status) => (
+                {availableStatuses.map((status) => (
                   <option key={status}>{status}</option>
                 ))}
               </select>
@@ -155,14 +158,33 @@ export function ContentEditor({ kind, item }: { kind: ContentKind; item?: Conten
           </label>
           <div className="min-w-0 overflow-hidden rounded-md border border-white/10 bg-white p-4 text-charcoal">
             <div className="mb-3 flex items-center justify-between gap-3 border-b border-navy/10 pb-3">
-              <h2 className="text-sm font-black uppercase text-charcoal">Live preview</h2>
-              <span className="rounded-md bg-mint px-2 py-1 text-xs font-black text-emerald">Sanitized</span>
+              <h2 className="text-sm font-black uppercase text-charcoal">Preview</h2>
+              <div className="flex gap-1">
+                {(["writing", "rendered", "metadata"] as const).map((tab) => (
+                  <button key={tab} type="button" onClick={() => setPreviewTab(tab)} className={cn("rounded-md px-2 py-1 text-xs font-black capitalize", previewTab === tab ? "bg-emerald text-white" : "bg-mint text-emerald")}>
+                    {tab}
+                  </button>
+                ))}
+              </div>
             </div>
-            <div className="prose prose-sm max-w-none overflow-hidden break-words">
-              <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeSanitize]}>
-                {fields.body || "Preview appears as you write."}
-              </ReactMarkdown>
-            </div>
+            {previewTab === "writing" ? <pre className="whitespace-pre-wrap break-words text-sm leading-7 text-charcoal/75">{fields.body || "Preview appears as you write."}</pre> : null}
+            {previewTab === "rendered" ? <MarkdownRenderer content={fields.body || "Preview appears as you write."} /> : null}
+            {previewTab === "metadata" ? (
+              <dl className="grid gap-3 text-sm">
+                {[
+                  ["Title", fields.title || "Untitled"],
+                  ["Slug", fields.slug || "not-set"],
+                  ["Summary", fields.excerpt || "No summary"],
+                  ["Read time", fields.readTime || calculateReadTime(fields.body)],
+                  ["Tags", fields.tags || "No tags"],
+                ].map(([label, value]) => (
+                  <div key={label} className="rounded-md bg-mint p-3">
+                    <dt className="text-xs font-black uppercase text-emerald">{label}</dt>
+                    <dd className="mt-1 break-words text-charcoal/75">{value}</dd>
+                  </div>
+                ))}
+              </dl>
+            ) : null}
           </div>
         </div>
       </section>
@@ -187,6 +209,17 @@ export function ContentEditor({ kind, item }: { kind: ContentKind; item?: Conten
           </button>
           {state.message ? <p className={state.ok ? "mt-4 text-sm font-bold text-emerald" : "mt-4 text-sm font-bold text-red-200"}>{state.message}</p> : null}
         </div>
+
+        {canHardDelete ? (
+          <div className="rounded-md border border-red-400/30 bg-red-950/20 p-5">
+            <h2 className="text-sm font-black uppercase text-red-100">Owner delete</h2>
+            <p className="mt-2 text-sm leading-6 text-red-100/70">Hard delete removes the content row after writing an audit entry.</p>
+            <button type="submit" formAction={deleteAction} disabled={deletePending} className="mt-4 rounded-md bg-red-600 px-4 py-3 text-sm font-black text-white disabled:opacity-60">
+              {deletePending ? "Deleting..." : "Delete content"}
+            </button>
+            {deleteState.message ? <p className={deleteState.ok ? "mt-3 text-sm font-bold text-emerald" : "mt-3 text-sm font-bold text-red-200"}>{deleteState.message}</p> : null}
+          </div>
+        ) : null}
 
         <div className="rounded-md border border-white/10 bg-white/5 p-5">
           <h2 className="text-sm font-black uppercase text-white">Embeds and metadata</h2>

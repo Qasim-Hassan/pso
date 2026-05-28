@@ -11,7 +11,7 @@ export const metadata = {
 
 export default async function AdminLoginPage() {
   const context = await getAdminContext();
-  if (context.isConfigured && context.user && context.role) redirect("/admin/dashboard");
+  if (context.isConfigured && context.user && context.member) redirect("/admin/dashboard");
 
   if (!context.isConfigured) {
     return (
@@ -28,7 +28,7 @@ export default async function AdminLoginPage() {
           <Logo />
           <h1 className="mt-16 font-display text-5xl font-bold leading-none text-white">Admin access</h1>
           <p className="mt-4 max-w-md text-sm leading-7 text-white/75">
-            Moderators and contributors can publish posts, update guides, review extracted questions, manage papers, and keep the resource library safe.
+            Whitelisted moderators sign in with a one-time email code, then manage only the blogs, guides, and subject resources they are allowed to edit.
           </p>
           <div className="mt-8 grid gap-3 sm:grid-cols-3">
             {["Server auth", "RLS", "Audit log"].map((item, index) => (

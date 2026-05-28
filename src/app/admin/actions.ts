@@ -3,18 +3,13 @@
 import "server-only";
 
 import { redirect } from "next/navigation";
-import { loginSchema, contentFormSchema, contributorRoleSchema, inviteSignupSchema, pastPaperFormSchema, questionFormSchema, resourceFormSchema, transitionSchema } from "@/lib/admin/schema";
+import { contentFormSchema, moderatorAccessSchema, otpRequestSchema, otpVerifySchema, pastPaperFormSchema, questionFormSchema, resourceFormSchema, transitionSchema } from "@/lib/admin/schema";
 import type { ActionState } from "@/lib/admin/types";
-import { getAdminContext, requireAdmin } from "@/lib/admin/auth";
-import { saveContentItem, saveContributorRole, savePastPaperItem, saveQuestionItem, saveResourceItem, transitionContentItem } from "@/lib/admin/content";
+import { getAdminContext, requireAdminAccess, requireDatasetOwner, requireOwner } from "@/lib/admin/auth";
+import { deleteContentItem, deleteResourceItem, saveContentItem, saveModeratorAccess, savePastPaperItem, saveQuestionItem, saveResourceItem, transitionContentItem } from "@/lib/admin/content";
 import { createSupabaseServerClient, getSupabaseServiceClient } from "@/lib/supabase/server";
 
 const initialError = "Something went wrong. Please try again.";
-
-function getAdminRedirectUrl() {
-  const appUrl = (process.env.NEXT_PUBLIC_APP_URL || (process.env.NODE_ENV === "production" ? "https://pakistanolympiads.com" : "")).replace(/\/+$/, "");
-  return appUrl ? `${appUrl}/admin` : undefined;
-}
 
 function zodError(error: { flatten: () => { fieldErrors: Record<string, string[] | undefined> } }): ActionState {
   return {
@@ -24,9 +19,20 @@ function zodError(error: { flatten: () => { fieldErrors: Record<string, string[]
   };
 }
 
-export async function signInAction(_: ActionState, formData: FormData): Promise<ActionState> {
-  const parsed = loginSchema.safeParse(Object.fromEntries(formData));
+const genericOtpMessage = "If this email has access, a code was sent.";
+
+export async function requestAdminOtpAction(_: ActionState, formData: FormData): Promise<ActionState> {
+  const parsed = otpRequestSchema.safeParse(Object.fromEntries(formData));
   if (!parsed.success) return zodError(parsed.error);
+
+  const service = getSupabaseServiceClient();
+  const { data: member } = service
+    ? await service.from("admin_members").select("email,status").eq("email", parsed.data.email).eq("status", "active").maybeSingle()
+    : { data: null };
+
+  if (!member) {
+    return { ok: true, message: genericOtpMessage, email: parsed.data.email };
+  }
 
   const supabase = await createSupabaseServerClient();
   if (!supabase) {
@@ -36,44 +42,10 @@ export async function signInAction(_: ActionState, formData: FormData): Promise<
     };
   }
 
-  const { error } = await supabase.auth.signInWithPassword(parsed.data);
-  if (error) {
-    return {
-      ok: false,
-      message: error.message,
-    };
-  }
-
-  redirect("/admin/dashboard");
-}
-
-export async function inviteSignupAction(_: ActionState, formData: FormData): Promise<ActionState> {
-  const parsed = inviteSignupSchema.safeParse(Object.fromEntries(formData));
-  if (!parsed.success) return zodError(parsed.error);
-
-  if (!process.env.ADMIN_INVITE_CODE || parsed.data.inviteCode !== process.env.ADMIN_INVITE_CODE) {
-    return {
-      ok: false,
-      message: "Invite code is invalid.",
-    };
-  }
-
-  const supabase = await createSupabaseServerClient();
-  if (!supabase) {
-    return {
-      ok: false,
-      message: "Supabase is not configured yet.",
-    };
-  }
-
-  const { data, error } = await supabase.auth.signUp({
+  const { error } = await supabase.auth.signInWithOtp({
     email: parsed.data.email,
-    password: parsed.data.password,
     options: {
-      emailRedirectTo: getAdminRedirectUrl(),
-      data: {
-        display_name: parsed.data.displayName,
-      },
+      shouldCreateUser: true,
     },
   });
 
@@ -84,24 +56,54 @@ export async function inviteSignupAction(_: ActionState, formData: FormData): Pr
     };
   }
 
-  const service = getSupabaseServiceClient();
-  if (service && data.user) {
-    await service.from("profiles").upsert({
-      id: data.user.id,
-      email: parsed.data.email,
-      display_name: parsed.data.displayName,
-    });
-    await service.from("admin_roles").upsert({
-      user_id: data.user.id,
-      role: "contributor",
-      require_mfa: process.env.ADMIN_MFA_REQUIRED !== "false",
-    });
+  return { ok: true, message: genericOtpMessage, email: parsed.data.email };
+}
+
+export async function verifyAdminOtpAction(_: ActionState, formData: FormData): Promise<ActionState> {
+  const parsed = otpVerifySchema.safeParse(Object.fromEntries(formData));
+  if (!parsed.success) return zodError(parsed.error);
+
+  const supabase = await createSupabaseServerClient();
+  if (!supabase) {
+    return {
+      ok: false,
+      message: "Supabase is not configured yet. Add the Supabase environment variables first.",
+    };
   }
 
-  return {
-    ok: true,
-    message: data.user?.confirmed_at ? "Account created. You can sign in now." : "Account created. Confirm your email if Supabase requires it, then sign in.",
-  };
+  const { data, error } = await supabase.auth.verifyOtp({
+    email: parsed.data.email,
+    token: parsed.data.token,
+    type: "email",
+  });
+
+  if (error) {
+    return {
+      ok: false,
+      message: error.message,
+    };
+  }
+
+  const service = getSupabaseServiceClient();
+  if (!service || !data.user?.email) {
+    await supabase.auth.signOut();
+    return { ok: false, message: "Admin access could not be verified." };
+  }
+
+  const { data: member } = await service.from("admin_members").select("id,email,display_name,status,user_id").eq("email", data.user.email.toLowerCase()).eq("status", "active").maybeSingle();
+  if (!member) {
+    await supabase.auth.signOut();
+    return { ok: false, message: "Admin access could not be verified." };
+  }
+
+  await service.from("admin_members").update({ user_id: data.user.id, last_login_at: new Date().toISOString() }).eq("id", member.id);
+  await service.from("profiles").upsert({
+      id: data.user.id,
+    email: data.user.email,
+    display_name: member.display_name || data.user.email,
+    });
+
+  redirect("/admin/dashboard");
 }
 
 export async function signOutAction() {
@@ -111,7 +113,7 @@ export async function signOutAction() {
 }
 
 export async function saveContentAction(_: ActionState, formData: FormData): Promise<ActionState> {
-  const context = await requireAdmin(["owner", "editor", "contributor"]);
+  const context = await requireAdminAccess();
   const parsed = contentFormSchema.safeParse({
     id: formData.get("id") || undefined,
     kind: formData.get("kind"),
@@ -176,11 +178,11 @@ export async function transitionContentFormAction(formData: FormData) {
 }
 
 export async function saveResourceAction(_: ActionState, formData: FormData): Promise<ActionState> {
-  const context = await requireAdmin(["owner", "editor"]);
+  const context = await requireAdminAccess();
   const parsed = resourceFormSchema.safeParse(Object.fromEntries(formData));
   if (!parsed.success) return zodError(parsed.error);
   try {
-    const result = await saveResourceItem(parsed.data, context);
+    const result = await saveResourceItem(parsed.data, context, formData.get("resourceFile"));
     return { ok: true, message: `Saved resource ${result.id}.` };
   } catch (error) {
     return { ok: false, message: error instanceof Error ? error.message : initialError };
@@ -188,7 +190,7 @@ export async function saveResourceAction(_: ActionState, formData: FormData): Pr
 }
 
 export async function savePastPaperAction(_: ActionState, formData: FormData): Promise<ActionState> {
-  const context = await requireAdmin(["owner", "editor"]);
+  const context = await requireDatasetOwner();
   const parsed = pastPaperFormSchema.safeParse({
     ...Object.fromEntries(formData),
     scanned: formData.get("scanned") === "on",
@@ -203,7 +205,7 @@ export async function savePastPaperAction(_: ActionState, formData: FormData): P
 }
 
 export async function saveQuestionAction(_: ActionState, formData: FormData): Promise<ActionState> {
-  const context = await requireAdmin(["owner", "editor", "contributor"]);
+  const context = await requireDatasetOwner();
   const parsed = questionFormSchema.safeParse(Object.fromEntries(formData));
   if (!parsed.success) return zodError(parsed.error);
   try {
@@ -214,16 +216,43 @@ export async function saveQuestionAction(_: ActionState, formData: FormData): Pr
   }
 }
 
-export async function saveContributorRoleAction(_: ActionState, formData: FormData): Promise<ActionState> {
-  const context = await requireAdmin(["owner"]);
-  const parsed = contributorRoleSchema.safeParse({
+export async function saveModeratorAccessAction(_: ActionState, formData: FormData): Promise<ActionState> {
+  const context = await requireOwner();
+  const parsed = moderatorAccessSchema.safeParse({
     ...Object.fromEntries(formData),
-    requireMfa: formData.get("requireMfa") === "on",
+    isOwner: formData.get("isOwner") === "on",
+    canBlog: formData.get("canBlog") === "on",
+    canGuide: formData.get("canGuide") === "on",
+    resourceSubjects: formData.getAll("resourceSubjects"),
   });
   if (!parsed.success) return zodError(parsed.error);
   try {
-    const id = await saveContributorRole(parsed.data, context);
-    return { ok: true, message: `Updated contributor ${id}.` };
+    const id = await saveModeratorAccess(parsed.data, context);
+    return { ok: true, message: `Updated access for ${id}.` };
+  } catch (error) {
+    return { ok: false, message: error instanceof Error ? error.message : initialError };
+  }
+}
+
+export async function deleteContentAction(_: ActionState, formData: FormData): Promise<ActionState> {
+  const context = await requireOwner();
+  const id = String(formData.get("id") ?? "");
+  if (!id) return { ok: false, message: "Content ID is required." };
+  try {
+    await deleteContentItem(id, context);
+    return { ok: true, message: "Content deleted." };
+  } catch (error) {
+    return { ok: false, message: error instanceof Error ? error.message : initialError };
+  }
+}
+
+export async function deleteResourceAction(_: ActionState, formData: FormData): Promise<ActionState> {
+  const context = await requireOwner();
+  const id = String(formData.get("id") ?? "");
+  if (!id) return { ok: false, message: "Resource ID is required." };
+  try {
+    await deleteResourceItem(id, context);
+    return { ok: true, message: "Resource deleted." };
   } catch (error) {
     return { ok: false, message: error instanceof Error ? error.message : initialError };
   }

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { AdminShell } from "@/components/admin/admin-shell";
 import { QuestionEditor } from "@/components/admin/dataset-editors";
-import { requireAdmin } from "@/lib/admin/auth";
+import { requireDatasetOwner } from "@/lib/admin/auth";
 import { getAdminQuestionItem, getAdminQuestions } from "@/lib/admin/content";
 
 export const metadata = {
@@ -9,7 +9,7 @@ export const metadata = {
 };
 
 export default async function AdminQuestionBankPage({ searchParams }: { searchParams: Promise<{ edit?: string }> }) {
-  const context = await requireAdmin(["owner", "editor", "contributor", "reviewer"]);
+  const context = await requireDatasetOwner();
   const { edit } = await searchParams;
   const [questions, item] = await Promise.all([getAdminQuestions(), getAdminQuestionItem(edit)]);
   const needsSolutions = questions.filter((question) => !question.solution).length;

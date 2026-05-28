@@ -1,5 +1,5 @@
 import { AdminShell } from "@/components/admin/admin-shell";
-import { requireAdmin } from "@/lib/admin/auth";
+import { requireOwner } from "@/lib/admin/auth";
 import { getAdminDashboardData } from "@/lib/admin/content";
 
 export const metadata = {
@@ -7,8 +7,8 @@ export const metadata = {
 };
 
 export default async function AdminAuditPage() {
-  const context = await requireAdmin(["owner"]);
-  const data = await getAdminDashboardData();
+  const context = await requireOwner();
+  const data = await getAdminDashboardData(context);
 
   return (
     <AdminShell context={context} title="Audit Logs" description="Owner-only trail of admin-sensitive content mutations.">
