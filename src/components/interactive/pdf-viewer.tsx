@@ -9,7 +9,7 @@ type PdfViewerProps = {
 
 function buildPdfEmbedUrl(url: string) {
   const separator = url.includes("?") ? "&" : "?";
-  return `${url}${separator}embed=1#toolbar=0&navpanes=0&view=FitH`;
+  return `${url}${separator}embed=1`;
 }
 
 export function PdfViewer({ title, url, heightClassName = "h-[560px] sm:h-[680px]", unavailableMessage = "PDF is not available yet." }: PdfViewerProps) {
