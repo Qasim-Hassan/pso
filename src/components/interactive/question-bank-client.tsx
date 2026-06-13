@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Icon } from "@/components/icon";
 import { PdfViewer } from "@/components/interactive/pdf-viewer";
+import { QuestionImage } from "@/components/interactive/question-image";
 import { Badge } from "@/components/sections/common";
 import type { Question } from "@/lib/content-data";
 import { questionPdfMetadata } from "@/lib/question-pdf-paths";
@@ -435,11 +436,19 @@ export function QuestionBankClient({ questions }: { questions: Question[] }) {
             </div>
 
             <div className="py-6">
-              <PdfViewer
-                title={`Question ${active.pdf.displayNumber} PDF`}
-                url={activePdfUrl}
-                unavailableMessage="Extracted PDF is not available for this question yet. The 2025 camera-scan papers are excluded from the extraction set."
-              />
+              {active.pdf.type === "MCQ" ? (
+                <QuestionImage
+                  title={`Question ${active.pdf.displayNumber}`}
+                  url={activePdfUrl}
+                  unavailableMessage="Extracted question image is not available yet. The 2025 camera-scan papers are excluded from the extraction set."
+                />
+              ) : (
+                <PdfViewer
+                  title={`Question ${active.pdf.displayNumber} PDF`}
+                  url={activePdfUrl}
+                  unavailableMessage="Extracted PDF is not available for this question yet. The 2025 camera-scan papers are excluded from the extraction set."
+                />
+              )}
             </div>
 
             {active.pdf.type === "MCQ" ? (
