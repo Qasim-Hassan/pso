@@ -38,6 +38,8 @@ For passwordless admin login, the email template used for OTP login must include
 
 The admin UI accepts 6 to 8 digit numeric codes. If the email only contains a confirmation URL, update the Supabase email template so it sends the token as visible text too.
 
+Before requesting an OTP, the app creates active whitelisted members in Supabase Auth as email-confirmed users. It then calls `signInWithOtp` with `shouldCreateUser: false`, so first login does not use the Confirm signup template or require a confirmation-link redirect.
+
 Set Site URL and redirect URLs for local and production:
 
 ```txt

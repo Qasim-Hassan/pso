@@ -6,6 +6,7 @@ import { redirect } from "next/navigation";
 import { contentFormSchema, moderatorAccessSchema, otpRequestSchema, otpVerifySchema, resourceFormSchema, transitionSchema } from "@/lib/admin/schema";
 import type { ActionState } from "@/lib/admin/types";
 import { getAdminContext, requireAdminAccess, requireOwner } from "@/lib/admin/auth";
+import { ensureConfirmedAdminAuthUser } from "@/lib/admin/auth-users";
 import { deleteContentItem, deleteResourceItem, saveContentItem, saveModeratorAccess, saveResourceItem, transitionContentItem } from "@/lib/admin/content";
 import { createSupabaseServerClient, getSupabaseServiceClient } from "@/lib/supabase/server";
 
@@ -29,11 +30,18 @@ export async function requestAdminOtpAction(_: ActionState, formData: FormData):
 
   const service = getSupabaseServiceClient();
   const { data: member } = service
-    ? await service.from("admin_members").select("email,status").eq("email", parsed.data.email).eq("status", "active").maybeSingle()
+    ? await service.from("admin_members").select("id,email,status,user_id").eq("email", parsed.data.email).eq("status", "active").maybeSingle()
     : { data: null };
 
   if (!member) {
     return { ok: true, message: genericOtpMessage, email: parsed.data.email };
+  }
+
+  try {
+    await ensureConfirmedAdminAuthUser(service!, member);
+  } catch (error) {
+    console.error("Failed to prepare whitelisted admin Auth user", error);
+    return { ok: false, message: "The login code could not be sent. Please try again." };
   }
 
   const supabase = await createSupabaseServerClient();
@@ -47,7 +55,7 @@ export async function requestAdminOtpAction(_: ActionState, formData: FormData):
   const { error } = await supabase.auth.signInWithOtp({
     email: parsed.data.email,
     options: {
-      shouldCreateUser: true,
+      shouldCreateUser: false,
     },
   });
 
