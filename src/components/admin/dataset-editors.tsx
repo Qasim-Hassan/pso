@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState } from "react";
+import { type FormEvent, useActionState, useRef, useState } from "react";
 import { deleteResourceAction, saveResourceAction } from "@/app/admin/actions";
 import { adminSubjects, type ActionState, type AdminContext, type ContentStatus, type ResourceAdminItem } from "@/lib/admin/types";
 
@@ -68,9 +68,61 @@ function SavePanel({ state, pending, label }: { state: ActionState; pending: boo
 export function ResourceEditor({ item, context }: { item?: ResourceAdminItem | null; context: AdminContext }) {
   const [state, action, pending] = useActionState(saveResourceAction, initialState);
   const [deleteState, deleteAction, deletePending] = useActionState(deleteResourceAction, initialState);
+  const [uploading, setUploading] = useState(false);
+  const [uploadMessage, setUploadMessage] = useState("");
+  const [uploadedFileKey, setUploadedFileKey] = useState("");
+  const formRef = useRef<HTMLFormElement>(null);
+  const fileRef = useRef<HTMLInputElement>(null);
+  const idRef = useRef<HTMLInputElement>(null);
+  const sizeBytesRef = useRef<HTMLInputElement>(null);
+  const localUrlRef = useRef<HTMLInputElement>(null);
   const subjects = context.member?.isOwner ? adminSubjects : context.permissions.resourceSubjects;
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    const file = fileRef.current?.files?.[0];
+    if (!file) return;
+
+    const formData = new FormData(event.currentTarget);
+    const subject = String(formData.get("subject") ?? "");
+    const title = String(formData.get("title") ?? "");
+    const id = String(formData.get("id") ?? "");
+    const fileKey = `${id}:${subject}:${title}:${file.name}:${file.size}:${file.lastModified}`;
+    if (fileKey === uploadedFileKey) return;
+
+    event.preventDefault();
+    setUploading(true);
+    setUploadMessage("Uploading file...");
+
+    const uploadData = new FormData();
+    uploadData.set("id", id);
+    uploadData.set("subject", subject);
+    uploadData.set("title", title);
+    uploadData.set("resourceFile", file);
+
+    try {
+      const response = await fetch("/api/admin/resources/upload", {
+        method: "POST",
+        body: uploadData,
+      });
+      const result = (await response.json().catch(() => null)) as { ok?: boolean; message?: string; resourceId?: string; localUrl?: string; sizeBytes?: number } | null;
+      if (!response.ok || !result?.ok || !result.resourceId || !result.localUrl) {
+        throw new Error(result?.message || "Upload failed. Please try again.");
+      }
+      if (idRef.current) idRef.current.value = result.resourceId;
+      if (localUrlRef.current) localUrlRef.current.value = result.localUrl;
+      if (sizeBytesRef.current) sizeBytesRef.current.value = String(result.sizeBytes ?? file.size);
+      setUploadedFileKey(`${result.resourceId}:${subject}:${title}:${file.name}:${file.size}:${file.lastModified}`);
+      setUploadMessage("File uploaded. Saving resource...");
+      requestAnimationFrame(() => formRef.current?.requestSubmit());
+    } catch (error) {
+      setUploadMessage(error instanceof Error ? error.message : "Upload failed. Please try again.");
+    } finally {
+      setUploading(false);
+    }
+  }
+
   return (
-    <form action={action} className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_320px]">
+    <form ref={formRef} action={action} onSubmit={handleSubmit} className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_320px]">
       <section className="rounded-md border border-white/10 bg-white/5 p-5">
         <div className="mb-5">
           <h2 className="text-xl font-black text-white">{item ? "Edit resource" : "Upload resource"}</h2>
@@ -79,7 +131,7 @@ export function ResourceEditor({ item, context }: { item?: ResourceAdminItem | n
           </p>
         </div>
         <div className="grid gap-4 lg:grid-cols-2">
-          <input type="hidden" name="id" value={item?.id ?? ""} />
+          <input ref={idRef} type="hidden" name="id" defaultValue={item?.id ?? ""} />
           <StatusField value={item?.status} />
           <TextField label="Title" name="title" value={item?.title} />
           <label className="block">
@@ -101,8 +153,8 @@ export function ResourceEditor({ item, context }: { item?: ResourceAdminItem | n
           <input type="hidden" name="folder" value="" />
           <input type="hidden" name="year" value="" />
           <input type="hidden" name="pages" value="0" />
-          <input type="hidden" name="sizeBytes" value={item?.sizeBytes ?? 0} />
-          <input type="hidden" name="localUrl" value={item?.localUrl ?? ""} />
+          <input ref={sizeBytesRef} type="hidden" name="sizeBytes" defaultValue={item?.sizeBytes ?? 0} />
+          <input ref={localUrlRef} type="hidden" name="localUrl" defaultValue={item?.localUrl ?? ""} />
           <input type="hidden" name="sourceUrl" value="" />
         </div>
         <div className="mt-4">
@@ -111,12 +163,13 @@ export function ResourceEditor({ item, context }: { item?: ResourceAdminItem | n
         <label className="mt-4 block">
           <span className="text-xs font-bold uppercase text-white/60">Upload PDF or image</span>
           <input
-            name="resourceFile"
+            ref={fileRef}
             type="file"
             accept="application/pdf,image/png,image/jpeg,image/webp"
             className="mt-2 w-full rounded-md border border-white/10 bg-[#061117] px-3 py-3 text-sm text-white file:mr-3 file:rounded-md file:border-0 file:bg-emerald file:px-3 file:py-2 file:text-sm file:font-black file:text-white"
           />
         </label>
+        {uploadMessage ? <p className={uploadMessage.includes("failed") || uploadMessage.includes("allowed") ? "mt-3 text-sm font-bold text-red-200" : "mt-3 text-sm font-bold text-emerald"}>{uploadMessage}</p> : null}
         {item?.localUrl ? (
           <a href={item.localUrl} target="_blank" className="mt-4 inline-flex font-black text-emerald">
             Open attached file
@@ -124,7 +177,7 @@ export function ResourceEditor({ item, context }: { item?: ResourceAdminItem | n
         ) : null}
       </section>
       <div className="space-y-4">
-        <SavePanel state={state} pending={pending} label="Save resource" />
+        <SavePanel state={state} pending={pending || uploading} label={uploading ? "Uploading..." : "Save resource"} />
         {context.member?.isOwner && item ? (
           <div className="rounded-md border border-red-400/30 bg-red-950/20 p-5">
             <button type="submit" formAction={deleteAction} disabled={deletePending} className="w-full rounded-md bg-red-600 px-4 py-3 text-sm font-black text-white disabled:opacity-60">

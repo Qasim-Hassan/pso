@@ -72,6 +72,13 @@ type ResourceMutation = Omit<ResourceAdminItem, "id" | "updatedAt" | "sizeBytes"
 
 const maxResourceUploadBytes = 50 * 1024 * 1024;
 const allowedResourceMimeTypes = new Set(["application/pdf", "image/png", "image/jpeg", "image/webp"]);
+const resourceExtensionMimeTypes: Record<string, string> = {
+  pdf: "application/pdf",
+  png: "image/png",
+  jpg: "image/jpeg",
+  jpeg: "image/jpeg",
+  webp: "image/webp",
+};
 
 function toListItem(row: ContentRow): ContentListItem {
   return {
@@ -146,6 +153,12 @@ function safeFilename(value: string) {
 
 function isUploadFile(value: unknown): value is File {
   return typeof File !== "undefined" && value instanceof File && value.size > 0;
+}
+
+function resourceUploadContentType(file: File) {
+  if (allowedResourceMimeTypes.has(file.type)) return file.type;
+  const extension = file.name.split(".").pop()?.toLowerCase() ?? "";
+  return resourceExtensionMimeTypes[extension] ?? null;
 }
 
 export async function getAdminDashboardData(context?: AdminContext): Promise<AdminDashboardData> {
@@ -436,6 +449,26 @@ export async function getAdminResourceItem(id?: string, context?: AdminContext) 
   } satisfies ResourceAdminItem;
 }
 
+export async function uploadResourceFileToStorage(subject: string, resourceId: string, fileValue: FormDataEntryValue | null | undefined) {
+  const supabase = getSupabaseServiceClient();
+  if (!supabase) throw new Error("Supabase service role is not configured.");
+  if (!isUploadFile(fileValue)) throw new Error("Choose a PDF, PNG, JPEG, or WEBP file to upload.");
+  const contentType = resourceUploadContentType(fileValue);
+  if (!contentType) throw new Error("Upload must be a PDF, PNG, JPEG, or WEBP file.");
+  if (fileValue.size > maxResourceUploadBytes) throw new Error("Upload must be 50 MB or smaller.");
+
+  const objectPath = `${slugSegment(subject)}/${resourceId}/${Date.now()}-${safeFilename(fileValue.name)}`;
+  const upload = await supabase.storage.from("resource-files").upload(objectPath, fileValue, {
+    contentType,
+    upsert: false,
+  });
+  if (upload.error) throw upload.error;
+  return {
+    localUrl: `/resources/${objectPath}`,
+    sizeBytes: fileValue.size,
+  };
+}
+
 export async function saveResourceItem(input: ResourceMutation, context: AdminContext, fileValue?: FormDataEntryValue | null) {
   assertManageResource(context, input.subject);
   const supabase = getSupabaseServiceClient();
@@ -448,16 +481,9 @@ export async function saveResourceItem(input: ResourceMutation, context: AdminCo
   let localUrl = input.localUrl || previous.data?.local_url || null;
   let sizeBytes = input.sizeBytes;
   if (isUploadFile(fileValue)) {
-    if (!allowedResourceMimeTypes.has(fileValue.type)) throw new Error("Upload must be a PDF, PNG, JPEG, or WEBP file.");
-    if (fileValue.size > maxResourceUploadBytes) throw new Error("Upload must be 50 MB or smaller.");
-    const objectPath = `${slugSegment(input.subject)}/${resourceId}/${Date.now()}-${safeFilename(fileValue.name)}`;
-    const upload = await supabase.storage.from("resource-files").upload(objectPath, fileValue, {
-      contentType: fileValue.type,
-      upsert: false,
-    });
-    if (upload.error) throw upload.error;
-    localUrl = `/resources/${objectPath}`;
-    sizeBytes = fileValue.size;
+    const upload = await uploadResourceFileToStorage(input.subject, resourceId, fileValue);
+    localUrl = upload.localUrl;
+    sizeBytes = upload.sizeBytes;
   }
 
   const { data, error } = await supabase
