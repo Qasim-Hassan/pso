@@ -27,7 +27,7 @@ export function TrackCard({
       className="group card-surface block w-full min-w-0 overflow-hidden p-5"
     >
       <div className="flex flex-wrap items-start justify-between gap-3">
-        <span className={cn("flex h-14 w-14 items-center justify-center rounded-md bg-gradient-to-br", track.gradient, track.color)}>
+        <span className={cn("flex h-14 w-14 items-center justify-center  bg-gradient-to-br", track.gradient, track.color)}>
           <Icon name={track.icon} className="h-8 w-8" />
         </span>
         <span className="rounded-full bg-mint px-3 py-1 text-xs font-black text-emerald">{track.exam}</span>
@@ -88,7 +88,7 @@ export function ResourceCard({
 }) {
   const dark = resource.tone === "dark";
   return (
-    <Link href={resource.href} className={cn("group w-full min-w-0 overflow-hidden rounded-md border border-navy/10 p-5", resourceTone[resource.tone])}>
+    <Link href={resource.href} className={cn("group w-full min-w-0 overflow-hidden  border border-navy/10 p-5", resourceTone[resource.tone])}>
       <Badge className={cn("mb-5", dark && "border-gold/20 bg-gold/20 text-gold")}>{resource.category}</Badge>
       <Icon name={resource.icon} className={cn("h-8 w-8", dark ? "text-gold" : "text-emerald")} />
       <h3 className={cn("mt-4 break-words text-lg font-black", dark ? "text-white" : "text-charcoal")}>{resource.title}</h3>
@@ -116,7 +116,7 @@ function GuideVisual({ guide }: { guide: { title: string; category: string } }) 
   const visual = guideVisuals[guide.category] ?? guideVisuals.General;
 
   return (
-    <div className={cn("soft-grid relative min-h-44 overflow-hidden rounded-t-md bg-gradient-to-br p-5", visual.accent)}>
+    <div className={cn("soft-grid relative min-h-44 overflow-hidden bg-gradient-to-br p-5", visual.accent)}>
       <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full border border-emerald/15" />
       <div className="absolute bottom-5 right-6 flex h-20 w-20 items-center justify-center rounded-full bg-white/85 text-emerald shadow-lg">
         <Icon name={visual.icon} className="h-10 w-10" />
@@ -138,7 +138,7 @@ export function GuidePreviewCard({
   guide: { slug: string; title: string; category: string; description: string; readTime: string; level: string };
 }) {
   return (
-    <Link href={`/guides/${guide.slug}`} className="card-surface group w-full min-w-0 overflow-hidden rounded-md">
+    <Link href={`/guides/${guide.slug}`} className="card-surface group w-full min-w-0 overflow-hidden">
       <GuideVisual guide={guide} />
       <div className="p-4">
         <h3 className="break-words text-lg font-black text-charcoal">{guide.title}</h3>
@@ -159,7 +159,7 @@ export function BlogCard({
   post: { slug: string; title: string; category: string; excerpt: string; date: string; author: string; read: string };
 }) {
   return (
-    <Link href={`/blog/${post.slug}`} className="card-surface group grid w-full min-w-0 overflow-hidden rounded-md sm:grid-cols-[150px_minmax(0,1fr)]">
+    <Link href={`/blog/${post.slug}`} className="card-surface group grid w-full min-w-0 overflow-hidden sm:grid-cols-[150px_minmax(0,1fr)]">
       <EmptyVisual title={post.title} icon={subjectIcon(post.category)} />
       <div className="min-w-0 p-4">
         <Badge>{post.category}</Badge>
@@ -181,7 +181,7 @@ export function AlumniCard({
   story: { name: string; achievement: string; subject: string; location: string; quote: string; role: string };
 }) {
   return (
-    <article className="card-surface w-full min-w-0 overflow-hidden rounded-md p-5">
+    <article className="card-surface w-full min-w-0 overflow-hidden p-5">
       <div className="flex items-start gap-4">
         <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-mint to-gold text-xl font-black text-navy">
           {story.name
